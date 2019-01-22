@@ -35,13 +35,11 @@ script:
       swiftlint
     fi
 
-  - declare -a projs=("VirgilCryptoCommon" "VirgilCryptoFoundation" "VirgilCryptoPythia" "VirgilCryptoRatchet")
-  - echo $projs
+  - projs=( "VirgilCryptoCommon" "VirgilCryptoFoundation" "VirgilCryptoPythia" "VirgilCryptoRatchet" )
 
   - |
-    for proj in projs; do
-      SCHEME="$proj_$PREFIX"
-      echo $SCHEME
+    for proj in "${projs[@]}"; do
+      SCHEME="${proj}_${PREFIX}"
 
       if [ $TWO_STEP_BUILD_ENABLED == "YES" ]; then
         # Build Framework
