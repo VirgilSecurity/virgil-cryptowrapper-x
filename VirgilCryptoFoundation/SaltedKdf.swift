@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Provides interface to the key derivation function (KDF) algorithms
 /// that use salt and teration count.

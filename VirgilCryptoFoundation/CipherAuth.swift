@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Mix-in interface that provides specific functionality to authenticated
 /// encryption and decryption.

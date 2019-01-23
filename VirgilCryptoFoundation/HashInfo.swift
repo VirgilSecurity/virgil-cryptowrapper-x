@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Provide details about implemented hash algorithm.
 @objc(VSCFHashInfo) public protocol HashInfo : CContext {

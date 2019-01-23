@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 @objc(VSCFRsaPublicKey) public class RsaPublicKey: NSObject, Key, Encrypt, Verify, PublicKey {
 

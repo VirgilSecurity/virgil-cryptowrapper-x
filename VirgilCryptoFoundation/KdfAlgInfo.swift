@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Provide KDF algorithm information implementation
 @objc(VSCFKdfAlgInfo) public class KdfAlgInfo: NSObject, AlgInfo {

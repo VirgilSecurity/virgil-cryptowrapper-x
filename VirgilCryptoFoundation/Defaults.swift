@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Provide interface to setup predefined values to the uninitialized
 /// class dependencies.

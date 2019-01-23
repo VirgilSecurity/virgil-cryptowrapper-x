@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Provide algorithm deserialization
 @objc(VSCFAlgInfoDeserializer) public protocol AlgInfoDeserializer : CContext {

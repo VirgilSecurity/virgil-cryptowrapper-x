@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Provide implementation of der serializer of algorithm information
 @objc(VSCFAlgInfoDerSerializer) public class AlgInfoDerSerializer: NSObject, Defaults, AlgInfoSerializer {

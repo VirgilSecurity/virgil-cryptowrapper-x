@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Provide simple algorithm information (hash) implementation
 @objc(VSCFSimpleAlgInfo) public class SimpleAlgInfo: NSObject, AlgInfo {

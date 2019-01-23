@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Provide produce and consume methods for implemented algorithms
 @objc(VSCFAlgInfoCompatible) public protocol AlgInfoCompatible : CContext {

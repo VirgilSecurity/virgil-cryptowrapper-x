@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+ 
 
 /// Defines generic interface for the entropy source.
 @objc(VSCFEntropySource) public protocol EntropySource : CContext {
