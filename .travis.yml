@@ -68,7 +68,6 @@ script:
 
 before_deploy:
   - carthage archive
-  - mv $CRYPTO_WRAPPER_FRAMEWORK_NAME.framework.zip
 
 deploy:
   - provider: releases
