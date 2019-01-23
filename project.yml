@@ -19,6 +19,7 @@ targets:
       path: VirgilCryptoCommon/Info.plist
       properties:
         CFBundleShortVersionString: 0.1.0
+        CFBundleIdentitifer: com.virgilsecurity.VirgilSDK
     scheme:
       testTargets:
         - VirgilCryptoCommon-Tests_$platform
@@ -26,6 +27,8 @@ targets:
       - VirgilCryptoCommon
     dependencies:
       - carthage: VSCCommon
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoCommon
 
   VirgilCryptoCommon_watchOS:
     type: framework
@@ -40,6 +43,7 @@ targets:
     dependencies:
       - carthage: VSCCommon
     settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoCommon
       PRODUCT_NAME: VirgilCryptoCommon
 
   VirgilCryptoCommon-Tests:
@@ -50,7 +54,6 @@ targets:
       - VirgilCryptoCommonTests
     dependencies:
       - target: VirgilCryptoCommon_$platform
-
 
   VirgilCryptoFoundation:
     type: framework
@@ -65,8 +68,9 @@ targets:
     sources:
       - VirgilCryptoFoundation
     dependencies:
-      - target: VirgilCryptoCommon_$platform
       - carthage: VSCFoundation
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoFoundation
 
   VirgilCryptoFoundation_watchOS:
     type: framework
@@ -79,10 +83,10 @@ targets:
     sources:
       - VirgilCryptoFoundation
     dependencies:
-      - target: VirgilCryptoCommon_$platform
       - carthage: VSCFoundation
     settings:
       PRODUCT_NAME: VirgilCryptoFoundation
+      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoFoundation
 
   VirgilCryptoFoundation-Tests:
     type: bundle.unit-test
@@ -107,8 +111,9 @@ targets:
     sources:
       - VirgilCryptoPythia
     dependencies:
-      - target: VirgilCryptoCommon_$platform
       - carthage: VSCPythia
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoPythia
 
   VirgilCryptoPythia_watchOS:
     type: framework
@@ -121,10 +126,10 @@ targets:
     sources:
       - VirgilCryptoPythia
     dependencies:
-      - target: VirgilCryptoCommon_$platform
       - carthage: VSCPythia
     settings:
       PRODUCT_NAME: VirgilCryptoPythia
+      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoPythia
 
   VirgilCryptoPythia-Tests:
     type: bundle.unit-test
@@ -148,9 +153,10 @@ targets:
     sources:
       - VirgilCryptoRatchet
     dependencies:
-      - target: VirgilCryptoCommon_$platform
       - target: VirgilCryptoFoundation_$platform
       - carthage: VSCRatchet
+    settings:
+      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoRatchet
 
   VirgilCryptoRatchet_watchOS:
     type: framework
@@ -163,11 +169,11 @@ targets:
     sources:
       - VirgilCryptoRatchet
     dependencies:
-      - target: VirgilCryptoCommon_$platform
       - target: VirgilCryptoFoundation_$platform
       - carthage: VSCRatchet
     settings:
       PRODUCT_NAME: VirgilCryptoRatchet
+      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoRatchet
 
   VirgilCryptoRatchet-Tests:
     type: bundle.unit-test
