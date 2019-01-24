@@ -1,5 +1,3 @@
-gem install jazzy
-
 SCHEME="${PROJ}_macOS"
 
 jazzy \

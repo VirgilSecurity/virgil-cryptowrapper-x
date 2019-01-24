@@ -35,6 +35,8 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
+gem install jazzy
+
 # Settings
 REPO_PATH=https://github.com/VirgilSecurity/virgil-cryptowrapper-x.git
 HTML_PATH_DST="${TRAVIS_BUILD_DIR}/docs"
@@ -83,6 +85,28 @@ EOL
 
 for dir in `get_dir_names "${HTML_PATH_DST}" "v*"`; do
     echo "<li><p><a href=\"${dir}/index.html\">${dir}</a></p></li>" >> "${HTML_PATH_DST}/index.html"
+
+cat >"${HTML_PATH_DST}/${dir}/index.html" <<EOL
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Virgil Security Crypto</title>
+    </head>
+    <body>
+        Virgil Security Crypto
+        <ul>
+EOL
+
+    for proj in "${PROJS[@]}"; do
+        echo "<li><p><a href=\"${proj}/index.html\">${proj}</a></p></li>" >> "${HTML_PATH_DST}/${dir}/index.html"
+    done
+
+cat >>"${HTML_PATH_DST}/${dir}/index.html" <<EOL
+        </ul>
+    </body>
+</html>
+EOL
 done
 
 cat >>"${HTML_PATH_DST}/index.html" <<EOL
