@@ -15,6 +15,7 @@ targets:
   VirgilCryptoCommon:
     type: framework
     platform: [iOS, tvOS, macOS]
+    scheme: {}
     info:
       path: VirgilCryptoCommon/Info.plist
       properties:
@@ -33,6 +34,7 @@ targets:
   VirgilCryptoCommon_watchOS:
     type: framework
     platform: [watchOS]
+    scheme: {}
     info:
       path: VirgilCryptoCommon/Info.plist
       properties:
@@ -59,6 +61,7 @@ targets:
   VirgilCryptoFoundation:
     type: framework
     platform: [iOS, tvOS, macOS]
+    scheme: {}
     info:
       path: VirgilCryptoFoundation/Info.plist
       properties:
@@ -77,6 +80,7 @@ targets:
   VirgilCryptoFoundation_watchOS:
     type: framework
     platform: [watchOS]
+    scheme: {}
     info:
       path: VirgilCryptoFoundation/Info.plist
       properties:
@@ -104,6 +108,7 @@ targets:
   VirgilCryptoPythia:
     type: framework
     platform: [iOS, tvOS, macOS]
+    scheme: {}
     info:
       path: VirgilCryptoPythia/Info.plist
       properties:
@@ -122,6 +127,7 @@ targets:
   VirgilCryptoPythia_watchOS:
     type: framework
     platform: [watchOS]
+    scheme: {}
     info:
       path: VirgilCryptoPythia/Info.plist
       properties:
@@ -149,6 +155,7 @@ targets:
   VirgilCryptoRatchet:
     type: framework
     platform: [iOS, tvOS, macOS]
+    scheme: {}
     info:
       path: VirgilCryptoRatchet/Info.plist
       properties:
@@ -168,6 +175,7 @@ targets:
   VirgilCryptoRatchet_watchOS:
     type: framework
     platform: [watchOS]
+    scheme: {}
     info:
       path: VirgilCryptoRatchet/Info.plist
       properties:
