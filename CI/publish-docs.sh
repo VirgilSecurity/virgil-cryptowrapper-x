@@ -52,7 +52,7 @@ VERSION="v"$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${IN
 CURRENT_HTML_PATH_DST="${HTML_PATH_DST}/${VERSION}"
 mkdir "${CURRENT_HTML_PATH_DST}"
 
-PROJS=( "VirgilCryptoCommon" "VirgilCryptoFoundation" "VirgilCryptoPythia" "VirgilCryptoRatchet" )
+PROJS=( "VirgilCryptoFoundation" "VirgilCryptoPythia" "VirgilCryptoRatchet" )
 
 for proj in "${PROJS[@]}"; do
     # Generate the HTML documentation.
@@ -81,7 +81,7 @@ cat >"${HTML_PATH_DST}/index.html" <<EOL
         <ul>
 EOL
 
-for dir in `get_dir_names "${VIRGIL_SDK_HTML_PATH_DST}/.." "v*"`; do
+for dir in `get_dir_names "${HTML_PATH_DST}" "v*"`; do
     echo "<li><p><a href=\"${dir}/index.html\">${dir}</a></p></li>" >> "${HTML_PATH_DST}/index.html"
 done
 
