@@ -63,10 +63,10 @@ before_deploy:
   - carthage archive
 
 after_success:
-  - pod trunk push VirgilCryptoCommon
-  - pod trunk push VirgilCryptoFoundation
-  - pod trunk push VirgilCryptoPythia
-  - pod trunk push VirgilCryptoRatchet
+  - pod trunk push VirgilCryptoCommon.podspec
+  - pod trunk push VirgilCryptoFoundation.podspec
+  - pod trunk push VirgilCryptoPythia.podspec
+  - pod trunk push VirgilCryptoRatchet.podspec
 
 deploy:
   - provider: releases
