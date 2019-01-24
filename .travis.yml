@@ -44,7 +44,6 @@ script:
       elif [ $BUILD == "1" ]; then
         # Build Framework
         xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release clean build | xcpretty;
-      else
       fi
     done
 
