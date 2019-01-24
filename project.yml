@@ -99,6 +99,7 @@ targets:
       - VirgilCryptoFoundationTests
     dependencies:
       - target: VirgilCryptoFoundation_$platform
+      - carthage: VSCCommon
 
   VirgilCryptoPythia:
     type: framework
@@ -143,6 +144,7 @@ targets:
       - VirgilCryptoPythiaTests
     dependencies:
       - target: VirgilCryptoPythia_$platform
+      - carthage: VSCCommon
 
   VirgilCryptoRatchet:
     type: framework
@@ -189,6 +191,7 @@ targets:
       - VirgilCryptoRatchetTests
     dependencies:
       - target: VirgilCryptoRatchet_$platform
+      - carthage: VSCCommon
 
 aggregateTargets:
   Build_iOS:

@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name                        = "VirgilCryptoCommon"
-  s.version                     = "0.2.0-alpha3"
+  s.version                     = "0.2.0-alpha6"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
-  s.summary                     = "Contains basic classes for creating key pairs, encrypting/decrypting data, signing data and verifying signatures."
-  s.homepage                    = "https://github.com/VirgilSecurity/virgil-crypto-c"
+  s.summary                     = "Contains basic swift classes for creating key pairs, encrypting/decrypting data, signing data and verifying signatures."
+  s.homepage                    = "https://github.com/VirgilSecurity/virgil-cryptowrapper-x"
   s.authors                     = { "Virgil Security" => "https://virgilsecurity.com/" }
   s.source                      = { :git => "https://github.com/VirgilSecurity/virgil-cryptowrapper-x.git", :tag => s.version }
   s.ios.deployment_target       = "9.0"
