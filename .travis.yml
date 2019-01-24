@@ -54,16 +54,7 @@ script:
 
 before_deploy:
   - carthage archive
-
-after_success:
-  - if [ -n "$TRAVIS_TAG" ] && [ $PUBLISH_POD == "YES" ]; then
-      gem install cocoapods --pre;
-      pod repo update;
-      pod trunk push VirgilCryptoCommon.podspec;
-      pod trunk push VirgilCryptoFoundation.podspec;
-      pod trunk push VirgilCryptoPythia.podspec;
-      pod trunk push VirgilCryptoRatchet.podspec;
-    fi
+  - mv VirgilCryptoCommon.zip VirgilCrypto.zip
 
 deploy:
   - provider: releases
@@ -75,6 +66,11 @@ deploy:
       repo: VirgilSecurity/virgil-cryptowrapper-x
       tags: true
       condition: $PUBLISH_CARTHAGE = "YES"
+  - provider: script
+    script: bash CI/publish-cocoapods.sh
+    on:
+      tags: true
+      condition: $PUBLISH_POD == "YES"
 
   # Upload docs to gh-pages
   - provider: pages
