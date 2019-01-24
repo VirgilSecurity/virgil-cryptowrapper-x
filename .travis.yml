@@ -54,6 +54,7 @@ script:
 
 before_deploy:
   - carthage archive
+  - ls
   - mv VirgilCryptoCommon.zip VirgilCrypto.zip
 
 deploy:
