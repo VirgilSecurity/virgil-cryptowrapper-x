@@ -54,6 +54,11 @@ script:
       mv VirgilCryptoCommon.framework.zip VirgilCrypto.framework.zip;
     fi
 
+    # Generate and publish docs
+  - if [ -n "${TRAVIS_TAG}" ] && [ $PUBLISH_DOCS == "YES" ]; then
+      ./CI/publish-docs.sh;
+    fi
+
 deploy:
   - provider: releases
     api_key: $GITHUB_ACCESS_TOKEN
