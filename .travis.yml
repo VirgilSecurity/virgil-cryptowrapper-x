@@ -59,12 +59,11 @@ after_success:
   - if [ -n "$TRAVIS_TAG" ] && [ $PUBLISH_POD == "YES" ]; then
       gem install cocoapods --pre;
       pod repo update;
-      pod trunk push VirgilCryptoCommon.podspec
-      pod trunk push VirgilCryptoFoundation.podspec
-      pod trunk push VirgilCryptoPythia.podspec
-      pod trunk push VirgilCryptoRatchet.podspec
+      pod trunk push VirgilCryptoCommon.podspec;
+      pod trunk push VirgilCryptoFoundation.podspec;
+      pod trunk push VirgilCryptoPythia.podspec;
+      pod trunk push VirgilCryptoRatchet.podspec;
     fi
-  
 
 deploy:
   - provider: releases
