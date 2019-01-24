@@ -54,8 +54,7 @@ script:
 
 before_deploy:
   - carthage archive
-  - ls
-  - mv VirgilCryptoCommon.zip VirgilCrypto.zip
+  - mv VirgilCryptoCommon.framework.zip VirgilCrypto.framework.zip
 
 deploy:
   - provider: releases
