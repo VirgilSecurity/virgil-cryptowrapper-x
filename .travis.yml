@@ -50,11 +50,9 @@ script:
   # Build with carthage
   - if [ $PUBLISH_CARTHAGE == "YES" ]; then
       carthage build --no-skip-current;
+      carthage archive;
+      mv VirgilCryptoCommon.framework.zip VirgilCrypto.framework.zip;
     fi
-
-before_deploy:
-  - carthage archive
-  - mv VirgilCryptoCommon.framework.zip VirgilCrypto.framework.zip
 
 deploy:
   - provider: releases
