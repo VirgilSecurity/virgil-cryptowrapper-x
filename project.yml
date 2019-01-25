@@ -30,6 +30,7 @@ targets:
       - carthage: VSCCommon
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoCommon
+      APPLICATION_EXTENSION_API_ONLY: YES
 
   VirgilCryptoCommon_watchOS:
     type: framework
@@ -47,6 +48,7 @@ targets:
       - carthage: VSCCommon
     settings:
       PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoCommon
+      APPLICATION_EXTENSION_API_ONLY: YES
       PRODUCT_NAME: VirgilCryptoCommon
 
   VirgilCryptoCommon-Tests:
@@ -75,6 +77,7 @@ targets:
     dependencies:
       - carthage: VSCFoundation
     settings:
+      APPLICATION_EXTENSION_API_ONLY: YES
       PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoFoundation
 
   VirgilCryptoFoundation_watchOS:
@@ -92,6 +95,7 @@ targets:
     dependencies:
       - carthage: VSCFoundation
     settings:
+      APPLICATION_EXTENSION_API_ONLY: YES
       PRODUCT_NAME: VirgilCryptoFoundation
       PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoFoundation
 
@@ -122,6 +126,7 @@ targets:
     dependencies:
       - carthage: VSCPythia
     settings:
+      APPLICATION_EXTENSION_API_ONLY: YES
       PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoPythia
 
   VirgilCryptoPythia_watchOS:
@@ -139,6 +144,7 @@ targets:
     dependencies:
       - carthage: VSCPythia
     settings:
+      APPLICATION_EXTENSION_API_ONLY: YES
       PRODUCT_NAME: VirgilCryptoPythia
       PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoPythia
 
@@ -170,6 +176,7 @@ targets:
       - target: VirgilCryptoFoundation_$platform
       - carthage: VSCRatchet
     settings:
+      APPLICATION_EXTENSION_API_ONLY: YES
       PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoRatchet
 
   VirgilCryptoRatchet_watchOS:
@@ -188,6 +195,7 @@ targets:
       - target: VirgilCryptoFoundation_$platform
       - carthage: VSCRatchet
     settings:
+      APPLICATION_EXTENSION_API_ONLY: YES
       PRODUCT_NAME: VirgilCryptoRatchet
       PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoRatchet
 

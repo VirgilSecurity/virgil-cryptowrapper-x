@@ -69,6 +69,7 @@ deploy:
       repo: VirgilSecurity/virgil-cryptowrapper-x
       tags: true
       condition: $PUBLISH_CARTHAGE = "YES"
+
   - provider: script
     script: bash CI/publish-cocoapods.sh
     on:
