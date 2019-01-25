@@ -6,10 +6,10 @@ options:
   tabWidth: 4
   transitivelyLinkDependencies: true
   deploymentTarget:
-    iOS: "10.0"
-    watchOS: "4.0"
-    tvOS: "10.0"
-    macOS: "10.9"
+    iOS: "8.0"
+    watchOS: "2.0"
+    tvOS: "9.0"
+    macOS: "10.10"
 
 targets:
   VirgilCryptoCommon:
