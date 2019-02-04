@@ -37,33 +37,57 @@ import Foundation
 import VSCFoundation
  
 
-/// Provide conversion logic between OID and algorithm tags.
-@objc(VSCFOid) public class Oid: NSObject {
+/// Handle symmetric cipher algorithm information.
+@objc(VSCFCipherAlgInfo) public class CipherAlgInfo: NSObject, AlgInfo {
 
-    /// Return OID for given algorithm identifier
-    @objc public static func fromAlgId(algId: AlgId) -> Data {
-        let proxyResult = vscf_oid_from_alg_id(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)))
+    /// Handle underlying C context.
+    @objc public let c_ctx: OpaquePointer
+
+    /// Create underlying C context.
+    public override init() {
+        self.c_ctx = vscf_cipher_alg_info_new()
+        super.init()
+    }
+
+    /// Acquire C context.
+    /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
+    public init(take c_ctx: OpaquePointer) {
+        self.c_ctx = c_ctx
+        super.init()
+    }
+
+    /// Acquire retained C context.
+    /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
+    public init(use c_ctx: OpaquePointer) {
+        self.c_ctx = vscf_cipher_alg_info_shallow_copy(c_ctx)
+        super.init()
+    }
+
+    /// Create symmetric cipher algorithm info with identificator and input vector.
+    public init(algId: AlgId, nonce: Data) {
+        let proxyResult = nonce.withUnsafeBytes({ (noncePointer: UnsafePointer<byte>) -> OpaquePointer? in
+            return vscf_cipher_alg_info_new_with_members(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), vsc_data(noncePointer, nonce.count))
+        })
+
+        self.c_ctx = proxyResult!
+    }
+
+    /// Release underlying C context.
+    deinit {
+        vscf_cipher_alg_info_delete(self.c_ctx)
+    }
+
+    /// Return IV.
+    @objc public func nonce() -> Data {
+        let proxyResult = vscf_cipher_alg_info_nonce(self.c_ctx)
 
         return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
     }
 
-    /// Return algorithm identifier for given OID.
-    @objc public static func toAlgId(oid: Data) -> AlgId {
-        let proxyResult = oid.withUnsafeBytes({ (oidPointer: UnsafePointer<byte>) -> vscf_alg_id_t in
-            return vscf_oid_to_alg_id(vsc_data(oidPointer, oid.count))
-        })
+    /// Provide algorithm identificator.
+    @objc public func algId() -> AlgId {
+        let proxyResult = vscf_cipher_alg_info_alg_id(self.c_ctx)
 
         return AlgId.init(fromC: proxyResult)
-    }
-
-    /// Return true if given OIDs are equal.
-    @objc public static func equal(lhs: Data, rhs: Data) -> Bool {
-        let proxyResult = lhs.withUnsafeBytes({ (lhsPointer: UnsafePointer<byte>) -> Bool in
-            rhs.withUnsafeBytes({ (rhsPointer: UnsafePointer<byte>) -> Bool in
-                return vscf_oid_equal(vsc_data(lhsPointer, lhs.count), vsc_data(rhsPointer, rhs.count))
-            })
-        })
-
-        return proxyResult
     }
 }

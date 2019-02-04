@@ -133,6 +133,7 @@
 		BF_1E913E5C8427CAC32B1AD15E7D076B49 /* SaltedKdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AB7C35558FF2EA266A5980F7D35AAA0F /* SaltedKdf.swift */; };
 		BF_1EA06BF5223C8CA68DDD5C85C78AF3C5 /* VSCPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_1DB6E6C22AF62331B4DE984CA9CC98D5 /* VSCPythia.framework */; };
 		BF_1F0A3DA9C7863D7510355FA41B65DBC2 /* EntropySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_7F1AEFC610E69F681B807855507B6F79 /* EntropySource.swift */; };
+		BF_1F9BC7A4448BEE06AC7A42E4A4A136C9 /* Alg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AC7C26360D1A22330C2FE324DC4B8EA5 /* Alg.swift */; };
 		BF_1FC6CDE7B800BABCCCD83F56E11C8EB2 /* RatchetMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_27DC5CACA5BF33473DA67E74B2E82330 /* RatchetMessage.swift */; };
 		BF_2011734A8D58E41DA24351428BAA8461 /* SaltedKdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AB7C35558FF2EA266A5980F7D35AAA0F /* SaltedKdf.swift */; };
 		BF_20DCC0A53097ABE213BFB645601DC573 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_6AC2A3EFDB70D62856A4956A4B817A21 /* Base64.swift */; };
@@ -143,7 +144,7 @@
 		BF_26A4DBE1FBBD0DDE286139B70CF191A2 /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_7F39BCB236B94ED8FFD6D26949FB1C22 /* CContext.swift */; };
 		BF_2701C18013587AEE521754D237C265C0 /* AuthDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9BD22E95C523567BC7516C41E76C5138 /* AuthDecrypt.swift */; };
 		BF_277635A0498D109024E1416D52510576 /* VirgilCryptoFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_4226B494271EAC3C80A7C2BB0B1335E6 /* VirgilCryptoFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF_27D5D57C8669A79BFE208319F3E8CFF9 /* AlgInfoCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_D7B61281A1C9C8F4B696EE709D300ABB /* AlgInfoCompatible.swift */; };
+		BF_281FB0AAFB0283354B1C70D784AC0386 /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0197895DBFE2933ADE954670831407D9 /* CipherAlgInfo.swift */; };
 		BF_288A616249D0C5D941F8D3202243004B /* GenerateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_97EF1CA31FE38398F173847541EFE545 /* GenerateKey.swift */; };
 		BF_2947938AC88596EB73548A7B34DD93B8 /* CipherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E0E8E1FE59CBE8C9E2E33BC81ADF41D9 /* CipherInfo.swift */; };
 		BF_29EE8E93873E29AEC2BDD63FD8C1D23D /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47A54EE12F556F6851348725DB65C0DB /* Hash.swift */; };
@@ -188,11 +189,12 @@
 		BF_3CC51F5FEDDA7249FB61BE052D3F2897 /* VirgilCryptoCommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_765A8DE68463C5E2D83F7FAA9AB66416 /* VirgilCryptoCommonTests.swift */; };
 		BF_3E55947C62C2AEB79356450BDD77F1B1 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E061B7730B67331E59F578C44F696B94 /* Defaults.swift */; };
 		BF_3EA199FD0E5CE8427E0912E4DF1BF389 /* Sign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_298E15114D8F8D474AF365601C911460 /* Sign.swift */; };
-		BF_3F20D516639C5A708EE67CAFCE0FE9F6 /* AlgInfoCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_D7B61281A1C9C8F4B696EE709D300ABB /* AlgInfoCompatible.swift */; };
+		BF_40DC0D86A912BCDE382EF6918E982B18 /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0197895DBFE2933ADE954670831407D9 /* CipherAlgInfo.swift */; };
 		BF_40E6156A4C4F711E8B3DE3A3097F4CFF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E7C134C19296B709C9FC069AB6D1BF41 /* Error.swift */; };
 		BF_42609D6288D032760AB33F9A4983DE68 /* Verify.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CF914621786596FB3229FF5D7215E40B /* Verify.swift */; };
 		BF_4262795B6233D829F882F985A5CAEDDE /* Asn1wr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_1290134FA6493F3FE614E785319921A8 /* Asn1wr.swift */; };
 		BF_42B99029BC96612141B26877E02BF73F /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_B64C59A530C45F626356329D74AD9791 /* Error.swift */; };
+		BF_43E5BB37CABB468F41D84C9EBC0EEABD /* Alg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AC7C26360D1A22330C2FE324DC4B8EA5 /* Alg.swift */; };
 		BF_4457EFF9534275ED0150EA2A76CEA9FC /* ErrorCtx.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_941637DA8D1AFE2772803A1820B4AA58 /* ErrorCtx.swift */; };
 		BF_448D1099D00D1CBE9BFFF46B87B22849 /* Pem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_236DDBC0D99491A55376520B49A3BFE2 /* Pem.swift */; };
 		BF_45C3B05FF9002DEACE72FDBF18DFA310 /* VirgilCryptoPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_6D77C1F5C79B03555D1BDB295181AC9B /* VirgilCryptoPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -236,6 +238,7 @@
 		BF_5C4B468AEB67251C3FAC6547454AF83E /* Oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_C274BD120FAC0377DBF81CD851AD6E3C /* Oid.swift */; };
 		BF_5D6FB9F6C66C1D611B7FE82ACCA91552 /* EntropySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_7F1AEFC610E69F681B807855507B6F79 /* EntropySource.swift */; };
 		BF_5DDCC34EA63A437DC938D824810959DF /* CipherAuthInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_814FB546155E0F9ACE767C614C83BCC9 /* CipherAuthInfo.swift */; };
+		BF_5F0DCAC49DF9D8A3B28756D9576FBBD6 /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0197895DBFE2933ADE954670831407D9 /* CipherAlgInfo.swift */; };
 		BF_5F5CFF6E5F2503EF7A037A9AAE7B2E1C /* CipherAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_B53C59579321ED5A2FAFCE86F55D60A1 /* CipherAuth.swift */; };
 		BF_5FC0178FBFED864B60AE428CB81A7CD4 /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_0AD8BDA2E57D4E1DCF28596BA70FE5DD /* VSCCommon.framework */; };
 		BF_6023862537DCA329511FFCC18CE9E131 /* AlgInfoDerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_54568F0878AF5C0E1FC3A649F3611C4C /* AlgInfoDerDeserializer.swift */; };
@@ -271,6 +274,7 @@
 		BF_70E0712FC9D6B16D8028105ADF162FDA /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A9AD67625573D60D02B7C8BBFB77C120 /* VSCFoundation.framework */; };
 		BF_7131A41CF97A5A19F8D4B7D0F2F9329E /* VirgilCryptoCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_55A3BB47432A8F0324FC55E2B727F6AF /* VirgilCryptoCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF_7137AC052479434D365ED13A4B1C0E8D /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_68C9BCA62812E0CC5F98027AF2B3FCC6 /* CContext.swift */; };
+		BF_713D2726BC4068C644A4C12303D0A155 /* Alg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AC7C26360D1A22330C2FE324DC4B8EA5 /* Alg.swift */; };
 		BF_71ABD698B4BCD5F3BF98B63C86745A79 /* AlgInfoDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_4F23EEA92B0BE25F3F73E8F8A6D90218 /* AlgInfoDeserializer.swift */; };
 		BF_72B5FA7E64EBE2264F5B1EA1775EE308 /* Kdf2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_108CB11BA7D5D9EAE8C0DE322AE1725C /* Kdf2.swift */; };
 		BF_72FA22EC9620197A2B7C52E5B49CF0E2 /* VirgilCryptoFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_300A40CAF8945B03BC7C0B7B02E2D61A /* VirgilCryptoFoundationTests.swift */; };
@@ -337,7 +341,6 @@
 		BF_9132E0D6A992678498EF72CF621AB6B6 /* AlgInfoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_93288D95B33A409F37DB85DFE1C5D214 /* AlgInfoSerializer.swift */; };
 		BF_91D16AD67F88021BA3510ED81B37F9D0 /* Kdf1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_41119B92BB8594CD1286E96B84C8C2FC /* Kdf1.swift */; };
 		BF_92EB2EF793EB0CC4C687A28233601AA0 /* EntropyAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0AD4C9F6A4D1D23051BAE44C616A232C /* EntropyAccumulator.swift */; };
-		BF_937187B65AA866207CB5A8126F355EB7 /* KeyAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_743534FAAA8A7C43E45C3873980FB7E9 /* KeyAlg.swift */; };
 		BF_93C6E8322AB192316E14C8FDD6D1488F /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_6AC2A3EFDB70D62856A4956A4B817A21 /* Base64.swift */; };
 		BF_952EA524AD8CBC3D759596849A947E20 /* HashStream.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_920D026FD20460BB05B917C355AC2EC6 /* HashStream.swift */; };
 		BF_966AF82BEAF61290BEBA1D14512322A4 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_6AC2A3EFDB70D62856A4956A4B817A21 /* Base64.swift */; };
@@ -346,7 +349,6 @@
 		BF_97486E32D7F4181701F918FD640F8006 /* AlgInfoDerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_54568F0878AF5C0E1FC3A649F3611C4C /* AlgInfoDerDeserializer.swift */; };
 		BF_97CF9651EE09B8D6ECD6E4B8D7E37D24 /* Pkcs8DerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_D0268902371BD2EBD93FC6A36ACBC0C9 /* Pkcs8DerDeserializer.swift */; };
 		BF_9939C678977F491AD3371BDB8AD522B9 /* Asn1Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ED62F685A4D837CE5FAB39220C129427 /* Asn1Writer.swift */; };
-		BF_9A7C7AD6AC1AC3542085767FF414931D /* KeyAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_743534FAAA8A7C43E45C3873980FB7E9 /* KeyAlg.swift */; };
 		BF_9AD78C0D1E976901898352B76FDC10C2 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E061B7730B67331E59F578C44F696B94 /* Defaults.swift */; };
 		BF_9B18A435783466DD51B6CE377A27393B /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_2065A768EF91ACC387FE0125CD09BC09 /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_9B36931E07520B9D788089EA55DD6FA5 /* Pythia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_4F031CE76320ED93EEF3F3962A0C99B6 /* Pythia.swift */; };
@@ -429,6 +431,7 @@
 		BF_C6C8AF83D0365FC8094A0EA356A437F1 /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_B4ADAAE1F4E803384711B8BA52D52ED4 /* CContext.swift */; };
 		BF_C7E1FB1F4F3D43C1D8CA0A3B24DB2514 /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_50C019C132F2E79A16CF4FABCDCB62F7 /* VSCCommon.framework */; };
 		BF_C7ECFBD1D8A3267A7E5B6CD2ED0C0F8D /* VirgilCryptoFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_535F993E1BC3CDDD90CE8494BD0243D7 /* VirgilCryptoFoundation.framework */; };
+		BF_C84ADE3C4700800B3419F68433182CCF /* Alg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AC7C26360D1A22330C2FE324DC4B8EA5 /* Alg.swift */; };
 		BF_C87CAF2504D800AE649DB52AECEA5BEF /* VSCRatchet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_D4DB6C4604653DEB2C68851C7032AD83 /* VSCRatchet.framework */; };
 		BF_C8AB72EB873E3CFFA7FAC73161B0A634 /* Hmac.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_975798041C0DC93AB590E33F54FFB96E /* Hmac.swift */; };
 		BF_C91776C4A1379ABE25C10B4CCDD2DF89 /* Oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_C274BD120FAC0377DBF81CD851AD6E3C /* Oid.swift */; };
@@ -449,7 +452,6 @@
 		BF_D3BE1CED48404C924AA59AE59C9D666A /* Pkcs8Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_1AC3F078A593632AE3585E6129C92769 /* Pkcs8Deserializer.swift */; };
 		BF_D42BBBC19E8DE604BED463355F2CB9DF /* AlgInfoDerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_54568F0878AF5C0E1FC3A649F3611C4C /* AlgInfoDerDeserializer.swift */; };
 		BF_D4778009A41DEA56471C0C97BCCE4235 /* VirgilCryptoPythiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_54840083D61C631C3A5BF2FE3D6EDD10 /* VirgilCryptoPythiaTests.swift */; };
-		BF_D5527803FEBBC06F4DC128FE4E1ADABB /* KeyAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_743534FAAA8A7C43E45C3873980FB7E9 /* KeyAlg.swift */; };
 		BF_D68E59B0679C30251C35391BCBFED1DF /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E7C134C19296B709C9FC069AB6D1BF41 /* Error.swift */; };
 		BF_D6B24CCAECB35233AC7710966DCB7308 /* AlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_A9484402CA56A0CEE560D8F18C948EFA /* AlgInfo.swift */; };
 		BF_D73A8F1C30560FFC760502854F350D97 /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_B4ADAAE1F4E803384711B8BA52D52ED4 /* CContext.swift */; };
@@ -460,10 +462,10 @@
 		BF_DCB6247121E2E21259418CD67543382E /* VSCPythia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_368C73674C1BEE6A83D6B269C1C31BF4 /* VSCPythia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_DD03E5035C49A2EF90B7BF367F717D50 /* Asn1rd.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0CA53397E83893104F333907AC6D97C7 /* Asn1rd.swift */; };
 		BF_DD74FFFFB7D0E51993BEB72D48D03A3E /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_0AD8BDA2E57D4E1DCF28596BA70FE5DD /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BF_DDC957BFDE9F5C459CCAF61E03CD367F /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0197895DBFE2933ADE954670831407D9 /* CipherAlgInfo.swift */; };
 		BF_DE3FDA25DE7D9A1C553227E09466AAC5 /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_B64C59A530C45F626356329D74AD9791 /* Error.swift */; };
 		BF_DE47AECFFBC547FEE263B29A519CD2EC /* SimpleAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_7F03F9727486589E9ED97930E0B1EB1F /* SimpleAlgInfo.swift */; };
 		BF_DE7424BC7DB5F6A6F25795CED4C99055 /* AlgId.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CFC4E7E6287F4E24DDFDA01521EE8081 /* AlgId.swift */; };
-		BF_DF4CC40F1B6D11A8B239BE159D267095 /* AlgInfoCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_D7B61281A1C9C8F4B696EE709D300ABB /* AlgInfoCompatible.swift */; };
 		BF_DF55114DAD628690E808910AA61BE28B /* Pkcs8Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_1AC3F078A593632AE3585E6129C92769 /* Pkcs8Deserializer.swift */; };
 		BF_DF5EDA07BD8661EFB9A8B760B26E2FF0 /* SimpleAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_7F03F9727486589E9ED97930E0B1EB1F /* SimpleAlgInfo.swift */; };
 		BF_E00FF81D3F03519DC20D36AB0DA746B7 /* RatchetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_3FCD77B3255F7D080AD7D987EA65EBE5 /* RatchetSession.swift */; };
@@ -493,7 +495,6 @@
 		BF_EC7B9A099E38C821FAED4305D08E8EF2 /* Aes256Gcm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_39DFD544B84E97A931F39C86D4C2AAE4 /* Aes256Gcm.swift */; };
 		BF_ECDD0ECD6AD044F506A35131378C2039 /* VirgilCryptoCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_21DF3A089E40F6C313DE60618C096744 /* VirgilCryptoCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_ED2BDF004C1CD13FB5B9CB5A353959AE /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_DF350B31C0059F9219F8754B1CC2C35D /* Mac.swift */; };
-		BF_EDB3CB26D48180F85798267AEF24B405 /* KeyAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_743534FAAA8A7C43E45C3873980FB7E9 /* KeyAlg.swift */; };
 		BF_EDB40C96C23A36F6A1B401061C68C999 /* Pem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_236DDBC0D99491A55376520B49A3BFE2 /* Pem.swift */; };
 		BF_EE16BE91FFDE56F2D21E982ABFF0CD41 /* MsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_1A1E9B6853842F9DB4DF337E033C64B3 /* MsgType.swift */; };
 		BF_EE7E513FD09DFE332017BAD3961A9F56 /* VirgilCryptoPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_6D77C1F5C79B03555D1BDB295181AC9B /* VirgilCryptoPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -531,7 +532,6 @@
 		BF_FB4922498BDF4757FB325680C76E4DD1 /* Asn1Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ED62F685A4D837CE5FAB39220C129427 /* Asn1Writer.swift */; };
 		BF_FDA4F203015EBFD80AD2FCE557D2D78D /* Encrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_196C578FEDAAB6A5E259EF06661B3B32 /* Encrypt.swift */; };
 		BF_FDDE1D24F8E72EE8C3427AA79AF630E6 /* KeySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_5FD5C25F0CC78C58A8807C40F652BC98 /* KeySerializer.swift */; };
-		BF_FEA6AC31C17C82B18EB6C7C46A311AB3 /* AlgInfoCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_D7B61281A1C9C8F4B696EE709D300ABB /* AlgInfoCompatible.swift */; };
 		BF_FEB88C11E90B49B5F670C30582FD0E0B /* VirgilCryptoFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_4226B494271EAC3C80A7C2BB0B1335E6 /* VirgilCryptoFoundation.framework */; };
 		BF_FFC755B5000F7232BAF931AF086E62FB /* RsaPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_072555DAD15899DCCE15D0280AC921C5 /* RsaPrivateKey.swift */; };
 /* End PBXBuildFile section */
@@ -978,6 +978,7 @@
 		FR_0022CF9D7EE37A963572879E5C923423 /* Hkdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hkdf.swift; sourceTree = "<group>"; };
 		FR_00E314E712C0F6A5D67A488AB82DCC55 /* HashInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashInfo.swift; sourceTree = "<group>"; };
 		FR_01952F41C042D0DE49967A0CCA46F738 /* PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivateKey.swift; sourceTree = "<group>"; };
+		FR_0197895DBFE2933ADE954670831407D9 /* CipherAlgInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherAlgInfo.swift; sourceTree = "<group>"; };
 		FR_0454723CF5648BD55B0264F7BC4543CB /* VSCCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCCommon.framework; sourceTree = "<group>"; };
 		FR_053721B50D262CBE9AA2BCDE13166A72 /* VSCRatchet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCRatchet.framework; sourceTree = "<group>"; };
 		FR_072555DAD15899DCCE15D0280AC921C5 /* RsaPrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RsaPrivateKey.swift; sourceTree = "<group>"; };
@@ -1037,7 +1038,6 @@
 		FR_6D77C1F5C79B03555D1BDB295181AC9B /* VirgilCryptoPythia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirgilCryptoPythia.h; sourceTree = "<group>"; };
 		FR_71FAE59E0470FD4147C3B2ED8A6812A4 /* FakeRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRandom.swift; sourceTree = "<group>"; };
 		FR_725059F6661C3E11D7C968D05437D0E2 /* VirgilCryptoRatchet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoRatchet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		FR_743534FAAA8A7C43E45C3873980FB7E9 /* KeyAlg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyAlg.swift; sourceTree = "<group>"; };
 		FR_7511105C612A490D253A24C974F0FA89 /* AuthEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEncrypt.swift; sourceTree = "<group>"; };
 		FR_765A8DE68463C5E2D83F7FAA9AB66416 /* VirgilCryptoCommonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirgilCryptoCommonTests.swift; sourceTree = "<group>"; };
 		FR_780724DE5435D3E640AFF07C5D6B28CB /* MacStream.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacStream.swift; sourceTree = "<group>"; };
@@ -1073,6 +1073,7 @@
 		FR_A9AD67625573D60D02B7C8BBFB77C120 /* VSCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCFoundation.framework; sourceTree = "<group>"; };
 		FR_AB6A43D10A060876EE07AF0C89044815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_AB7C35558FF2EA266A5980F7D35AAA0F /* SaltedKdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaltedKdf.swift; sourceTree = "<group>"; };
+		FR_AC7C26360D1A22330C2FE324DC4B8EA5 /* Alg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alg.swift; sourceTree = "<group>"; };
 		FR_ACD47DA9A0EDF9438AEB7A6A823C0967 /* VirgilCryptoCommon-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoCommon-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_AF2FD3230D58E071F8AEFC3EF366D226 /* Cipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher.swift; sourceTree = "<group>"; };
 		FR_B084CABA0AFC20233B50CDE7888A366C /* VSCPythia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCPythia.framework; sourceTree = "<group>"; };
@@ -1096,7 +1097,6 @@
 		FR_D0268902371BD2EBD93FC6A36ACBC0C9 /* Pkcs8DerDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs8DerDeserializer.swift; sourceTree = "<group>"; };
 		FR_D407A05FC8F68D4EDB12599F3F60A199 /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_D4DB6C4604653DEB2C68851C7032AD83 /* VSCRatchet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCRatchet.framework; sourceTree = "<group>"; };
-		FR_D7B61281A1C9C8F4B696EE709D300ABB /* AlgInfoCompatible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgInfoCompatible.swift; sourceTree = "<group>"; };
 		FR_D9591156DE1B4122521206777158AAEB /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_D9A03E3F7624468157E383B17028436E /* RatchetCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetCommon.swift; sourceTree = "<group>"; };
 		FR_DF34C3B2321D5EF30EDB0D3B4BCCD796 /* VirgilCryptoPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1401,9 +1401,9 @@
 			isa = PBXGroup;
 			children = (
 				FR_39DFD544B84E97A931F39C86D4C2AAE4 /* Aes256Gcm.swift */,
+				FR_AC7C26360D1A22330C2FE324DC4B8EA5 /* Alg.swift */,
 				FR_CFC4E7E6287F4E24DDFDA01521EE8081 /* AlgId.swift */,
 				FR_A9484402CA56A0CEE560D8F18C948EFA /* AlgInfo.swift */,
-				FR_D7B61281A1C9C8F4B696EE709D300ABB /* AlgInfoCompatible.swift */,
 				FR_54568F0878AF5C0E1FC3A649F3611C4C /* AlgInfoDerDeserializer.swift */,
 				FR_A2BB10435772F3A1861D6F52A09EE64B /* AlgInfoDerSerializer.swift */,
 				FR_4F23EEA92B0BE25F3F73E8F8A6D90218 /* AlgInfoDeserializer.swift */,
@@ -1418,6 +1418,7 @@
 				FR_6AC2A3EFDB70D62856A4956A4B817A21 /* Base64.swift */,
 				FR_B4ADAAE1F4E803384711B8BA52D52ED4 /* CContext.swift */,
 				FR_AF2FD3230D58E071F8AEFC3EF366D226 /* Cipher.swift */,
+				FR_0197895DBFE2933ADE954670831407D9 /* CipherAlgInfo.swift */,
 				FR_B53C59579321ED5A2FAFCE86F55D60A1 /* CipherAuth.swift */,
 				FR_814FB546155E0F9ACE767C614C83BCC9 /* CipherAuthInfo.swift */,
 				FR_E0E8E1FE59CBE8C9E2E33BC81ADF41D9 /* CipherInfo.swift */,
@@ -1446,7 +1447,6 @@
 				FR_108CB11BA7D5D9EAE8C0DE322AE1725C /* Kdf2.swift */,
 				FR_1AA9410B82942B517DDC6A9D69F4FE42 /* KdfAlgInfo.swift */,
 				FR_5BA1393E1617F1DA12D04E0D0601D59D /* Key.swift */,
-				FR_743534FAAA8A7C43E45C3873980FB7E9 /* KeyAlg.swift */,
 				FR_95DC0FD6BD97A86B8F14C5354A4A6E0E /* KeyDeserializer.swift */,
 				FR_5FD5C25F0CC78C58A8807C40F652BC98 /* KeySerializer.swift */,
 				FR_DF350B31C0059F9219F8754B1CC2C35D /* Mac.swift */,
@@ -2359,9 +2359,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_EBA3A079C7D525BECFF9B348CF97D238 /* Aes256Gcm.swift in Sources */,
+				BF_43E5BB37CABB468F41D84C9EBC0EEABD /* Alg.swift in Sources */,
 				BF_F8F6DB221CDD007BDE5B07645B7104D9 /* AlgId.swift in Sources */,
 				BF_8D820B6EC9AD15937AFDD177B4620532 /* AlgInfo.swift in Sources */,
-				BF_FEA6AC31C17C82B18EB6C7C46A311AB3 /* AlgInfoCompatible.swift in Sources */,
 				BF_EEB5C1BCE2EC9FCDF7F5DA0224EC00DD /* AlgInfoDerDeserializer.swift in Sources */,
 				BF_B9461463740AE489BBB717D4FE471E13 /* AlgInfoDerSerializer.swift in Sources */,
 				BF_6B94BEC09451AB36487AD841E401F7BD /* AlgInfoDeserializer.swift in Sources */,
@@ -2376,6 +2376,7 @@
 				BF_93C6E8322AB192316E14C8FDD6D1488F /* Base64.swift in Sources */,
 				BF_D73A8F1C30560FFC760502854F350D97 /* CContext.swift in Sources */,
 				BF_32D42EC688B3A2C32B6C8A559F2802B0 /* Cipher.swift in Sources */,
+				BF_281FB0AAFB0283354B1C70D784AC0386 /* CipherAlgInfo.swift in Sources */,
 				BF_4D4D3D7328DACEA568913524F0B77786 /* CipherAuth.swift in Sources */,
 				BF_BDBDC1493B10C43C1D561032C76CB4D6 /* CipherAuthInfo.swift in Sources */,
 				BF_503617BC00C52F735C6786F1E4E6C62F /* CipherInfo.swift in Sources */,
@@ -2403,7 +2404,6 @@
 				BF_C5D141654D25100A683968F896DDF51A /* Kdf2.swift in Sources */,
 				BF_E072AF7E1935869897BFF745E4257C4C /* KdfAlgInfo.swift in Sources */,
 				BF_B256442B22787D041ED8D809CDF51556 /* Key.swift in Sources */,
-				BF_937187B65AA866207CB5A8126F355EB7 /* KeyAlg.swift in Sources */,
 				BF_3CB3DC25DF3A78B8AD38DD1CBDF05441 /* KeyDeserializer.swift in Sources */,
 				BF_FDDE1D24F8E72EE8C3427AA79AF630E6 /* KeySerializer.swift in Sources */,
 				BF_ED2BDF004C1CD13FB5B9CB5A353959AE /* Mac.swift in Sources */,
@@ -2452,9 +2452,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_CB937533BAEF01724D787F1F1A5D2921 /* Aes256Gcm.swift in Sources */,
+				BF_713D2726BC4068C644A4C12303D0A155 /* Alg.swift in Sources */,
 				BF_837A881C4481574C82BFD4F9F13E0104 /* AlgId.swift in Sources */,
 				BF_6F97968743546F5EAE25C89C9509A606 /* AlgInfo.swift in Sources */,
-				BF_DF4CC40F1B6D11A8B239BE159D267095 /* AlgInfoCompatible.swift in Sources */,
 				BF_97486E32D7F4181701F918FD640F8006 /* AlgInfoDerDeserializer.swift in Sources */,
 				BF_5BD4FE11D4B67F223BA9EA6ECA91FE7B /* AlgInfoDerSerializer.swift in Sources */,
 				BF_71ABD698B4BCD5F3BF98B63C86745A79 /* AlgInfoDeserializer.swift in Sources */,
@@ -2469,6 +2469,7 @@
 				BF_966AF82BEAF61290BEBA1D14512322A4 /* Base64.swift in Sources */,
 				BF_972214485C40133C9C93EA3901455B6D /* CContext.swift in Sources */,
 				BF_B7E3109D325673CCFAE5F50998F9EF14 /* Cipher.swift in Sources */,
+				BF_DDC957BFDE9F5C459CCAF61E03CD367F /* CipherAlgInfo.swift in Sources */,
 				BF_9DB1C8C5DA219E31B9B267E094D2558F /* CipherAuth.swift in Sources */,
 				BF_6F1794F5DF344DB82F2399474F87AAC8 /* CipherAuthInfo.swift in Sources */,
 				BF_46793E3C87C4F6CAD44360C917C03111 /* CipherInfo.swift in Sources */,
@@ -2496,7 +2497,6 @@
 				BF_2AE523641B382F8E302E23E859D0094B /* Kdf2.swift in Sources */,
 				BF_3B89EF773A7F53E04598A6FD4A07648E /* KdfAlgInfo.swift in Sources */,
 				BF_634298136C0165E0BDF4AF4BCD593AB0 /* Key.swift in Sources */,
-				BF_D5527803FEBBC06F4DC128FE4E1ADABB /* KeyAlg.swift in Sources */,
 				BF_E9EB5EA49BE55AC8E7C4CE5E46982491 /* KeyDeserializer.swift in Sources */,
 				BF_702E18EBC33A682D6D0057E41FC51FF9 /* KeySerializer.swift in Sources */,
 				BF_EED3DFECDA5154673E00E84BFFBCE66E /* Mac.swift in Sources */,
@@ -2567,9 +2567,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_E8C925225439A4092C867510B1938D56 /* Aes256Gcm.swift in Sources */,
+				BF_C84ADE3C4700800B3419F68433182CCF /* Alg.swift in Sources */,
 				BF_DE7424BC7DB5F6A6F25795CED4C99055 /* AlgId.swift in Sources */,
 				BF_D6B24CCAECB35233AC7710966DCB7308 /* AlgInfo.swift in Sources */,
-				BF_3F20D516639C5A708EE67CAFCE0FE9F6 /* AlgInfoCompatible.swift in Sources */,
 				BF_6023862537DCA329511FFCC18CE9E131 /* AlgInfoDerDeserializer.swift in Sources */,
 				BF_BF45F0B3D46F0BCD497C7DD0B18F59DA /* AlgInfoDerSerializer.swift in Sources */,
 				BF_08D47B0A9723C5B3DF2BC483A1D76993 /* AlgInfoDeserializer.swift in Sources */,
@@ -2584,6 +2584,7 @@
 				BF_61A1FBF8540BA640404424C960A3A3A5 /* Base64.swift in Sources */,
 				BF_C6C8AF83D0365FC8094A0EA356A437F1 /* CContext.swift in Sources */,
 				BF_AABE38C210BDBB06F377F16A06A56376 /* Cipher.swift in Sources */,
+				BF_40DC0D86A912BCDE382EF6918E982B18 /* CipherAlgInfo.swift in Sources */,
 				BF_5F5CFF6E5F2503EF7A037A9AAE7B2E1C /* CipherAuth.swift in Sources */,
 				BF_AE56E8D5B5CADD2012071B2BB46DAE14 /* CipherAuthInfo.swift in Sources */,
 				BF_2947938AC88596EB73548A7B34DD93B8 /* CipherInfo.swift in Sources */,
@@ -2611,7 +2612,6 @@
 				BF_72B5FA7E64EBE2264F5B1EA1775EE308 /* Kdf2.swift in Sources */,
 				BF_8803CD97AD84E86070DAED4495BE563C /* KdfAlgInfo.swift in Sources */,
 				BF_743B497830CA42444236177BA1BED03D /* Key.swift in Sources */,
-				BF_9A7C7AD6AC1AC3542085767FF414931D /* KeyAlg.swift in Sources */,
 				BF_1972DC6FD67D10E72F0ADE6ED774727A /* KeyDeserializer.swift in Sources */,
 				BF_5C1337BA070CDCE59EA4E324071D27EE /* KeySerializer.swift in Sources */,
 				BF_AA56AFF2C56E814FA3C6E424D746E2E5 /* Mac.swift in Sources */,
@@ -2687,9 +2687,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF_EC7B9A099E38C821FAED4305D08E8EF2 /* Aes256Gcm.swift in Sources */,
+				BF_1F9BC7A4448BEE06AC7A42E4A4A136C9 /* Alg.swift in Sources */,
 				BF_63D5A30BFAC327E7DB893DBA42D626C6 /* AlgId.swift in Sources */,
 				BF_03921D8C0D901EFDC23159F026D1169C /* AlgInfo.swift in Sources */,
-				BF_27D5D57C8669A79BFE208319F3E8CFF9 /* AlgInfoCompatible.swift in Sources */,
 				BF_D42BBBC19E8DE604BED463355F2CB9DF /* AlgInfoDerDeserializer.swift in Sources */,
 				BF_B3412453553D55A4254443CB17D3F7FD /* AlgInfoDerSerializer.swift in Sources */,
 				BF_AA985D3652C133F91B16BA275918E2BD /* AlgInfoDeserializer.swift in Sources */,
@@ -2704,6 +2704,7 @@
 				BF_20DCC0A53097ABE213BFB645601DC573 /* Base64.swift in Sources */,
 				BF_7AD87968D375B32BB8418013F0631DBB /* CContext.swift in Sources */,
 				BF_CBCD54D304E5512296B3A661BC769300 /* Cipher.swift in Sources */,
+				BF_5F0DCAC49DF9D8A3B28756D9576FBBD6 /* CipherAlgInfo.swift in Sources */,
 				BF_6B53C211C6FB10C1C8E9AF74F1BB3695 /* CipherAuth.swift in Sources */,
 				BF_5DDCC34EA63A437DC938D824810959DF /* CipherAuthInfo.swift in Sources */,
 				BF_0CA3BF184FAC3ED617AEC4AF9CF17DCF /* CipherInfo.swift in Sources */,
@@ -2731,7 +2732,6 @@
 				BF_54DC3881FB00FD2A573DDD7C62DC9CE7 /* Kdf2.swift in Sources */,
 				BF_8FEFA9B3A4D2E6DEA802FC31B569CA81 /* KdfAlgInfo.swift in Sources */,
 				BF_0AEFF91D4086F0FF391D1E95E947A502 /* Key.swift in Sources */,
-				BF_EDB3CB26D48180F85798267AEF24B405 /* KeyAlg.swift in Sources */,
 				BF_7BB0C3A983E82B3B883089A105E9023F /* KeyDeserializer.swift in Sources */,
 				BF_E5DB8F03A378A3127BA2A2EF4AD93E56 /* KeySerializer.swift in Sources */,
 				BF_EAB25200B4DAC8E9FF16D30D62627B37 /* Mac.swift in Sources */,
