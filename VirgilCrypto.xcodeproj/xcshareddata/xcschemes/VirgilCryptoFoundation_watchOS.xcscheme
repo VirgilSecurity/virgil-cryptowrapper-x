@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "NT_7972536ECB423DF56E3545B31C22C3DE"
-               BuildableName = "VirgilCryptoFoundation.framework"
+               BuildableName = "VirgilCryptoFoundation_watchOS.framework"
                BlueprintName = "VirgilCryptoFoundation_watchOS"
                ReferencedContainer = "container:VirgilCrypto.xcodeproj">
             </BuildableReference>
@@ -33,11 +33,13 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_7972536ECB423DF56E3545B31C22C3DE"
-            BuildableName = "VirgilCryptoFoundation.framework"
+            BuildableName = "VirgilCryptoFoundation_watchOS.framework"
             BlueprintName = "VirgilCryptoFoundation_watchOS"
             ReferencedContainer = "container:VirgilCrypto.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CommandLineArguments>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -55,11 +57,13 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_7972536ECB423DF56E3545B31C22C3DE"
-            BuildableName = "VirgilCryptoFoundation.framework"
+            BuildableName = "VirgilCryptoFoundation_watchOS.framework"
             BlueprintName = "VirgilCryptoFoundation_watchOS"
             ReferencedContainer = "container:VirgilCrypto.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
+      <CommandLineArguments>
+      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -74,11 +78,13 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_7972536ECB423DF56E3545B31C22C3DE"
-            BuildableName = "VirgilCryptoFoundation.framework"
+            BuildableName = "VirgilCryptoFoundation_watchOS.framework"
             BlueprintName = "VirgilCryptoFoundation_watchOS"
             ReferencedContainer = "container:VirgilCrypto.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <CommandLineArguments>
+      </CommandLineArguments>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
