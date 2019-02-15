@@ -1039,7 +1039,7 @@
 		FR_24D11B38EDF53536E0202338BEC30573 /* Kdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kdf.swift; sourceTree = "<group>"; };
 		FR_27DC5CACA5BF33473DA67E74B2E82330 /* RatchetMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetMessage.swift; sourceTree = "<group>"; };
 		FR_27E7244DF922EC27531700B30694A68C /* MessageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfo.swift; sourceTree = "<group>"; };
-		FR_293E670AA2BFC40E779B3E64EFF046AA /* VirgilCryptoFoundation_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VirgilCryptoFoundation_watchOS.framework; path = VirgilCryptoFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_293E670AA2BFC40E779B3E64EFF046AA /* VirgilCryptoFoundation_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoFoundation_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_298E15114D8F8D474AF365601C911460 /* Sign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sign.swift; sourceTree = "<group>"; };
 		FR_2A249B9E72CD97512085EB65D3F2BC93 /* VirgilCryptoPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_2A6E3EF9BA75689C7B18153B07785725 /* Decrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decrypt.swift; sourceTree = "<group>"; };
@@ -1078,7 +1078,7 @@
 		FR_68C9BCA62812E0CC5F98027AF2B3FCC6 /* CContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CContext.swift; sourceTree = "<group>"; };
 		FR_6AC2A3EFDB70D62856A4956A4B817A21 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		FR_6B190E0B4057EE27D8999B917F44C11C /* Pkcs8Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs8Serializer.swift; sourceTree = "<group>"; };
-		FR_6B20FA234588AA2E14C8691EAFB63B35 /* VirgilCryptoPythia_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VirgilCryptoPythia_watchOS.framework; path = VirgilCryptoPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_6B20FA234588AA2E14C8691EAFB63B35 /* VirgilCryptoPythia_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoPythia_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_6D77C1F5C79B03555D1BDB295181AC9B /* VirgilCryptoPythia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirgilCryptoPythia.h; sourceTree = "<group>"; };
 		FR_71FAE59E0470FD4147C3B2ED8A6812A4 /* FakeRandom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeRandom.swift; sourceTree = "<group>"; };
 		FR_725059F6661C3E11D7C968D05437D0E2 /* VirgilCryptoRatchet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoRatchet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1091,7 +1091,7 @@
 		FR_7F1AEFC610E69F681B807855507B6F79 /* EntropySource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntropySource.swift; sourceTree = "<group>"; };
 		FR_7F39BCB236B94ED8FFD6D26949FB1C22 /* CContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CContext.swift; sourceTree = "<group>"; };
 		FR_814FB546155E0F9ACE767C614C83BCC9 /* CipherAuthInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherAuthInfo.swift; sourceTree = "<group>"; };
-		FR_8177D66691C1E7F56DB7914EB6A8CD01 /* VirgilCryptoCommon_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VirgilCryptoCommon_watchOS.framework; path = VirgilCryptoCommon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_8177D66691C1E7F56DB7914EB6A8CD01 /* VirgilCryptoCommon_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoCommon_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_82AC1FD01CBF187BBF2F4C9AA44A3017 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_88B125ECBBB53099169F9500840F1398 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_8B6A734A98E177138C71C5D09F66A44B /* VirgilCryptoRatchet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoRatchet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1159,7 +1159,7 @@
 		FR_F36A24CB888D2014D89BDF9CE8358022 /* VirgilCryptoRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirgilCryptoRatchetTests.swift; sourceTree = "<group>"; };
 		FR_F65EE0F7E408C5DDF887666E736B94E4 /* RawKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawKey.swift; sourceTree = "<group>"; };
 		FR_F8A749B4912F7B32E23FB81BFB734482 /* Sha256.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha256.swift; sourceTree = "<group>"; };
-		FR_FF1C9D16CE422D69E6C269C60BD63DFB /* VirgilCryptoRatchet_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = VirgilCryptoRatchet_watchOS.framework; path = VirgilCryptoRatchet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FR_FF1C9D16CE422D69E6C269C60BD63DFB /* VirgilCryptoRatchet_watchOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoRatchet_watchOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_FFAA20ABB149FD28B31C4F337B7C2BC9 /* Sha384.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha384.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
