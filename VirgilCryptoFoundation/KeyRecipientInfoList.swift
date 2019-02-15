@@ -37,15 +37,15 @@ import Foundation
 import VSCFoundation
  
 
-/// Handle KDF algorithm information.
-@objc(VSCFKdfAlgInfo) public class KdfAlgInfo: NSObject, AlgInfo {
+/// Handles a list of "key recipient info" class objects.
+@objc(VSCFKeyRecipientInfoList) public class KeyRecipientInfoList: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_kdf_alg_info_new()
+        self.c_ctx = vscf_key_recipient_info_list_new()
         super.init()
     }
 
@@ -59,33 +59,60 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_kdf_alg_info_shallow_copy(c_ctx)
+        self.c_ctx = vscf_key_recipient_info_list_shallow_copy(c_ctx)
         super.init()
-    }
-
-    /// Create KDF algorithm info with identificator and HASH algorithm info.
-    public init(algId: AlgId, hashAlgInfo: SimpleAlgInfo) {
-        let proxyResult = vscf_kdf_alg_info_new_with_members(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), hashAlgInfo.c_ctx)
-
-        self.c_ctx = proxyResult!
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_kdf_alg_info_delete(self.c_ctx)
+        vscf_key_recipient_info_list_delete(self.c_ctx)
     }
 
-    /// Return hash algorithm information.
-    @objc public func hashAlgInfo() -> SimpleAlgInfo {
-        let proxyResult = vscf_kdf_alg_info_hash_alg_info(self.c_ctx)
-
-        return SimpleAlgInfo.init(use: proxyResult!)
+    /// Add new item to the list.
+    /// Note, ownership is transfered.
+    @objc public func add(keyRecipientInfo: KeyRecipientInfo) {
+        vscf_key_recipient_info_list_add(self.c_ctx, &keyRecipientInfo.c_ctx)
     }
 
-    /// Provide algorithm identificator.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_kdf_alg_info_alg_id(self.c_ctx)
+    /// Return true if given list has item.
+    @objc public func hasItem() -> Bool {
+        let proxyResult = vscf_key_recipient_info_list_has_item(self.c_ctx)
 
-        return AlgId.init(fromC: proxyResult)
+        return proxyResult
+    }
+
+    /// Return list item.
+    @objc public func item() -> KeyRecipientInfo {
+        let proxyResult = vscf_key_recipient_info_list_item(self.c_ctx)
+
+        return KeyRecipientInfo.init(use: proxyResult!)
+    }
+
+    /// Return true if list has next item.
+    @objc public func hasNext() -> Bool {
+        let proxyResult = vscf_key_recipient_info_list_has_next(self.c_ctx)
+
+        return proxyResult
+    }
+
+    /// Return next list node if exists, or NULL otherwise.
+    @objc public func next() -> KeyRecipientInfoList {
+        let proxyResult = vscf_key_recipient_info_list_next(self.c_ctx)
+
+        return KeyRecipientInfoList.init(take: proxyResult!)
+    }
+
+    /// Return true if list has previous item.
+    @objc public func hasPrev() -> Bool {
+        let proxyResult = vscf_key_recipient_info_list_has_prev(self.c_ctx)
+
+        return proxyResult
+    }
+
+    /// Return previous list node if exists, or NULL otherwise.
+    @objc public func prev() -> KeyRecipientInfoList {
+        let proxyResult = vscf_key_recipient_info_list_prev(self.c_ctx)
+
+        return KeyRecipientInfoList.init(take: proxyResult!)
     }
 }

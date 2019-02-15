@@ -37,25 +37,21 @@ import Foundation
 import VSCFoundation
  
 
-/// Provides interface to the MAC (message authentication code) algorithms.
-@objc(VSCFMacStream) public protocol MacStream : MacInfo {
+/// Provide interface for "message info" class serialization.
+@objc(VSCFMessageInfoSerializer) public protocol MessageInfoSerializer : CContext {
 
-    /// Start a new MAC.
-    @objc func start(key: Data)
+    /// Return buffer size enough to hold serialized message info.
+    @objc func serializedLen(messageInfo: MessageInfo) -> Int
 
-    /// Add given data to the MAC.
-    @objc func update(data: Data)
+    /// Serialize class "message info".
+    @objc func serialize(messageInfo: MessageInfo) -> Data
 
-    /// Accomplish MAC and return it's result (a message digest).
-    @objc func finish() -> Data
-
-    /// Prepare to authenticate a new message with the same key
-    /// as the previous MAC operation.
-    @objc func reset()
+    /// Deserialize class "message info".
+    @objc func deserialize(data: Data, error: ErrorCtx) -> MessageInfo
 }
 
 /// Implement interface methods
-@objc(VSCFMacStreamProxy) internal class MacStreamProxy: NSObject, MacStream {
+@objc(VSCFMessageInfoSerializerProxy) internal class MessageInfoSerializerProxy: NSObject, MessageInfoSerializer {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
@@ -71,49 +67,38 @@ import VSCFoundation
         vscf_impl_delete(self.c_ctx)
     }
 
-    /// Size of the digest (mac output) in bytes.
-    @objc public func digestLen() -> Int {
-        let proxyResult = vscf_mac_info_digest_len(self.c_ctx)
+    /// Return buffer size enough to hold serialized message info.
+    @objc public func serializedLen(messageInfo: MessageInfo) -> Int {
+        let proxyResult = vscf_message_info_serializer_serialized_len(self.c_ctx, messageInfo.c_ctx)
 
         return proxyResult
     }
 
-    /// Start a new MAC.
-    @objc public func start(key: Data) {
-        key.withUnsafeBytes({ (keyPointer: UnsafePointer<byte>) -> Void in
-            vscf_mac_stream_start(self.c_ctx, vsc_data(keyPointer, key.count))
-        })
-    }
-
-    /// Add given data to the MAC.
-    @objc public func update(data: Data) {
-        data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Void in
-            vscf_mac_stream_update(self.c_ctx, vsc_data(dataPointer, data.count))
-        })
-    }
-
-    /// Accomplish MAC and return it's result (a message digest).
-    @objc public func finish() -> Data {
-        let macCount = self.digestLen()
-        var mac = Data(count: macCount)
-        var macBuf = vsc_buffer_new()
+    /// Serialize class "message info".
+    @objc public func serialize(messageInfo: MessageInfo) -> Data {
+        let outCount = self.serializedLen(messageInfo: messageInfo)
+        var out = Data(count: outCount)
+        var outBuf = vsc_buffer_new()
         defer {
-            vsc_buffer_delete(macBuf)
+            vsc_buffer_delete(outBuf)
         }
 
-        mac.withUnsafeMutableBytes({ (macPointer: UnsafeMutablePointer<byte>) -> Void in
-            vsc_buffer_init(macBuf)
-            vsc_buffer_use(macBuf, macPointer, macCount)
-            vscf_mac_stream_finish(self.c_ctx, macBuf)
+        out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> Void in
+            vsc_buffer_init(outBuf)
+            vsc_buffer_use(outBuf, outPointer, outCount)
+            vscf_message_info_serializer_serialize(self.c_ctx, messageInfo.c_ctx, outBuf)
         })
-        mac.count = vsc_buffer_len(macBuf)
+        out.count = vsc_buffer_len(outBuf)
 
-        return mac
+        return out
     }
 
-    /// Prepare to authenticate a new message with the same key
-    /// as the previous MAC operation.
-    @objc public func reset() {
-        vscf_mac_stream_reset(self.c_ctx)
+    /// Deserialize class "message info".
+    @objc public func deserialize(data: Data, error: ErrorCtx) -> MessageInfo {
+        let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) in
+            return vscf_message_info_serializer_deserialize(self.c_ctx, vsc_data(dataPointer, data.count), error.c_ctx)
+        })
+
+        return MessageInfo.init(take: proxyResult!)
     }
 }

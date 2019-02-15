@@ -37,15 +37,15 @@ import Foundation
 import VSCFoundation
  
 
-/// Provide DER serializer of algorithm information.
-@objc(VSCFAlgInfoDerSerializer) public class AlgInfoDerSerializer: NSObject, Defaults, AlgInfoSerializer {
+/// Handle KDF algorithms that are configured with salt and iteration count.
+@objc(VSCFSaltedKdfAlgInfo) public class SaltedKdfAlgInfo: NSObject, AlgInfo {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_alg_info_der_serializer_new()
+        self.c_ctx = vscf_salted_kdf_alg_info_new()
         super.init()
     }
 
@@ -59,59 +59,51 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_alg_info_der_serializer_shallow_copy(c_ctx)
+        self.c_ctx = vscf_salted_kdf_alg_info_shallow_copy(c_ctx)
         super.init()
+    }
+
+    /// Create algorithm info with identificator, HASH algorithm info,
+    /// salt and iteration count.
+    public init(algId: AlgId, hashAlgInfo: AlgInfo, salt: Data, iterationCount: Int) {
+        let proxyResult = salt.withUnsafeBytes({ (saltPointer: UnsafePointer<byte>) -> OpaquePointer? in
+            return vscf_salted_kdf_alg_info_new_with_members(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), &hashAlgInfo.c_ctx, vsc_data(saltPointer, salt.count), iterationCount)
+        })
+
+        self.c_ctx = proxyResult!
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_alg_info_der_serializer_delete(self.c_ctx)
+        vscf_salted_kdf_alg_info_delete(self.c_ctx)
     }
 
-    @objc public func setAsn1Writer(asn1Writer: Asn1Writer) {
-        vscf_alg_info_der_serializer_release_asn1_writer(self.c_ctx)
-        vscf_alg_info_der_serializer_use_asn1_writer(self.c_ctx, asn1Writer.c_ctx)
+    /// Return hash algorithm information.
+    @objc public func hashAlgInfo() -> AlgInfo {
+        let proxyResult = vscf_salted_kdf_alg_info_hash_alg_info(self.c_ctx)
+
+        return AlgInfoProxy.init(c_ctx: proxyResult!)
     }
 
-    /// Serialize by using internal ASN.1 writer.
-    /// Note, that caller code is responsible to reset ASN.1 writer with
-    /// an output buffer.
-    @objc public func serializeInplace(algInfo: AlgInfo) -> Int {
-        let proxyResult = vscf_alg_info_der_serializer_serialize_inplace(self.c_ctx, algInfo.c_ctx)
+    /// Return KDF salt.
+    @objc public func salt() -> Data {
+        let proxyResult = vscf_salted_kdf_alg_info_salt(self.c_ctx)
+
+        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
+    }
+
+    /// Return KDF iteration count.
+    /// Note, can be 0 if KDF does not need the iteration count.
+    @objc public func iterationCount() -> Int {
+        let proxyResult = vscf_salted_kdf_alg_info_iteration_count(self.c_ctx)
 
         return proxyResult
     }
 
-    /// Setup predefined values to the uninitialized class dependencies.
-    @objc public func setupDefaults() throws {
-        let proxyResult = vscf_alg_info_der_serializer_setup_defaults(self.c_ctx)
+    /// Provide algorithm identificator.
+    @objc public func algId() -> AlgId {
+        let proxyResult = vscf_salted_kdf_alg_info_alg_id(self.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
-    }
-
-    /// Return buffer size enough to hold serialized algorithm.
-    @objc public func serializedLen(algInfo: AlgInfo) -> Int {
-        let proxyResult = vscf_alg_info_der_serializer_serialized_len(self.c_ctx, algInfo.c_ctx)
-
-        return proxyResult
-    }
-
-    /// Serialize algorithm info to buffer class.
-    @objc public func serialize(algInfo: AlgInfo) -> Data {
-        let outCount = self.serializedLen(algInfo: algInfo)
-        var out = Data(count: outCount)
-        var outBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(outBuf)
-        }
-
-        out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> Void in
-            vsc_buffer_init(outBuf)
-            vsc_buffer_use(outBuf, outPointer, outCount)
-            vscf_alg_info_der_serializer_serialize(self.c_ctx, algInfo.c_ctx, outBuf)
-        })
-        out.count = vsc_buffer_len(outBuf)
-
-        return out
+        return AlgId.init(fromC: proxyResult)
     }
 }

@@ -37,34 +37,58 @@ import Foundation
 import VSCFoundation
  
 
-/// Provide details about implemented MAC (message authentication code) algorithm.
-@objc(VSCFMacInfo) public protocol MacInfo : CContext {
-
-    /// Size of the digest (mac output) in bytes.
-    @objc func digestLen() -> Int
-}
-
-/// Implement interface methods
-@objc(VSCFMacInfoProxy) internal class MacInfoProxy: NSObject, MacInfo {
+/// Handle information about recipient that is defined by a password.
+@objc(VSCFPasswordRecipientInfo) public class PasswordRecipientInfo: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
-    /// Take C context that implements this interface
-    public init(c_ctx: OpaquePointer) {
+    /// Create underlying C context.
+    public override init() {
+        self.c_ctx = vscf_password_recipient_info_new()
+        super.init()
+    }
+
+    /// Acquire C context.
+    /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
+    public init(take c_ctx: OpaquePointer) {
         self.c_ctx = c_ctx
         super.init()
     }
 
-    /// Release underlying C context.
-    deinit {
-        vscf_impl_delete(self.c_ctx)
+    /// Acquire retained C context.
+    /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
+    public init(use c_ctx: OpaquePointer) {
+        self.c_ctx = vscf_password_recipient_info_shallow_copy(c_ctx)
+        super.init()
     }
 
-    /// Size of the digest (mac output) in bytes.
-    @objc public func digestLen() -> Int {
-        let proxyResult = vscf_mac_info_digest_len(self.c_ctx)
+    /// Create object and define all properties.
+    public init(keyEncryptionAlgorithm: AlgInfo, encryptedKey: Data) {
+        let proxyResult = encryptedKey.withUnsafeBytes({ (encryptedKeyPointer: UnsafePointer<byte>) -> OpaquePointer? in
+            return vscf_password_recipient_info_new_with_members(&keyEncryptionAlgorithm.c_ctx, vsc_data(encryptedKeyPointer, encryptedKey.count))
+        })
 
-        return proxyResult
+        self.c_ctx = proxyResult!
+    }
+
+    /// Release underlying C context.
+    deinit {
+        vscf_password_recipient_info_delete(self.c_ctx)
+    }
+
+    /// Return algorithm information that was used for encryption
+    /// a data encryption key.
+    @objc public func keyEncryptionAlgorithm() -> AlgInfo {
+        let proxyResult = vscf_password_recipient_info_key_encryption_algorithm(self.c_ctx)
+
+        return AlgInfoProxy.init(c_ctx: proxyResult!)
+    }
+
+    /// Return an encrypted data encryption key.
+    @objc public func encryptedKey() -> Data {
+        let proxyResult = vscf_password_recipient_info_encrypted_key(self.c_ctx)
+
+        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
     }
 }

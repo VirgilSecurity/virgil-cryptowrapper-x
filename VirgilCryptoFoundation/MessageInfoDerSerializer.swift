@@ -37,15 +37,15 @@ import Foundation
 import VSCFoundation
  
 
-/// Provide DER serializer of algorithm information.
-@objc(VSCFAlgInfoDerSerializer) public class AlgInfoDerSerializer: NSObject, Defaults, AlgInfoSerializer {
+/// CMS based implementation of the class "message info" serialization.
+@objc(VSCFMessageInfoDerSerializer) public class MessageInfoDerSerializer: NSObject, Defaults, MessageInfoSerializer {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_alg_info_der_serializer_new()
+        self.c_ctx = vscf_message_info_der_serializer_new()
         super.init()
     }
 
@@ -59,46 +59,44 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_alg_info_der_serializer_shallow_copy(c_ctx)
+        self.c_ctx = vscf_message_info_der_serializer_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_alg_info_der_serializer_delete(self.c_ctx)
+        vscf_message_info_der_serializer_delete(self.c_ctx)
     }
 
-    @objc public func setAsn1Writer(asn1Writer: Asn1Writer) {
-        vscf_alg_info_der_serializer_release_asn1_writer(self.c_ctx)
-        vscf_alg_info_der_serializer_use_asn1_writer(self.c_ctx, asn1Writer.c_ctx)
+    @objc public func setAsn1Reader(asn1Reader: Asn1Reader) throws {
+        vscf_message_info_der_serializer_release_asn1_reader(self.c_ctx)
+        let proxyResult = vscf_message_info_der_serializer_use_asn1_reader(self.c_ctx, asn1Reader.c_ctx)
+        try FoundationError.handleError(fromC: proxyResult)
     }
 
-    /// Serialize by using internal ASN.1 writer.
-    /// Note, that caller code is responsible to reset ASN.1 writer with
-    /// an output buffer.
-    @objc public func serializeInplace(algInfo: AlgInfo) -> Int {
-        let proxyResult = vscf_alg_info_der_serializer_serialize_inplace(self.c_ctx, algInfo.c_ctx)
-
-        return proxyResult
+    @objc public func setAsn1Writer(asn1Writer: Asn1Writer) throws {
+        vscf_message_info_der_serializer_release_asn1_writer(self.c_ctx)
+        let proxyResult = vscf_message_info_der_serializer_use_asn1_writer(self.c_ctx, asn1Writer.c_ctx)
+        try FoundationError.handleError(fromC: proxyResult)
     }
 
     /// Setup predefined values to the uninitialized class dependencies.
     @objc public func setupDefaults() throws {
-        let proxyResult = vscf_alg_info_der_serializer_setup_defaults(self.c_ctx)
+        let proxyResult = vscf_message_info_der_serializer_setup_defaults(self.c_ctx)
 
         try FoundationError.handleError(fromC: proxyResult)
     }
 
-    /// Return buffer size enough to hold serialized algorithm.
-    @objc public func serializedLen(algInfo: AlgInfo) -> Int {
-        let proxyResult = vscf_alg_info_der_serializer_serialized_len(self.c_ctx, algInfo.c_ctx)
+    /// Return buffer size enough to hold serialized message info.
+    @objc public func serializedLen(messageInfo: MessageInfo) -> Int {
+        let proxyResult = vscf_message_info_der_serializer_serialized_len(self.c_ctx, messageInfo.c_ctx)
 
         return proxyResult
     }
 
-    /// Serialize algorithm info to buffer class.
-    @objc public func serialize(algInfo: AlgInfo) -> Data {
-        let outCount = self.serializedLen(algInfo: algInfo)
+    /// Serialize class "message info".
+    @objc public func serialize(messageInfo: MessageInfo) -> Data {
+        let outCount = self.serializedLen(messageInfo: messageInfo)
         var out = Data(count: outCount)
         var outBuf = vsc_buffer_new()
         defer {
@@ -108,10 +106,19 @@ import VSCFoundation
         out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> Void in
             vsc_buffer_init(outBuf)
             vsc_buffer_use(outBuf, outPointer, outCount)
-            vscf_alg_info_der_serializer_serialize(self.c_ctx, algInfo.c_ctx, outBuf)
+            vscf_message_info_der_serializer_serialize(self.c_ctx, messageInfo.c_ctx, outBuf)
         })
         out.count = vsc_buffer_len(outBuf)
 
         return out
+    }
+
+    /// Deserialize class "message info".
+    @objc public func deserialize(data: Data, error: ErrorCtx) -> MessageInfo {
+        let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) in
+            return vscf_message_info_der_serializer_deserialize(self.c_ctx, vsc_data(dataPointer, data.count), error.c_ctx)
+        })
+
+        return MessageInfo.init(take: proxyResult!)
     }
 }

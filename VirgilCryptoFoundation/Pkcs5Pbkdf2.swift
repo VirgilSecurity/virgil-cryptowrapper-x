@@ -37,17 +37,15 @@ import Foundation
 import VSCFoundation
  
 
-/// Virgil Security implementation of the HKDF (RFC 6234) algorithm.
-@objc(VSCFHkdf) public class Hkdf: NSObject, Alg, Kdf, SaltedKdf {
-
-    @objc public let hashCounterMax: Int = 255
+/// Virgil Security implementation of the PBKDF2 (RFC 8018) algorithm.
+@objc(VSCFPkcs5Pbkdf2) public class Pkcs5Pbkdf2: NSObject, Defaults, Alg, Kdf, SaltedKdf {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_hkdf_new()
+        self.c_ctx = vscf_pkcs5_pbkdf2_new()
         super.init()
     }
 
@@ -61,37 +59,44 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_hkdf_shallow_copy(c_ctx)
+        self.c_ctx = vscf_pkcs5_pbkdf2_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_hkdf_delete(self.c_ctx)
+        vscf_pkcs5_pbkdf2_delete(self.c_ctx)
     }
 
-    @objc public func setHash(hash: Hash) {
-        vscf_hkdf_release_hash(self.c_ctx)
-        vscf_hkdf_use_hash(self.c_ctx, hash.c_ctx)
+    @objc public func setHmac(hmac: Mac) {
+        vscf_pkcs5_pbkdf2_release_hmac(self.c_ctx)
+        vscf_pkcs5_pbkdf2_use_hmac(self.c_ctx, hmac.c_ctx)
+    }
+
+    /// Setup predefined values to the uninitialized class dependencies.
+    @objc public func setupDefaults() throws {
+        let proxyResult = vscf_pkcs5_pbkdf2_setup_defaults(self.c_ctx)
+
+        try FoundationError.handleError(fromC: proxyResult)
     }
 
     /// Provide algorithm identificator.
     @objc public func algId() -> AlgId {
-        let proxyResult = vscf_hkdf_alg_id(self.c_ctx)
+        let proxyResult = vscf_pkcs5_pbkdf2_alg_id(self.c_ctx)
 
         return AlgId.init(fromC: proxyResult)
     }
 
     /// Produce object with algorithm information and configuration parameters.
     @objc public func produceAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_hkdf_produce_alg_info(self.c_ctx)
+        let proxyResult = vscf_pkcs5_pbkdf2_produce_alg_info(self.c_ctx)
 
         return AlgInfoProxy.init(c_ctx: proxyResult!)
     }
 
     /// Restore algorithm configuration from the given object.
     @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
-        let proxyResult = vscf_hkdf_restore_alg_info(self.c_ctx, algInfo.c_ctx)
+        let proxyResult = vscf_pkcs5_pbkdf2_restore_alg_info(self.c_ctx, algInfo.c_ctx)
 
         try FoundationError.handleError(fromC: proxyResult)
     }
@@ -109,7 +114,7 @@ import VSCFoundation
             key.withUnsafeMutableBytes({ (keyPointer: UnsafeMutablePointer<byte>) -> Void in
                 vsc_buffer_init(keyBuf)
                 vsc_buffer_use(keyBuf, keyPointer, keyCount)
-                vscf_hkdf_derive(self.c_ctx, vsc_data(dataPointer, data.count), keyLen, keyBuf)
+                vscf_pkcs5_pbkdf2_derive(self.c_ctx, vsc_data(dataPointer, data.count), keyLen, keyBuf)
             })
         })
         key.count = vsc_buffer_len(keyBuf)
@@ -120,7 +125,7 @@ import VSCFoundation
     /// Prepare algorithm to derive new key.
     @objc public func reset(salt: Data, iterationCount: Int) {
         salt.withUnsafeBytes({ (saltPointer: UnsafePointer<byte>) -> Void in
-            vscf_hkdf_reset(self.c_ctx, vsc_data(saltPointer, salt.count), iterationCount)
+            vscf_pkcs5_pbkdf2_reset(self.c_ctx, vsc_data(saltPointer, salt.count), iterationCount)
         })
     }
 
@@ -128,7 +133,7 @@ import VSCFoundation
     /// Can be empty.
     @objc public func setInfo(info: Data) {
         info.withUnsafeBytes({ (infoPointer: UnsafePointer<byte>) -> Void in
-            vscf_hkdf_set_info(self.c_ctx, vsc_data(infoPointer, info.count))
+            vscf_pkcs5_pbkdf2_set_info(self.c_ctx, vsc_data(infoPointer, info.count))
         })
     }
 }

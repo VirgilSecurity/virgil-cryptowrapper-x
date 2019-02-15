@@ -35,6 +35,7 @@
 
 import Foundation
 import VSCFoundation
+ 
 
 /// Provide interface to persist algorithm information and it parameters
 /// and then restore the algorithm from it.

@@ -37,16 +37,16 @@ import Foundation
 import VSCFoundation
  
 
-/// Implementation of the symmetric cipher AES-256 bit in a GCM mode.
+/// Implementation of the symmetric cipher AES-256 bit in a CBC mode.
 /// Note, this implementation contains dynamic memory allocations,
 /// this should be improved in the future releases.
-@objc(VSCFAes256Gcm) public class Aes256Gcm: NSObject, Alg, Encrypt, Decrypt, CipherInfo, Cipher, CipherAuthInfo, AuthEncrypt, AuthDecrypt, CipherAuth {
+@objc(VSCFAes256Cbc) public class Aes256Cbc: NSObject, Alg, Encrypt, Decrypt, CipherInfo, Cipher {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Cipher nfonce length or IV length in bytes, or 0 if nonce is not required.
-    @objc public let nonceLen: Int = 12
+    @objc public let nonceLen: Int = 16
 
     /// Cipher key length in bytes.
     @objc public let keyLen: Int = 32
@@ -57,12 +57,9 @@ import VSCFoundation
     /// Cipher block length in bytes.
     @objc public let blockLen: Int = 16
 
-    /// Defines authentication tag length in bytes.
-    @objc public let authTagLen: Int = 16
-
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_aes256_gcm_new()
+        self.c_ctx = vscf_aes256_cbc_new()
         super.init()
     }
 
@@ -76,32 +73,32 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_aes256_gcm_shallow_copy(c_ctx)
+        self.c_ctx = vscf_aes256_cbc_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_aes256_gcm_delete(self.c_ctx)
+        vscf_aes256_cbc_delete(self.c_ctx)
     }
 
     /// Provide algorithm identificator.
     @objc public func algId() -> AlgId {
-        let proxyResult = vscf_aes256_gcm_alg_id(self.c_ctx)
+        let proxyResult = vscf_aes256_cbc_alg_id(self.c_ctx)
 
         return AlgId.init(fromC: proxyResult)
     }
 
     /// Produce object with algorithm information and configuration parameters.
     @objc public func produceAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_aes256_gcm_produce_alg_info(self.c_ctx)
+        let proxyResult = vscf_aes256_cbc_produce_alg_info(self.c_ctx)
 
         return AlgInfoProxy.init(c_ctx: proxyResult!)
     }
 
     /// Restore algorithm configuration from the given object.
     @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
-        let proxyResult = vscf_aes256_gcm_restore_alg_info(self.c_ctx, algInfo.c_ctx)
+        let proxyResult = vscf_aes256_cbc_restore_alg_info(self.c_ctx, algInfo.c_ctx)
 
         try FoundationError.handleError(fromC: proxyResult)
     }
@@ -119,7 +116,7 @@ import VSCFoundation
             out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
                 vsc_buffer_init(outBuf)
                 vsc_buffer_use(outBuf, outPointer, outCount)
-                return vscf_aes256_gcm_encrypt(self.c_ctx, vsc_data(dataPointer, data.count), outBuf)
+                return vscf_aes256_cbc_encrypt(self.c_ctx, vsc_data(dataPointer, data.count), outBuf)
             })
         })
         out.count = vsc_buffer_len(outBuf)
@@ -131,7 +128,7 @@ import VSCFoundation
 
     /// Calculate required buffer length to hold the encrypted data.
     @objc public func encryptedLen(dataLen: Int) -> Int {
-        let proxyResult = vscf_aes256_gcm_encrypted_len(self.c_ctx, dataLen)
+        let proxyResult = vscf_aes256_cbc_encrypted_len(self.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -149,7 +146,7 @@ import VSCFoundation
             out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
                 vsc_buffer_init(outBuf)
                 vsc_buffer_use(outBuf, outPointer, outCount)
-                return vscf_aes256_gcm_decrypt(self.c_ctx, vsc_data(dataPointer, data.count), outBuf)
+                return vscf_aes256_cbc_decrypt(self.c_ctx, vsc_data(dataPointer, data.count), outBuf)
             })
         })
         out.count = vsc_buffer_len(outBuf)
@@ -161,7 +158,7 @@ import VSCFoundation
 
     /// Calculate required buffer length to hold the decrypted data.
     @objc public func decryptedLen(dataLen: Int) -> Int {
-        let proxyResult = vscf_aes256_gcm_decrypted_len(self.c_ctx, dataLen)
+        let proxyResult = vscf_aes256_cbc_decrypted_len(self.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -169,25 +166,25 @@ import VSCFoundation
     /// Setup IV or nonce.
     @objc public func setNonce(nonce: Data) {
         nonce.withUnsafeBytes({ (noncePointer: UnsafePointer<byte>) -> Void in
-            vscf_aes256_gcm_set_nonce(self.c_ctx, vsc_data(noncePointer, nonce.count))
+            vscf_aes256_cbc_set_nonce(self.c_ctx, vsc_data(noncePointer, nonce.count))
         })
     }
 
     /// Set cipher encryption / decryption key.
     @objc public func setKey(key: Data) {
         key.withUnsafeBytes({ (keyPointer: UnsafePointer<byte>) -> Void in
-            vscf_aes256_gcm_set_key(self.c_ctx, vsc_data(keyPointer, key.count))
+            vscf_aes256_cbc_set_key(self.c_ctx, vsc_data(keyPointer, key.count))
         })
     }
 
     /// Start sequential encryption.
     @objc public func startEncryption() {
-        vscf_aes256_gcm_start_encryption(self.c_ctx)
+        vscf_aes256_cbc_start_encryption(self.c_ctx)
     }
 
     /// Start sequential decryption.
     @objc public func startDecryption() {
-        vscf_aes256_gcm_start_decryption(self.c_ctx)
+        vscf_aes256_cbc_start_decryption(self.c_ctx)
     }
 
     /// Process encryption or decryption of the given data chunk.
@@ -203,7 +200,7 @@ import VSCFoundation
             out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> Void in
                 vsc_buffer_init(outBuf)
                 vsc_buffer_use(outBuf, outPointer, outCount)
-                vscf_aes256_gcm_update(self.c_ctx, vsc_data(dataPointer, data.count), outBuf)
+                vscf_aes256_cbc_update(self.c_ctx, vsc_data(dataPointer, data.count), outBuf)
             })
         })
         out.count = vsc_buffer_len(outBuf)
@@ -215,7 +212,7 @@ import VSCFoundation
     /// "update" or "finish" in an current mode.
     /// Pass zero length to define buffer length of the method "finish".
     @objc public func outLen(dataLen: Int) -> Int {
-        let proxyResult = vscf_aes256_gcm_out_len(self.c_ctx, dataLen)
+        let proxyResult = vscf_aes256_cbc_out_len(self.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -224,7 +221,7 @@ import VSCFoundation
     /// "update" or "finish" in an encryption mode.
     /// Pass zero length to define buffer length of the method "finish".
     @objc public func encryptedOutLen(dataLen: Int) -> Int {
-        let proxyResult = vscf_aes256_gcm_encrypted_out_len(self.c_ctx, dataLen)
+        let proxyResult = vscf_aes256_cbc_encrypted_out_len(self.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -233,7 +230,7 @@ import VSCFoundation
     /// "update" or "finish" in an decryption mode.
     /// Pass zero length to define buffer length of the method "finish".
     @objc public func decryptedOutLen(dataLen: Int) -> Int {
-        let proxyResult = vscf_aes256_gcm_decrypted_out_len(self.c_ctx, dataLen)
+        let proxyResult = vscf_aes256_cbc_decrypted_out_len(self.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -250,93 +247,12 @@ import VSCFoundation
         let proxyResult = out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
             vsc_buffer_init(outBuf)
             vsc_buffer_use(outBuf, outPointer, outCount)
-            return vscf_aes256_gcm_finish(self.c_ctx, outBuf)
+            return vscf_aes256_cbc_finish(self.c_ctx, outBuf)
         })
         out.count = vsc_buffer_len(outBuf)
 
         try FoundationError.handleError(fromC: proxyResult)
 
         return out
-    }
-
-    /// Encrypt given data.
-    /// If 'tag' is not give, then it will written to the 'enc'.
-    @objc public func authEncrypt(data: Data, authData: Data) throws -> AuthEncryptAuthEncryptResult {
-        let outCount = self.authEncryptedLen(dataLen: data.count)
-        var out = Data(count: outCount)
-        var outBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(outBuf)
-        }
-
-        let tagCount = self.authTagLen
-        var tag = Data(count: tagCount)
-        var tagBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(tagBuf)
-        }
-
-        let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> vscf_error_t in
-            authData.withUnsafeBytes({ (authDataPointer: UnsafePointer<byte>) -> vscf_error_t in
-                out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
-                    tag.withUnsafeMutableBytes({ (tagPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
-                        vsc_buffer_init(outBuf)
-                        vsc_buffer_use(outBuf, outPointer, outCount)
-
-                        vsc_buffer_init(tagBuf)
-                        vsc_buffer_use(tagBuf, tagPointer, tagCount)
-                        return vscf_aes256_gcm_auth_encrypt(self.c_ctx, vsc_data(dataPointer, data.count), vsc_data(authDataPointer, authData.count), outBuf, tagBuf)
-                    })
-                })
-            })
-        })
-        out.count = vsc_buffer_len(outBuf)
-        tag.count = vsc_buffer_len(tagBuf)
-
-        try FoundationError.handleError(fromC: proxyResult)
-
-        return AuthEncryptAuthEncryptResult(out: out, tag: tag)
-    }
-
-    /// Calculate required buffer length to hold the authenticated encrypted data.
-    @objc public func authEncryptedLen(dataLen: Int) -> Int {
-        let proxyResult = vscf_aes256_gcm_auth_encrypted_len(self.c_ctx, dataLen)
-
-        return proxyResult
-    }
-
-    /// Decrypt given data.
-    /// If 'tag' is not give, then it will be taken from the 'enc'.
-    @objc public func authDecrypt(data: Data, authData: Data, tag: Data) throws -> Data {
-        let outCount = self.authDecryptedLen(dataLen: data.count)
-        var out = Data(count: outCount)
-        var outBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(outBuf)
-        }
-
-        let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> vscf_error_t in
-            authData.withUnsafeBytes({ (authDataPointer: UnsafePointer<byte>) -> vscf_error_t in
-                tag.withUnsafeBytes({ (tagPointer: UnsafePointer<byte>) -> vscf_error_t in
-                    out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
-                        vsc_buffer_init(outBuf)
-                        vsc_buffer_use(outBuf, outPointer, outCount)
-                        return vscf_aes256_gcm_auth_decrypt(self.c_ctx, vsc_data(dataPointer, data.count), vsc_data(authDataPointer, authData.count), vsc_data(tagPointer, tag.count), outBuf)
-                    })
-                })
-            })
-        })
-        out.count = vsc_buffer_len(outBuf)
-
-        try FoundationError.handleError(fromC: proxyResult)
-
-        return out
-    }
-
-    /// Calculate required buffer length to hold the authenticated decrypted data.
-    @objc public func authDecryptedLen(dataLen: Int) -> Int {
-        let proxyResult = vscf_aes256_gcm_auth_decrypted_len(self.c_ctx, dataLen)
-
-        return proxyResult
     }
 }

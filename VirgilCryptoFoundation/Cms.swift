@@ -37,17 +37,15 @@ import Foundation
 import VSCFoundation
  
 
-/// Virgil Security implementation of the HKDF (RFC 6234) algorithm.
-@objc(VSCFHkdf) public class Hkdf: NSObject, Alg, Kdf, SaltedKdf {
-
-    @objc public let hashCounterMax: Int = 255
+/// CMS based implementation of the class "message info" serialization.
+@objc(VSCFCms) public class Cms: NSObject, Defaults, MessageInfoSerializer {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_hkdf_new()
+        self.c_ctx = vscf_cms_new()
         super.init()
     }
 
@@ -61,74 +59,64 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_hkdf_shallow_copy(c_ctx)
+        self.c_ctx = vscf_cms_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_hkdf_delete(self.c_ctx)
+        vscf_cms_delete(self.c_ctx)
     }
 
-    @objc public func setHash(hash: Hash) {
-        vscf_hkdf_release_hash(self.c_ctx)
-        vscf_hkdf_use_hash(self.c_ctx, hash.c_ctx)
+    @objc public func setAsn1Reader(asn1Reader: Asn1Reader) {
+        vscf_cms_release_asn1_reader(self.c_ctx)
+        vscf_cms_use_asn1_reader(self.c_ctx, asn1Reader.c_ctx)
     }
 
-    /// Provide algorithm identificator.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_hkdf_alg_id(self.c_ctx)
-
-        return AlgId.init(fromC: proxyResult)
+    @objc public func setAsn1Writer(asn1Writer: Asn1Writer) {
+        vscf_cms_release_asn1_writer(self.c_ctx)
+        vscf_cms_use_asn1_writer(self.c_ctx, asn1Writer.c_ctx)
     }
 
-    /// Produce object with algorithm information and configuration parameters.
-    @objc public func produceAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_hkdf_produce_alg_info(self.c_ctx)
-
-        return AlgInfoProxy.init(c_ctx: proxyResult!)
-    }
-
-    /// Restore algorithm configuration from the given object.
-    @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
-        let proxyResult = vscf_hkdf_restore_alg_info(self.c_ctx, algInfo.c_ctx)
+    /// Setup predefined values to the uninitialized class dependencies.
+    @objc public func setupDefaults() throws {
+        let proxyResult = vscf_cms_setup_defaults(self.c_ctx)
 
         try FoundationError.handleError(fromC: proxyResult)
     }
 
-    /// Derive key of the requested length from the given data.
-    @objc public func derive(data: Data, keyLen: Int) -> Data {
-        let keyCount = keyLen
-        var key = Data(count: keyCount)
-        var keyBuf = vsc_buffer_new()
+    /// Return buffer size enough to hold serialized message info.
+    @objc public func serializedLen(messageInfo: MessageInfo) -> Int {
+        let proxyResult = vscf_cms_serialized_len(self.c_ctx, messageInfo.c_ctx)
+
+        return proxyResult
+    }
+
+    /// Serialize class "message info".
+    @objc public func serialize(messageInfo: MessageInfo) -> Data {
+        let outCount = self.serializedLen(messageInfo: messageInfo)
+        var out = Data(count: outCount)
+        var outBuf = vsc_buffer_new()
         defer {
-            vsc_buffer_delete(keyBuf)
+            vsc_buffer_delete(outBuf)
         }
 
-        data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Void in
-            key.withUnsafeMutableBytes({ (keyPointer: UnsafeMutablePointer<byte>) -> Void in
-                vsc_buffer_init(keyBuf)
-                vsc_buffer_use(keyBuf, keyPointer, keyCount)
-                vscf_hkdf_derive(self.c_ctx, vsc_data(dataPointer, data.count), keyLen, keyBuf)
-            })
+        out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> Void in
+            vsc_buffer_init(outBuf)
+            vsc_buffer_use(outBuf, outPointer, outCount)
+            vscf_cms_serialize(self.c_ctx, messageInfo.c_ctx, outBuf)
         })
-        key.count = vsc_buffer_len(keyBuf)
+        out.count = vsc_buffer_len(outBuf)
 
-        return key
+        return out
     }
 
-    /// Prepare algorithm to derive new key.
-    @objc public func reset(salt: Data, iterationCount: Int) {
-        salt.withUnsafeBytes({ (saltPointer: UnsafePointer<byte>) -> Void in
-            vscf_hkdf_reset(self.c_ctx, vsc_data(saltPointer, salt.count), iterationCount)
+    /// Deserialize class "message info".
+    @objc public func deserialize(data: Data, error: ErrorCtx) -> MessageInfo {
+        let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) in
+            return vscf_cms_deserialize(self.c_ctx, vsc_data(dataPointer, data.count), error.c_ctx)
         })
-    }
 
-    /// Setup application specific information (optional).
-    /// Can be empty.
-    @objc public func setInfo(info: Data) {
-        info.withUnsafeBytes({ (infoPointer: UnsafePointer<byte>) -> Void in
-            vscf_hkdf_set_info(self.c_ctx, vsc_data(infoPointer, info.count))
-        })
+        return MessageInfo.init(use: proxyResult!)
     }
 }

@@ -37,15 +37,15 @@ import Foundation
 import VSCFoundation
  
 
-/// Provide DER serializer of algorithm information.
-@objc(VSCFAlgInfoDerSerializer) public class AlgInfoDerSerializer: NSObject, Defaults, AlgInfoSerializer {
+/// Handle information about recipient that is defined by a Public Key.
+@objc(VSCFKeyRecipientInfo) public class KeyRecipientInfo: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_alg_info_der_serializer_new()
+        self.c_ctx = vscf_key_recipient_info_new()
         super.init()
     }
 
@@ -59,59 +59,45 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_alg_info_der_serializer_shallow_copy(c_ctx)
+        self.c_ctx = vscf_key_recipient_info_shallow_copy(c_ctx)
         super.init()
+    }
+
+    /// Create object and define all properties.
+    public init(recipientId: Data, keyEncryptionAlgorithm: AlgInfo, encryptedKey: Data) {
+        let proxyResult = recipientId.withUnsafeBytes({ (recipientIdPointer: UnsafePointer<byte>) -> OpaquePointer? in
+            encryptedKey.withUnsafeBytes({ (encryptedKeyPointer: UnsafePointer<byte>) -> OpaquePointer? in
+                return vscf_key_recipient_info_new_with_members(vsc_data(recipientIdPointer, recipientId.count), &keyEncryptionAlgorithm.c_ctx, vsc_data(encryptedKeyPointer, encryptedKey.count))
+            })
+        })
+
+        self.c_ctx = proxyResult!
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_alg_info_der_serializer_delete(self.c_ctx)
+        vscf_key_recipient_info_delete(self.c_ctx)
     }
 
-    @objc public func setAsn1Writer(asn1Writer: Asn1Writer) {
-        vscf_alg_info_der_serializer_release_asn1_writer(self.c_ctx)
-        vscf_alg_info_der_serializer_use_asn1_writer(self.c_ctx, asn1Writer.c_ctx)
+    /// Return recipient identifier.
+    @objc public func recipientId() -> Data {
+        let proxyResult = vscf_key_recipient_info_recipient_id(self.c_ctx)
+
+        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
     }
 
-    /// Serialize by using internal ASN.1 writer.
-    /// Note, that caller code is responsible to reset ASN.1 writer with
-    /// an output buffer.
-    @objc public func serializeInplace(algInfo: AlgInfo) -> Int {
-        let proxyResult = vscf_alg_info_der_serializer_serialize_inplace(self.c_ctx, algInfo.c_ctx)
+    /// Return algorithm information that was used for encryption
+    /// a data encryption key.
+    @objc public func keyEncryptionAlgorithm() -> AlgInfo {
+        let proxyResult = vscf_key_recipient_info_key_encryption_algorithm(self.c_ctx)
 
-        return proxyResult
+        return AlgInfoProxy.init(c_ctx: proxyResult!)
     }
 
-    /// Setup predefined values to the uninitialized class dependencies.
-    @objc public func setupDefaults() throws {
-        let proxyResult = vscf_alg_info_der_serializer_setup_defaults(self.c_ctx)
+    /// Return an encrypted data encryption key.
+    @objc public func encryptedKey() -> Data {
+        let proxyResult = vscf_key_recipient_info_encrypted_key(self.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
-    }
-
-    /// Return buffer size enough to hold serialized algorithm.
-    @objc public func serializedLen(algInfo: AlgInfo) -> Int {
-        let proxyResult = vscf_alg_info_der_serializer_serialized_len(self.c_ctx, algInfo.c_ctx)
-
-        return proxyResult
-    }
-
-    /// Serialize algorithm info to buffer class.
-    @objc public func serialize(algInfo: AlgInfo) -> Data {
-        let outCount = self.serializedLen(algInfo: algInfo)
-        var out = Data(count: outCount)
-        var outBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(outBuf)
-        }
-
-        out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> Void in
-            vsc_buffer_init(outBuf)
-            vsc_buffer_use(outBuf, outPointer, outCount)
-            vscf_alg_info_der_serializer_serialize(self.c_ctx, algInfo.c_ctx, outBuf)
-        })
-        out.count = vsc_buffer_len(outBuf)
-
-        return out
+        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
     }
 }
