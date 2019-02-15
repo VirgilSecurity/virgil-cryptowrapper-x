@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provide interface to compute shared key for 2 asymmetric keys.
 /// Assume that this interface is implemented on the private key.

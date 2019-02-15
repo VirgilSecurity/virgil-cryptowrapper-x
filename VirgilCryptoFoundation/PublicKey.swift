@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Contains public part of the key.
 @objc(VSCFPublicKey) public protocol PublicKey : Key {

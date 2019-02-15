@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Create information about password-based encryption algorithm.
 @objc(VSCFPbeAlgInfo) public class PbeAlgInfo: NSObject, AlgInfo {
@@ -66,7 +65,9 @@ import VSCFoundation
     /// Create algorithm info with identificator, KDF algorithm info and
     /// cipher alg info.
     public init(algId: AlgId, kdfAlgInfo: AlgInfo, cipherAlgInfo: AlgInfo) {
-        let proxyResult = vscf_pbe_alg_info_new_with_members(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), &kdfAlgInfo.c_ctx, &cipherAlgInfo.c_ctx)
+        var kdfAlgInfoCopy = vscf_impl_shallow_copy(kdfAlgInfo.c_ctx)
+        var cipherAlgInfoCopy = vscf_impl_shallow_copy(cipherAlgInfo.c_ctx)
+        let proxyResult = vscf_pbe_alg_info_new_with_members(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), &kdfAlgInfoCopy, &cipherAlgInfoCopy)
 
         self.c_ctx = proxyResult!
     }

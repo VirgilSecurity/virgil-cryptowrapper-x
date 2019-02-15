@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 @objc(VSCFRsaPublicKey) public class RsaPublicKey: NSObject, Alg, Key, Encrypt, Verify, PublicKey {
 

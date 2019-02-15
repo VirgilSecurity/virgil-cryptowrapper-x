@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// This is MbedTLS implementation of ASN.1 reader.
 @objc(VSCFAsn1rd) public class Asn1rd: NSObject, Asn1Reader {

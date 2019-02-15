@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Handle information about recipient that is defined by a password.
 @objc(VSCFPasswordRecipientInfo) public class PasswordRecipientInfo: NSObject {
@@ -66,7 +65,8 @@ import VSCFoundation
     /// Create object and define all properties.
     public init(keyEncryptionAlgorithm: AlgInfo, encryptedKey: Data) {
         let proxyResult = encryptedKey.withUnsafeBytes({ (encryptedKeyPointer: UnsafePointer<byte>) -> OpaquePointer? in
-            return vscf_password_recipient_info_new_with_members(&keyEncryptionAlgorithm.c_ctx, vsc_data(encryptedKeyPointer, encryptedKey.count))
+            var keyEncryptionAlgorithmCopy = vscf_impl_shallow_copy(keyEncryptionAlgorithm.c_ctx)
+            return vscf_password_recipient_info_new_with_members(&keyEncryptionAlgorithmCopy, vsc_data(encryptedKeyPointer, encryptedKey.count))
         })
 
         self.c_ctx = proxyResult!

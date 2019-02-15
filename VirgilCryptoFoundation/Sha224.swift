@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// This is MbedTLS implementation of SHA224.
 @objc(VSCFSha224) public class Sha224: NSObject, Alg, Hash {

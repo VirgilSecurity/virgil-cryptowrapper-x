@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Handle symmetric cipher algorithm information.
 @objc(VSCFCipherAlgInfo) public class CipherAlgInfo: NSObject, AlgInfo {

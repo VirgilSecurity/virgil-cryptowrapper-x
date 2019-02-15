@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Mix-in interface that provides specific functionality to authenticated
 /// encryption and decryption.

@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provide details about implemented algorithms.
 @objc(VSCFAlgInfo) public protocol AlgInfo : CContext {

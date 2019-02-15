@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Common interface to get random data.
 @objc(VSCFRandom) public protocol Random : CContext {

@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Public and private key deserialization from an interchangeable format.
 @objc(VSCFKeyDeserializer) public protocol KeyDeserializer : CContext {

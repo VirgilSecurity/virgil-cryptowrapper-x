@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// CMS based implementation of the class "message info" serialization.
 @objc(VSCFCms) public class Cms: NSObject, Defaults, MessageInfoSerializer {

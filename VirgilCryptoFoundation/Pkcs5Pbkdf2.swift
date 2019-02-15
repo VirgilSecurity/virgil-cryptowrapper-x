@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Virgil Security implementation of the PBKDF2 (RFC 8018) algorithm.
 @objc(VSCFPkcs5Pbkdf2) public class Pkcs5Pbkdf2: NSObject, Defaults, Alg, Kdf, SaltedKdf {

@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provide implementation agnostic representation of the asymmetric key.
 @objc(VSCFRawKey) public class RawKey: NSObject {

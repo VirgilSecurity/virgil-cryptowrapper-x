@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provide algorithm deserialization.
 @objc(VSCFAlgInfoDeserializer) public protocol AlgInfoDeserializer : CContext {

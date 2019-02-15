@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provide interface for data encryption.
 @objc(VSCFEncrypt) public protocol Encrypt : CContext {

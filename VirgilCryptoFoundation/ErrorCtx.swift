@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Error context.
 /// Can be used for sequential operations, i.e. parsers, to accumulate error.

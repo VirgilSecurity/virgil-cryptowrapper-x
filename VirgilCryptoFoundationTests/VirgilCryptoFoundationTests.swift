@@ -59,7 +59,8 @@ class VirgilCryptoFoundationTests: XCTestCase {
     func test_Hkdf_derive_emptyString_success() {
         let hkdf = Hkdf()
         hkdf.setHash(hash: Sha256())
-        let key = hkdf.derive(data: "".data(using: .utf8)!, salt: "".data(using: .utf8)!, info: "".data(using: .utf8)!, keyLen: 10)
+        hkdf.reset(salt: "".data(using: .utf8)!, iterationCount: 0)
+        let key = hkdf.derive(data: "".data(using: .utf8)!, keyLen: 10)
         XCTAssert(key.count == 10)
     }
 }

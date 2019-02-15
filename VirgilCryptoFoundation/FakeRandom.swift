@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Random number generator that is used for test purposes only.
 @objc(VSCFFakeRandom) public class FakeRandom: NSObject, Random, EntropySource {

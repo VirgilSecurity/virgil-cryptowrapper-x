@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provide interface for verifying data with public key.
 @objc(VSCFVerify) public protocol Verify : CContext {

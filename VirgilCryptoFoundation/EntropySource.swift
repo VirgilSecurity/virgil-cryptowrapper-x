@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Defines generic interface for the entropy source.
 @objc(VSCFEntropySource) public protocol EntropySource : CContext {

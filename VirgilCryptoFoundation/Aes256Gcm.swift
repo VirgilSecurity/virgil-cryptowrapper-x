@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Implementation of the symmetric cipher AES-256 bit in a GCM mode.
 /// Note, this implementation contains dynamic memory allocations,

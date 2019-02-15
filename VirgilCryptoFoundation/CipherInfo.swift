@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provides compile time knownledge about algorithm.
 @objc(VSCFCipherInfo) public protocol CipherInfo : CContext {

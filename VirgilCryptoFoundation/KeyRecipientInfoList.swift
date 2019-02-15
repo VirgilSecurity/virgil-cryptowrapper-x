@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Handles a list of "key recipient info" class objects.
 @objc(VSCFKeyRecipientInfoList) public class KeyRecipientInfoList: NSObject {
@@ -71,7 +70,8 @@ import VSCFoundation
     /// Add new item to the list.
     /// Note, ownership is transfered.
     @objc public func add(keyRecipientInfo: KeyRecipientInfo) {
-        vscf_key_recipient_info_list_add(self.c_ctx, &keyRecipientInfo.c_ctx)
+        var keyRecipientInfoCopy = vscf_key_recipient_info_shallow_copy(keyRecipientInfo.c_ctx)
+        vscf_key_recipient_info_list_add(self.c_ctx, &keyRecipientInfoCopy)
     }
 
     /// Return true if given list has item.

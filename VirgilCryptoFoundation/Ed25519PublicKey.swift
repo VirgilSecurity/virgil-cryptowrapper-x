@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// This is implementation of ED25519 public key
 @objc(VSCFEd25519PublicKey) public class Ed25519PublicKey: NSObject, Alg, Key, Verify, PublicKey {

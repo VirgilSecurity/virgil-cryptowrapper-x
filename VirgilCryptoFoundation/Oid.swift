@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provide conversion logic between OID and algorithm tags.
 @objc(VSCFOid) public class Oid: NSObject {

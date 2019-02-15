@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 @objc(VSCFRsaPrivateKey) public class RsaPrivateKey: NSObject, Alg, Key, GenerateKey, Decrypt, Sign, PrivateKey {
 

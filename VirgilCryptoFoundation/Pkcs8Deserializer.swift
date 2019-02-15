@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Implements PKCS#8 key deserialization from PEM format.
 @objc(VSCFPkcs8Deserializer) public class Pkcs8Deserializer: NSObject, Defaults, KeyDeserializer {

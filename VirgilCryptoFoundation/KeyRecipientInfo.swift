@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Handle information about recipient that is defined by a Public Key.
 @objc(VSCFKeyRecipientInfo) public class KeyRecipientInfo: NSObject {
@@ -67,7 +66,8 @@ import VSCFoundation
     public init(recipientId: Data, keyEncryptionAlgorithm: AlgInfo, encryptedKey: Data) {
         let proxyResult = recipientId.withUnsafeBytes({ (recipientIdPointer: UnsafePointer<byte>) -> OpaquePointer? in
             encryptedKey.withUnsafeBytes({ (encryptedKeyPointer: UnsafePointer<byte>) -> OpaquePointer? in
-                return vscf_key_recipient_info_new_with_members(vsc_data(recipientIdPointer, recipientId.count), &keyEncryptionAlgorithm.c_ctx, vsc_data(encryptedKeyPointer, encryptedKey.count))
+                var keyEncryptionAlgorithmCopy = vscf_impl_shallow_copy(keyEncryptionAlgorithm.c_ctx)
+                return vscf_key_recipient_info_new_with_members(vsc_data(recipientIdPointer, recipientId.count), &keyEncryptionAlgorithmCopy, vsc_data(encryptedKeyPointer, encryptedKey.count))
             })
         })
 

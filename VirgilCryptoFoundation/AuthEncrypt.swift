@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Provide interface for authenticated data encryption.
 @objc(VSCFAuthEncrypt) public protocol AuthEncrypt : CipherAuthInfo {

@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// This is MbedTLS implementation of ASN.1 writer.
 @objc(VSCFAsn1wr) public class Asn1wr: NSObject, Asn1Writer {
@@ -71,11 +70,6 @@ import VSCFoundation
     /// Reset all internal states and prepare to new ASN.1 writing operations.
     @objc public func reset(out: UnsafeMutablePointer<UInt8>, outLen: Int) {
         vscf_asn1wr_reset(self.c_ctx, out, outLen)
-    }
-
-    /// Release a target buffer.
-    @objc public func release() {
-        vscf_asn1wr_release(self.c_ctx)
     }
 
     /// Move written data to the buffer beginning and forbid further operations.

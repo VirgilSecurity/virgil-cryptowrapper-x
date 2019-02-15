@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Interface for private or secret key generation.
 @objc(VSCFGenerateKey) public protocol GenerateKey : CContext {

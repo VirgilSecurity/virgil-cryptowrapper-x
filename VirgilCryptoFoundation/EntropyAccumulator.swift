@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCFoundation
- 
 
 /// Implementation based on a simple entropy accumulator.
 @objc(VSCFEntropyAccumulator) public class EntropyAccumulator: NSObject, Defaults, EntropySource {
