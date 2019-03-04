@@ -35,7 +35,7 @@
 
 import Foundation
 import VSCFoundation
-import VirgilCryptoCommon
+
 
 /// Provide interface to compute shared key for 2 asymmetric keys.
 ///
