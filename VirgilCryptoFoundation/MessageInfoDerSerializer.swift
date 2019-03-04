@@ -42,6 +42,8 @@ import VSCFoundation
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
+    @objc public let prefixLen: Int = 32
+
     /// Create underlying C context.
     public override init() {
         self.c_ctx = vscf_message_info_der_serializer_new()
@@ -110,6 +112,19 @@ import VSCFoundation
         out.count = vsc_buffer_len(outBuf)
 
         return out
+    }
+
+    /// Read message info prefix from the given data, and if it is valid,
+    /// return a length of bytes of the whole message info.
+    ///
+    /// Zero returned if length can not be determined from the given data,
+    /// and this means that there is no message info at the data beginning.
+    @objc public func readPrefix(data: Data) -> Int {
+        let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Int in
+            return vscf_message_info_der_serializer_read_prefix(self.c_ctx, vsc_data(dataPointer, data.count))
+        })
+
+        return proxyResult
     }
 
     /// Deserialize class "message info".

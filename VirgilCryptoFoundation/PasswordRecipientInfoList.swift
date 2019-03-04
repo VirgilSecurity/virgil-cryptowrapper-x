@@ -115,4 +115,9 @@ import VSCFoundation
 
         return PasswordRecipientInfoList.init(take: proxyResult!)
     }
+
+    /// Remove all items.
+    @objc public func clear() {
+        vscf_password_recipient_info_list_clear(self.c_ctx)
+    }
 }

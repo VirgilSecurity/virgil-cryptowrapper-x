@@ -34,18 +34,39 @@
 
 
 import Foundation
-import VSCRatchet
-import VirgilCryptoFoundation
+import VSCFoundation
+import VirgilCryptoCommon
 
-/// Class with public constants
-@objc(VSCRRatchetCommon) public class RatchetCommon: NSObject {
+/// Provide interface to compute shared key for 2 asymmetric keys.
+///
+/// Assume that this interface is implemented on the private key.
+@objc(VSCFGenerateEphemeralKey) public protocol GenerateEphemeralKey : CContext {
 
-    /// Max plain text length allowed to be encrypted
-    @objc public static let maxPlainTextLen = 30000;
-    /// Max cipher text length allowed to be decrypted
-    @objc public static let maxCipherTextLen = 32768;
-    /// Max message length
-    @objc public static let maxMessageLen = 32964;
-    /// Key pair id length
-    @objc public static let keyIdLen = 8;
+    /// Generate ephemeral private key of the same type.
+    @objc func generateEphemeralKey(error: ErrorCtx) -> PrivateKey
+}
+
+/// Implement interface methods
+@objc(VSCFGenerateEphemeralKeyProxy) internal class GenerateEphemeralKeyProxy: NSObject, GenerateEphemeralKey {
+
+    /// Handle underlying C context.
+    @objc public let c_ctx: OpaquePointer
+
+    /// Take C context that implements this interface
+    public init(c_ctx: OpaquePointer) {
+        self.c_ctx = c_ctx
+        super.init()
+    }
+
+    /// Release underlying C context.
+    deinit {
+        vscf_impl_delete(self.c_ctx)
+    }
+
+    /// Generate ephemeral private key of the same type.
+    @objc public func generateEphemeralKey(error: ErrorCtx) -> PrivateKey {
+        let proxyResult = vscf_generate_ephemeral_key(self.c_ctx, error.c_ctx)
+
+        return PrivateKeyProxy.init(c_ctx: proxyResult!)
+    }
 }

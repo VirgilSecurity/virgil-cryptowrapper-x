@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCRatchet
- 
 import VirgilCryptoFoundation
 
 /// Class represents ratchet message

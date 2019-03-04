@@ -36,7 +36,7 @@
 import Foundation
 import VSCFoundation
 
-@objc(VSCFRsaPublicKey) public class RsaPublicKey: NSObject, Alg, Key, Encrypt, Verify, PublicKey {
+@objc(VSCFRsaPublicKey) public class RsaPublicKey: NSObject, Defaults, Alg, Key, Encrypt, Verify, PublicKey, GenerateEphemeralKey {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
@@ -90,6 +90,13 @@ import VSCFoundation
     @objc public func setAsn1wr(asn1wr: Asn1Writer) {
         vscf_rsa_public_key_release_asn1wr(self.c_ctx)
         vscf_rsa_public_key_use_asn1wr(self.c_ctx, asn1wr.c_ctx)
+    }
+
+    /// Setup predefined values to the uninitialized class dependencies.
+    @objc public func setupDefaults() throws {
+        let proxyResult = vscf_rsa_public_key_setup_defaults(self.c_ctx)
+
+        try FoundationError.handleError(fromC: proxyResult)
     }
 
     /// Provide algorithm identificator.
@@ -211,5 +218,12 @@ import VSCFoundation
         })
 
         try FoundationError.handleError(fromC: proxyResult)
+    }
+
+    /// Generate ephemeral private key of the same type.
+    @objc public func generateEphemeralKey(error: ErrorCtx) -> PrivateKey {
+        let proxyResult = vscf_rsa_public_key_generate_ephemeral_key(self.c_ctx, error.c_ctx)
+
+        return PrivateKeyProxy.init(c_ctx: proxyResult!)
     }
 }

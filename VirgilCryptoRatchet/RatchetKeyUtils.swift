@@ -35,7 +35,6 @@
 
 import Foundation
 import VSCRatchet
- 
 import VirgilCryptoFoundation
 
 /// Utils class for working with keys formats
