@@ -36,7 +36,6 @@
 import Foundation
 import VSCFoundation
 
-
 /// This class provides hybrid encryption algorithm that combines symmetric
 /// cipher for data encryption and asymmetric cipher and password based
 /// cipher for symmetric key encryption.
@@ -95,6 +94,14 @@ import VSCFoundation
     /// Remove all recipients.
     @objc public func clearRecipients() {
         vscf_recipient_cipher_clear_recipients(self.c_ctx)
+    }
+
+    /// Provide access to the custom params object.
+    /// The returned object can be used to add custom params or read it.
+    @objc public func customParams() -> MessageInfoCustomParams {
+        let proxyResult = vscf_recipient_cipher_custom_params(self.c_ctx)
+
+        return MessageInfoCustomParams.init(use: proxyResult!)
     }
 
     /// Return buffer length required to hold message info returned by the

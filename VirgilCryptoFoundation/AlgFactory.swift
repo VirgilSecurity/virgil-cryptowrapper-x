@@ -36,7 +36,6 @@
 import Foundation
 import VSCFoundation
 
-
 /// Create algorithms based on the given information.
 @objc(VSCFAlgFactory) public class AlgFactory: NSObject {
 

@@ -36,36 +36,34 @@
 import Foundation
 import VSCFoundation
 
-/// Provide interface to compute shared key for 2 asymmetric keys.
-///
-/// Assume that this interface is implemented on the private key.
-@objc(VSCFGenerateEphemeralKey) public protocol GenerateEphemeralKey : CContext {
-
-    /// Generate ephemeral private key of the same type.
-    @objc func generateEphemeralKey(error: ErrorCtx) -> PrivateKey
-}
-
-/// Implement interface methods
-@objc(VSCFGenerateEphemeralKeyProxy) internal class GenerateEphemeralKeyProxy: NSObject, GenerateEphemeralKey {
+/// Double linked list node with key and value.
+@objc(VSCFListKeyValueNode) public class ListKeyValueNode: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
-    /// Take C context that implements this interface
-    public init(c_ctx: OpaquePointer) {
+    /// Create underlying C context.
+    public override init() {
+        self.c_ctx = vscf_list_key_value_node_new()
+        super.init()
+    }
+
+    /// Acquire C context.
+    /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
+    public init(take c_ctx: OpaquePointer) {
         self.c_ctx = c_ctx
+        super.init()
+    }
+
+    /// Acquire retained C context.
+    /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
+    public init(use c_ctx: OpaquePointer) {
+        self.c_ctx = vscf_list_key_value_node_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_impl_delete(self.c_ctx)
-    }
-
-    /// Generate ephemeral private key of the same type.
-    @objc public func generateEphemeralKey(error: ErrorCtx) -> PrivateKey {
-        let proxyResult = vscf_generate_ephemeral_key(self.c_ctx, error.c_ctx)
-
-        return PrivateKeyProxy.init(c_ctx: proxyResult!)
+        vscf_list_key_value_node_delete(self.c_ctx)
     }
 }

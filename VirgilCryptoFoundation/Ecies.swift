@@ -36,7 +36,6 @@
 import Foundation
 import VSCFoundation
 
-
 /// Virgil implementation of the ECIES algorithm.
 @objc(VSCFEcies) public class Ecies: NSObject, Defaults, Encrypt, Decrypt {
 
