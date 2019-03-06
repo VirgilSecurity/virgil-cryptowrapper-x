@@ -1,4 +1,4 @@
-name: VirgilCrypto
+name: VirgilCryptoWrapper
 
 options:
   usesTabs: false
