@@ -47,9 +47,6 @@ class VirgilCryptoRatchetTests: XCTestCase {
         
         let data = ratchetAlice.serialize()
         
-        let errCtx = ErrorCtx()
-        _ = RatchetSession.deserialize(input: data, errCtx: errCtx)
-        
-        try! errCtx.error()
+        _ = try! RatchetSession.deserialize(input: data)
     }
 }
