@@ -36,26 +36,26 @@
 import Foundation
 import VSCPythia
 
-/// Defines the library error codes.
+/// Defines the library status codes.
 @objc(VSCPPythiaError) public enum PythiaError: Int, Error {
 
     /// This error should not be returned if assertions is enabled.
-    case badArguments = -1
+    case errorBadArguments = -1
 
     /// Undrlying pythia library returns -1.
-    case pythiaInnerFail = -200
+    case errorPythiaInnerFail = -200
 
     /// Pythia verify operation failed.
-    case verificationFail = -201
+    case errorVerificationFail = -201
 
     /// Create enumeration value from the correspond C enumeration value.
-    internal init(fromC error: vscp_error_t) {
-        self.init(rawValue: Int(error.rawValue))!
+    internal init(fromC status: vscp_status_t) {
+        self.init(rawValue: Int(status.rawValue))!
     }
 
-    /// Check given C error (result), and if it's not "success" then throw correspond exception.
-    internal static func handleError(fromC code: vscp_error_t) throws {
-        if code != vscp_SUCCESS {
+    /// Check given C status, and if it's not "success" then throw correspond exception.
+    internal static func handleStatus(fromC code: vscp_status_t) throws {
+        if code != vscp_status_SUCCESS {
             throw PythiaError(fromC: code)
         }
     }

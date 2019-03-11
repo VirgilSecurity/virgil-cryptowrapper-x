@@ -36,68 +36,68 @@
 import Foundation
 import VSCRatchet
 
-/// Error codes
+/// Defines the library status codes.
 @objc(VSCRRatchetError) public enum RatchetError: Int, Error {
 
-    /// Error during protobuf deserialization
-    case protobufDecode = -1
+    /// Error during protobuf deserialization.
+    case errorProtobufDecode = -1
 
-    /// Message version doesn't match
-    case messageVersionDoesnTMatch = -2
+    /// Message version doesn't match.
+    case errorMessageVersionDoesnTMatch = -2
 
-    /// Bad message type
-    case badMessageType = -3
+    /// Bad message type.
+    case errorBadMessageType = -3
 
-    /// AES error
-    case aes = -4
+    /// AES error.
+    case errorAes = -4
 
-    /// RNG failed
-    case rngFailed = -5
+    /// RNG failed.
+    case errorRngFailed = -5
 
-    /// Curve25519 error
-    case curve25519 = -6
+    /// Curve25519 error.
+    case errorCurve25519 = -6
 
-    /// Key deserialization error
-    case keyDeserialization = -7
+    /// Key deserialization failed.
+    case errorKeyDeserializationFailed = -7
 
-    /// Invalid key type
-    case invalidKeyType = -8
+    /// Invalid key type.
+    case errorInvalidKeyType = -8
 
-    /// Identity key doesn't match
-    case identityKeyDoesntMatch = -9
+    /// Identity key doesn't match.
+    case errorIdentityKeyDoesntMatch = -9
 
-    /// Message already decrypted
-    case messageAlreadyDecrypted = -10
+    /// Message already decrypted.
+    case errorMessageAlreadyDecrypted = -10
 
-    /// Too many lost messages
-    case tooManyLostMessages = -11
+    /// Too many lost messages.
+    case errorTooManyLostMessages = -11
 
-    /// Sender chain missing
-    case senderChainMissing = -12
+    /// Sender chain missing.
+    case errorSenderChainMissing = -12
 
-    /// Skipped message missing
-    case skippedMessageMissing = -13
+    /// Skipped message missing.
+    case errorSkippedMessageMissing = -13
 
-    /// Can't encrypt yet
-    case canTEncryptYet = -14
+    /// Can't encrypt yet.
+    case errorCanTEncryptYet = -14
 
-    /// Exceeded max plain text len
-    case exceededMaxPlainTextLen = -15
+    /// Exceeded max plain text len.
+    case errorExceededMaxPlainTextLen = -15
 
-    /// Too many messages for sender chain
-    case tooManyMessagesForSenderChain = -16
+    /// Too many messages for sender chain.
+    case errorTooManyMessagesForSenderChain = -16
 
-    /// Too many messages for receiver chain
-    case tooManyMessagesForReceiverChain = -17
+    /// Too many messages for receiver chain.
+    case errorTooManyMessagesForReceiverChain = -17
 
     /// Create enumeration value from the correspond C enumeration value.
-    internal init(fromC error: vscr_error_t) {
-        self.init(rawValue: Int(error.rawValue))!
+    internal init(fromC status: vscr_status_t) {
+        self.init(rawValue: Int(status.rawValue))!
     }
 
-    /// Check given C error (result), and if it's not "success" then throw correspond exception.
-    internal static func handleError(fromC code: vscr_error_t) throws {
-        if code != vscr_SUCCESS {
+    /// Check given C status, and if it's not "success" then throw correspond exception.
+    internal static func handleStatus(fromC code: vscr_status_t) throws {
+        if code != vscr_status_SUCCESS {
             throw RatchetError(fromC: code)
         }
     }

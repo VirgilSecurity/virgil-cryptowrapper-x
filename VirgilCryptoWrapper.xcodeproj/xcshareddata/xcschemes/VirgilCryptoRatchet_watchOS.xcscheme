@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "NT_CC34432E975EF70EE771574763E6607F"
-               BuildableName = "VirgilCryptoRatchet_watchOS.framework"
+               BuildableName = "VirgilCryptoRatchet.framework"
                BlueprintName = "VirgilCryptoRatchet_watchOS"
                ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
             </BuildableReference>
@@ -33,13 +33,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_CC34432E975EF70EE771574763E6607F"
-            BuildableName = "VirgilCryptoRatchet_watchOS.framework"
+            BuildableName = "VirgilCryptoRatchet.framework"
             BlueprintName = "VirgilCryptoRatchet_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -57,13 +55,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_CC34432E975EF70EE771574763E6607F"
-            BuildableName = "VirgilCryptoRatchet_watchOS.framework"
+            BuildableName = "VirgilCryptoRatchet.framework"
             BlueprintName = "VirgilCryptoRatchet_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -78,13 +74,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_CC34432E975EF70EE771574763E6607F"
-            BuildableName = "VirgilCryptoRatchet_watchOS.framework"
+            BuildableName = "VirgilCryptoRatchet.framework"
             BlueprintName = "VirgilCryptoRatchet_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-      </CommandLineArguments>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "NT_FF6DACC940EBDBD2FD2E20C0B945A484"
-               BuildableName = "VirgilCryptoCommon_watchOS.framework"
+               BuildableName = "VirgilCryptoCommon.framework"
                BlueprintName = "VirgilCryptoCommon_watchOS"
                ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
             </BuildableReference>
@@ -33,13 +33,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_FF6DACC940EBDBD2FD2E20C0B945A484"
-            BuildableName = "VirgilCryptoCommon_watchOS.framework"
+            BuildableName = "VirgilCryptoCommon.framework"
             BlueprintName = "VirgilCryptoCommon_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -57,13 +55,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_FF6DACC940EBDBD2FD2E20C0B945A484"
-            BuildableName = "VirgilCryptoCommon_watchOS.framework"
+            BuildableName = "VirgilCryptoCommon.framework"
             BlueprintName = "VirgilCryptoCommon_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -78,13 +74,11 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "NT_FF6DACC940EBDBD2FD2E20C0B945A484"
-            BuildableName = "VirgilCryptoCommon_watchOS.framework"
+            BuildableName = "VirgilCryptoCommon.framework"
             BlueprintName = "VirgilCryptoCommon_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-      </CommandLineArguments>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
