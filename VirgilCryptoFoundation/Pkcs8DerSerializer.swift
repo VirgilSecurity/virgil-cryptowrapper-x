@@ -75,10 +75,32 @@ import VSCFoundation
     /// Serialize Public Key by using internal ASN.1 writer.
     /// Note, that caller code is responsible to reset ASN.1 writer with
     /// an output buffer.
-    @objc public func serializePublicKeyInplace(publicKey: PublicKey) throws -> Int {
-        var error: vscf_error_t
+    public func serializePublicKeyInplace(publicKey: PublicKey) throws -> Int {
+        var error: vscf_error_t = vscf_error_t()
+        vscf_error_reset(&error)
 
         let proxyResult = vscf_pkcs8_der_serializer_serialize_public_key_inplace(self.c_ctx, publicKey.c_ctx, &error)
+
+        try FoundationError.handleStatus(fromC: error.status)
+
+        return proxyResult
+    }
+
+    /// Serialize Public Key by using internal ASN.1 writer.
+    /// Note, that caller code is responsible to reset ASN.1 writer with
+    /// an output buffer.
+    @objc public func serializePublicKeyInplace(publicKey: PublicKey) throws -> NSNumber {
+        return NSNumber(value: try self.serializePublicKeyInplace(publicKey: publicKey))
+    }
+
+    /// Serialize Private Key by using internal ASN.1 writer.
+    /// Note, that caller code is responsible to reset ASN.1 writer with
+    /// an output buffer.
+    public func serializePrivateKeyInplace(privateKey: PrivateKey) throws -> Int {
+        var error: vscf_error_t = vscf_error_t()
+        vscf_error_reset(&error)
+
+        let proxyResult = vscf_pkcs8_der_serializer_serialize_private_key_inplace(self.c_ctx, privateKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -88,14 +110,8 @@ import VSCFoundation
     /// Serialize Private Key by using internal ASN.1 writer.
     /// Note, that caller code is responsible to reset ASN.1 writer with
     /// an output buffer.
-    @objc public func serializePrivateKeyInplace(privateKey: PrivateKey) throws -> Int {
-        var error: vscf_error_t
-
-        let proxyResult = vscf_pkcs8_der_serializer_serialize_private_key_inplace(self.c_ctx, privateKey.c_ctx, &error)
-
-        try FoundationError.handleStatus(fromC: error.status)
-
-        return proxyResult
+    @objc public func serializePrivateKeyInplace(privateKey: PrivateKey) throws -> NSNumber {
+        return NSNumber(value: try self.serializePrivateKeyInplace(privateKey: privateKey))
     }
 
     /// Setup predefined values to the uninitialized class dependencies.
