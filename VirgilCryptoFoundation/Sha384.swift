@@ -91,7 +91,7 @@ import VSCFoundation
     @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
         let proxyResult = vscf_sha384_restore_alg_info(self.c_ctx, algInfo.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
     }
 
     /// Calculate hash over given data.
@@ -107,6 +107,7 @@ import VSCFoundation
             digest.withUnsafeMutableBytes({ (digestPointer: UnsafeMutablePointer<byte>) -> Void in
                 vsc_buffer_init(digestBuf)
                 vsc_buffer_use(digestBuf, digestPointer, digestCount)
+
                 vscf_sha384_hash(vsc_data(dataPointer, data.count), digestBuf)
             })
         })
@@ -123,6 +124,7 @@ import VSCFoundation
     /// Add given data to the hash.
     @objc public func update(data: Data) {
         data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Void in
+
             vscf_sha384_update(self.c_ctx, vsc_data(dataPointer, data.count))
         })
     }
@@ -139,6 +141,7 @@ import VSCFoundation
         digest.withUnsafeMutableBytes({ (digestPointer: UnsafeMutablePointer<byte>) -> Void in
             vsc_buffer_init(digestBuf)
             vsc_buffer_use(digestBuf, digestPointer, digestCount)
+
             vscf_sha384_finish(self.c_ctx, digestBuf)
         })
         digest.count = vsc_buffer_len(digestBuf)

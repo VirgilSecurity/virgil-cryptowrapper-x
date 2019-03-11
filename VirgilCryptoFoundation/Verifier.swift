@@ -36,15 +36,16 @@
 import Foundation
 import VSCFoundation
 
-/// Virgil Security implementation of the KDF2 (ISO-18033-2) algorithm.
-@objc(VSCFKdf2) public class Kdf2: NSObject, Alg, Kdf {
+/// Verify data of any size.
+/// Compatible with the class "signer".
+@objc(VSCFVerifier) public class Verifier: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_kdf2_new()
+        self.c_ctx = vscf_verifier_new()
         super.init()
     }
 
@@ -58,60 +59,37 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_kdf2_shallow_copy(c_ctx)
+        self.c_ctx = vscf_verifier_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_kdf2_delete(self.c_ctx)
+        vscf_verifier_delete(self.c_ctx)
     }
 
-    @objc public func setHash(hash: Hash) {
-        vscf_kdf2_release_hash(self.c_ctx)
-        vscf_kdf2_use_hash(self.c_ctx, hash.c_ctx)
-    }
+    /// Start verifying a signature.
+    @objc public func reset(signature: Data) throws {
+        let proxyResult = signature.withUnsafeBytes({ (signaturePointer: UnsafePointer<byte>) -> vscf_status_t in
 
-    /// Provide algorithm identificator.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_kdf2_alg_id(self.c_ctx)
-
-        return AlgId.init(fromC: proxyResult)
-    }
-
-    /// Produce object with algorithm information and configuration parameters.
-    @objc public func produceAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_kdf2_produce_alg_info(self.c_ctx)
-
-        return AlgInfoProxy.init(c_ctx: proxyResult!)
-    }
-
-    /// Restore algorithm configuration from the given object.
-    @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
-        let proxyResult = vscf_kdf2_restore_alg_info(self.c_ctx, algInfo.c_ctx)
+            return vscf_verifier_reset(self.c_ctx, vsc_data(signaturePointer, signature.count))
+        })
 
         try FoundationError.handleStatus(fromC: proxyResult)
     }
 
-    /// Derive key of the requested length from the given data.
-    @objc public func derive(data: Data, keyLen: Int) -> Data {
-        let keyCount = keyLen
-        var key = Data(count: keyCount)
-        var keyBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(keyBuf)
-        }
-
+    /// Add given data to the signed data.
+    @objc public func update(data: Data) {
         data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Void in
-            key.withUnsafeMutableBytes({ (keyPointer: UnsafeMutablePointer<byte>) -> Void in
-                vsc_buffer_init(keyBuf)
-                vsc_buffer_use(keyBuf, keyPointer, keyCount)
 
-                vscf_kdf2_derive(self.c_ctx, vsc_data(dataPointer, data.count), keyLen, keyBuf)
-            })
+            vscf_verifier_update(self.c_ctx, vsc_data(dataPointer, data.count))
         })
-        key.count = vsc_buffer_len(keyBuf)
+    }
 
-        return key
+    /// Verify accumulated data.
+    @objc public func verify(publicKey: VerifyHash) -> Bool {
+        let proxyResult = vscf_verifier_verify(self.c_ctx, publicKey.c_ctx)
+
+        return proxyResult
     }
 }

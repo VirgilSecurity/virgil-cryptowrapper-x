@@ -61,6 +61,7 @@ import VSCFoundation
             pem.withUnsafeMutableBytes({ (pemPointer: UnsafeMutablePointer<byte>) -> Void in
                 vsc_buffer_init(pemBuf)
                 vsc_buffer_use(pemBuf, pemPointer, pemCount)
+
                 vscf_pem_wrap(title, vsc_data(dataPointer, data.count), pemBuf)
             })
         })
@@ -85,16 +86,17 @@ import VSCFoundation
             vsc_buffer_delete(dataBuf)
         }
 
-        let proxyResult = pem.withUnsafeBytes({ (pemPointer: UnsafePointer<byte>) -> vscf_error_t in
-            data.withUnsafeMutableBytes({ (dataPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
+        let proxyResult = pem.withUnsafeBytes({ (pemPointer: UnsafePointer<byte>) -> vscf_status_t in
+            data.withUnsafeMutableBytes({ (dataPointer: UnsafeMutablePointer<byte>) -> vscf_status_t in
                 vsc_buffer_init(dataBuf)
                 vsc_buffer_use(dataBuf, dataPointer, dataCount)
+
                 return vscf_pem_unwrap(vsc_data(pemPointer, pem.count), dataBuf)
             })
         })
         data.count = vsc_buffer_len(dataBuf)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
 
         return data
     }
@@ -102,6 +104,7 @@ import VSCFoundation
     /// Returns PEM title if PEM data is valid, otherwise - empty data.
     @objc public static func title(pem: Data) -> Data {
         let proxyResult = pem.withUnsafeBytes({ (pemPointer: UnsafePointer<byte>) in
+
             return vscf_pem_title(vsc_data(pemPointer, pem.count))
         })
 

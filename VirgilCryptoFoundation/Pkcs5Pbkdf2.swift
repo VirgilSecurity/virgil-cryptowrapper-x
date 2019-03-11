@@ -76,7 +76,7 @@ import VSCFoundation
     @objc public func setupDefaults() throws {
         let proxyResult = vscf_pkcs5_pbkdf2_setup_defaults(self.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
     }
 
     /// Provide algorithm identificator.
@@ -97,7 +97,7 @@ import VSCFoundation
     @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
         let proxyResult = vscf_pkcs5_pbkdf2_restore_alg_info(self.c_ctx, algInfo.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
     }
 
     /// Derive key of the requested length from the given data.
@@ -113,6 +113,7 @@ import VSCFoundation
             key.withUnsafeMutableBytes({ (keyPointer: UnsafeMutablePointer<byte>) -> Void in
                 vsc_buffer_init(keyBuf)
                 vsc_buffer_use(keyBuf, keyPointer, keyCount)
+
                 vscf_pkcs5_pbkdf2_derive(self.c_ctx, vsc_data(dataPointer, data.count), keyLen, keyBuf)
             })
         })
@@ -124,6 +125,7 @@ import VSCFoundation
     /// Prepare algorithm to derive new key.
     @objc public func reset(salt: Data, iterationCount: Int) {
         salt.withUnsafeBytes({ (saltPointer: UnsafePointer<byte>) -> Void in
+
             vscf_pkcs5_pbkdf2_reset(self.c_ctx, vsc_data(saltPointer, salt.count), iterationCount)
         })
     }
@@ -132,6 +134,7 @@ import VSCFoundation
     /// Can be empty.
     @objc public func setInfo(info: Data) {
         info.withUnsafeBytes({ (infoPointer: UnsafePointer<byte>) -> Void in
+
             vscf_pkcs5_pbkdf2_set_info(self.c_ctx, vsc_data(infoPointer, info.count))
         })
     }

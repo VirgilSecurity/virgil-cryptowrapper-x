@@ -96,6 +96,7 @@ import VSCFoundation
             digest.withUnsafeMutableBytes({ (digestPointer: UnsafeMutablePointer<byte>) -> Void in
                 vsc_buffer_init(digestBuf)
                 vsc_buffer_use(digestBuf, digestPointer, digestCount)
+
                 vscf_hash(vscf_hash_api(self.c_ctx), vsc_data(dataPointer, data.count), digestBuf)
             })
         })
@@ -112,6 +113,7 @@ import VSCFoundation
     /// Add given data to the hash.
     @objc public func update(data: Data) {
         data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Void in
+
             vscf_hash_update(self.c_ctx, vsc_data(dataPointer, data.count))
         })
     }
@@ -128,6 +130,7 @@ import VSCFoundation
         digest.withUnsafeMutableBytes({ (digestPointer: UnsafeMutablePointer<byte>) -> Void in
             vsc_buffer_init(digestBuf)
             vsc_buffer_use(digestBuf, digestPointer, digestCount)
+
             vscf_hash_finish(self.c_ctx, digestBuf)
         })
         digest.count = vsc_buffer_len(digestBuf)

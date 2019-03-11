@@ -75,8 +75,12 @@ import VSCFoundation
     /// Deserialize Public Key by using internal ASN.1 reader.
     /// Note, that caller code is responsible to reset ASN.1 reader with
     /// an input buffer.
-    @objc public func deserializePublicKeyInplace(error: ErrorCtx) -> RawKey {
-        let proxyResult = vscf_pkcs8_der_deserializer_deserialize_public_key_inplace(self.c_ctx, error.c_ctx)
+    @objc public func deserializePublicKeyInplace() throws -> RawKey {
+        var error: vscf_error_t
+
+        let proxyResult = vscf_pkcs8_der_deserializer_deserialize_public_key_inplace(self.c_ctx, &error)
+
+        try FoundationError.handleStatus(fromC: error.status)
 
         return RawKey.init(take: proxyResult!)
     }
@@ -84,8 +88,12 @@ import VSCFoundation
     /// Deserialize Public Key by using internal ASN.1 reader.
     /// Note, that caller code is responsible to reset ASN.1 reader with
     /// an input buffer.
-    @objc public func deserializePrivateKeyInplace(error: ErrorCtx) -> RawKey {
-        let proxyResult = vscf_pkcs8_der_deserializer_deserialize_private_key_inplace(self.c_ctx, error.c_ctx)
+    @objc public func deserializePrivateKeyInplace() throws -> RawKey {
+        var error: vscf_error_t
+
+        let proxyResult = vscf_pkcs8_der_deserializer_deserialize_private_key_inplace(self.c_ctx, &error)
+
+        try FoundationError.handleStatus(fromC: error.status)
 
         return RawKey.init(take: proxyResult!)
     }
@@ -94,23 +102,33 @@ import VSCFoundation
     @objc public func setupDefaults() throws {
         let proxyResult = vscf_pkcs8_der_deserializer_setup_defaults(self.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
     }
 
     /// Deserialize given public key as an interchangeable format to the object.
-    @objc public func deserializePublicKey(publicKeyData: Data, error: ErrorCtx) -> RawKey {
+    @objc public func deserializePublicKey(publicKeyData: Data) throws -> RawKey {
+        var error: vscf_error_t
+
         let proxyResult = publicKeyData.withUnsafeBytes({ (publicKeyDataPointer: UnsafePointer<byte>) in
-            return vscf_pkcs8_der_deserializer_deserialize_public_key(self.c_ctx, vsc_data(publicKeyDataPointer, publicKeyData.count), error.c_ctx)
+
+            return vscf_pkcs8_der_deserializer_deserialize_public_key(self.c_ctx, vsc_data(publicKeyDataPointer, publicKeyData.count), &error)
         })
+
+        try FoundationError.handleStatus(fromC: error.status)
 
         return RawKey.init(take: proxyResult!)
     }
 
     /// Deserialize given private key as an interchangeable format to the object.
-    @objc public func deserializePrivateKey(privateKeyData: Data, error: ErrorCtx) -> RawKey {
+    @objc public func deserializePrivateKey(privateKeyData: Data) throws -> RawKey {
+        var error: vscf_error_t
+
         let proxyResult = privateKeyData.withUnsafeBytes({ (privateKeyDataPointer: UnsafePointer<byte>) in
-            return vscf_pkcs8_der_deserializer_deserialize_private_key(self.c_ctx, vsc_data(privateKeyDataPointer, privateKeyData.count), error.c_ctx)
+
+            return vscf_pkcs8_der_deserializer_deserialize_private_key(self.c_ctx, vsc_data(privateKeyDataPointer, privateKeyData.count), &error)
         })
+
+        try FoundationError.handleStatus(fromC: error.status)
 
         return RawKey.init(take: proxyResult!)
     }

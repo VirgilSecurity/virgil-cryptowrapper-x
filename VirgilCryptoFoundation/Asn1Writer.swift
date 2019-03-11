@@ -44,9 +44,14 @@ import VSCFoundation
     /// Reset all internal states and prepare to new ASN.1 writing operations.
     @objc func reset(out: UnsafeMutablePointer<UInt8>, outLen: Int)
 
-    /// Move written data to the buffer beginning and forbid further operations.
-    /// Returns written size in bytes.
-    @objc func finish() -> Int
+    /// Finalize writing and forbid further operations.
+    ///
+    /// Note, that ASN.1 structure is always written to the buffer end, and
+    /// if argument "do not adjust" is false, then data is moved to the
+    /// beginning, otherwise - data is left at the buffer end.
+    ///
+    /// Returns length of the written bytes.
+    @objc func finish(doNotAdjust: Bool) -> Int
 
     /// Returns pointer to the inner buffer.
     @objc func bytes() -> UnsafeMutablePointer<UInt8>
@@ -60,8 +65,11 @@ import VSCFoundation
     /// Returns how many bytes are available for writing.
     @objc func unwrittenLen() -> Int
 
-    /// Return last error.
-    @objc func error() throws
+    /// Return true if status is not "success".
+    @objc func hasError() -> Bool
+
+    /// Return error code.
+    @objc func status() throws
 
     /// Move writing position backward for the given length.
     /// Return current writing position.
@@ -179,10 +187,15 @@ import VSCFoundation
         vscf_asn1_writer_reset(self.c_ctx, out, outLen)
     }
 
-    /// Move written data to the buffer beginning and forbid further operations.
-    /// Returns written size in bytes.
-    @objc public func finish() -> Int {
-        let proxyResult = vscf_asn1_writer_finish(self.c_ctx)
+    /// Finalize writing and forbid further operations.
+    ///
+    /// Note, that ASN.1 structure is always written to the buffer end, and
+    /// if argument "do not adjust" is false, then data is moved to the
+    /// beginning, otherwise - data is left at the buffer end.
+    ///
+    /// Returns length of the written bytes.
+    @objc public func finish(doNotAdjust: Bool) -> Int {
+        let proxyResult = vscf_asn1_writer_finish(self.c_ctx, doNotAdjust)
 
         return proxyResult
     }
@@ -215,11 +228,18 @@ import VSCFoundation
         return proxyResult
     }
 
-    /// Return last error.
-    @objc public func error() throws {
-        let proxyResult = vscf_asn1_writer_error(self.c_ctx)
+    /// Return true if status is not "success".
+    @objc public func hasError() -> Bool {
+        let proxyResult = vscf_asn1_writer_has_error(self.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        return proxyResult
+    }
+
+    /// Return error code.
+    @objc public func status() throws {
+        let proxyResult = vscf_asn1_writer_status(self.c_ctx)
+
+        try FoundationError.handleStatus(fromC: proxyResult)
     }
 
     /// Move writing position backward for the given length.
@@ -353,6 +373,7 @@ import VSCFoundation
     /// Return count of written bytes.
     @objc public func writeOctetStr(value: Data) -> Int {
         let proxyResult = value.withUnsafeBytes({ (valuePointer: UnsafePointer<byte>) -> Int in
+
             return vscf_asn1_writer_write_octet_str(self.c_ctx, vsc_data(valuePointer, value.count))
         })
 
@@ -364,6 +385,7 @@ import VSCFoundation
     /// Return count of written bytes.
     @objc public func writeOctetStrAsBitstring(value: Data) -> Int {
         let proxyResult = value.withUnsafeBytes({ (valuePointer: UnsafePointer<byte>) -> Int in
+
             return vscf_asn1_writer_write_octet_str_as_bitstring(self.c_ctx, vsc_data(valuePointer, value.count))
         })
 
@@ -375,6 +397,7 @@ import VSCFoundation
     /// Note, use this method carefully.
     @objc public func writeData(data: Data) -> Int {
         let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Int in
+
             return vscf_asn1_writer_write_data(self.c_ctx, vsc_data(dataPointer, data.count))
         })
 
@@ -385,6 +408,7 @@ import VSCFoundation
     /// Return count of written bytes.
     @objc public func writeUtf8Str(value: Data) -> Int {
         let proxyResult = value.withUnsafeBytes({ (valuePointer: UnsafePointer<byte>) -> Int in
+
             return vscf_asn1_writer_write_utf8_str(self.c_ctx, vsc_data(valuePointer, value.count))
         })
 
@@ -395,6 +419,7 @@ import VSCFoundation
     /// Return count of written bytes.
     @objc public func writeOid(value: Data) -> Int {
         let proxyResult = value.withUnsafeBytes({ (valuePointer: UnsafePointer<byte>) -> Int in
+
             return vscf_asn1_writer_write_oid(self.c_ctx, vsc_data(valuePointer, value.count))
         })
 

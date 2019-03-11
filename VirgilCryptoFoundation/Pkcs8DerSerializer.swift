@@ -75,8 +75,12 @@ import VSCFoundation
     /// Serialize Public Key by using internal ASN.1 writer.
     /// Note, that caller code is responsible to reset ASN.1 writer with
     /// an output buffer.
-    @objc public func serializePublicKeyInplace(publicKey: PublicKey, error: ErrorCtx) -> Int {
-        let proxyResult = vscf_pkcs8_der_serializer_serialize_public_key_inplace(self.c_ctx, publicKey.c_ctx, error.c_ctx)
+    @objc public func serializePublicKeyInplace(publicKey: PublicKey) throws -> Int {
+        var error: vscf_error_t
+
+        let proxyResult = vscf_pkcs8_der_serializer_serialize_public_key_inplace(self.c_ctx, publicKey.c_ctx, &error)
+
+        try FoundationError.handleStatus(fromC: error.status)
 
         return proxyResult
     }
@@ -84,8 +88,12 @@ import VSCFoundation
     /// Serialize Private Key by using internal ASN.1 writer.
     /// Note, that caller code is responsible to reset ASN.1 writer with
     /// an output buffer.
-    @objc public func serializePrivateKeyInplace(privateKey: PrivateKey, error: ErrorCtx) -> Int {
-        let proxyResult = vscf_pkcs8_der_serializer_serialize_private_key_inplace(self.c_ctx, privateKey.c_ctx, error.c_ctx)
+    @objc public func serializePrivateKeyInplace(privateKey: PrivateKey) throws -> Int {
+        var error: vscf_error_t
+
+        let proxyResult = vscf_pkcs8_der_serializer_serialize_private_key_inplace(self.c_ctx, privateKey.c_ctx, &error)
+
+        try FoundationError.handleStatus(fromC: error.status)
 
         return proxyResult
     }
@@ -94,7 +102,7 @@ import VSCFoundation
     @objc public func setupDefaults() throws {
         let proxyResult = vscf_pkcs8_der_serializer_setup_defaults(self.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
     }
 
     /// Calculate buffer size enough to hold serialized public key.
@@ -117,14 +125,15 @@ import VSCFoundation
             vsc_buffer_delete(outBuf)
         }
 
-        let proxyResult = out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
+        let proxyResult = out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_status_t in
             vsc_buffer_init(outBuf)
             vsc_buffer_use(outBuf, outPointer, outCount)
+
             return vscf_pkcs8_der_serializer_serialize_public_key(self.c_ctx, publicKey.c_ctx, outBuf)
         })
         out.count = vsc_buffer_len(outBuf)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
 
         return out
     }
@@ -149,14 +158,15 @@ import VSCFoundation
             vsc_buffer_delete(outBuf)
         }
 
-        let proxyResult = out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
+        let proxyResult = out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_status_t in
             vsc_buffer_init(outBuf)
             vsc_buffer_use(outBuf, outPointer, outCount)
+
             return vscf_pkcs8_der_serializer_serialize_private_key(self.c_ctx, privateKey.c_ctx, outBuf)
         })
         out.count = vsc_buffer_len(outBuf)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
 
         return out
     }

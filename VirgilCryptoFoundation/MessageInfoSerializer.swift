@@ -54,7 +54,7 @@ import VSCFoundation
     @objc func readPrefix(data: Data) -> Int
 
     /// Deserialize class "message info".
-    @objc func deserialize(data: Data, error: ErrorCtx) -> MessageInfo
+    @objc func deserialize(data: Data) throws -> MessageInfo
 }
 
 /// Implement interface methods
@@ -97,6 +97,7 @@ import VSCFoundation
         out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> Void in
             vsc_buffer_init(outBuf)
             vsc_buffer_use(outBuf, outPointer, outCount)
+
             vscf_message_info_serializer_serialize(self.c_ctx, messageInfo.c_ctx, outBuf)
         })
         out.count = vsc_buffer_len(outBuf)
@@ -111,6 +112,7 @@ import VSCFoundation
     /// and this means that there is no message info at the data beginning.
     @objc public func readPrefix(data: Data) -> Int {
         let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Int in
+
             return vscf_message_info_serializer_read_prefix(self.c_ctx, vsc_data(dataPointer, data.count))
         })
 
@@ -118,10 +120,15 @@ import VSCFoundation
     }
 
     /// Deserialize class "message info".
-    @objc public func deserialize(data: Data, error: ErrorCtx) -> MessageInfo {
+    @objc public func deserialize(data: Data) throws -> MessageInfo {
+        var error: vscf_error_t
+
         let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) in
-            return vscf_message_info_serializer_deserialize(self.c_ctx, vsc_data(dataPointer, data.count), error.c_ctx)
+
+            return vscf_message_info_serializer_deserialize(self.c_ctx, vsc_data(dataPointer, data.count), &error)
         })
+
+        try FoundationError.handleStatus(fromC: error.status)
 
         return MessageInfo.init(take: proxyResult!)
     }

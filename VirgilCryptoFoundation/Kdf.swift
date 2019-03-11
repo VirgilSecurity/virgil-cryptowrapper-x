@@ -73,6 +73,7 @@ import VSCFoundation
             key.withUnsafeMutableBytes({ (keyPointer: UnsafeMutablePointer<byte>) -> Void in
                 vsc_buffer_init(keyBuf)
                 vsc_buffer_use(keyBuf, keyPointer, keyCount)
+
                 vscf_kdf_derive(self.c_ctx, vsc_data(dataPointer, data.count), keyLen, keyBuf)
             })
         })

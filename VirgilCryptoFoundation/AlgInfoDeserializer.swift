@@ -40,7 +40,7 @@ import VSCFoundation
 @objc(VSCFAlgInfoDeserializer) public protocol AlgInfoDeserializer : CContext {
 
     /// Deserialize algorithm from the data.
-    @objc func deserialize(data: Data, error: ErrorCtx) -> AlgInfo
+    @objc func deserialize(data: Data) throws -> AlgInfo
 }
 
 /// Implement interface methods
@@ -61,10 +61,15 @@ import VSCFoundation
     }
 
     /// Deserialize algorithm from the data.
-    @objc public func deserialize(data: Data, error: ErrorCtx) -> AlgInfo {
+    @objc public func deserialize(data: Data) throws -> AlgInfo {
+        var error: vscf_error_t
+
         let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) in
-            return vscf_alg_info_deserializer_deserialize(self.c_ctx, vsc_data(dataPointer, data.count), error.c_ctx)
+
+            return vscf_alg_info_deserializer_deserialize(self.c_ctx, vsc_data(dataPointer, data.count), &error)
         })
+
+        try FoundationError.handleStatus(fromC: error.status)
 
         return AlgInfoProxy.init(c_ctx: proxyResult!)
     }

@@ -101,15 +101,16 @@ import VSCFoundation
             vsc_buffer_delete(tagBuf)
         }
 
-        let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> vscf_error_t in
-            authData.withUnsafeBytes({ (authDataPointer: UnsafePointer<byte>) -> vscf_error_t in
-                out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
-                    tag.withUnsafeMutableBytes({ (tagPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
+        let proxyResult = data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> vscf_status_t in
+            authData.withUnsafeBytes({ (authDataPointer: UnsafePointer<byte>) -> vscf_status_t in
+                out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_status_t in
+                    tag.withUnsafeMutableBytes({ (tagPointer: UnsafeMutablePointer<byte>) -> vscf_status_t in
                         vsc_buffer_init(outBuf)
                         vsc_buffer_use(outBuf, outPointer, outCount)
 
                         vsc_buffer_init(tagBuf)
                         vsc_buffer_use(tagBuf, tagPointer, tagCount)
+
                         return vscf_auth_encrypt(self.c_ctx, vsc_data(dataPointer, data.count), vsc_data(authDataPointer, authData.count), outBuf, tagBuf)
                     })
                 })
@@ -118,7 +119,7 @@ import VSCFoundation
         out.count = vsc_buffer_len(outBuf)
         tag.count = vsc_buffer_len(tagBuf)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
 
         return AuthEncryptAuthEncryptResult(out: out, tag: tag)
     }

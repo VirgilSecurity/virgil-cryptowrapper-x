@@ -36,112 +36,115 @@
 import Foundation
 import VSCFoundation
 
-/// Defines library error codes.
+/// Defines the library status codes.
 @objc(VSCFFoundationError) public enum FoundationError: Int, Error {
 
     /// This error should not be returned if assertions is enabled.
-    case badArguments = -1
+    case errorBadArguments = -1
 
     /// Can be used to define that not all context prerequisites are satisfied.
     /// Note, this error should not be returned if assertions is enabled.
-    case uninitialized = -2
+    case errorUninitialized = -2
 
     /// Define that error code from one of third-party module was not handled.
     /// Note, this error should not be returned if assertions is enabled.
-    case unhandledThirdpartyError = -3
+    case errorUnhandledThirdpartyError = -3
 
     /// Buffer capacity is not enough to hold result.
-    case smallBuffer = -101
+    case errorSmallBuffer = -101
 
     /// Unsupported algorithm.
-    case unsupportedAlgorithm = -200
+    case errorUnsupportedAlgorithm = -200
 
     /// Authentication failed during decryption.
-    case authFailed = -201
+    case errorAuthFailed = -201
 
     /// Attempt to read data out of buffer bounds.
-    case outOfData = -202
+    case errorOutOfData = -202
 
     /// ASN.1 encoded data is corrupted.
-    case badAsn1 = -203
+    case errorBadAsn1 = -203
 
     /// Attempt to read ASN.1 type that is bigger then requested C type.
-    case asn1LossyTypeNarrowing = -204
+    case errorAsn1LossyTypeNarrowing = -204
 
     /// ASN.1 representation of PKCS#1 public key is corrupted.
-    case badPkcs1PublicKey = -205
+    case errorBadPkcs1PublicKey = -205
 
     /// ASN.1 representation of PKCS#1 private key is corrupted.
-    case badPkcs1PrivateKey = -206
+    case errorBadPkcs1PrivateKey = -206
 
     /// ASN.1 representation of PKCS#8 public key is corrupted.
-    case badPkcs8PublicKey = -207
+    case errorBadPkcs8PublicKey = -207
 
     /// ASN.1 representation of PKCS#8 private key is corrupted.
-    case badPkcs8PrivateKey = -208
+    case errorBadPkcs8PrivateKey = -208
 
     /// Encrypted data is corrupted.
-    case badEncryptedData = -209
+    case errorBadEncryptedData = -209
 
     /// Underlying random operation returns error.
-    case randomFailed = -210
+    case errorRandomFailed = -210
 
     /// Generation of the private or secret key failed.
-    case keyGenerationFailed = -211
+    case errorKeyGenerationFailed = -211
 
     /// One of the entropy sources failed.
-    case entropySourceFailed = -212
+    case errorEntropySourceFailed = -212
 
     /// Requested data to be generated is too big.
-    case rngRequestedDataTooBig = -213
+    case errorRngRequestedDataTooBig = -213
 
     /// Base64 encoded string contains invalid characters.
-    case badBase64 = -214
+    case errorBadBase64 = -214
 
     /// PEM data is corrupted.
-    case badPem = -215
+    case errorBadPem = -215
 
     /// Exchange key return zero.
-    case sharedKeyExchangeFailed = -216
+    case errorSharedKeyExchangeFailed = -216
 
     /// Ed25519 public key is corrupted.
-    case badEd25519PublicKey = -217
+    case errorBadEd25519PublicKey = -217
 
     /// Ed25519 private key is corrupted.
-    case badEd25519PrivateKey = -218
+    case errorBadEd25519PrivateKey = -218
 
     /// Decryption failed, because message info was not given explicitly,
     /// and was not part of an encrypted message.
-    case noMessageInfo = -301
+    case errorNoMessageInfo = -301
 
     /// Message info is corrupted.
-    case badMessageInfo = -302
+    case errorBadMessageInfo = -302
 
     /// Recipient defined with id is not found within message info
     /// during data decryption.
-    case keyRecipientIsNotFound = -303
+    case errorKeyRecipientIsNotFound = -303
 
     /// Content encryption key can not be decrypted with a given private key.
-    case keyRecipientPrivateKeyIsWrong = -304
+    case errorKeyRecipientPrivateKeyIsWrong = -304
 
     /// Content encryption key can not be decrypted with a given password.
-    case passwordRecipientPasswordIsWrong = -305
+    case errorPasswordRecipientPasswordIsWrong = -305
 
     /// Custom parameter with a given key is not found within message info.
-    case messageInfoCustomParamNotFound = -306
+    case errorMessageInfoCustomParamNotFound = -306
 
     /// A custom parameter with a given key is found, but the requested value
     /// type does not correspond to the actual type.
-    case messageInfoCustomParamTypeMismatch = -307
+    case errorMessageInfoCustomParamTypeMismatch = -307
+
+    /// Signature format is corrupted.
+    case errorBadSignature = -308
 
     /// Create enumeration value from the correspond C enumeration value.
-    internal init(fromC error: vscf_error_t) {
-        self.init(rawValue: Int(error.rawValue))!
+    internal init(fromC status: vscf_status_t) {
+        self.init(rawValue: Int(status.rawValue))!
     }
 
-    /// Check given C error (result), and if it's not "success" then throw correspond exception.
-    internal static func handleError(fromC code: vscf_error_t) throws {
-        if code != vscf_SUCCESS {
+    /// Check given C status, and if it's not "success" then throw correspond exception.
+    internal static func handleStatus(fromC code: vscf_status_t) throws {
+        if code != vscf_status_SUCCESS {
             throw FoundationError(fromC: code)
         }
     }

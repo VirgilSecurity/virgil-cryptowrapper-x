@@ -76,6 +76,7 @@ import VSCFoundation
     /// Note, that given data is used as circular source.
     @objc public func setupSourceData(dataSource: Data) {
         dataSource.withUnsafeBytes({ (dataSourcePointer: UnsafePointer<byte>) -> Void in
+
             vscf_fake_random_setup_source_data(self.c_ctx, vsc_data(dataSourcePointer, dataSource.count))
         })
     }
@@ -89,14 +90,15 @@ import VSCFoundation
             vsc_buffer_delete(dataBuf)
         }
 
-        let proxyResult = data.withUnsafeMutableBytes({ (dataPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
+        let proxyResult = data.withUnsafeMutableBytes({ (dataPointer: UnsafeMutablePointer<byte>) -> vscf_status_t in
             vsc_buffer_init(dataBuf)
             vsc_buffer_use(dataBuf, dataPointer, dataCount)
+
             return vscf_fake_random_random(self.c_ctx, dataLen, dataBuf)
         })
         data.count = vsc_buffer_len(dataBuf)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
 
         return data
     }
@@ -105,7 +107,7 @@ import VSCFoundation
     @objc public func reseed() throws {
         let proxyResult = vscf_fake_random_reseed(self.c_ctx)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
     }
 
     /// Defines that implemented source is strong.
@@ -124,14 +126,15 @@ import VSCFoundation
             vsc_buffer_delete(outBuf)
         }
 
-        let proxyResult = out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_error_t in
+        let proxyResult = out.withUnsafeMutableBytes({ (outPointer: UnsafeMutablePointer<byte>) -> vscf_status_t in
             vsc_buffer_init(outBuf)
             vsc_buffer_use(outBuf, outPointer, outCount)
+
             return vscf_fake_random_gather(self.c_ctx, len, outBuf)
         })
         out.count = vsc_buffer_len(outBuf)
 
-        try FoundationError.handleError(fromC: proxyResult)
+        try FoundationError.handleStatus(fromC: proxyResult)
 
         return out
     }

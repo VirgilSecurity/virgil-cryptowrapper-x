@@ -97,6 +97,7 @@ import VSCFoundation
                 mac.withUnsafeMutableBytes({ (macPointer: UnsafeMutablePointer<byte>) -> Void in
                     vsc_buffer_init(macBuf)
                     vsc_buffer_use(macBuf, macPointer, macCount)
+
                     vscf_mac(self.c_ctx, vsc_data(keyPointer, key.count), vsc_data(dataPointer, data.count), macBuf)
                 })
             })
@@ -109,6 +110,7 @@ import VSCFoundation
     /// Start a new MAC.
     @objc public func start(key: Data) {
         key.withUnsafeBytes({ (keyPointer: UnsafePointer<byte>) -> Void in
+
             vscf_mac_start(self.c_ctx, vsc_data(keyPointer, key.count))
         })
     }
@@ -116,6 +118,7 @@ import VSCFoundation
     /// Add given data to the MAC.
     @objc public func update(data: Data) {
         data.withUnsafeBytes({ (dataPointer: UnsafePointer<byte>) -> Void in
+
             vscf_mac_update(self.c_ctx, vsc_data(dataPointer, data.count))
         })
     }
@@ -132,6 +135,7 @@ import VSCFoundation
         mac.withUnsafeMutableBytes({ (macPointer: UnsafeMutablePointer<byte>) -> Void in
             vsc_buffer_init(macBuf)
             vsc_buffer_use(macBuf, macPointer, macCount)
+
             vscf_mac_finish(self.c_ctx, macBuf)
         })
         mac.count = vsc_buffer_len(macBuf)
