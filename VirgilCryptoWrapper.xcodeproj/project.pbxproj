@@ -388,6 +388,7 @@
 		BF_9336ECA2F977F488724BC90EF9BA9561 /* VirgilCryptoRatchet.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_572F538FEAA27EF6F110225576C4F20C /* VirgilCryptoRatchet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF_93839A772C01DFD3DD4480924B0A66FD /* AuthDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_C7F7348964BC4B52DCC4587B57A35CA6 /* AuthDecrypt.swift */; };
 		BF_941FD60D0CAA8736D2CFE94531CBFD8D /* GenerateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9BE6529D56D9FF3C70D2175222634406 /* GenerateKey.swift */; };
+		BF_944652243E70F8066E5A8D48A2E3D460 /* FoundationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9F5ABD161AD60CA6950AD4CA7F61590C /* FoundationImplementation.swift */; };
 		BF_9486C0D69D5BFCC1AED92F9986105744 /* VirgilCryptoPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_91B90BADD0B5B1BFF54EFE32FC34D80D /* VirgilCryptoPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF_954D337785730DECDE9C7BED335EEEC7 /* Pkcs8DerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_4201F7091183E01B91FF3861B8658F48 /* Pkcs8DerDeserializer.swift */; };
 		BF_95818CDA229AC18EDD81DD677D4E872C /* Pkcs8Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_A90AE83FF111586E810F93BBC3FDAC8F /* Pkcs8Deserializer.swift */; };
@@ -559,6 +560,7 @@
 		BF_E4264B2D6343CCD6B22038813A5C2DD7 /* MessageInfoDerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACF10A61292C9B7BCE85C9742843302A /* MessageInfoDerSerializer.swift */; };
 		BF_E562EA5853186E4B2E6327D198248DB1 /* AuthEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8188AE86EB1B3F837B46D08677E34BA1 /* AuthEncrypt.swift */; };
 		BF_E5907A097AC61E504F24DC7AF3D3820E /* MessageInfoDerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_ACF10A61292C9B7BCE85C9742843302A /* MessageInfoDerSerializer.swift */; };
+		BF_E598EF76FE684EF3B9B17461212B783B /* FoundationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9F5ABD161AD60CA6950AD4CA7F61590C /* FoundationImplementation.swift */; };
 		BF_E709318497C28A47EB2985835845A50F /* Pythia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_36522D74DD89BC54357F45EFC79FAE04 /* Pythia.swift */; };
 		BF_E70DC56C61220D63D2E6EB1ED3B0D105 /* RatchetKeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_856852DA99980112E09EEFA0056B39F6 /* RatchetKeyUtils.swift */; };
 		BF_E77650B80C63F238C943D84E07C82657 /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_757E6E153544700DC5CE701EEE071691 /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -566,6 +568,7 @@
 		BF_E8CD98D435065AA1AD2A485929308834 /* VSCFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_CD74056A585C8AE8E0DC58597BE80025 /* VSCFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_E9748AC67E007A2E1FABE5B69F78404D /* VirgilCryptoFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_CEDA63D39DE6A5B79F4150F52D0FFB50 /* VirgilCryptoFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_E9A887CDFAA013580D638AE3B5067A69 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9FEFD1E5AB6138C75196002348206A9A /* Key.swift */; };
+		BF_EAE08EE74385138002FF77E74AB1C72A /* FoundationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9F5ABD161AD60CA6950AD4CA7F61590C /* FoundationImplementation.swift */; };
 		BF_EB7E0692BF7F18CE9A450274D0D6DA48 /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_2FFDD73074E2B0529FE627B51E581718 /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_ECC992BE5099E57030FEAEA417911E6B /* VirgilCryptoRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BFD9AE92AEC7FEEA578FAD7A858E6EAD /* VirgilCryptoRatchetTests.swift */; };
 		BF_ECF039222A620F6427304A444C748411 /* VirgilCryptoFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_CEDA63D39DE6A5B79F4150F52D0FFB50 /* VirgilCryptoFoundation.framework */; };
@@ -593,6 +596,7 @@
 		BF_FD23E5A1B1A1C6A1F3B521AE9A0B51CB /* CipherAuthInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_EF45ADCA631E64F635E6D140DB276DC7 /* CipherAuthInfo.swift */; };
 		BF_FD7DC38A2559608735AB0C3FC5DC25A2 /* Kdf2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_66826A73C8D44332E1B1B158C2614159 /* Kdf2.swift */; };
 		BF_FE2081F4E8E917EEBFF3653F21237AA3 /* GenerateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9BE6529D56D9FF3C70D2175222634406 /* GenerateKey.swift */; };
+		BF_FE683924C161CD8252B9C615DF06956F /* FoundationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9F5ABD161AD60CA6950AD4CA7F61590C /* FoundationImplementation.swift */; };
 		BF_FE6E327798D5DE3CDFDAEC55E32F891D /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_A9A65CB91CFAE79FC4CD9FF01D14D8CD /* Sha256.swift */; };
 		BF_FE9559763E0E7EA1A0F26F74D28A78C0 /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A2E84BCC37BC95675A6FE4F3E1076892 /* VSCCommon.framework */; };
 		BF_FE991568CFD6CD0C39ECB756D853D5E7 /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_2FFDD73074E2B0529FE627B51E581718 /* VSCCommon.framework */; };
@@ -1133,6 +1137,7 @@
 		FR_973F120A9A343366C7E8CFE902EAD60E /* Pkcs5Pbkdf2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs5Pbkdf2.swift; sourceTree = "<group>"; };
 		FR_9BE6529D56D9FF3C70D2175222634406 /* GenerateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateKey.swift; sourceTree = "<group>"; };
 		FR_9F58F39A16ABF9D5C683F4EC34083AF9 /* Sha224.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha224.swift; sourceTree = "<group>"; };
+		FR_9F5ABD161AD60CA6950AD4CA7F61590C /* FoundationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationImplementation.swift; sourceTree = "<group>"; };
 		FR_9FEFD1E5AB6138C75196002348206A9A /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
 		FR_A0EFCC03F1D5EE36B23CF1B05D496F0F /* Asn1Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asn1Writer.swift; sourceTree = "<group>"; };
 		FR_A2E84BCC37BC95675A6FE4F3E1076892 /* VSCCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCCommon.framework; sourceTree = "<group>"; };
@@ -1662,6 +1667,7 @@
 				FR_1D96FB4DA2F350219E33C63A69F80F9D /* EntropySource.swift */,
 				FR_6AFA52E2113D352EC83A597B08C601B5 /* FakeRandom.swift */,
 				FR_F50F843BA5B5CF0A3338A814047F69E8 /* FoundationError.swift */,
+				FR_9F5ABD161AD60CA6950AD4CA7F61590C /* FoundationImplementation.swift */,
 				FR_D0D51A7732634D2BA392337E367D419A /* GenerateEphemeralKey.swift */,
 				FR_9BE6529D56D9FF3C70D2175222634406 /* GenerateKey.swift */,
 				FR_8765B79B578BC502558C95433D692088 /* Hash.swift */,
@@ -2482,6 +2488,7 @@
 				BF_24B2E5E02A7F8A2594F3091D16D5B187 /* EntropySource.swift in Sources */,
 				BF_AB01214FF70B62629109DD88F2AB9B02 /* FakeRandom.swift in Sources */,
 				BF_14F45FDC3A4B29641DA918810380EB88 /* FoundationError.swift in Sources */,
+				BF_E598EF76FE684EF3B9B17461212B783B /* FoundationImplementation.swift in Sources */,
 				BF_0A3B91D2C5CEDAB459B3D86F22066667 /* GenerateEphemeralKey.swift in Sources */,
 				BF_FE2081F4E8E917EEBFF3653F21237AA3 /* GenerateKey.swift in Sources */,
 				BF_DDB6A82DA77225367C9C68476A0AE80E /* Hash.swift in Sources */,
@@ -2583,6 +2590,7 @@
 				BF_280F0A1B7EC76F99043EFC5EF5F60B91 /* EntropySource.swift in Sources */,
 				BF_0C1E1A669EEA842DDCBF26E8A16B89F2 /* FakeRandom.swift in Sources */,
 				BF_9CD0A0A40E748270A985467CBE973F34 /* FoundationError.swift in Sources */,
+				BF_944652243E70F8066E5A8D48A2E3D460 /* FoundationImplementation.swift in Sources */,
 				BF_1586B139CAE2073F010D32629269624D /* GenerateEphemeralKey.swift in Sources */,
 				BF_4B801D743B14554054492DBB1CFA7EBC /* GenerateKey.swift in Sources */,
 				BF_6E33833C428A560FF35AB5C9C35D6A77 /* Hash.swift in Sources */,
@@ -2787,6 +2795,7 @@
 				BF_F3B0CB176B31E8FFD35DCDC725FE0EAB /* EntropySource.swift in Sources */,
 				BF_5ECE1DB0F2EDC6EDB77B7485EBC9DB0C /* FakeRandom.swift in Sources */,
 				BF_40E0F0DBFACD4D6AF1CAABFCB777E033 /* FoundationError.swift in Sources */,
+				BF_FE683924C161CD8252B9C615DF06956F /* FoundationImplementation.swift in Sources */,
 				BF_2DE333B6F266FF72BDF43594381C9585 /* GenerateEphemeralKey.swift in Sources */,
 				BF_941FD60D0CAA8736D2CFE94531CBFD8D /* GenerateKey.swift in Sources */,
 				BF_3BCA941945435CB9B86F49F5B9F52E29 /* Hash.swift in Sources */,
@@ -2930,6 +2939,7 @@
 				BF_9FA7992616D918CB55D3BFB73310D058 /* EntropySource.swift in Sources */,
 				BF_EDA3E3F055B5DB48EBAD9CE39D1014DE /* FakeRandom.swift in Sources */,
 				BF_1616D6774936A902556A149A77D09698 /* FoundationError.swift in Sources */,
+				BF_EAE08EE74385138002FF77E74AB1C72A /* FoundationImplementation.swift in Sources */,
 				BF_B9D3BEEDEECA0D500C0B66ADD8F7CCBA /* GenerateEphemeralKey.swift in Sources */,
 				BF_0EAB3E4C700262594D6CF8720E4ED805 /* GenerateKey.swift in Sources */,
 				BF_DA005226EED48412559FFDB72CB4BCAA /* Hash.swift in Sources */,
