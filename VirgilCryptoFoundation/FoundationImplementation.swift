@@ -76,7 +76,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PRIVATE_KEY:
             return Ed25519PrivateKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -94,7 +94,7 @@ import VSCFoundation
         case vscf_impl_tag_SHA512:
             return Sha512(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -116,7 +116,7 @@ import VSCFoundation
         case vscf_impl_tag_ECIES:
             return Ecies(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -138,7 +138,7 @@ import VSCFoundation
         case vscf_impl_tag_ECIES:
             return Ecies(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -152,7 +152,7 @@ import VSCFoundation
         case vscf_impl_tag_AES256_CBC:
             return Aes256Cbc(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -166,7 +166,7 @@ import VSCFoundation
         case vscf_impl_tag_AES256_CBC:
             return Aes256Cbc(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -178,7 +178,7 @@ import VSCFoundation
         case vscf_impl_tag_AES256_GCM:
             return Aes256Gcm(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -190,7 +190,7 @@ import VSCFoundation
         case vscf_impl_tag_AES256_GCM:
             return Aes256Gcm(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -202,7 +202,7 @@ import VSCFoundation
         case vscf_impl_tag_AES256_GCM:
             return Aes256Gcm(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -214,7 +214,7 @@ import VSCFoundation
         case vscf_impl_tag_AES256_GCM:
             return Aes256Gcm(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -226,7 +226,7 @@ import VSCFoundation
         case vscf_impl_tag_ASN1RD:
             return Asn1rd(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -238,7 +238,7 @@ import VSCFoundation
         case vscf_impl_tag_ASN1WR:
             return Asn1wr(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -278,7 +278,7 @@ import VSCFoundation
         case vscf_impl_tag_MESSAGE_INFO_DER_SERIALIZER:
             return MessageInfoDerSerializer(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -296,7 +296,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PRIVATE_KEY:
             return Ed25519PrivateKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -310,7 +310,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PUBLIC_KEY:
             return Ed25519PublicKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -324,7 +324,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PUBLIC_KEY:
             return Ed25519PublicKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -338,7 +338,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PUBLIC_KEY:
             return Ed25519PublicKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -352,7 +352,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PRIVATE_KEY:
             return Ed25519PrivateKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -366,7 +366,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PRIVATE_KEY:
             return Ed25519PrivateKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -380,7 +380,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PRIVATE_KEY:
             return Ed25519PrivateKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -394,7 +394,7 @@ import VSCFoundation
         case vscf_impl_tag_FAKE_RANDOM:
             return FakeRandom(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -408,7 +408,7 @@ import VSCFoundation
         case vscf_impl_tag_FAKE_RANDOM:
             return FakeRandom(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -420,7 +420,7 @@ import VSCFoundation
         case vscf_impl_tag_HMAC:
             return Hmac(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -438,7 +438,7 @@ import VSCFoundation
         case vscf_impl_tag_PKCS5_PBKDF2:
             return Pkcs5Pbkdf2(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -452,7 +452,7 @@ import VSCFoundation
         case vscf_impl_tag_PKCS5_PBKDF2:
             return Pkcs5Pbkdf2(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -466,7 +466,7 @@ import VSCFoundation
         case vscf_impl_tag_PKCS8_SERIALIZER:
             return Pkcs8Serializer(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -480,7 +480,7 @@ import VSCFoundation
         case vscf_impl_tag_PKCS8_DESERIALIZER:
             return Pkcs8Deserializer(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -492,7 +492,7 @@ import VSCFoundation
         case vscf_impl_tag_ED25519_PRIVATE_KEY:
             return Ed25519PrivateKey(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -512,7 +512,7 @@ import VSCFoundation
         case vscf_impl_tag_PBE_ALG_INFO:
             return PbeAlgInfo(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -524,7 +524,7 @@ import VSCFoundation
         case vscf_impl_tag_ALG_INFO_DER_SERIALIZER:
             return AlgInfoDerSerializer(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -536,7 +536,7 @@ import VSCFoundation
         case vscf_impl_tag_ALG_INFO_DER_DESERIALIZER:
             return AlgInfoDerDeserializer(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 
@@ -548,7 +548,7 @@ import VSCFoundation
         case vscf_impl_tag_MESSAGE_INFO_DER_SERIALIZER:
             return MessageInfoDerSerializer(take: c_ctx)
         default:
-            assert(false)
+            fatalError("")
         }
     }
 }
