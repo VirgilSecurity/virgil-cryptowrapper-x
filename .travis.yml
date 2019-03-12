@@ -77,11 +77,12 @@ deploy:
       condition: $PUBLISH_POD == "YES"
 
   # Upload docs to gh-pages
-  - provider: pages
-    skip_cleanup: true
-    github-token: $GITHUB_ACCESS_TOKEN
-    local_dir: "docs"
-    on:
-      repo: VirgilSecurity/virgil-cryptowrapper-x
-      tags: true
-      condition: $PUBLISH_DOCS = "YES"
+  # Travis gh-pages deploy is broken
+  # - provider: pages
+  #   skip_cleanup: true
+  #   github-token: $GITHUB_ACCESS_TOKEN
+  #   local_dir: "docs"
+  #   on:
+  #     repo: VirgilSecurity/virgil-cryptowrapper-x
+  #     tags: true
+  #     condition: $PUBLISH_DOCS = "YES"
