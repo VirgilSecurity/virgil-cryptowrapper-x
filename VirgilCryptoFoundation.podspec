@@ -14,5 +14,4 @@ Pod::Spec.new do |s|
   s.source_files                = "VirgilCryptoFoundation/**/*.{h,mm,swift}"
   s.dependency 'VSCCrypto/Common', '= 0.2.0'
   s.dependency 'VSCCrypto/Foundation', '= 0.2.0'
-  s.swift_version               = "4.0", "4.1", "4.2"
 end
