@@ -42,6 +42,7 @@ INFOPLIST_FILE_PATH="${TRAVIS_BUILD_DIR}/VirgilCryptoFoundation/Info.plist"
 
 # Define SDK versions
 VERSION="v"$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${INFOPLIST_FILE_PATH}")
+echo "${DOCS_DIR}"
 CURRENT_VERSION_DIR="${DOCS_DIR}/${VERSION}"
 mkdir "${CURRENT_VERSION_DIR}"
 
