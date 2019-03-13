@@ -51,11 +51,22 @@ script:
   #     mv VirgilCryptoFoundation.framework.zip VirgilCryptoWrapper.framework.zip;
   #   fi
 
-  - if [$PUBLISH_DOCS = "YES" && $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+]; then
-      ./CI/publish-docs.sh;
-    fi
+  # - if [$PUBLISH_DOCS = "YES" && $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+]; then
+      # echo TEST;
+    - ./CI/publish-docs.sh;
+    # fi
 
 deploy:
+  # Publish docs
+  - provider: pages
+    skip_cleanup: true
+    github-token: $GITHUB_ACCESS_TOKEN
+    local_dir: "docs"
+    on:
+      repo: $REPO
+      tags: true
+      condition: $PUBLISH_DOCS = "YES" && $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+
+
   # Publish binary for Carthage
   # - provider: releases
   #   api_key: $GITHUB_ACCESS_TOKEN
@@ -75,13 +86,3 @@ deploy:
   #     repo: $REPO
   #     tags: true
   #     condition: $PUBLISH_POD == "YES" && $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+
-
-  # Publish docs
-  - provider: pages
-    skip_cleanup: true
-    github-token: $GITHUB_ACCESS_TOKEN
-    local_dir: "docs"
-    on:
-      repo: $REPO
-      tags: true
-      condition: $PUBLISH_DOCS = "YES" && $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+

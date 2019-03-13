@@ -37,6 +37,8 @@
 
 # Get a clean version of the HTML documentation repo.
 DOCS_DIR="${TRAVIS_BUILD_DIR}/docs"
+echo $TRAVIS_BUILD_DIR
+echo $DOCS_DIR
 rm -rf ${DOCS_DIR}
 mkdir -p ${DOCS_DIR}
 git clone -b gh-pages "${REPO_PATH}" --single-branch ${DOCS_DIR}
