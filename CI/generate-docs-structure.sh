@@ -38,20 +38,18 @@
 gem install jazzy
 
 # Settings
-HTML_PATH_DST="${TRAVIS_BUILD_DIR}/docs"
-
-INFOPLIST_FILE_PATH="${TRAVIS_BUILD_DIR}/VirgilCryptoCommon/Info.plist"
+INFOPLIST_FILE_PATH="${TRAVIS_BUILD_DIR}/VirgilCryptoFoundation/Info.plist"
 
 # Define SDK versions
 VERSION="v"$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${INFOPLIST_FILE_PATH}")
-CURRENT_HTML_PATH_DST="${HTML_PATH_DST}/${VERSION}"
-mkdir "${CURRENT_HTML_PATH_DST}"
+CURRENT_VERSION_DIR="${DOCS_DIR}/${VERSION}"
+mkdir "${CURRENT_VERSION_DIR}"
 
 PROJS=( "VirgilCryptoFoundation" "VirgilCryptoPythia" "VirgilCryptoRatchet" )
 
 for proj in "${PROJS[@]}"; do
     # Generate the HTML documentation.
-    PROJ=${proj} OUTPUT="${CURRENT_HTML_PATH_DST}/${proj}" ./CI/generate-docs.sh
+    PROJ=${proj} OUTPUT="${CURRENT_VERSION_DIR}/${proj}" ${TRAVIS_BUILD_DIR}/CI/generate-docs.sh
 done
 
 # Generate root HTML file
