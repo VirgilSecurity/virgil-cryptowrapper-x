@@ -79,7 +79,7 @@ deploy:
   # Publish docs
   - provider: pages
     skip_cleanup: true
-    github-token: $GITHUB_TOKEN
+    github-token: $GITHUB_ACCESS_TOKEN
     local_dir: "docs"
     on:
       repo: $REPO
