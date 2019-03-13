@@ -62,7 +62,7 @@ function get_dir_names {
     echo ${DIR_NAMES[*]}
 }
 
-cat >"${HTML_PATH_DST}/index.html" <<EOL
+cat >"${DOCS_DIR}/index.html" <<EOL
 <!DOCTYPE HTML>
 <html>
    <head>
@@ -74,10 +74,10 @@ cat >"${HTML_PATH_DST}/index.html" <<EOL
         <ul>
 EOL
 
-for dir in `get_dir_names "${HTML_PATH_DST}" "v*"`; do
-    echo "<li><p><a href=\"${dir}/index.html\">${dir}</a></p></li>" >> "${HTML_PATH_DST}/index.html"
+for dir in `get_dir_names "${DOCS_DIR}" "v*"`; do
+    echo "<li><p><a href=\"${dir}/index.html\">${dir}</a></p></li>" >> "${DOCS_DIR}/index.html"
 
-cat >"${HTML_PATH_DST}/${dir}/index.html" <<EOL
+cat >"${DOCS_DIR}/${dir}/index.html" <<EOL
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -90,17 +90,17 @@ cat >"${HTML_PATH_DST}/${dir}/index.html" <<EOL
 EOL
 
     for proj in "${PROJS[@]}"; do
-        echo "<li><p><a href=\"${proj}/index.html\">${proj}</a></p></li>" >> "${HTML_PATH_DST}/${dir}/index.html"
+        echo "<li><p><a href=\"${proj}/index.html\">${proj}</a></p></li>" >> "${DOCS_DIR}/${dir}/index.html"
     done
 
-cat >>"${HTML_PATH_DST}/${dir}/index.html" <<EOL
+cat >>"${DOCS_DIR}/${dir}/index.html" <<EOL
         </ul>
     </body>
 </html>
 EOL
 done
 
-cat >>"${HTML_PATH_DST}/index.html" <<EOL
+cat >>"${DOCS_DIR}/index.html" <<EOL
         </ul>
    </body>
 </html>
