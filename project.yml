@@ -12,54 +12,6 @@ options:
     macOS: "10.10"
 
 targets:
-  VirgilCryptoCommon:
-    type: framework
-    platform: [iOS, tvOS, macOS]
-    scheme: {}
-    info:
-      path: VirgilCryptoCommon/Info.plist
-      properties:
-        CFBundleShortVersionString: 0.1.0
-        CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoCommon
-    scheme:
-      testTargets:
-        - VirgilCryptoCommon-Tests_$platform
-    sources:
-      - VirgilCryptoCommon
-    dependencies:
-      - carthage: VSCCommon
-    settings:
-      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoCommon
-      APPLICATION_EXTENSION_API_ONLY: YES
-
-  VirgilCryptoCommon_watchOS:
-    type: framework
-    platform: [watchOS]
-    scheme: {}
-    info:
-      path: VirgilCryptoCommon/Info.plist
-      properties:
-        CFBundleShortVersionString: 0.1.0
-        CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoCommon
-    platformSuffix: ""
-    sources:
-      - VirgilCryptoCommon
-    dependencies:
-      - carthage: VSCCommon
-    settings:
-      PRODUCT_BUNDLE_IDENTIFIER: com.virgilsecurity.VirgilCryptoCommon
-      APPLICATION_EXTENSION_API_ONLY: YES
-      PRODUCT_NAME: VirgilCryptoCommon
-
-  VirgilCryptoCommon-Tests:
-    type: bundle.unit-test
-    platform: [iOS, tvOS, macOS]
-    scheme: {}
-    sources:
-      - VirgilCryptoCommonTests
-    dependencies:
-      - target: VirgilCryptoCommon_$platform
-
   VirgilCryptoFoundation:
     type: framework
     platform: [iOS, tvOS, macOS]
@@ -67,7 +19,7 @@ targets:
     info:
       path: VirgilCryptoFoundation/Info.plist
       properties:
-        CFBundleShortVersionString: 0.1.0
+        CFBundleShortVersionString: 0.3.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoFoundation
     scheme:
       testTargets:
@@ -87,7 +39,7 @@ targets:
     info:
       path: VirgilCryptoFoundation/Info.plist
       properties:
-        CFBundleShortVersionString: 0.1.0
+        CFBundleShortVersionString: 0.3.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoFoundation
     platformSuffix: ""
     sources:
@@ -116,7 +68,7 @@ targets:
     info:
       path: VirgilCryptoPythia/Info.plist
       properties:
-        CFBundleShortVersionString: 0.1.0
+        CFBundleShortVersionString: 0.3.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoPythia
     scheme:
       testTargets:
@@ -136,7 +88,7 @@ targets:
     info:
       path: VirgilCryptoPythia/Info.plist
       properties:
-        CFBundleShortVersionString: 0.1.0
+        CFBundleShortVersionString: 0.3.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoPythia
     platformSuffix: ""
     sources:
@@ -165,7 +117,7 @@ targets:
     info:
       path: VirgilCryptoRatchet/Info.plist
       properties:
-        CFBundleShortVersionString: 0.1.0
+        CFBundleShortVersionString: 0.3.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoRatchet
     scheme:
       testTargets:
@@ -186,7 +138,7 @@ targets:
     info:
       path: VirgilCryptoRatchet/Info.plist
       properties:
-        CFBundleShortVersionString: 0.1.0
+        CFBundleShortVersionString: 0.3.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoRatchet
     platformSuffix: ""
     sources:
@@ -212,28 +164,24 @@ targets:
 aggregateTargets:
   Build_iOS:
     targets:
-      - VirgilCryptoCommon_iOS
       - VirgilCryptoFoundation_iOS
       - VirgilCryptoPythia_iOS
       - VirgilCryptoRatchet_iOS
 
   Build_watchOS:
     targets:
-      - VirgilCryptoCommon_watchOS
       - VirgilCryptoFoundation_watchOS
       - VirgilCryptoPythia_watchOS
       - VirgilCryptoRatchet_watchOS
 
   Build_tvOS:
     targets:
-      - VirgilCryptoCommon_tvOS
       - VirgilCryptoFoundation_tvOS
       - VirgilCryptoPythia_tvOS
       - VirgilCryptoRatchet_tvOS
 
   Build_macOS:
     targets:
-      - VirgilCryptoCommon_macOS
       - VirgilCryptoFoundation_macOS
       - VirgilCryptoPythia_macOS
       - VirgilCryptoRatchet_macOS

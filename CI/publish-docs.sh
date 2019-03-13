@@ -35,82 +35,12 @@
 # POSSIBILITY OF SUCH DAMAGE.
 #
 
-gem install jazzy
-
-# Settings
-REPO_PATH=https://github.com/VirgilSecurity/virgil-cryptowrapper-x.git
-HTML_PATH_DST="${TRAVIS_BUILD_DIR}/docs"
-CHANGESET=$(git rev-parse --verify HEAD)
-
 # Get a clean version of the HTML documentation repo.
 rm -rf ${HTML_PATH_DST}
 mkdir -p ${HTML_PATH_DST}
 git clone -b gh-pages "${REPO_PATH}" --single-branch ${HTML_PATH_DST}
 
-INFOPLIST_FILE_PATH="${TRAVIS_BUILD_DIR}/VirgilCryptoCommon/Info.plist"
+./CI/generate-docs-structure.sh
 
-# Define SDK versions
-VERSION="v"$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${INFOPLIST_FILE_PATH}")
-CURRENT_HTML_PATH_DST="${HTML_PATH_DST}/${VERSION}"
-mkdir "${CURRENT_HTML_PATH_DST}"
-
-PROJS=( "VirgilCryptoFoundation" "VirgilCryptoPythia" "VirgilCryptoRatchet" )
-
-for proj in "${PROJS[@]}"; do
-    # Generate the HTML documentation.
-    PROJ=${proj} OUTPUT="${CURRENT_HTML_PATH_DST}/${proj}" ./CI/generate-docs.sh
-done
-
-# Generate root HTML file
-function get_dir_names {
-    local DIRS=`find "$1" -maxdepth 1 -type d -name "$2"`
-    local DIR_NAMES=()
-    for dir in ${DIRS}; do
-        DIR_NAMES+=("${dir#${1}/}")
-    done
-    echo ${DIR_NAMES[*]}
-}
-
-cat >"${HTML_PATH_DST}/index.html" <<EOL
-<!DOCTYPE HTML>
-<html>
-   <head>
-        <meta charset="utf-8">
-        <title>Virgil Security Crypto</title>
-   </head>
-   <body>
-        Virgil Security Crypto
-        <ul>
-EOL
-
-for dir in `get_dir_names "${HTML_PATH_DST}" "v*"`; do
-    echo "<li><p><a href=\"${dir}/index.html\">${dir}</a></p></li>" >> "${HTML_PATH_DST}/index.html"
-
-cat >"${HTML_PATH_DST}/${dir}/index.html" <<EOL
-<!DOCTYPE HTML>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Virgil Security Crypto</title>
-    </head>
-    <body>
-        Virgil Security Crypto
-        <ul>
-EOL
-
-    for proj in "${PROJS[@]}"; do
-        echo "<li><p><a href=\"${proj}/index.html\">${proj}</a></p></li>" >> "${HTML_PATH_DST}/${dir}/index.html"
-    done
-
-cat >>"${HTML_PATH_DST}/${dir}/index.html" <<EOL
-        </ul>
-    </body>
-</html>
-EOL
-done
-
-cat >>"${HTML_PATH_DST}/index.html" <<EOL
-        </ul>
-   </body>
-</html>
-EOL
+git commit -m "Updated docs"
+git push
