@@ -53,7 +53,7 @@ script:
 
   # Generate docs
   - if [$PUBLISH_DOCS = "YES" && $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+]; then
-      ./CI/publish-docs.sh
+      ./CI/publish-docs.sh;
     fi
 
 deploy:
