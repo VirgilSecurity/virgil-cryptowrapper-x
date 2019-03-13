@@ -86,6 +86,7 @@
 		BF_04721C57B97AC346A9525E38F3834D77 /* KeyDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_2182DE3D2CE614D01CF0C64CE0773B68 /* KeyDeserializer.swift */; };
 		BF_056F9AA04D5FDBA3EF5E2391BBB4F542 /* AlgInfoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_A83E6BD072DE5AD3D468649A09E43C43 /* AlgInfoSerializer.swift */; };
 		BF_061CED0D49FBB8D5A03FC474AC0D606F /* RatchetError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_2AA311BA420AC4A8E69B0FD153305549 /* RatchetError.swift */; };
+		BF_0650B55181238B95ED493F5D712B8804 /* Curve25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_5F656ED7DAB3797954AF3612C2111206 /* Curve25519PublicKey.swift */; };
 		BF_06C5FCAD6FF52DC1B454FD57BF12D2E6 /* Ecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_6FC32449AAB1D10F2BACBFD8A8826F96 /* Ecies.swift */; };
 		BF_07D7575AEE860BE6EF0E5F4472CD7E3F /* Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_22A48B1E3E81BD82962E2B30CDFEADC5 /* Decrypt.swift */; };
 		BF_07EFD36FC0CC254C063255F6F90EB4F5 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A43903FAEF429835A315FCC154A1885E /* VSCFoundation.framework */; };
@@ -101,7 +102,6 @@
 		BF_0DC3516314229A7DE015524868017D16 /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_2FFDD73074E2B0529FE627B51E581718 /* VSCCommon.framework */; };
 		BF_0E201132311291A24BBA87D504C7E3E3 /* AuthDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_C7F7348964BC4B52DCC4587B57A35CA6 /* AuthDecrypt.swift */; };
 		BF_0EAB3E4C700262594D6CF8720E4ED805 /* GenerateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9BE6529D56D9FF3C70D2175222634406 /* GenerateKey.swift */; };
-		BF_0EF6F4AB70FC84206257DB64614FE99A /* X25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_EE238DC7E5B9313D956297684B132674 /* X25519PrivateKey.swift */; };
 		BF_0F4BA183D9977056DB23164A71717045 /* PythiaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_804068CDDEC04F8228515B0C6F1943D5 /* PythiaError.swift */; };
 		BF_0FBE18BB7E0DCF953425C86B7F28D5C1 /* VSCRatchet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_35C845B1CD8F20C0341869B8F4A9BCF1 /* VSCRatchet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_10998D784B669A1B6101513C83D41842 /* VerifyHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_694E930F12DA61FF959C2DB4FDD5701C /* VerifyHash.swift */; };
@@ -112,6 +112,7 @@
 		BF_123227A0E61F7CFF46DBC4EE381C3B09 /* Pkcs8Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_49369FF1BB12408F42E18331EFD50714 /* Pkcs8Serializer.swift */; };
 		BF_1232C6DC0BD9E06F7484AF458C8BEB1B /* VSCFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A43903FAEF429835A315FCC154A1885E /* VSCFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_123EA6EEDD29FE3F80095AD3EF304820 /* RawKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_2B2336DF768AB38A6488ACAF47BF8BC8 /* RawKey.swift */; };
+		BF_1249E7237E9ABDBB8266EBD99CE1DB00 /* Curve25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9ACC9C2152FE484F298A149CB812D322 /* Curve25519PrivateKey.swift */; };
 		BF_12743D8405B614365C7813BF3194C56F /* MessageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F1451F4BB6583C19027D9B2B4A9A2181 /* MessageInfo.swift */; };
 		BF_127530698E8E437870C0702D11B0FEDA /* Hmac.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_89711317EA60CA433FEE776DD5DE839F /* Hmac.swift */; };
 		BF_13495298695DAF95F240465A08CF2E7C /* Aes256Gcm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_4A06040C996A42A301BF0FF6B6C6304B /* Aes256Gcm.swift */; };
@@ -172,6 +173,7 @@
 		BF_299B2D2FDF501A029928AD49489367F3 /* SignHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_A467E35568110FF0AC973BBEAE8C2414 /* SignHash.swift */; };
 		BF_2AF303435DB67742D4114424E0A873DF /* Sha512.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_130653C24CDCFE34F29AECF35C05B887 /* Sha512.swift */; };
 		BF_2AF43B9EDC6C0AA7791C45DB1CC34784 /* MessageInfoCustomParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_024153487FBCA0EE0BC6C8822E997EFC /* MessageInfoCustomParams.swift */; };
+		BF_2BBBDD1C4A6DD84A995EA80B9DA2AF4E /* Curve25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9ACC9C2152FE484F298A149CB812D322 /* Curve25519PrivateKey.swift */; };
 		BF_2BE92085E728C0E1C3D576624BE0EAB9 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_1974BBB3AD53D529248D8E1561DA9F73 /* Defaults.swift */; };
 		BF_2C9801CA2FC6ECB2A79F5F1B65F8D3D7 /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_C1A427885D98B6B7649438B04CA8C698 /* CipherAlgInfo.swift */; };
 		BF_2CFA7EA62DADE51A8457CADDEC59724C /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_A9A65CB91CFAE79FC4CD9FF01D14D8CD /* Sha256.swift */; };
@@ -198,7 +200,6 @@
 		BF_35F60F74D982049E8BB1962C35008AFA /* Sha224.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9F58F39A16ABF9D5C683F4EC34083AF9 /* Sha224.swift */; };
 		BF_3684E99095B0018EB0BA97F79A791D9A /* PasswordRecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_84DB147E51191562902758D63EBECEC2 /* PasswordRecipientInfo.swift */; };
 		BF_36C4EDBF43A5634D5DEC394CE4C720E2 /* RatchetMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_F0CFFE43F9D61E2AF64CD07A4FA2EFE6 /* RatchetMessage.swift */; };
-		BF_376E3409E5BE4F44A2812E517410464D /* X25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_EE238DC7E5B9313D956297684B132674 /* X25519PrivateKey.swift */; };
 		BF_37A59DD8FDE0E27D78808A3355FC01D1 /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_1C4039C5757439E3048DFE444CB16E31 /* CContext.swift */; };
 		BF_387630A844115BAECFB092A7EFB9135F /* VirgilCryptoPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_E297091C83F16804D2FA44D78BB63A1A /* VirgilCryptoPythia.framework */; };
 		BF_38DFBF29046862BA9475394CED2C9A9C /* AlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA0FE692D4CB86CC3D27307B192676B8 /* AlgInfo.swift */; };
@@ -206,7 +207,6 @@
 		BF_39EA4FE4FFB1259D72FFE48C839EE991 /* AlgInfoDerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_C74DD0094AC530AA3A06420538BEA1D6 /* AlgInfoDerSerializer.swift */; };
 		BF_3A1EC98FF8987FEDA1682D7873A46F2E /* AuthEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8188AE86EB1B3F837B46D08677E34BA1 /* AuthEncrypt.swift */; };
 		BF_3A4E7C06EC2897BCBCB8266826DFC313 /* Encrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0D872FF54FBCA842E39ECFD2C63795C2 /* Encrypt.swift */; };
-		BF_3ACA0B630C7BCB4DA50AFFF3ECC47FDB /* X25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47F988616B3AF89085AAA2BD6E423E47 /* X25519PublicKey.swift */; };
 		BF_3B039D1984659CD617488BAC18BE5600 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9FEFD1E5AB6138C75196002348206A9A /* Key.swift */; };
 		BF_3B4C6F4186BD107BBEDCA96BA99D59DD /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_88EF49D6F73C350FF2D4BE69B68965E3 /* CContext.swift */; };
 		BF_3B6E46D5C374A81A928387E724B3E3B7 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A6EB85C207AA125F147112EAE5AB8ECF /* VSCFoundation.framework */; };
@@ -230,10 +230,10 @@
 		BF_4484FC6D6D8612B0EB6F9CA37366C5DC /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A2E84BCC37BC95675A6FE4F3E1076892 /* VSCCommon.framework */; };
 		BF_44ED2F2A3B856FF18FF8067E68D81128 /* Alg.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_2C1652206E3FCDBF762489097EDE9226 /* Alg.swift */; };
 		BF_45041BDD01FBA93F07FAE5FB82082B96 /* VirgilCryptoPythia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_DF011BB75796BDA287CE4C01FD54E9A3 /* VirgilCryptoPythia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BF_45C6371C19877E27D55DC96C7C43F66F /* X25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_EE238DC7E5B9313D956297684B132674 /* X25519PrivateKey.swift */; };
 		BF_4616AA52A9816184D7C1D87B29259BB8 /* VSCFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_40F51726CD680DA1892FAED775C95842 /* VSCFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_4621D19761C96B4C3362E1BB0CF96D23 /* VSCRatchet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_077C0D988B0E3CD472EA48781505D17B /* VSCRatchet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_471F46B03561F8809FEE94598E3BFF61 /* HashBasedAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BA3D9DBA6F5E6A374812A5A59FE96C23 /* HashBasedAlgInfo.swift */; };
+		BF_472C1429E9BD88FA6E8613D4AD4366B1 /* Curve25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9ACC9C2152FE484F298A149CB812D322 /* Curve25519PrivateKey.swift */; };
 		BF_472DEB361E67FC55F0A68C694FE08217 /* PbeAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CA022E4DAB6C679833991C755CAB120F /* PbeAlgInfo.swift */; };
 		BF_4777662765BDDEE59C4A5BDE61E1D9B8 /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0EE17E5B57509C697DA3DDC9B7E054BC /* Signer.swift */; };
 		BF_47DC870C2BF9F0AF6DE16C2ECAB28057 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9FEFD1E5AB6138C75196002348206A9A /* Key.swift */; };
@@ -289,7 +289,6 @@
 		BF_67E5BDE5D67B331F87CC403ABF2CED46 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_884DBF3DE3182AD1D6A69B101771ED4A /* PrivateKey.swift */; };
 		BF_67E79038F46CC8D217CA1AE502727F43 /* Pkcs5Pbkdf2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_973F120A9A343366C7E8CFE902EAD60E /* Pkcs5Pbkdf2.swift */; };
 		BF_680D7333C855BF26771505DA3C9B813E /* MessageInfoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_CB91004F215FCD6C93DBC86DC45F2259 /* MessageInfoSerializer.swift */; };
-		BF_681899E53FF2DDA7BB7354AC960D043C /* X25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47F988616B3AF89085AAA2BD6E423E47 /* X25519PublicKey.swift */; };
 		BF_6821202E548D21F4F16B88FA059929B7 /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_757E6E153544700DC5CE701EEE071691 /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_6A6A5E603F432FE7A604C48570C1F027 /* Aes256Cbc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_6F02DF1432477761EC257D00DB356994 /* Aes256Cbc.swift */; };
 		BF_6AE307F4DEDD78AC659AB023B40B1CB5 /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BBF11477529DEF3A75727443C7FC2A32 /* CContext.swift */; };
@@ -340,10 +339,10 @@
 		BF_7FE5E93BD7B3419BD0635EFB06D3C94C /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A2E84BCC37BC95675A6FE4F3E1076892 /* VSCCommon.framework */; };
 		BF_800A4CA018E7D9C2D11BC4D530F36C7E /* VSCPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_5431E9E09822E91677B077B42A5DDD84 /* VSCPythia.framework */; };
 		BF_8061985816A6CB6723C7BA683E538CE0 /* Hmac.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_89711317EA60CA433FEE776DD5DE839F /* Hmac.swift */; };
-		BF_81AF68BF01C5D4A968EB7354A2218AD1 /* X25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47F988616B3AF89085AAA2BD6E423E47 /* X25519PublicKey.swift */; };
 		BF_81B23645B6C0AFFDF155D3BB6020CAC4 /* VSCPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_40F62A3240B5D3E7DF75C809AF5A5D78 /* VSCPythia.framework */; };
 		BF_8206C283FF21CE9BE35887A2CCDAF719 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_40F51726CD680DA1892FAED775C95842 /* VSCFoundation.framework */; };
 		BF_82425A8F171C849231D9D0044361E454 /* Hmac.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_89711317EA60CA433FEE776DD5DE839F /* Hmac.swift */; };
+		BF_82CFAFD66BF2F9CA07EF1B473C815E24 /* Curve25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_5F656ED7DAB3797954AF3612C2111206 /* Curve25519PublicKey.swift */; };
 		BF_833DB7FCAB99C02F68D1B6BEE706E343 /* VirgilCryptoRatchet.h in Headers */ = {isa = PBXBuildFile; fileRef = FR_572F538FEAA27EF6F110225576C4F20C /* VirgilCryptoRatchet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BF_8340BF50C617DB0C5B30CA12A8DCB6D4 /* Sha224.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9F58F39A16ABF9D5C683F4EC34083AF9 /* Sha224.swift */; };
 		BF_83B9CA90BA8F9C01C63F24032EC96408 /* ListKeyValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_60225FAE4BD53CD2025D4F13611E9ECA /* ListKeyValueNode.swift */; };
@@ -423,7 +422,6 @@
 		BF_AD05CCA1578BECFEEB0DD7D8A91147BC /* PasswordRecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_84DB147E51191562902758D63EBECEC2 /* PasswordRecipientInfo.swift */; };
 		BF_AD48F61191B137C45A2D42E2B0D671B6 /* KeyDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_2182DE3D2CE614D01CF0C64CE0773B68 /* KeyDeserializer.swift */; };
 		BF_AEC305D69CCADB42F14BB3B084221AEA /* RecipientCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8457918C08641ABD957F30E63F010A34 /* RecipientCipher.swift */; };
-		BF_AEDE613E8ACA11E100557C6A58838B2D /* X25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_47F988616B3AF89085AAA2BD6E423E47 /* X25519PublicKey.swift */; };
 		BF_AF9C4AF0801DA63A77E33B85CC826A38 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_945BECB54EAD2C96F07C652DD0058A69 /* Base64.swift */; };
 		BF_AFDED6DA97A7B877F75E9EA4E254A90A /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A2E84BCC37BC95675A6FE4F3E1076892 /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_B0469A81CD6A8AA625578217D1494917 /* KeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_42BFAEFFDB9E4E0974D5B7B2D76F88DD /* KeyProvider.swift */; };
@@ -503,6 +501,7 @@
 		BF_CD31C7C8ABF339088D991EE3A7322CA0 /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_2FFDD73074E2B0529FE627B51E581718 /* VSCCommon.framework */; };
 		BF_CD706D14CF2587A100124B1291D8D56F /* Ed25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_DEEDD553BA20E3D3CDD3FF480CB7892D /* Ed25519PublicKey.swift */; };
 		BF_CDB231F75B27F4703C39D802CEC58BFC /* Aes256Cbc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_6F02DF1432477761EC257D00DB356994 /* Aes256Cbc.swift */; };
+		BF_CEB51B6CA3C0C35EEB543B4CA2583D5B /* Curve25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_5F656ED7DAB3797954AF3612C2111206 /* Curve25519PublicKey.swift */; };
 		BF_CEB6C802C91025E4774BDFB5D1266C1E /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_C2E6A03C162EF8FDA9FC7D6A84A04ADC /* Cipher.swift */; };
 		BF_CEEB07389886A6AB927AB45D3DEA093D /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_757E6E153544700DC5CE701EEE071691 /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_D1854CD585D1153C0FDF9D46604EFDC5 /* Asn1wr.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_E18F2010E05B04A53547A55B668326DF /* Asn1wr.swift */; };
@@ -530,6 +529,7 @@
 		BF_DDB6A82DA77225367C9C68476A0AE80E /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8765B79B578BC502558C95433D692088 /* Hash.swift */; };
 		BF_DDC6B98D793AB2AEC58AC935C894C43C /* RecipientCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_8457918C08641ABD957F30E63F010A34 /* RecipientCipher.swift */; };
 		BF_DE642D60AF6524033787010415B29430 /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_C1A427885D98B6B7649438B04CA8C698 /* CipherAlgInfo.swift */; };
+		BF_DE94939E2EA3F069E23B902C9BFEBBD8 /* Curve25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_5F656ED7DAB3797954AF3612C2111206 /* Curve25519PublicKey.swift */; };
 		BF_DEE62DBB8FDE3E120A51631C43D83C9D /* Encrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_0D872FF54FBCA842E39ECFD2C63795C2 /* Encrypt.swift */; };
 		BF_DF30FE97B3371F3B6D54CD335A2D586E /* Pythia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_36522D74DD89BC54357F45EFC79FAE04 /* Pythia.swift */; };
 		BF_DF80D73814C1271C802077EC8D3432E8 /* RatchetCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_1AE06010315A83B551947E975E63B9E6 /* RatchetCommon.swift */; };
@@ -546,7 +546,6 @@
 		BF_E709318497C28A47EB2985835845A50F /* Pythia.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_36522D74DD89BC54357F45EFC79FAE04 /* Pythia.swift */; };
 		BF_E70DC56C61220D63D2E6EB1ED3B0D105 /* RatchetKeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_856852DA99980112E09EEFA0056B39F6 /* RatchetKeyUtils.swift */; };
 		BF_E80CE5D52E27744AD326AE0E5BA84AC9 /* AlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA0FE692D4CB86CC3D27307B192676B8 /* AlgInfo.swift */; };
-		BF_E8B6AFC5B012F51C266B9EA9D8F38018 /* X25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_EE238DC7E5B9313D956297684B132674 /* X25519PrivateKey.swift */; };
 		BF_E8CD98D435065AA1AD2A485929308834 /* VSCFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_CD74056A585C8AE8E0DC58597BE80025 /* VSCFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_E9748AC67E007A2E1FABE5B69F78404D /* VirgilCryptoFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_CEDA63D39DE6A5B79F4150F52D0FFB50 /* VirgilCryptoFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_E9A887CDFAA013580D638AE3B5067A69 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9FEFD1E5AB6138C75196002348206A9A /* Key.swift */; };
@@ -555,6 +554,7 @@
 		BF_ECC992BE5099E57030FEAEA417911E6B /* VirgilCryptoRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BFD9AE92AEC7FEEA578FAD7A858E6EAD /* VirgilCryptoRatchetTests.swift */; };
 		BF_ECF039222A620F6427304A444C748411 /* VirgilCryptoFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FR_CEDA63D39DE6A5B79F4150F52D0FFB50 /* VirgilCryptoFoundation.framework */; };
 		BF_EDA3E3F055B5DB48EBAD9CE39D1014DE /* FakeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_6AFA52E2113D352EC83A597B08C601B5 /* FakeRandom.swift */; };
+		BF_EE60FAE56329912C44E4786F0459A58D /* Curve25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_9ACC9C2152FE484F298A149CB812D322 /* Curve25519PrivateKey.swift */; };
 		BF_EF5CB1197268E2E9761A05BF518FFFB0 /* VSCFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FR_A43903FAEF429835A315FCC154A1885E /* VSCFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF_EFB43DAB23465CF7814B6DB184E535E4 /* Verifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_BAFFA88A5C78F18B3B4A8A302D071CFE /* Verifier.swift */; };
 		BF_F050FB31A92BF4FC6E13391345755BD6 /* AlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FR_AA0FE692D4CB86CC3D27307B192676B8 /* AlgInfo.swift */; };
@@ -980,7 +980,6 @@
 		FR_40F62A3240B5D3E7DF75C809AF5A5D78 /* VSCPythia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCPythia.framework; sourceTree = "<group>"; };
 		FR_4201F7091183E01B91FF3861B8658F48 /* Pkcs8DerDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs8DerDeserializer.swift; sourceTree = "<group>"; };
 		FR_42BFAEFFDB9E4E0974D5B7B2D76F88DD /* KeyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyProvider.swift; sourceTree = "<group>"; };
-		FR_47F988616B3AF89085AAA2BD6E423E47 /* X25519PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X25519PublicKey.swift; sourceTree = "<group>"; };
 		FR_492D1164809AFC1E169C524CD25A65D1 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_49369FF1BB12408F42E18331EFD50714 /* Pkcs8Serializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs8Serializer.swift; sourceTree = "<group>"; };
 		FR_4A06040C996A42A301BF0FF6B6C6304B /* Aes256Gcm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aes256Gcm.swift; sourceTree = "<group>"; };
@@ -991,6 +990,7 @@
 		FR_572F538FEAA27EF6F110225576C4F20C /* VirgilCryptoRatchet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirgilCryptoRatchet.h; sourceTree = "<group>"; };
 		FR_59F32F13E55563ED1B24CFAA3CD640C4 /* ComputeSharedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeSharedKey.swift; sourceTree = "<group>"; };
 		FR_5B80A6ED73D28EA7F59CD904AB789713 /* CipherAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherAuth.swift; sourceTree = "<group>"; };
+		FR_5F656ED7DAB3797954AF3612C2111206 /* Curve25519PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve25519PublicKey.swift; sourceTree = "<group>"; };
 		FR_60225FAE4BD53CD2025D4F13611E9ECA /* ListKeyValueNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKeyValueNode.swift; sourceTree = "<group>"; };
 		FR_62A3B6BF7AB5A72AC7633267DF7E3F6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FR_66826A73C8D44332E1B1B158C2614159 /* Kdf2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kdf2.swift; sourceTree = "<group>"; };
@@ -1026,6 +1026,7 @@
 		FR_945BECB54EAD2C96F07C652DD0058A69 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
 		FR_94AFF9965E408D2B0698C44E271FF231 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FR_973F120A9A343366C7E8CFE902EAD60E /* Pkcs5Pbkdf2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs5Pbkdf2.swift; sourceTree = "<group>"; };
+		FR_9ACC9C2152FE484F298A149CB812D322 /* Curve25519PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve25519PrivateKey.swift; sourceTree = "<group>"; };
 		FR_9BE6529D56D9FF3C70D2175222634406 /* GenerateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateKey.swift; sourceTree = "<group>"; };
 		FR_9F58F39A16ABF9D5C683F4EC34083AF9 /* Sha224.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha224.swift; sourceTree = "<group>"; };
 		FR_9F5ABD161AD60CA6950AD4CA7F61590C /* FoundationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationImplementation.swift; sourceTree = "<group>"; };
@@ -1078,7 +1079,6 @@
 		FR_E983C58E49ACDD5C34BB5B36D14685EC /* OidId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OidId.swift; sourceTree = "<group>"; };
 		FR_EB2E39E5D2DC74AE999C002C5303D635 /* CipherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInfo.swift; sourceTree = "<group>"; };
 		FR_EC9DB7DC9793FA372A4670538D751570 /* Asn1rd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asn1rd.swift; sourceTree = "<group>"; };
-		FR_EE238DC7E5B9313D956297684B132674 /* X25519PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X25519PrivateKey.swift; sourceTree = "<group>"; };
 		FR_EF45ADCA631E64F635E6D140DB276DC7 /* CipherAuthInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherAuthInfo.swift; sourceTree = "<group>"; };
 		FR_F0CFFE43F9D61E2AF64CD07A4FA2EFE6 /* RatchetMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetMessage.swift; sourceTree = "<group>"; };
 		FR_F1451F4BB6583C19027D9B2B4A9A2181 /* MessageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfo.swift; sourceTree = "<group>"; };
@@ -1457,6 +1457,8 @@
 				FR_EB2E39E5D2DC74AE999C002C5303D635 /* CipherInfo.swift */,
 				FR_59F32F13E55563ED1B24CFAA3CD640C4 /* ComputeSharedKey.swift */,
 				FR_3C82FF4E7AC118F79D65A402042FF8FD /* CtrDrbg.swift */,
+				FR_9ACC9C2152FE484F298A149CB812D322 /* Curve25519PrivateKey.swift */,
+				FR_5F656ED7DAB3797954AF3612C2111206 /* Curve25519PublicKey.swift */,
 				FR_22A48B1E3E81BD82962E2B30CDFEADC5 /* Decrypt.swift */,
 				FR_1974BBB3AD53D529248D8E1561DA9F73 /* Defaults.swift */,
 				FR_6FC32449AAB1D10F2BACBFD8A8826F96 /* Ecies.swift */,
@@ -1521,8 +1523,6 @@
 				FR_BAFFA88A5C78F18B3B4A8A302D071CFE /* Verifier.swift */,
 				FR_694E930F12DA61FF959C2DB4FDD5701C /* VerifyHash.swift */,
 				FR_B8418EBD1EA732A6864EB5C43AEEF5EF /* VirgilCryptoFoundation.h */,
-				FR_EE238DC7E5B9313D956297684B132674 /* X25519PrivateKey.swift */,
-				FR_47F988616B3AF89085AAA2BD6E423E47 /* X25519PublicKey.swift */,
 			);
 			path = VirgilCryptoFoundation;
 			sourceTree = "<group>";
@@ -2118,6 +2118,8 @@
 				BF_42217CF964DC0B44D7C1CCB17A1E2EAB /* CipherInfo.swift in Sources */,
 				BF_F91968D1FE369982B6626AA05B4E87DE /* ComputeSharedKey.swift in Sources */,
 				BF_905AA8A4575F74D5C9D28D7486C98708 /* CtrDrbg.swift in Sources */,
+				BF_EE60FAE56329912C44E4786F0459A58D /* Curve25519PrivateKey.swift in Sources */,
+				BF_DE94939E2EA3F069E23B902C9BFEBBD8 /* Curve25519PublicKey.swift in Sources */,
 				BF_07D7575AEE860BE6EF0E5F4472CD7E3F /* Decrypt.swift in Sources */,
 				BF_742D7DF8676E02FE4EDF10E7FD285B58 /* Defaults.swift in Sources */,
 				BF_B18BB05BA8AFD0823126E25DA797E2AE /* Ecies.swift in Sources */,
@@ -2180,8 +2182,6 @@
 				BF_9777FA01C78AD6ED94ED4439757851CC /* SimpleAlgInfo.swift in Sources */,
 				BF_0A1D76210BE6343FACDCBE10CFDCF220 /* Verifier.swift in Sources */,
 				BF_305258AB0049D24467CEDDBBF9054741 /* VerifyHash.swift in Sources */,
-				BF_0EF6F4AB70FC84206257DB64614FE99A /* X25519PrivateKey.swift in Sources */,
-				BF_681899E53FF2DDA7BB7354AC960D043C /* X25519PublicKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2215,6 +2215,8 @@
 				BF_5BA0EE495D2203F29E9759785F68DF79 /* CipherInfo.swift in Sources */,
 				BF_A6D38FCB8792E5DEFA00645B8E70820A /* ComputeSharedKey.swift in Sources */,
 				BF_C93854ABC62B4993364D2DF91F166B40 /* CtrDrbg.swift in Sources */,
+				BF_472C1429E9BD88FA6E8613D4AD4366B1 /* Curve25519PrivateKey.swift in Sources */,
+				BF_82CFAFD66BF2F9CA07EF1B473C815E24 /* Curve25519PublicKey.swift in Sources */,
 				BF_C5EEC87ACF482294D8A95A5DDCE46DCA /* Decrypt.swift in Sources */,
 				BF_BEA42FC4A2E2A5612E1149EDD52FA322 /* Defaults.swift in Sources */,
 				BF_06C5FCAD6FF52DC1B454FD57BF12D2E6 /* Ecies.swift in Sources */,
@@ -2277,8 +2279,6 @@
 				BF_C426387FAA0829A225E70C0BFEF24DED /* SimpleAlgInfo.swift in Sources */,
 				BF_4BDA5B660A1610AC4A83A5ECF601580F /* Verifier.swift in Sources */,
 				BF_B49493DE7A09E013B66395EA36389C8B /* VerifyHash.swift in Sources */,
-				BF_E8B6AFC5B012F51C266B9EA9D8F38018 /* X25519PrivateKey.swift in Sources */,
-				BF_3ACA0B630C7BCB4DA50AFFF3ECC47FDB /* X25519PublicKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2392,6 +2392,8 @@
 				BF_4164407F9DA39895CB098AECE9BB169C /* CipherInfo.swift in Sources */,
 				BF_287A41CD586A1A1E9EA57B0402BD169F /* ComputeSharedKey.swift in Sources */,
 				BF_BBF972F3E268665BBA4CFDE72065C941 /* CtrDrbg.swift in Sources */,
+				BF_2BBBDD1C4A6DD84A995EA80B9DA2AF4E /* Curve25519PrivateKey.swift in Sources */,
+				BF_CEB51B6CA3C0C35EEB543B4CA2583D5B /* Curve25519PublicKey.swift in Sources */,
 				BF_D46957B177E4FE7A62B0FA572E0049AD /* Decrypt.swift in Sources */,
 				BF_2BE92085E728C0E1C3D576624BE0EAB9 /* Defaults.swift in Sources */,
 				BF_5B50F5D0698F9FAB172E0427C7BD0D23 /* Ecies.swift in Sources */,
@@ -2454,8 +2456,6 @@
 				BF_35DF4AF380846CFFFBCC3F548C320CA4 /* SimpleAlgInfo.swift in Sources */,
 				BF_EFB43DAB23465CF7814B6DB184E535E4 /* Verifier.swift in Sources */,
 				BF_10998D784B669A1B6101513C83D41842 /* VerifyHash.swift in Sources */,
-				BF_376E3409E5BE4F44A2812E517410464D /* X25519PrivateKey.swift in Sources */,
-				BF_AEDE613E8ACA11E100557C6A58838B2D /* X25519PublicKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2531,6 +2531,8 @@
 				BF_0012B8A87EF25E692BC675902069D35C /* CipherInfo.swift in Sources */,
 				BF_1A45C584049341F3CAFA4255314E7A39 /* ComputeSharedKey.swift in Sources */,
 				BF_15C965A1D31B1D5D9A5E52FA8982ADA5 /* CtrDrbg.swift in Sources */,
+				BF_1249E7237E9ABDBB8266EBD99CE1DB00 /* Curve25519PrivateKey.swift in Sources */,
+				BF_0650B55181238B95ED493F5D712B8804 /* Curve25519PublicKey.swift in Sources */,
 				BF_18364D1D2E11B77E60DAEB27C920AB62 /* Decrypt.swift in Sources */,
 				BF_8549D2C5C786DBDCC79887FE75A2FA80 /* Defaults.swift in Sources */,
 				BF_297BC73AD75FD477493627BA2F179142 /* Ecies.swift in Sources */,
@@ -2593,8 +2595,6 @@
 				BF_89647F284DD6FA0433D4DF404106675E /* SimpleAlgInfo.swift in Sources */,
 				BF_6275E181DD4EC969969614DA3A5CCE84 /* Verifier.swift in Sources */,
 				BF_A030675E3806268FBA44623835FCCEA7 /* VerifyHash.swift in Sources */,
-				BF_45C6371C19877E27D55DC96C7C43F66F /* X25519PrivateKey.swift in Sources */,
-				BF_81AF68BF01C5D4A968EB7354A2218AD1 /* X25519PublicKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
