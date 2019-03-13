@@ -44,13 +44,14 @@ script:
       fi
     done
 
-  Build with carthage
+  # Build with carthage
   - if [ $PUBLISH_CARTHAGE == "YES" ]; then
       carthage build --no-skip-current;
       carthage archive;
       mv VirgilCryptoFoundation.framework.zip VirgilCryptoWrapper.framework.zip;
     fi
 
+  # Generate docs
   - if [$PUBLISH_DOCS = "YES" && $TRAVIS_TAG =~ ^[0-9]+\.[0-9]+\.[0-9]+]; then
       ./CI/publish-docs.sh
     fi
