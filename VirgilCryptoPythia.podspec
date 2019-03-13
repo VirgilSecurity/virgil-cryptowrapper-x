@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name                        = "VirgilCryptoPythia"
   s.version                     = "0.3.0"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
-  s.summary                     = "Contains basic swift classes for creating key pairs, encrypting/decrypting data, signing data and verifying signatures."
+  s.summary                     = "Contains swift classes working with Pythia crypto."
   s.homepage                    = "https://github.com/VirgilSecurity/virgil-cryptowrapper-x"
   s.authors                     = { "Virgil Security" => "https://virgilsecurity.com/" }
   s.source                      = { :git => "https://github.com/VirgilSecurity/virgil-cryptowrapper-x.git", :tag => s.version }
