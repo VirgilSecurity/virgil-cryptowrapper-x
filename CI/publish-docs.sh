@@ -41,6 +41,3 @@ mkdir -p ${HTML_PATH_DST}
 git clone -b gh-pages "${REPO_PATH}" --single-branch ${HTML_PATH_DST}
 
 ./CI/generate-docs-structure.sh
-
-git commit -m "Updated docs"
-git push
