@@ -6,7 +6,7 @@
 [![Platform](https://img.shields.io/cocoapods/p/VirgilCryptoFoundation.svg?style=flat)](http://cocoadocs.org/docsets/VirgilCryptoFoundation)
 [![GitHub license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://github.com/VirgilSecurity/virgil/blob/master/LICENSE)
 
-### [Introduction](#introduction) | [Features](#features) | [Usage examples](#usage-examples) | [Installation](#installation) | [Docs](#docs) | [License](#license) | [Contacts](#support)
+### [Introduction](#introduction) | [Features](#features) | [Installation](#installation) | [Docs](#docs) | [License](#license) | [Contacts](#support)
 
 ## Introduction
 This library is designed to be a small, flexible and convenient wrapper for a variety of crypto algorithms. So it can be used in a small microcontroller as well as in a high load server application. Also, it provides a bunch of custom hybrid algorithms that combine different crypto algorithms to solve common complex cryptographic problems in an easy way. That eliminates requirement for developers to have a strong cryptographic skills.
@@ -36,11 +36,6 @@ Cryptographic background for the [Pythia PRF Service](http://pages.cs.wisc.edu/~
 ### Library: Ratchet
 
 Implementation of the [Double Ratchet](https://signal.org/docs/specifications/doubleratchet/) protocol.
-
-
-## Usage examples
-
-
 
 ## Installation
 
