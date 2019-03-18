@@ -3,6 +3,7 @@
 [![Build Status](https://api.travis-ci.com/VirgilSecurity/virgil-cryptowrapper-x.svg?branch=master)](https://travis-ci.com/VirgilSecurity/virgil-cryptowrapper-x)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VirgilCryptoFoundation.svg)](https://cocoapods.org/pods/VirgilCryptoFoundation)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![Platform](https://img.shields.io/cocoapods/p/VirgilCryptoFoundation.svg?style=flat)
 [![GitHub license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://github.com/VirgilSecurity/virgil/blob/master/LICENSE)
 
 ### [Introduction](#introduction) | [Features](#features) | [Installation](#installation) | [Docs](#docs) | [License](#license) | [Contacts](#support)
