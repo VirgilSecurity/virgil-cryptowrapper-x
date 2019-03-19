@@ -43,7 +43,7 @@ class VirgilCryptoRatchetTests: XCTestCase {
 
     func test_ErrorCtx_callDefaultInit_success() {
         let ratchetAlice = RatchetSession()
-        ratchetAlice.setupDefaults()
+        try! ratchetAlice.setupDefaults()
         
         let data = ratchetAlice.serialize()
         
