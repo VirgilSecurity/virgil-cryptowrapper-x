@@ -6,7 +6,7 @@ options:
   tabWidth: 4
   transitivelyLinkDependencies: true
   deploymentTarget:
-    iOS: "8.0"
+    iOS: "9.0"
     watchOS: "2.0"
     tvOS: "9.0"
     macOS: "10.10"
@@ -19,7 +19,7 @@ targets:
     info:
       path: VirgilCryptoFoundation/Info.plist
       properties:
-        CFBundleShortVersionString: 0.3.0
+        CFBundleShortVersionString: 0.4.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoFoundation
     scheme:
       testTargets:
@@ -39,7 +39,7 @@ targets:
     info:
       path: VirgilCryptoFoundation/Info.plist
       properties:
-        CFBundleShortVersionString: 0.3.0
+        CFBundleShortVersionString: 0.4.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoFoundation
     platformSuffix: ""
     sources:
@@ -68,7 +68,7 @@ targets:
     info:
       path: VirgilCryptoPythia/Info.plist
       properties:
-        CFBundleShortVersionString: 0.3.0
+        CFBundleShortVersionString: 0.4.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoPythia
     scheme:
       testTargets:
@@ -88,7 +88,7 @@ targets:
     info:
       path: VirgilCryptoPythia/Info.plist
       properties:
-        CFBundleShortVersionString: 0.3.0
+        CFBundleShortVersionString: 0.4.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoPythia
     platformSuffix: ""
     sources:
@@ -117,7 +117,7 @@ targets:
     info:
       path: VirgilCryptoRatchet/Info.plist
       properties:
-        CFBundleShortVersionString: 0.3.0
+        CFBundleShortVersionString: 0.4.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoRatchet
     scheme:
       testTargets:
@@ -138,7 +138,7 @@ targets:
     info:
       path: VirgilCryptoRatchet/Info.plist
       properties:
-        CFBundleShortVersionString: 0.3.0
+        CFBundleShortVersionString: 0.4.0
         CFBundleIdentitifer: com.virgilsecurity.VirgilCryptoRatchet
     platformSuffix: ""
     sources:

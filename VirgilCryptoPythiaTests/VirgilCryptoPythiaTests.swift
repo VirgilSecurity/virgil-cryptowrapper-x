@@ -42,16 +42,15 @@ import XCTest
 class VirgilCryptoPythiaTests: XCTestCase {
 
     override func setUp() {
-        Pythia.globalInit()
+        try! Pythia.configure()
     }
 
     override func tearDown() {
-        Pythia.globalCleanup()
+        try! Pythia.configure()
     }
 
     func testBlind() {
-        let pythia = Pythia()
-        let result = try! pythia.blind(password: "password".data(using: .utf8)!)
+        let result = try! Pythia.blind(password: "password".data(using: .utf8)!)
         XCTAssert(result.blindedPassword.count == Pythia.blindedPasswordBufLen())
     }
 
