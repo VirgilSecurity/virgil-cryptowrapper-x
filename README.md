@@ -18,20 +18,24 @@ Virgil Security Crypto library wrapper is decomposed to small libraries with spe
 
 ### Library: Foundation
 
-| Algorithm Purpose    | Implementation details                                       |
-| -------------------- | ------------------------------------------------------------ |
-| Key Generation, PRNG | CTR_DRBG [NIST SP 800-90A](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf) |
-| Key Derivation       | [KDF1, KDF2](https://www.shoup.net/iso/std6.pdf),  [HKDF](https://tools.ietf.org/html/rfc5869) |
-| Key Exchange         | [X25519](https://tools.ietf.org/html/rfc7748), [RSA](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Br1.pdf) |
-| Hashing              | [SHA-2 (224/256/384/512)](https://tools.ietf.org/html/rfc4634) |
-| Digital Signature    | [Ed25519](https://tools.ietf.org/html/rfc8032), [RSASSA-PSS](https://tools.ietf.org/html/rfc4056) |
-| Entropy Source       | Linux, macOS [/dev/urandom](https://tls.mbed.org/module-level-design-rng),<br>Windows [CryptGenRandom()](https://tls.mbed.org/module-level-design-rng) |
-| Symmetric Algorithms | [AES-256-GCM](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf) |
-| Elliptic Curves      | [Ed25519](https://tools.ietf.org/html/rfc8032)               |
+This library contains basic cryptographic algorithms and can be used as building blocks for complex solutions.
+
+| Algorithm Purpose           | Implementation details                                                                                                                                    |
+|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Key Generation, PRNG        | CTR_DRBG [NIST SP 800-90A](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-90Ar1.pdf)                                                    |
+| Key Derivation              | [KDF1, KDF2](https://www.shoup.net/iso/std6.pdf),  [HKDF](https://tools.ietf.org/html/rfc5869), [PBKDF2](https://tools.ietf.org/html/rfc8018#section-5.2) |
+| Key Exchange                | [X25519](https://tools.ietf.org/html/rfc7748), [RSA](http://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-56Br1.pdf)                          |
+| Hashing                     | [SHA-2 (224/256/384/512)](https://tools.ietf.org/html/rfc4634)                                                                                            |
+| Message Authentication Code | [HMAC](https://www.ietf.org/rfc/rfc2104.txt)                                                                                                              |
+| Digital Signature           | [Ed25519](https://tools.ietf.org/html/rfc8032), [RSASSA-PSS](https://tools.ietf.org/html/rfc4056)                                                         |
+| Entropy Source              | Linux, macOS [/dev/urandom](https://tls.mbed.org/module-level-design-rng),<br>Windows [CryptGenRandom()](https://tls.mbed.org/module-level-design-rng)    |
+| Symmetric Algorithms        | [AES-256-GCM](http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf), [AES-256-CBC](https://tools.ietf.org/html/rfc3602)           |
+| Encryption schemes          | [PBES2](https://tools.ietf.org/html/rfc8018#section-6.2)                                                                                                  |
+| Elliptic Curves             | [Ed25519](https://tools.ietf.org/html/rfc8032), [Curve25519](https://tools.ietf.org/html/rfc7748)                                                         |
 
 ### Library: Pythia
 
-Cryptographic background for the [Pythia PRF Service](http://pages.cs.wisc.edu/~ace/papers/pythia-full.pdf).
+Cryptographic background for the [Password-Hardened Encryption (PHE) protocol](https://virgilsecurity.com/wp-content/uploads/2018/11/PHE-Whitepaper-2018.pdf) that provides developers with a technology to protect users passwords from offline attacks and make stolen passwords useless even if your database has been compromised. Service implementation can be found [here](https://github.com/passw0rd/phe-go).
 
 ### Library: Ratchet
 
@@ -42,8 +46,8 @@ Implementation of the [Double Ratchet](https://signal.org/docs/specifications/do
 VirgilCrypto is provided as a set of frameworks. These frameworks are distributed via Carthage and CocoaPods.
 
 All frameworks are available for:
-- iOS 8.0+
-- macOS 10.10+
+- iOS 9.0+
+- macOS 10.9+
 - tvOS 9.0+
 - watchOS 2.0+
 
@@ -61,9 +65,9 @@ To integrate VirgilCryptoWrapper into your Xcode project using CocoaPods, specif
 target '<Your Target Name>' do
   use_frameworks!
 
-  pod 'VirgilCryptoFoundation', '~> 0.3.0'
-  pod 'VirgilCryptoRatchet', '~> 0.3.0'
-  pod 'VirgilCryptoPythia', '~> 0.3.0'
+  pod 'VirgilCryptoFoundation', '~> 0.5.0'
+  pod 'VirgilCryptoRatchet', '~> 0.5.0'
+  pod 'VirgilCryptoPythia', '~> 0.5.0'
 end
 ```
 
@@ -89,7 +93,7 @@ $ brew install carthage
 To integrate VirgilCryptoWrapper into your Xcode project using Carthage, create an empty file with name *Cartfile* in your project's root folder and add following lines to your *Cartfile*
 
 ```
-github "VirgilSecurity/virgil-cryptowrapper-x" ~> 0.3.0
+github "VirgilSecurity/virgil-cryptowrapper-x" ~> 0.5.0
 ```
 
 #### Linking against prebuilt binaries
