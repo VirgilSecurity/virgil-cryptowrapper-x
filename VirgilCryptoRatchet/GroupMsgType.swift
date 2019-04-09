@@ -35,23 +35,19 @@
 
 import Foundation
 import VSCRatchet
-import VirgilCryptoFoundation
 
-/// Class with public constants
-@objc(VSCRRatchetCommon) public class RatchetCommon: NSObject {
+/// Represents group message type
+@objc(VSCRGroupMsgType) public enum GroupMsgType: Int {
 
-    /// Max plain text length allowed to be encrypted
-    @objc public static let maxPlainTextLen: Int = 30000
-    /// Max message length
-    @objc public static let maxMessageLen: Int = 32960
-    /// Key pair id length
-    @objc public static let keyIdLen: Int = 8
-    /// Participant id length
-    @objc public static let participantIdLen: Int = 32
-    /// Max number of group chat participants
-    @objc public static let maxParticipantsCount: Int = 100
-    /// Min number of group chat participants
-    @objc public static let minParticipantsCount: Int = 1
-    /// Max group message length
-    @objc public static let maxGroupMessageLen: Int = 32882
+    /// Group info used to create group chat, or change group chat.
+    /// Should be distributed only using secure channels.
+    case groupInfo = 0
+
+    /// Regular group ratchet message with cipher text.
+    case regular = 1
+
+    /// Create enumeration value from the correspond C enumeration value.
+    internal init(fromC groupMsgType: vscr_group_msg_type_t) {
+        self.init(rawValue: Int(groupMsgType.rawValue))!
+    }
 }

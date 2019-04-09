@@ -34,17 +34,18 @@
 
 
 import Foundation
-import VSCFoundation
+import VSCRatchet
+import VirgilCryptoFoundation
 
-/// Handle KDF algorithms that are configured with salt and iteration count.
-@objc(VSCFSaltedKdfAlgInfo) public class SaltedKdfAlgInfo: NSObject, AlgInfo {
+/// Class represents ratchet group message
+@objc(VSCRRatchetGroupMessage) public class RatchetGroupMessage: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_salted_kdf_alg_info_new()
+        self.c_ctx = vscr_ratchet_group_message_new()
         super.init()
     }
 
@@ -58,54 +59,76 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_salted_kdf_alg_info_shallow_copy(c_ctx)
+        self.c_ctx = vscr_ratchet_group_message_shallow_copy(c_ctx)
         super.init()
-    }
-
-    /// Create algorithm info with identificator, HASH algorithm info,
-    /// salt and iteration count.
-    public init(algId: AlgId, hashAlgInfo: AlgInfo, salt: Data, iterationCount: Int) {
-        let proxyResult = salt.withUnsafeBytes({ (saltPointer: UnsafeRawBufferPointer) -> OpaquePointer? in
-
-            var hashAlgInfoCopy = vscf_impl_shallow_copy(hashAlgInfo.c_ctx)
-
-            return vscf_salted_kdf_alg_info_new_with_members(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), &hashAlgInfoCopy, vsc_data(saltPointer.bindMemory(to: byte.self).baseAddress, salt.count), iterationCount)
-        })
-
-        self.c_ctx = proxyResult!
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_salted_kdf_alg_info_delete(self.c_ctx)
+        vscr_ratchet_group_message_delete(self.c_ctx)
     }
 
-    /// Return hash algorithm information.
-    @objc public func hashAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_salted_kdf_alg_info_hash_alg_info(self.c_ctx)
+    /// Returns message type.
+    @objc public func getType() -> GroupMsgType {
+        let proxyResult = vscr_ratchet_group_message_get_type(self.c_ctx)
 
-        return FoundationImplementation.wrapAlgInfo(take: proxyResult!)
+        return GroupMsgType.init(fromC: proxyResult)
     }
 
-    /// Return KDF salt.
-    @objc public func salt() -> Data {
-        let proxyResult = vscf_salted_kdf_alg_info_salt(self.c_ctx)
-
-        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
-    }
-
-    /// Return KDF iteration count.
-    /// Note, can be 0 if KDF does not need the iteration count.
-    @objc public func iterationCount() -> Int {
-        let proxyResult = vscf_salted_kdf_alg_info_iteration_count(self.c_ctx)
+    @objc public func getPubKeyCount() -> Int {
+        let proxyResult = vscr_ratchet_group_message_get_pub_key_count(self.c_ctx)
 
         return proxyResult
     }
 
-    /// Provide algorithm identificator.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_salted_kdf_alg_info_alg_id(self.c_ctx)
+    @objc public func getPubKey(id: Data) -> Data {
+        let proxyResult = id.withUnsafeBytes({ (idPointer: UnsafeRawBufferPointer) in
 
-        return AlgId.init(fromC: proxyResult)
+            return vscr_ratchet_group_message_get_pub_key(self.c_ctx, vsc_data(idPointer.bindMemory(to: byte.self).baseAddress, id.count))
+        })
+
+        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
+    }
+
+    /// Buffer len to serialize this class.
+    @objc public func serializeLen() -> Int {
+        let proxyResult = vscr_ratchet_group_message_serialize_len(self.c_ctx)
+
+        return proxyResult
+    }
+
+    /// Serializes instance.
+    @objc public func serialize() -> Data {
+        let outputCount = self.serializeLen()
+        var output = Data(count: outputCount)
+        var outputBuf = vsc_buffer_new()
+        defer {
+            vsc_buffer_delete(outputBuf)
+        }
+
+        output.withUnsafeMutableBytes({ (outputPointer: UnsafeMutableRawBufferPointer) -> Void in
+            vsc_buffer_init(outputBuf)
+            vsc_buffer_use(outputBuf, outputPointer.bindMemory(to: byte.self).baseAddress, outputCount)
+
+            vscr_ratchet_group_message_serialize(self.c_ctx, outputBuf)
+        })
+        output.count = vsc_buffer_len(outputBuf)
+
+        return output
+    }
+
+    /// Deserializes instance.
+    @objc public static func deserialize(input: Data) throws -> RatchetGroupMessage {
+        var error: vscr_error_t = vscr_error_t()
+        vscr_error_reset(&error)
+
+        let proxyResult = input.withUnsafeBytes({ (inputPointer: UnsafeRawBufferPointer) in
+
+            return vscr_ratchet_group_message_deserialize(vsc_data(inputPointer.bindMemory(to: byte.self).baseAddress, input.count), &error)
+        })
+
+        try RatchetError.handleStatus(fromC: error.status)
+
+        return RatchetGroupMessage.init(take: proxyResult!)
     }
 }

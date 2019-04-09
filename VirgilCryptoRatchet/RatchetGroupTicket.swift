@@ -34,17 +34,18 @@
 
 
 import Foundation
-import VSCFoundation
+import VSCRatchet
+import VirgilCryptoFoundation
 
-/// Handle symmetric cipher algorithm information.
-@objc(VSCFCipherAlgInfo) public class CipherAlgInfo: NSObject, AlgInfo {
+/// Group ticket used to start group session.
+@objc(VSCRRatchetGroupTicket) public class RatchetGroupTicket: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_cipher_alg_info_new()
+        self.c_ctx = vscr_ratchet_group_ticket_new()
         super.init()
     }
 
@@ -58,36 +59,45 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_cipher_alg_info_shallow_copy(c_ctx)
+        self.c_ctx = vscr_ratchet_group_ticket_shallow_copy(c_ctx)
         super.init()
-    }
-
-    /// Create symmetric cipher algorithm info with identificator and input vector.
-    public init(algId: AlgId, nonce: Data) {
-        let proxyResult = nonce.withUnsafeBytes({ (noncePointer: UnsafeRawBufferPointer) -> OpaquePointer? in
-
-            return vscf_cipher_alg_info_new_with_members(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), vsc_data(noncePointer.bindMemory(to: byte.self).baseAddress, nonce.count))
-        })
-
-        self.c_ctx = proxyResult!
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_cipher_alg_info_delete(self.c_ctx)
+        vscr_ratchet_group_ticket_delete(self.c_ctx)
     }
 
-    /// Return IV.
-    @objc public func nonce() -> Data {
-        let proxyResult = vscf_cipher_alg_info_nonce(self.c_ctx)
-
-        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
+    /// Random used to generate keys
+    @objc public func setRng(rng: Random) {
+        vscr_ratchet_group_ticket_release_rng(self.c_ctx)
+        vscr_ratchet_group_ticket_use_rng(self.c_ctx, rng.c_ctx)
     }
 
-    /// Provide algorithm identificator.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_cipher_alg_info_alg_id(self.c_ctx)
+    /// Setups default dependencies:
+    /// - RNG: CTR DRBG
+    @objc public func setupDefaults() throws {
+        let proxyResult = vscr_ratchet_group_ticket_setup_defaults(self.c_ctx)
 
-        return AlgId.init(fromC: proxyResult)
+        try RatchetError.handleStatus(fromC: proxyResult)
+    }
+
+    /// Adds participant to chat.
+    @objc public func addParticipant(participantId: Data, publicKey: Data) throws {
+        let proxyResult = participantId.withUnsafeBytes({ (participantIdPointer: UnsafeRawBufferPointer) -> vscr_status_t in
+            publicKey.withUnsafeBytes({ (publicKeyPointer: UnsafeRawBufferPointer) -> vscr_status_t in
+
+                return vscr_ratchet_group_ticket_add_participant(self.c_ctx, vsc_data(participantIdPointer.bindMemory(to: byte.self).baseAddress, participantId.count), vsc_data(publicKeyPointer.bindMemory(to: byte.self).baseAddress, publicKey.count))
+            })
+        })
+
+        try RatchetError.handleStatus(fromC: proxyResult)
+    }
+
+    /// Generates message that should be sent to all participants using secure channel.
+    @objc public func generateTicket() -> RatchetGroupMessage {
+        let proxyResult = vscr_ratchet_group_ticket_generate_ticket(self.c_ctx)
+
+        return RatchetGroupMessage.init(use: proxyResult!)
     }
 }

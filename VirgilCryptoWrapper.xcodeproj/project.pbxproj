@@ -89,6 +89,7 @@
 		02BBB81AE556C1692D0D9E2BF1361E50 /* AuthEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F19B083A708F7415861563327B7A5BD /* AuthEncrypt.swift */; };
 		03095F89E24BAC8282E8C0E036870D2D /* RatchetCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224EF7201F02DA8006518718FCF5AE98 /* RatchetCommon.swift */; };
 		030C4C4CD90BDC0DAC2E80B7DA24F420 /* VSCRatchet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77867337B494EFBE8F79FC34CC180D30 /* VSCRatchet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		03AAAD9826E4BF6F8BFAD37E4DD49898 /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BFBD5C27A440CDE84FDC3429B688F /* GroupMsgType.swift */; };
 		03F808FDD81C0D5B1E8BBB286B303E7C /* Pkcs8Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD60FF52B171AEAB14721417D84BC6 /* Pkcs8Deserializer.swift */; };
 		0562A6B743810E3CA037C42B7EAE14BD /* PythiaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000E6CDB580C8BC963B269A7B6390C03 /* PythiaError.swift */; };
 		058BC1105253C48291A2EEAA286D7040 /* VirgilCryptoFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE63F42C8EC4586AAEE1780EB35CB8E /* VirgilCryptoFoundationTests.swift */; };
@@ -153,6 +154,7 @@
 		203E071D411EB13E7A1094CDB574057B /* KeyRecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E731E02A5359719160EE0F08A4C5 /* KeyRecipientInfo.swift */; };
 		20AD898D971300BBBA14F18FEB4FD03C /* Asn1Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F298F35294FDCBF07392FF5F82F8A /* Asn1Tag.swift */; };
 		211B885894630B5EF4EC3756E59EF57D /* VirgilCryptoRatchet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A663C0E1090353CE782ADF6F346AEB03 /* VirgilCryptoRatchet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		217AB4FB40647B4AD5AE92AFA55DF0FB /* RatchetGroupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320C08116F72B0078D83BFAF67BF76E /* RatchetGroupMessage.swift */; };
 		21A8E3359A4C3EE620DD7E736E84A0DC /* AlgFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CED32CE3C5B64E72A60626CBB24C73 /* AlgFactory.swift */; };
 		225D92CD80CBD0C77EE4E4B0AE63CEB8 /* VirgilCryptoFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540D410964789DEC990D0534DB6BFCEC /* VirgilCryptoFoundation.framework */; };
 		22E929A42DD747A9E0BA3A5941851B74 /* EntropySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D2CEF1A1BF6F82A3371CBB57A46F17C /* EntropySource.swift */; };
@@ -220,6 +222,8 @@
 		471C0F03E9ABC4D2B8E65CC328335AF9 /* MessageInfoCustomParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E1829A5096E0A995DC17D93D98B74F7 /* MessageInfoCustomParams.swift */; };
 		47C1D7C3E05C0BBB2C8BA32DEC072FB1 /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BADA7343F0DCDBEF1CA2B35262AE3 /* Mac.swift */; };
 		48E64C3B0B43DC8B1531597A7161927A /* EntropyAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B968E6F792275C59C2536A92206C75 /* EntropyAccumulator.swift */; };
+		4963408A8ADC1B1C7ADB06C5A973D202 /* RatchetGroupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452C096012514CE472EE2ED3C3341A8 /* RatchetGroupSession.swift */; };
+		498857DD133A49A7BEDD5B86AF8D5ECE /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BFBD5C27A440CDE84FDC3429B688F /* GroupMsgType.swift */; };
 		498A9D47A06B0A2D0EC19E1E3DBFC54C /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAEC40A65CDF21E4D0F755C5B23998A0 /* VSCFoundation.framework */; };
 		49C4F23728464BCA656311BD86DC1014 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE18690AC37D7164CA87647800DD458 /* Base64.swift */; };
 		4A9203AB9256E4357D4D20C194388E38 /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C71ED044C93EB7A1580D691AFA296 /* CipherAlgInfo.swift */; };
@@ -244,10 +248,12 @@
 		53EE4762CC759D5200383A64B30E080A /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D102052E4F23C740AC3DACF001DAEE /* Hash.swift */; };
 		54A2D7D71E01330E42A18292F94CA70F /* RatchetKeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CBC7292695E83948FE241C1936102 /* RatchetKeyUtils.swift */; };
 		54F4CE477849D744A4E292B5101D6AEB /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B426F3F94950B498F305E418AEB9D7E2 /* VSCCommon.framework */; };
+		5542A2CE7431981E590CFC094DDF0E7E /* RatchetGroupTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98D138B339154524DBC6A35DD262B0 /* RatchetGroupTicket.swift */; };
 		559852510881B5A4E697AD7C16E9FFD5 /* Aes256Gcm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD16AF1719F26A9AEA4089BA01087C7 /* Aes256Gcm.swift */; };
 		55C12DE12236FD4A284003D13CA0ED6D /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E6D413B6984E4A16125D4D678AC9D /* Sha256.swift */; };
 		560E544330D2B2C33BE564B26CF4A7FD /* Hkdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912DB40A57D33B496EECEB012E3A0144 /* Hkdf.swift */; };
 		56914B35E06D15D3A7130D0A223F178D /* Asn1Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460B409AD44E59A332D9CCB6E55C91C /* Asn1Writer.swift */; };
+		56D0354D109E2411BC1A702DA2CBB35F /* RatchetGroupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320C08116F72B0078D83BFAF67BF76E /* RatchetGroupMessage.swift */; };
 		570B6C8B5F4C279F8A496FAA3C34F303 /* RatchetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830979EB33504F633A6D4D34B56E3D25 /* RatchetSession.swift */; };
 		5710CF2E3F42473A37D8EFB6D3611F40 /* EntropyAccumulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B968E6F792275C59C2536A92206C75 /* EntropyAccumulator.swift */; };
 		5736A733CFF662C3ACBDB4548C8D02B4 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0D8A1BA3F0E2C279D0AD1D7745FAA4 /* VSCFoundation.framework */; };
@@ -267,6 +273,7 @@
 		5D0D8D9EE76E928587141B9E140B76F7 /* Asn1Tag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A5F298F35294FDCBF07392FF5F82F8A /* Asn1Tag.swift */; };
 		5D7EAA036C9F04EBC516CABF44AA6EA8 /* AlgInfoDerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8F0A56151F1BFEBF9FCC905AEB9F0A /* AlgInfoDerDeserializer.swift */; };
 		5DB44C46D62CF3441ABE835B6352441F /* Ed25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4FC06991D2A460A645C515E0FD99C /* Ed25519PublicKey.swift */; };
+		5DB9901A6A06D82C804B162FFB308F63 /* RatchetGroupTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98D138B339154524DBC6A35DD262B0 /* RatchetGroupTicket.swift */; };
 		5DBF2BED7CAAFD618671F932F226B697 /* PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = D950A91C786D452ACC8DD249C2898718 /* PrivateKey.swift */; };
 		5E3D9FA72A9AA2457A284F6EA09EF5F6 /* Kdf2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA40E13A6DBF6976C2FB8EC9BEB8C5 /* Kdf2.swift */; };
 		5E62C5BA2957C27E469790A8A5C056FD /* RsaPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67C7A6574E3B3894D4B666690055623 /* RsaPublicKey.swift */; };
@@ -276,6 +283,7 @@
 		5F2927A95F1678281E228BB32AB430C2 /* VirgilCryptoFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3A9C2C91D7CA038771E57A3E4EE8DE2 /* VirgilCryptoFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		612A044B9CF171EDB6DF96687A968D4D /* AuthEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F19B083A708F7415861563327B7A5BD /* AuthEncrypt.swift */; };
 		6140C9A0A3C2E3F9A657FBCE33699A82 /* Asn1Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460B409AD44E59A332D9CCB6E55C91C /* Asn1Writer.swift */; };
+		6169F1F19DB192B059363EDBCF379C47 /* RatchetGroupTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98D138B339154524DBC6A35DD262B0 /* RatchetGroupTicket.swift */; };
 		61AC30F27FE34D5253030541E5D04268 /* AlgId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E115D5E7608BA04C612929B276744B /* AlgId.swift */; };
 		61D84C67789D901D74AA544D99EE7192 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D29982AC13070BAA09227353BE74E3 /* PublicKey.swift */; };
 		628D8EA9CD410D9AD2685450F1BBD1C8 /* VSCRatchet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBC06F0AFEE4145AB076E3CBE7993685 /* VSCRatchet.framework */; };
@@ -288,6 +296,7 @@
 		6593236B2B1F6E82DD603AF0371F585E /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 537CDB0ED8D5DABCFE2505653C41F36D /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		66F13C85AE7B9A44E7958CE983F1E73E /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F43EFEDC6B22D5E53F40689E35BF69 /* CContext.swift */; };
 		67157A0CF3DADB275F029DE552DCA146 /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B426F3F94950B498F305E418AEB9D7E2 /* VSCCommon.framework */; };
+		675658DBAD1024766CC39C69544B995D /* RatchetGroupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452C096012514CE472EE2ED3C3341A8 /* RatchetGroupSession.swift */; };
 		6853A5970F8A3116335EFCEE0E4A3D01 /* SaltedKdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F319464E90A5470062CB9A4B7CAEC45 /* SaltedKdf.swift */; };
 		696C71655DEECF1F34D8A573D6F228AB /* CipherAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1719D816EEC31A8E3BD697F440B24 /* CipherAuth.swift */; };
 		69811E4F5377D93F9CE9EDA8E40653C9 /* Aes256Cbc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC939FBA71F91B8193C4C853E847C1 /* Aes256Cbc.swift */; };
@@ -320,10 +329,12 @@
 		761A9B5741FF61BB098EEFEA00169D00 /* Encrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6FFFC641D9BD9BEF886696C4D65311C /* Encrypt.swift */; };
 		76F4A2245F6520C246F913DC3F97BC8B /* SaltedKdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F319464E90A5470062CB9A4B7CAEC45 /* SaltedKdf.swift */; };
 		7708BF54B177EE1FD1F7CC7315CCC482 /* RecipientCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450BCC1E7751BB381B514EB1558BAFD /* RecipientCipher.swift */; };
+		773AD1C0128DF73FB2580ADCE2D9C13C /* RatchetGroupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452C096012514CE472EE2ED3C3341A8 /* RatchetGroupSession.swift */; };
 		773C42F7B95A92FB9A398EF6EFA3A0B9 /* Curve25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4238BF12B78A88EEF75A343695E77BB /* Curve25519PublicKey.swift */; };
 		7786DA132D3B91DFFCAACAD406B227FF /* Sha512.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5544F6D22233D281C108320344F9A473 /* Sha512.swift */; };
 		77A2244850A0C06DB3A07EDDEC537775 /* AlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BCC4C91E6AFC6DE04006B510D526FE /* AlgInfo.swift */; };
 		77E1A2CDD91E6641B7F334009B3EB771 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE18690AC37D7164CA87647800DD458 /* Base64.swift */; };
+		785DF5A0B42CF1D59743600864A0F166 /* RatchetGroupTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A98D138B339154524DBC6A35DD262B0 /* RatchetGroupTicket.swift */; };
 		7A333A96EA34A34434063B5D2E803D09 /* CtrDrbg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 304FCFD06291B1E34E63330D46410BA6 /* CtrDrbg.swift */; };
 		7AEDA3BD8BAEC17E85E5668289D3FB17 /* RatchetKeyUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36CBC7292695E83948FE241C1936102 /* RatchetKeyUtils.swift */; };
 		7AF71CFF906451C51E5C1F533DA80155 /* Aes256Cbc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC939FBA71F91B8193C4C853E847C1 /* Aes256Cbc.swift */; };
@@ -458,6 +469,7 @@
 		B6A165C4C9760907AB4BB3D4FD77A1D3 /* Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB4C19995B40306339E9FC6B80B63A /* Decrypt.swift */; };
 		B6AF9EB77B26D5A13459D0A249D106E4 /* KeySerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F4F719F320FD2AE3BE8F859DE6E49D /* KeySerializer.swift */; };
 		B6AFCB3A916828A0C86B49C1232CBEF0 /* Mac.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16BADA7343F0DCDBEF1CA2B35262AE3 /* Mac.swift */; };
+		B72CE03A985F6C322F977094D6940858 /* RatchetGroupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0452C096012514CE472EE2ED3C3341A8 /* RatchetGroupSession.swift */; };
 		B7DA9A00644773E4C43A08A6BEA7E504 /* KeyRecipientInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8669FC2D17C7802506C86A76BBCA6B21 /* KeyRecipientInfoList.swift */; };
 		B7F1EA967F6829DDE16C8D092BAE8E3D /* VirgilCryptoRatchet.h in Headers */ = {isa = PBXBuildFile; fileRef = 960B2A8CA6579C15E842054EB2AEFC25 /* VirgilCryptoRatchet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B85C04E252EB1C7BEE9641651B431293 /* ComputeSharedKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65BD06E323EE4B9204614ADD0077EEA /* ComputeSharedKey.swift */; };
@@ -466,6 +478,7 @@
 		B925167DB76FE7C02ECEE7BE0FF7A411 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD351D1532C9F158A4CF27C7ADAC4BE /* VSCFoundation.framework */; };
 		BA8A9FCDAA7FC53C5D0D514B2CB37580 /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FA63831F89CEA0AD98B932A0943D25 /* Cipher.swift */; };
 		BAAA204002A047F20D67F8E2142381E5 /* VSCPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB0B09C2B3FD1C78384FEC783FBD3E /* VSCPythia.framework */; };
+		BAD6101A29445F183A7DFC2770F72BE0 /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BFBD5C27A440CDE84FDC3429B688F /* GroupMsgType.swift */; };
 		BB2D95ABCD9D098DA348DDA5FAF21CA6 /* RatchetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830979EB33504F633A6D4D34B56E3D25 /* RatchetSession.swift */; };
 		BB3EB209D525B9CAC8E3527E3EDB05EE /* PasswordRecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53725F7A0160C664342F8428A403B37 /* PasswordRecipientInfo.swift */; };
 		BC73A89A2A385471B16C3C49A197E686 /* VSCFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1AD351D1532C9F158A4CF27C7ADAC4BE /* VSCFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -496,6 +509,7 @@
 		CB8894043C91D55C0397878E54A7CF9B /* VSCPythia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 06470D5BE69DEF133DCDD2E55F856BCA /* VSCPythia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB9160D54F90997205482E271AE6AC32 /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3912F3040F1CBC7B4AC578CECE674FF /* CContext.swift */; };
 		CBA965EC55BB386E98BE1560E4EAB113 /* RatchetCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224EF7201F02DA8006518718FCF5AE98 /* RatchetCommon.swift */; };
+		CBB62682114948FF53FDBD8088943716 /* RatchetGroupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320C08116F72B0078D83BFAF67BF76E /* RatchetGroupMessage.swift */; };
 		CC02CD28649AF307F00098C4A7F71149 /* ListKeyValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19E377CE0BE587F38AC0AA616722C /* ListKeyValueNode.swift */; };
 		CC6D7A4F652A8062F944640A33AB9AD4 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E747C06C35F7243875CD0BE5309A89F1 /* VSCFoundation.framework */; };
 		CCA7EC68FC20F8548AD276931A5CF0BD /* Asn1wr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F999E0EA724BF0B98D98D3E7AC99511 /* Asn1wr.swift */; };
@@ -520,6 +534,7 @@
 		D58270DF2F4AE11D3DE74C961235DB32 /* Sha384.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E1F1294051A5761709472EE894B0B /* Sha384.swift */; };
 		D621C68122453DE4733098BB417B3FDA /* KeyRecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E499E731E02A5359719160EE0F08A4C5 /* KeyRecipientInfo.swift */; };
 		D6EB298E6949E3100EB52F4105CB7DB4 /* Kdf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B8A98D3EEA1C0BD1749E4665950D6BF /* Kdf.swift */; };
+		D788721ADEB4322E5D407C44A9384FA5 /* RatchetGroupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320C08116F72B0078D83BFAF67BF76E /* RatchetGroupMessage.swift */; };
 		D7CA187C63679E4953D0DC2B69107AA1 /* Alg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951655C3B179DA0EB9B42A8023912B8C /* Alg.swift */; };
 		D7FCD829729A0F09AF8A012A9CAE6C25 /* VSCPythia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9E2CD4D12B41E25AACF6794F252A7B0E /* VSCPythia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		D89483F50CF176140856B09635491659 /* PasswordRecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53725F7A0160C664342F8428A403B37 /* PasswordRecipientInfo.swift */; };
@@ -532,6 +547,7 @@
 		E0037766114D596222662FD06E9693E2 /* VirgilCryptoFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93548B6D2AB5A90DC746D77B78ACD66 /* VirgilCryptoFoundation.framework */; };
 		E0412BE24B5744776C97DCD423BAD589 /* Pythia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7616A6EA8D692397E4B7CA99C9B2C /* Pythia.swift */; };
 		E069C922FBAD29CF2B1440804C5421BA /* Ed25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8992A5B34D0264A6683397AEA8F00760 /* Ed25519PrivateKey.swift */; };
+		E0D83CFAED598475D6BC4B8348D47586 /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BFBD5C27A440CDE84FDC3429B688F /* GroupMsgType.swift */; };
 		E1BDE4A26D5AF073A8AC498E89A6C58F /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027C23E788FAEFEBA38DF6F531940A2E /* Random.swift */; };
 		E1D25C15EF41FE4E22FC57C05A4A1126 /* VirgilCryptoPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E467761979DFC08B814783D6BAA054EB /* VirgilCryptoPythia.framework */; };
 		E2C664BB30174E7B628B01140B9B78DA /* VSCCommon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B426F3F94950B498F305E418AEB9D7E2 /* VSCCommon.framework */; };
@@ -961,7 +977,9 @@
 		0331CA4A8409F2A8382D3C060B88C880 /* VirgilCryptoFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D6BD151622E4C6BFFD3E707F2990D7 /* MsgType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgType.swift; sourceTree = "<group>"; };
 		03FA63831F89CEA0AD98B932A0943D25 /* Cipher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cipher.swift; sourceTree = "<group>"; };
+		0452C096012514CE472EE2ED3C3341A8 /* RatchetGroupSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetGroupSession.swift; sourceTree = "<group>"; };
 		06470D5BE69DEF133DCDD2E55F856BCA /* VSCPythia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCPythia.framework; sourceTree = "<group>"; };
+		0A98D138B339154524DBC6A35DD262B0 /* RatchetGroupTicket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetGroupTicket.swift; sourceTree = "<group>"; };
 		0B4D8A16766C93FB352971B36798590A /* Pkcs5Pbes2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs5Pbes2.swift; sourceTree = "<group>"; };
 		0DA7A9731601B4E6D95E64FF4D96910E /* VirgilCryptoRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirgilCryptoRatchetTests.swift; sourceTree = "<group>"; };
 		0F19B083A708F7415861563327B7A5BD /* AuthEncrypt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEncrypt.swift; sourceTree = "<group>"; };
@@ -972,6 +990,7 @@
 		1AB2DFC92D81F0E4CEAD678E99124B64 /* VirgilCryptoPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AD351D1532C9F158A4CF27C7ADAC4BE /* VSCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCFoundation.framework; sourceTree = "<group>"; };
 		1B8A98D3EEA1C0BD1749E4665950D6BF /* Kdf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kdf.swift; sourceTree = "<group>"; };
+		1C1BFBD5C27A440CDE84FDC3429B688F /* GroupMsgType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupMsgType.swift; sourceTree = "<group>"; };
 		1C3AD30F43BC723714B4134AC5D0312E /* Kdf1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kdf1.swift; sourceTree = "<group>"; };
 		1C678030818AB5850A641960BF79F298 /* KeyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyProvider.swift; sourceTree = "<group>"; };
 		1DA44AA37F558B58EDB7BCAB9F7EE5EC /* Sha224.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha224.swift; sourceTree = "<group>"; };
@@ -991,7 +1010,7 @@
 		365C842CBC8A18274C4C1B3418914C40 /* VSCRatchet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCRatchet.framework; sourceTree = "<group>"; };
 		3ABCDC2FAA19EC7B1C8B5A1EA34B5863 /* Curve25519PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve25519PrivateKey.swift; sourceTree = "<group>"; };
 		3AE18690AC37D7164CA87647800DD458 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
-		3B85C1C40DC52505A1E96FED5540A054 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B85C1C40DC52505A1E96FED5540A054 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA19916DFD333F0BFD9DB7940A3B6E2 /* AlgInfoSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgInfoSerializer.swift; sourceTree = "<group>"; };
 		3F854BCC4323AD9FC9DC971A6FFE1318 /* RatchetMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetMessage.swift; sourceTree = "<group>"; };
 		41E115D5E7608BA04C612929B276744B /* AlgId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgId.swift; sourceTree = "<group>"; };
@@ -1005,15 +1024,16 @@
 		4ED3E4F895B8722D6A3F52C81B66AF36 /* Signer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signer.swift; sourceTree = "<group>"; };
 		50A1527400A1A808586AF22E2EA96BB3 /* PythiaImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaImplementation.swift; sourceTree = "<group>"; };
 		50EC631B558BF525EF74AEB25C02E086 /* RatchetError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetError.swift; sourceTree = "<group>"; };
+		5320C08116F72B0078D83BFAF67BF76E /* RatchetGroupMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetGroupMessage.swift; sourceTree = "<group>"; };
 		537CDB0ED8D5DABCFE2505653C41F36D /* VSCCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCCommon.framework; sourceTree = "<group>"; };
 		540D410964789DEC990D0534DB6BFCEC /* VirgilCryptoFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5544F6D22233D281C108320344F9A473 /* Sha512.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha512.swift; sourceTree = "<group>"; };
 		5595700F701D5B0785592FB98B10F206 /* Asn1rd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asn1rd.swift; sourceTree = "<group>"; };
 		588CB566553A8A8E133D667928419547 /* VirgilCryptoPythia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirgilCryptoPythia.h; sourceTree = "<group>"; };
-		59225707F2BB7657FB54DA5B26800EF9 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A99E151904A6D709ACC13ADF74AA30D /* VirgilCryptoFoundation-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoFoundation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59225707F2BB7657FB54DA5B26800EF9 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A99E151904A6D709ACC13ADF74AA30D /* VirgilCryptoFoundation-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoFoundation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD396FEFADA2E89793ED6C34D0415CC /* MessageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfo.swift; sourceTree = "<group>"; };
-		5C4ECDB4CDA773A42D4CE9526513DDBA /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4ECDB4CDA773A42D4CE9526513DDBA /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D33F30B4A747D0FF66A5D694880FFCC /* CipherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInfo.swift; sourceTree = "<group>"; };
 		605C1FA7C04B4C1299CEE8B5473B734C /* Asn1Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asn1Reader.swift; sourceTree = "<group>"; };
 		6196A4ACC9E0049AA243D5A901211B6C /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
@@ -1063,14 +1083,14 @@
 		A84AA161461F5FC6437DDF90B88103D1 /* VirgilCryptoFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirgilCryptoFoundation.h; sourceTree = "<group>"; };
 		AA58BA1461A32173AF7B416780C64571 /* KeyDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDeserializer.swift; sourceTree = "<group>"; };
 		AAEC40A65CDF21E4D0F755C5B23998A0 /* VSCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCFoundation.framework; sourceTree = "<group>"; };
-		AB070BA1355FE223EF4B3FC1A38429B7 /* VirgilCryptoFoundation-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoFoundation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB070BA1355FE223EF4B3FC1A38429B7 /* VirgilCryptoFoundation-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoFoundation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B76A1F472095E79D5A2EED014ACFDF /* VSCCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCCommon.framework; sourceTree = "<group>"; };
 		B1D29982AC13070BAA09227353BE74E3 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
 		B426F3F94950B498F305E418AEB9D7E2 /* VSCCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCCommon.framework; sourceTree = "<group>"; };
 		B460B409AD44E59A332D9CCB6E55C91C /* Asn1Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asn1Writer.swift; sourceTree = "<group>"; };
 		B65BD06E323EE4B9204614ADD0077EEA /* ComputeSharedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeSharedKey.swift; sourceTree = "<group>"; };
 		B7F43EFEDC6B22D5E53F40689E35BF69 /* CContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CContext.swift; sourceTree = "<group>"; };
-		B86ECC54505E3612D72760CE75E71F8E /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B86ECC54505E3612D72760CE75E71F8E /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B930DF9FC7AB5E513FCCD5F0D431AA58 /* FoundationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationImplementation.swift; sourceTree = "<group>"; };
 		BD0D8A1BA3F0E2C279D0AD1D7745FAA4 /* VSCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCFoundation.framework; sourceTree = "<group>"; };
 		BFAA40E13A6DBF6976C2FB8EC9BEB8C5 /* Kdf2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kdf2.swift; sourceTree = "<group>"; };
@@ -1317,10 +1337,14 @@
 			isa = PBXGroup;
 			children = (
 				9F9E208539664B88E540699711A6E096 /* CContext.swift */,
+				1C1BFBD5C27A440CDE84FDC3429B688F /* GroupMsgType.swift */,
 				219B6560448D3C1A64E385BCFB27B117 /* Info.plist */,
 				03D6BD151622E4C6BFFD3E707F2990D7 /* MsgType.swift */,
 				224EF7201F02DA8006518718FCF5AE98 /* RatchetCommon.swift */,
 				50EC631B558BF525EF74AEB25C02E086 /* RatchetError.swift */,
+				5320C08116F72B0078D83BFAF67BF76E /* RatchetGroupMessage.swift */,
+				0452C096012514CE472EE2ED3C3341A8 /* RatchetGroupSession.swift */,
+				0A98D138B339154524DBC6A35DD262B0 /* RatchetGroupTicket.swift */,
 				FA7C17011799B7D8643BEAD6D8EF9B4F /* RatchetImplementation.swift */,
 				D36CBC7292695E83948FE241C1936102 /* RatchetKeyUtils.swift */,
 				3F854BCC4323AD9FC9DC971A6FFE1318 /* RatchetMessage.swift */,
@@ -2065,13 +2089,7 @@
 					06FD5131E629998633C99EEB627B39B6 = {
 						LastSwiftMigration = 1020;
 					};
-					1A82AABC14E289DE0E33AD4DFE88AD1A = {
-						LastSwiftMigration = 1020;
-					};
 					3BD3F1BFD20257BEE85947CFA2923B96 = {
-						LastSwiftMigration = 1020;
-					};
-					404F49577F8C94EFF5C889A5CE4B2926 = {
 						LastSwiftMigration = 1020;
 					};
 					43152703D5DF8DC71DD98274AABC7D99 = {
@@ -2086,25 +2104,7 @@
 					518839FE28520B45E3E22CA0F2F25D05 = {
 						LastSwiftMigration = 1020;
 					};
-					6E515EB01EE4A2C0311AEB2F53398663 = {
-						LastSwiftMigration = 1020;
-					};
-					72A14415C59746934A1909F8DC183A93 = {
-						LastSwiftMigration = 1020;
-					};
-					794314D953A5EBF720165F7508C31E1C = {
-						LastSwiftMigration = 1020;
-					};
-					7C6DA5D831FFBCD25C80231AD2B3CF91 = {
-						LastSwiftMigration = 1020;
-					};
-					92CD67FC0C8DDB33398236D9FA026922 = {
-						LastSwiftMigration = 1020;
-					};
 					980035A804E2DE173B5101F2789E72F7 = {
-						LastSwiftMigration = 1020;
-					};
-					9C88BB1F447859A12E48A932B341E0AC = {
 						LastSwiftMigration = 1020;
 					};
 					BA072C618E840A5F1D4B67A9CDDB881B = {
@@ -2117,9 +2117,6 @@
 						LastSwiftMigration = 1020;
 					};
 					EBC4EB55650D68FC092DDC5B4B38DCD7 = {
-						LastSwiftMigration = 1020;
-					};
-					F3C3D70EAB1EA9D8D4DDDCB0406024A7 = {
 						LastSwiftMigration = 1020;
 					};
 					FBB41C24CE0CC2F8AE51F4D8EAAF8E0B = {
@@ -2175,9 +2172,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				95714E12FF0F1FE59804BE023C37DE0D /* CContext.swift in Sources */,
+				E0D83CFAED598475D6BC4B8348D47586 /* GroupMsgType.swift in Sources */,
 				1767975D91E4C6BBA880ED1938ACDEBB /* MsgType.swift in Sources */,
 				C0FBA2638AB45B86F391E6AFA086328F /* RatchetCommon.swift in Sources */,
 				7C86CEF331C30DC0AE660C087F78E1ED /* RatchetError.swift in Sources */,
+				217AB4FB40647B4AD5AE92AFA55DF0FB /* RatchetGroupMessage.swift in Sources */,
+				675658DBAD1024766CC39C69544B995D /* RatchetGroupSession.swift in Sources */,
+				785DF5A0B42CF1D59743600864A0F166 /* RatchetGroupTicket.swift in Sources */,
 				36C684F1EF882037FEDEC888CBD399CA /* RatchetImplementation.swift in Sources */,
 				54A2D7D71E01330E42A18292F94CA70F /* RatchetKeyUtils.swift in Sources */,
 				716056F2977B2853A4BBF3578044516D /* RatchetMessage.swift in Sources */,
@@ -2209,9 +2210,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A27DE94651066D438EB8EA6A0E9449C /* CContext.swift in Sources */,
+				03AAAD9826E4BF6F8BFAD37E4DD49898 /* GroupMsgType.swift in Sources */,
 				5AC1BAABF65656260BA8304079BAEFEA /* MsgType.swift in Sources */,
 				98449A3F2C909CC084593F79095ECAD5 /* RatchetCommon.swift in Sources */,
 				874828E489FA55D63AD90C6F3834244C /* RatchetError.swift in Sources */,
+				56D0354D109E2411BC1A702DA2CBB35F /* RatchetGroupMessage.swift in Sources */,
+				B72CE03A985F6C322F977094D6940858 /* RatchetGroupSession.swift in Sources */,
+				5542A2CE7431981E590CFC094DDF0E7E /* RatchetGroupTicket.swift in Sources */,
 				D32BDEBD19177A0FFCBC6B89687952A0 /* RatchetImplementation.swift in Sources */,
 				29EB41879B1F760A5676FF6FB0D6C6E4 /* RatchetKeyUtils.swift in Sources */,
 				00DAD20649EE5AB2FB6D749F3381FB0D /* RatchetMessage.swift in Sources */,
@@ -2460,9 +2465,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				33B0D0B4C996F4E5ACE4477FA09E743B /* CContext.swift in Sources */,
+				498857DD133A49A7BEDD5B86AF8D5ECE /* GroupMsgType.swift in Sources */,
 				8AE98643A22AEE72D99762A0A8053CD5 /* MsgType.swift in Sources */,
 				CBA965EC55BB386E98BE1560E4EAB113 /* RatchetCommon.swift in Sources */,
 				A7A9449EC148856F5A76ED144488C022 /* RatchetError.swift in Sources */,
+				D788721ADEB4322E5D407C44A9384FA5 /* RatchetGroupMessage.swift in Sources */,
+				4963408A8ADC1B1C7ADB06C5A973D202 /* RatchetGroupSession.swift in Sources */,
+				6169F1F19DB192B059363EDBCF379C47 /* RatchetGroupTicket.swift in Sources */,
 				E8E95E7186CFD8EF3280D2BF7F6C7DB9 /* RatchetImplementation.swift in Sources */,
 				7AEDA3BD8BAEC17E85E5668289D3FB17 /* RatchetKeyUtils.swift in Sources */,
 				87FC69E3B3AB585BAD9A1838E7EE07F6 /* RatchetMessage.swift in Sources */,
@@ -2625,9 +2634,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E344F8D888CC04C2486C9FDBAEB60A0B /* CContext.swift in Sources */,
+				BAD6101A29445F183A7DFC2770F72BE0 /* GroupMsgType.swift in Sources */,
 				073292DFA417B14681C07F92496E1954 /* MsgType.swift in Sources */,
 				03095F89E24BAC8282E8C0E036870D2D /* RatchetCommon.swift in Sources */,
 				E87A2E002C4D8B121F113E01B7F1FEF0 /* RatchetError.swift in Sources */,
+				CBB62682114948FF53FDBD8088943716 /* RatchetGroupMessage.swift in Sources */,
+				773AD1C0128DF73FB2580ADCE2D9C13C /* RatchetGroupSession.swift in Sources */,
+				5DB9901A6A06D82C804B162FFB308F63 /* RatchetGroupTicket.swift in Sources */,
 				27B29ED0D718628F30407B64FEDAA194 /* RatchetImplementation.swift in Sources */,
 				380B0C1A97D94FD20AD4AD8B2BB6BF94 /* RatchetKeyUtils.swift in Sources */,
 				13B9D9D25C57480C12846489A0CA1A7E /* RatchetMessage.swift in Sources */,
@@ -2954,7 +2967,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3098,7 +3110,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3296,7 +3307,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3316,7 +3326,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -3337,7 +3346,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -3358,7 +3366,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -3406,7 +3413,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3512,7 +3518,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3552,7 +3557,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3663,7 +3667,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3719,7 +3722,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3740,7 +3742,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3762,7 +3763,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3904,7 +3904,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -3925,7 +3924,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3988,7 +3986,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -4009,7 +4006,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -4056,7 +4052,6 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = iphoneos;
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
