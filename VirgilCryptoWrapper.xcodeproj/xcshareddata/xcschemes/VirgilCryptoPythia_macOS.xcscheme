@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_D65640EC38EC6B22F814F71DDE73C22A"
+               BlueprintIdentifier = "FBB41C24CE0CC2F8AE51F4D8EAAF8E0B"
                BuildableName = "VirgilCryptoPythia.framework"
                BlueprintName = "VirgilCryptoPythia_macOS"
                ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_05DEF029B31C3D616DC7E25408405049"
+               BlueprintIdentifier = "1A82AABC14E289DE0E33AD4DFE88AD1A"
                BuildableName = "VirgilCryptoPythia-Tests.xctest"
                BlueprintName = "VirgilCryptoPythia-Tests_macOS"
                ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
@@ -42,14 +42,12 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_D65640EC38EC6B22F814F71DDE73C22A"
+            BlueprintIdentifier = "FBB41C24CE0CC2F8AE51F4D8EAAF8E0B"
             BuildableName = "VirgilCryptoPythia.framework"
             BlueprintName = "VirgilCryptoPythia_macOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -66,14 +64,12 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_D65640EC38EC6B22F814F71DDE73C22A"
+            BlueprintIdentifier = "FBB41C24CE0CC2F8AE51F4D8EAAF8E0B"
             BuildableName = "VirgilCryptoPythia.framework"
             BlueprintName = "VirgilCryptoPythia_macOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
-      <CommandLineArguments>
-      </CommandLineArguments>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -87,14 +83,12 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_D65640EC38EC6B22F814F71DDE73C22A"
+            BlueprintIdentifier = "FBB41C24CE0CC2F8AE51F4D8EAAF8E0B"
             BuildableName = "VirgilCryptoPythia.framework"
             BlueprintName = "VirgilCryptoPythia_macOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
-      <CommandLineArguments>
-      </CommandLineArguments>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">

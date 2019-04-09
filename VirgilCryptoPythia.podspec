@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                        = "VirgilCryptoPythia"
-  s.version                     = "0.5.0"
+  s.version                     = "0.6.0"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
   s.summary                     = "Contains swift classes working with Pythia crypto."
   s.homepage                    = "https://github.com/VirgilSecurity/virgil-cryptowrapper-x"
@@ -12,8 +12,8 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target   = "2.0"
   s.public_header_files         = "VirgilCryptoPythia/VirgilCryptoPythia.h"
   s.source_files                = "VirgilCryptoPythia/**/*.{h,mm,swift}"
-  s.dependency 'VirgilCryptoFoundation', '= 0.5.0'
-  s.dependency 'VSCCrypto/Common', '= 0.5.0'
-  s.dependency 'VSCCrypto/Foundation', '= 0.5.0'
-  s.dependency 'VSCCrypto/Pythia', '= 0.5.0'
+  s.dependency 'VirgilCryptoFoundation', '= 0.6.0'
+  s.dependency 'VSCCrypto/Common', '= 0.6.0'
+  s.dependency 'VSCCrypto/Foundation', '= 0.6.0'
+  s.dependency 'VSCCrypto/Pythia', '= 0.6.0'
 end

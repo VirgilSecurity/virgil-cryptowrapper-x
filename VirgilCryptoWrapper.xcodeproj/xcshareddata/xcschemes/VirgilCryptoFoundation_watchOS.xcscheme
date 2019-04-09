@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "1000"
+   LastUpgradeVersion = "1020"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "NT_BAB0E1AA7E29ED22496E93DB316DA176"
+               BlueprintIdentifier = "432568B14A65068D360455F3FF111A01"
                BuildableName = "VirgilCryptoFoundation.framework"
                BlueprintName = "VirgilCryptoFoundation_watchOS"
                ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_BAB0E1AA7E29ED22496E93DB316DA176"
+            BlueprintIdentifier = "432568B14A65068D360455F3FF111A01"
             BuildableName = "VirgilCryptoFoundation.framework"
             BlueprintName = "VirgilCryptoFoundation_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
@@ -54,7 +54,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_BAB0E1AA7E29ED22496E93DB316DA176"
+            BlueprintIdentifier = "432568B14A65068D360455F3FF111A01"
             BuildableName = "VirgilCryptoFoundation.framework"
             BlueprintName = "VirgilCryptoFoundation_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
@@ -73,7 +73,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "NT_BAB0E1AA7E29ED22496E93DB316DA176"
+            BlueprintIdentifier = "432568B14A65068D360455F3FF111A01"
             BuildableName = "VirgilCryptoFoundation.framework"
             BlueprintName = "VirgilCryptoFoundation_watchOS"
             ReferencedContainer = "container:VirgilCryptoWrapper.xcodeproj">
