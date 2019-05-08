@@ -82,7 +82,6 @@
 		00E576DD47EFC2A7745A167CCA34C259 /* Asn1rd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5595700F701D5B0785592FB98B10F206 /* Asn1rd.swift */; };
 		016DF93DA79F29164521B71F52224CB2 /* OidId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44305C4FD16F206D77A3D48C90DDA2AA /* OidId.swift */; };
 		01A8BB20FA177C553E0D8ABC5E4EFCF9 /* OidId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44305C4FD16F206D77A3D48C90DDA2AA /* OidId.swift */; };
-		01C4069F0A02EBA5B33826BABD778FC8 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C14329D98D14A922FFD1CADD4D8923 /* Defaults.swift */; };
 		0226997D4F2EE60CD58251228F1820DA /* Ed25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32A4FC06991D2A460A645C515E0FD99C /* Ed25519PublicKey.swift */; };
 		023B3512E6F3FBF0633B8CC495229E53 /* AlgId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E115D5E7608BA04C612929B276744B /* AlgId.swift */; };
 		02A1C01B8BC8470B9D588C68265F9C3A /* Sha384.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E1F1294051A5761709472EE894B0B /* Sha384.swift */; };
@@ -90,7 +89,6 @@
 		03095F89E24BAC8282E8C0E036870D2D /* RatchetCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224EF7201F02DA8006518718FCF5AE98 /* RatchetCommon.swift */; };
 		030C4C4CD90BDC0DAC2E80B7DA24F420 /* VSCRatchet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77867337B494EFBE8F79FC34CC180D30 /* VSCRatchet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03AAAD9826E4BF6F8BFAD37E4DD49898 /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1BFBD5C27A440CDE84FDC3429B688F /* GroupMsgType.swift */; };
-		03F808FDD81C0D5B1E8BBB286B303E7C /* Pkcs8Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD60FF52B171AEAB14721417D84BC6 /* Pkcs8Deserializer.swift */; };
 		0562A6B743810E3CA037C42B7EAE14BD /* PythiaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000E6CDB580C8BC963B269A7B6390C03 /* PythiaError.swift */; };
 		058BC1105253C48291A2EEAA286D7040 /* VirgilCryptoFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE63F42C8EC4586AAEE1780EB35CB8E /* VirgilCryptoFoundationTests.swift */; };
 		05AD6905A71D47FC242402AF4E6D2D5F /* VirgilCryptoRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA7A9731601B4E6D95E64FF4D96910E /* VirgilCryptoRatchetTests.swift */; };
@@ -118,7 +116,6 @@
 		10B00E92BC70249B16E92FBC395F7EF8 /* AuthDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4726B96CDF5C6915ED200737DBDC4F4 /* AuthDecrypt.swift */; };
 		10CAA044E1B5C6322BCDDAB98D8E3F8C /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 537CDB0ED8D5DABCFE2505653C41F36D /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		115304D69BE19B609A213AB28FBE77F9 /* Hash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D102052E4F23C740AC3DACF001DAEE /* Hash.swift */; };
-		115A5ACD6AF4D583B0B58621A07B4447 /* Pkcs8DerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7313A97424BD98864F64F91450BB0CEA /* Pkcs8DerSerializer.swift */; };
 		117C7DD7C3B719ABD7DADC155685EE67 /* VSCRatchet.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = EBC06F0AFEE4145AB076E3CBE7993685 /* VSCRatchet.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		118DC7BD120F5AF7756E6A0682600902 /* VirgilCryptoPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77509BE765338E7E1FE8993816F190B4 /* VirgilCryptoPythia.framework */; };
 		11953C0B922C847594732A68DBF86924 /* PythiaImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A1527400A1A808586AF22E2EA96BB3 /* PythiaImplementation.swift */; };
@@ -172,7 +169,6 @@
 		2B96383AF03DAA82FE293AD41304E5FF /* VSCPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9DB0B09C2B3FD1C78384FEC783FBD3E /* VSCPythia.framework */; };
 		2BCBB7AD9B09B26B628472BA9D04E48C /* KeyDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58BA1461A32173AF7B416780C64571 /* KeyDeserializer.swift */; };
 		2C331604A3BBAF28A9689B20A0559BDB /* Sha384.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E1F1294051A5761709472EE894B0B /* Sha384.swift */; };
-		2D0480046F1E04F442E342019E365ACD /* Pkcs8DerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7313A97424BD98864F64F91450BB0CEA /* Pkcs8DerSerializer.swift */; };
 		2D06B6E3AD1E5785E0C69EE6BEBAD428 /* CipherAuthInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AE8F552F4D6124ADC8221959761840 /* CipherAuthInfo.swift */; };
 		2D06FD9DAECDA794B63437DB59C74615 /* Kdf2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAA40E13A6DBF6976C2FB8EC9BEB8C5 /* Kdf2.swift */; };
 		2D496406DFB55F2C25B8FC0FC92BCF84 /* VirgilCryptoFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 540D410964789DEC990D0534DB6BFCEC /* VirgilCryptoFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -193,7 +189,6 @@
 		36C684F1EF882037FEDEC888CBD399CA /* RatchetImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7C17011799B7D8643BEAD6D8EF9B4F /* RatchetImplementation.swift */; };
 		37E79A32750C67E26E5945C0A165A505 /* VirgilCryptoRatchet.h in Headers */ = {isa = PBXBuildFile; fileRef = 960B2A8CA6579C15E842054EB2AEFC25 /* VirgilCryptoRatchet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37F78189AC6CDDF4B2E16A5DEE80E3D7 /* Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB4C19995B40306339E9FC6B80B63A /* Decrypt.swift */; };
-		38BDDF6EFA905EDC8BC282459A298FE6 /* Pkcs8DerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7313A97424BD98864F64F91450BB0CEA /* Pkcs8DerSerializer.swift */; };
 		3A4378C2D2F53E4BE4D2D289215F8F6D /* AlgInfoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19916DFD333F0BFD9DB7940A3B6E2 /* AlgInfoSerializer.swift */; };
 		3B7C16A62D625CE6690B6ECBFF7CAD6A /* CipherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D33F30B4A747D0FF66A5D694880FFCC /* CipherInfo.swift */; };
 		3B8641BEE263929DFFC17F7B436EC4BD /* SimpleAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4189F841DAB5C3F653FAC33E6BA34 /* SimpleAlgInfo.swift */; };
@@ -207,6 +202,30 @@
 		4149F4FFE90C6A2ACEC660D6A8B2D117 /* VSCRatchet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F5785DE1D99EAE191C625E2A5E3EC218 /* VSCRatchet.framework */; };
 		41C9159818BDE827038083DE597F270F /* Curve25519PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABCDC2FAA19EC7B1C8B5A1EA34B5863 /* Curve25519PrivateKey.swift */; };
 		41E0B139506BA1DFAA2D102D92C2F160 /* VerifyHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885588FBDEF8A2531E18B4035450D6F3 /* VerifyHash.swift */; };
+		420948742282C3E100CAF5E6 /* KeyAsn1Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209486E2282C3E000CAF5E6 /* KeyAsn1Serializer.swift */; };
+		420948752282C3E100CAF5E6 /* KeyAsn1Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209486E2282C3E000CAF5E6 /* KeyAsn1Serializer.swift */; };
+		420948762282C3E100CAF5E6 /* KeyAsn1Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209486E2282C3E000CAF5E6 /* KeyAsn1Serializer.swift */; };
+		420948772282C3E100CAF5E6 /* KeyAsn1Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209486E2282C3E000CAF5E6 /* KeyAsn1Serializer.swift */; };
+		420948782282C3E100CAF5E6 /* Secp256r1PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209486F2282C3E000CAF5E6 /* Secp256r1PublicKey.swift */; };
+		420948792282C3E100CAF5E6 /* Secp256r1PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209486F2282C3E000CAF5E6 /* Secp256r1PublicKey.swift */; };
+		4209487A2282C3E100CAF5E6 /* Secp256r1PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209486F2282C3E000CAF5E6 /* Secp256r1PublicKey.swift */; };
+		4209487B2282C3E100CAF5E6 /* Secp256r1PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4209486F2282C3E000CAF5E6 /* Secp256r1PublicKey.swift */; };
+		4209487C2282C3E100CAF5E6 /* EcAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948702282C3E000CAF5E6 /* EcAlgInfo.swift */; };
+		4209487D2282C3E100CAF5E6 /* EcAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948702282C3E000CAF5E6 /* EcAlgInfo.swift */; };
+		4209487E2282C3E100CAF5E6 /* EcAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948702282C3E000CAF5E6 /* EcAlgInfo.swift */; };
+		4209487F2282C3E100CAF5E6 /* EcAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948702282C3E000CAF5E6 /* EcAlgInfo.swift */; };
+		420948802282C3E100CAF5E6 /* Sec1Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948712282C3E000CAF5E6 /* Sec1Serializer.swift */; };
+		420948812282C3E100CAF5E6 /* Sec1Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948712282C3E000CAF5E6 /* Sec1Serializer.swift */; };
+		420948822282C3E100CAF5E6 /* Sec1Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948712282C3E000CAF5E6 /* Sec1Serializer.swift */; };
+		420948832282C3E100CAF5E6 /* Sec1Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948712282C3E000CAF5E6 /* Sec1Serializer.swift */; };
+		420948842282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */; };
+		420948852282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */; };
+		420948862282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */; };
+		420948872282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */; };
+		420948882282C3E100CAF5E6 /* Secp256r1PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948732282C3E000CAF5E6 /* Secp256r1PrivateKey.swift */; };
+		420948892282C3E100CAF5E6 /* Secp256r1PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948732282C3E000CAF5E6 /* Secp256r1PrivateKey.swift */; };
+		4209488A2282C3E100CAF5E6 /* Secp256r1PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948732282C3E000CAF5E6 /* Secp256r1PrivateKey.swift */; };
+		4209488B2282C3E100CAF5E6 /* Secp256r1PrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948732282C3E000CAF5E6 /* Secp256r1PrivateKey.swift */; };
 		4219FAC722648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
 		4219FAC822648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
 		4219FAC922648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
@@ -236,11 +255,9 @@
 		4D2950D8A2C2009542E47AC4342F80EA /* Ecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDF060DC68D9B7D08370DB258BE39D /* Ecies.swift */; };
 		4D62FD6F874D71E9F3FB49242343E08B /* RawKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873DF7417CB5E63C88C6D607F8E26FD0 /* RawKey.swift */; };
 		4DE37649C259E29D2C31FB39FEFF8C86 /* MessageInfoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC33983AF5F67C443D9317C4CC93AF1 /* MessageInfoSerializer.swift */; };
-		4DF1FE379225CD28B655B5276DF25C62 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C14329D98D14A922FFD1CADD4D8923 /* Defaults.swift */; };
 		4E546CDB0BAEC782A6794734EB66B8F3 /* RatchetSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 830979EB33504F633A6D4D34B56E3D25 /* RatchetSession.swift */; };
 		4EE534CB40713A25765F27EDF62F6D7C /* AlgId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E115D5E7608BA04C612929B276744B /* AlgId.swift */; };
 		4F20D969FEC192F08E1FACBD91B0551B /* MessageInfoDerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A092E1ED9E39C5D4EC2FE9CC3A063D2 /* MessageInfoDerSerializer.swift */; };
-		4FAA6282FB51B484E03670443569570E /* Pkcs8Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD60FF52B171AEAB14721417D84BC6 /* Pkcs8Deserializer.swift */; };
 		4FB9C0CE8EFC22FD6755A3F92B3D762A /* Curve25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4238BF12B78A88EEF75A343695E77BB /* Curve25519PublicKey.swift */; };
 		508CC1CF407625AE0E4456E63F15A1DC /* CipherAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1719D816EEC31A8E3BD697F440B24 /* CipherAuth.swift */; };
 		50B98CCB739E61C18F9FD71D948F6504 /* AuthDecrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4726B96CDF5C6915ED200737DBDC4F4 /* AuthDecrypt.swift */; };
@@ -280,7 +297,6 @@
 		5E62C5BA2957C27E469790A8A5C056FD /* RsaPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67C7A6574E3B3894D4B666690055623 /* RsaPublicKey.swift */; };
 		5E78FB414E0E1FA97DA2D13A0EE8FD68 /* PasswordRecipientInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D60A873FF0B6BB9A0715C3BEA9CFDA /* PasswordRecipientInfoList.swift */; };
 		5F212392DE8A6E151306C4B111367651 /* FakeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C584EA6CF4776627D883CD7AAB334C /* FakeRandom.swift */; };
-		5F2774236FC96602A64608E2033D3D90 /* Pkcs8DerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7313A97424BD98864F64F91450BB0CEA /* Pkcs8DerSerializer.swift */; };
 		5F2927A95F1678281E228BB32AB430C2 /* VirgilCryptoFoundation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F3A9C2C91D7CA038771E57A3E4EE8DE2 /* VirgilCryptoFoundation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		612A044B9CF171EDB6DF96687A968D4D /* AuthEncrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F19B083A708F7415861563327B7A5BD /* AuthEncrypt.swift */; };
 		6140C9A0A3C2E3F9A657FBCE33699A82 /* Asn1Writer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B460B409AD44E59A332D9CCB6E55C91C /* Asn1Writer.swift */; };
@@ -319,7 +335,6 @@
 		718DD8B009F39A0BFC4AFB108CC590B9 /* SeedEntropySource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F78EAE618D85485C12A1105C6E45F45 /* SeedEntropySource.swift */; };
 		719565031722844428AFBA02AE8B0B45 /* GenerateEphemeralKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521688E8D40DD3112EEC08948C250C5 /* GenerateEphemeralKey.swift */; };
 		7257E1DAF53D0B110A5A8C608A0D07D7 /* FakeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C584EA6CF4776627D883CD7AAB334C /* FakeRandom.swift */; };
-		72B9E2AA2F5D7CC433C49B7B6F166676 /* Pkcs8DerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429BC5A4C7720A23E3DAF3C74FA063C /* Pkcs8DerDeserializer.swift */; };
 		73493ABE4F9AAB4EB5D245D7442819BF /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3912F3040F1CBC7B4AC578CECE674FF /* CContext.swift */; };
 		737A8C0D93559042F439F12667296D7A /* PasswordRecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53725F7A0160C664342F8428A403B37 /* PasswordRecipientInfo.swift */; };
 		7389AD8DD5ECAD0D14C482B8B5143975 /* Pythia.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77C7616A6EA8D692397E4B7CA99C9B2C /* Pythia.swift */; };
@@ -404,7 +419,6 @@
 		9BEC94B08D86F313EB36BBEB20273FA8 /* VirgilCryptoRatchet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0292852769279B468EDD1C02C429DEB2 /* VirgilCryptoRatchet.framework */; };
 		9CF4CB41444FCD01E9EEB0DEB384D8E8 /* VirgilCryptoFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A9C2C91D7CA038771E57A3E4EE8DE2 /* VirgilCryptoFoundation.framework */; };
 		9D186FACE7FF1C6D4DE75C47706A09AA /* AlgInfoDerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C8F0A56151F1BFEBF9FCC905AEB9F0A /* AlgInfoDerDeserializer.swift */; };
-		9E08644DBEB167BBFB65C25870F32A10 /* Pkcs8DerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429BC5A4C7720A23E3DAF3C74FA063C /* Pkcs8DerDeserializer.swift */; };
 		9E111CAD89518FDE4231127F04016320 /* VirgilCryptoFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = A84AA161461F5FC6437DDF90B88103D1 /* VirgilCryptoFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9E5EDB4BE0A50109C029E492B3BAA383 /* Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE18690AC37D7164CA87647800DD458 /* Base64.swift */; };
 		9EED7ADEE6EB6FD29DE0F0B027B7DBCF /* SaltedKdfAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F817756736497E56BC6B1F7BC86CC834 /* SaltedKdfAlgInfo.swift */; };
@@ -417,7 +431,6 @@
 		A086C88A32BEC2A1C4A9DDE0773B9C38 /* PasswordRecipientInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D53725F7A0160C664342F8428A403B37 /* PasswordRecipientInfo.swift */; };
 		A119960A99C306BA9E8ECE3ACFC864CB /* Ecies.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDDF060DC68D9B7D08370DB258BE39D /* Ecies.swift */; };
 		A123874C95E4F81747D1634E0BBD2F64 /* GenerateEphemeralKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521688E8D40DD3112EEC08948C250C5 /* GenerateEphemeralKey.swift */; };
-		A168A894C0F350258F9B1FC1B88C34C6 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C14329D98D14A922FFD1CADD4D8923 /* Defaults.swift */; };
 		A2BDC3C692D28E55130CDF68B1BAC566 /* HashBasedAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91487494B4B6FC9BEC58BAF9DDE0FB32 /* HashBasedAlgInfo.swift */; };
 		A2DCD337A655429BFF1F9B85B1735512 /* Asn1wr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F999E0EA724BF0B98D98D3E7AC99511 /* Asn1wr.swift */; };
 		A3298F3F4266081E8FEDB77D988F46D8 /* PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1D29982AC13070BAA09227353BE74E3 /* PublicKey.swift */; };
@@ -450,10 +463,8 @@
 		B0031A3E5EEC97A6DAF5FDC41EE7740E /* RsaPublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F67C7A6574E3B3894D4B666690055623 /* RsaPublicKey.swift */; };
 		B04A8B02A04283B0347E5B5861376353 /* Key.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6196A4ACC9E0049AA243D5A901211B6C /* Key.swift */; };
 		B14D5D506AF2D34157A773ABA604A5A6 /* SignHash.swift in Sources */ = {isa = PBXBuildFile; fileRef = E21542BE4DDB22D9E406B9B0ACF9DC88 /* SignHash.swift */; };
-		B1A34623EB505709EB35552E5A7981A9 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C14329D98D14A922FFD1CADD4D8923 /* Defaults.swift */; };
 		B201C6BEF48A53F011B20B269FCFFE23 /* Oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108EC7D74A8F34C20C4717A1758DEBF /* Oid.swift */; };
 		B215F4356228391CBCA19AC568009BAC /* CipherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D33F30B4A747D0FF66A5D694880FFCC /* CipherInfo.swift */; };
-		B228D8F4D93A92C1CE3F7C86455B5AEC /* Pkcs8DerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429BC5A4C7720A23E3DAF3C74FA063C /* Pkcs8DerDeserializer.swift */; };
 		B23CF91E995C6524E4FE85F6EE5E0EA3 /* AlgInfoDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2FEE48513124E4C5529203AE5A9D845 /* AlgInfoDeserializer.swift */; };
 		B2D41F9ED0E792F978AFE830EDFEB1CB /* PythiaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000E6CDB580C8BC963B269A7B6390C03 /* PythiaError.swift */; };
 		B2EC19548AD002CD5871C4789F80D190 /* AlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25BCC4C91E6AFC6DE04006B510D526FE /* AlgInfo.swift */; };
@@ -513,7 +524,6 @@
 		CC02CD28649AF307F00098C4A7F71149 /* ListKeyValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19E377CE0BE587F38AC0AA616722C /* ListKeyValueNode.swift */; };
 		CC6D7A4F652A8062F944640A33AB9AD4 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E747C06C35F7243875CD0BE5309A89F1 /* VSCFoundation.framework */; };
 		CCA7EC68FC20F8548AD276931A5CF0BD /* Asn1wr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F999E0EA724BF0B98D98D3E7AC99511 /* Asn1wr.swift */; };
-		CD780F5DB90F536E533E461C5AE30C36 /* Pkcs8Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD60FF52B171AEAB14721417D84BC6 /* Pkcs8Deserializer.swift */; };
 		CDC1D7EE58A0C5C3AE3408A143A58C58 /* Verifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6C38B0BD37C101E8B0822435165A4 /* Verifier.swift */; };
 		CE11BC8768B5CB5ADA61765BB8877B33 /* Decrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EB4C19995B40306339E9FC6B80B63A /* Decrypt.swift */; };
 		CF3910AC0C1A0B813C4C2DD7006308C0 /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C71ED044C93EB7A1580D691AFA296 /* CipherAlgInfo.swift */; };
@@ -584,7 +594,6 @@
 		EFEDD2B067C6A69B321048327259D9AB /* PythiaError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000E6CDB580C8BC963B269A7B6390C03 /* PythiaError.swift */; };
 		F04BD88CE0F5D69C4C92F4FDD484AECA /* Signer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED3E4F895B8722D6A3F52C81B66AF36 /* Signer.swift */; };
 		F1B4E9D854F3B874E1B573A5AB4CBB45 /* Sha256.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3E6D413B6984E4A16125D4D678AC9D /* Sha256.swift */; };
-		F2AC7D83AB0291D2850B2847F4325565 /* Pkcs8DerDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3429BC5A4C7720A23E3DAF3C74FA063C /* Pkcs8DerDeserializer.swift */; };
 		F2C25B4B40635D90E5359E4C60C33FB0 /* Curve25519PublicKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4238BF12B78A88EEF75A343695E77BB /* Curve25519PublicKey.swift */; };
 		F2CEF119FCA3967F4FF145560BB0FB34 /* SimpleAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4189F841DAB5C3F653FAC33E6BA34 /* SimpleAlgInfo.swift */; };
 		F3462899040140580123334F097C1B15 /* Aes256Cbc.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFDC939FBA71F91B8193C4C853E847C1 /* Aes256Cbc.swift */; };
@@ -592,7 +601,6 @@
 		F44510732BE02833A8011CBA66D3EC85 /* SimpleAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A4189F841DAB5C3F653FAC33E6BA34 /* SimpleAlgInfo.swift */; };
 		F46134A898545538B4B549B812D8C824 /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0B76A1F472095E79D5A2EED014ACFDF /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F46CC33A05183C2F03B0C99386FB5FB2 /* AlgFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CED32CE3C5B64E72A60626CBB24C73 /* AlgFactory.swift */; };
-		F56C4FE6182610AE61522535DBF51628 /* Pkcs8Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBD60FF52B171AEAB14721417D84BC6 /* Pkcs8Deserializer.swift */; };
 		F571F9D52061888658EBB4245D08B4A2 /* VirgilCryptoPythia.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77509BE765338E7E1FE8993816F190B4 /* VirgilCryptoPythia.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F58E1E2C0AACF1DC4500C9E8BEFE4664 /* VirgilCryptoRatchet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A663C0E1090353CE782ADF6F346AEB03 /* VirgilCryptoRatchet.framework */; };
 		F5EA4F997F99025F80C99EE59A453844 /* RecipientCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D450BCC1E7751BB381B514EB1558BAFD /* RecipientCipher.swift */; };
@@ -994,7 +1002,6 @@
 		1C3AD30F43BC723714B4134AC5D0312E /* Kdf1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kdf1.swift; sourceTree = "<group>"; };
 		1C678030818AB5850A641960BF79F298 /* KeyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyProvider.swift; sourceTree = "<group>"; };
 		1DA44AA37F558B58EDB7BCAB9F7EE5EC /* Sha224.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha224.swift; sourceTree = "<group>"; };
-		1FBD60FF52B171AEAB14721417D84BC6 /* Pkcs8Deserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs8Deserializer.swift; sourceTree = "<group>"; };
 		219B6560448D3C1A64E385BCFB27B117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		224EF7201F02DA8006518718FCF5AE98 /* RatchetCommon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetCommon.swift; sourceTree = "<group>"; };
 		240E1F1294051A5761709472EE894B0B /* Sha384.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha384.swift; sourceTree = "<group>"; };
@@ -1005,7 +1012,6 @@
 		304FCFD06291B1E34E63330D46410BA6 /* CtrDrbg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtrDrbg.swift; sourceTree = "<group>"; };
 		31A28AB2633E6B8AB9E184F789269C46 /* KeyMaterialRng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMaterialRng.swift; sourceTree = "<group>"; };
 		32A4FC06991D2A460A645C515E0FD99C /* Ed25519PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ed25519PublicKey.swift; sourceTree = "<group>"; };
-		3429BC5A4C7720A23E3DAF3C74FA063C /* Pkcs8DerDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs8DerDeserializer.swift; sourceTree = "<group>"; };
 		36422389DE602618D07BC081C6E73168 /* VirgilCryptoRatchet.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoRatchet.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		365C842CBC8A18274C4C1B3418914C40 /* VSCRatchet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCRatchet.framework; sourceTree = "<group>"; };
 		3ABCDC2FAA19EC7B1C8B5A1EA34B5863 /* Curve25519PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve25519PrivateKey.swift; sourceTree = "<group>"; };
@@ -1014,6 +1020,12 @@
 		3CA19916DFD333F0BFD9DB7940A3B6E2 /* AlgInfoSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgInfoSerializer.swift; sourceTree = "<group>"; };
 		3F854BCC4323AD9FC9DC971A6FFE1318 /* RatchetMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetMessage.swift; sourceTree = "<group>"; };
 		41E115D5E7608BA04C612929B276744B /* AlgId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgId.swift; sourceTree = "<group>"; };
+		4209486E2282C3E000CAF5E6 /* KeyAsn1Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyAsn1Serializer.swift; sourceTree = "<group>"; };
+		4209486F2282C3E000CAF5E6 /* Secp256r1PublicKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secp256r1PublicKey.swift; sourceTree = "<group>"; };
+		420948702282C3E000CAF5E6 /* EcAlgInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcAlgInfo.swift; sourceTree = "<group>"; };
+		420948712282C3E000CAF5E6 /* Sec1Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sec1Serializer.swift; sourceTree = "<group>"; };
+		420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyAsn1Deserializer.swift; sourceTree = "<group>"; };
+		420948732282C3E000CAF5E6 /* Secp256r1PrivateKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secp256r1PrivateKey.swift; sourceTree = "<group>"; };
 		4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatchetKeyId.swift; sourceTree = "<group>"; };
 		422DB46F2E2EB0E5D30A0717AFB30DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44305C4FD16F206D77A3D48C90DDA2AA /* OidId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OidId.swift; sourceTree = "<group>"; };
@@ -1047,14 +1059,12 @@
 		6E77B0E485F91236155EF44D2FCFEBB7 /* VirgilCryptoPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB431FAB0669229C01AEB9BDF21B5C4 /* GenerateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenerateKey.swift; sourceTree = "<group>"; };
 		72A4189F841DAB5C3F653FAC33E6BA34 /* SimpleAlgInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleAlgInfo.swift; sourceTree = "<group>"; };
-		7313A97424BD98864F64F91450BB0CEA /* Pkcs8DerSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pkcs8DerSerializer.swift; sourceTree = "<group>"; };
 		73D54AC7B7508AD4A0B706665C11DCA0 /* VirgilCryptoPythiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirgilCryptoPythiaTests.swift; sourceTree = "<group>"; };
 		77509BE765338E7E1FE8993816F190B4 /* VirgilCryptoPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilCryptoPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77867337B494EFBE8F79FC34CC180D30 /* VSCRatchet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCRatchet.framework; sourceTree = "<group>"; };
 		77C7616A6EA8D692397E4B7CA99C9B2C /* Pythia.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pythia.swift; sourceTree = "<group>"; };
 		77F4F719F320FD2AE3BE8F859DE6E49D /* KeySerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeySerializer.swift; sourceTree = "<group>"; };
 		830979EB33504F633A6D4D34B56E3D25 /* RatchetSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetSession.swift; sourceTree = "<group>"; };
-		84C14329D98D14A922FFD1CADD4D8923 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		84D102052E4F23C740AC3DACF001DAEE /* Hash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hash.swift; sourceTree = "<group>"; };
 		8669FC2D17C7802506C86A76BBCA6B21 /* KeyRecipientInfoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyRecipientInfoList.swift; sourceTree = "<group>"; };
 		873DF7417CB5E63C88C6D607F8E26FD0 /* RawKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RawKey.swift; sourceTree = "<group>"; };
@@ -1414,7 +1424,7 @@
 				3ABCDC2FAA19EC7B1C8B5A1EA34B5863 /* Curve25519PrivateKey.swift */,
 				A4238BF12B78A88EEF75A343695E77BB /* Curve25519PublicKey.swift */,
 				88EB4C19995B40306339E9FC6B80B63A /* Decrypt.swift */,
-				84C14329D98D14A922FFD1CADD4D8923 /* Defaults.swift */,
+				420948702282C3E000CAF5E6 /* EcAlgInfo.swift */,
 				DBDDF060DC68D9B7D08370DB258BE39D /* Ecies.swift */,
 				8992A5B34D0264A6683397AEA8F00760 /* Ed25519PrivateKey.swift */,
 				32A4FC06991D2A460A645C515E0FD99C /* Ed25519PublicKey.swift */,
@@ -1434,6 +1444,8 @@
 				1B8A98D3EEA1C0BD1749E4665950D6BF /* Kdf.swift */,
 				1C3AD30F43BC723714B4134AC5D0312E /* Kdf1.swift */,
 				BFAA40E13A6DBF6976C2FB8EC9BEB8C5 /* Kdf2.swift */,
+				420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */,
+				4209486E2282C3E000CAF5E6 /* KeyAsn1Serializer.swift */,
 				6196A4ACC9E0049AA243D5A901211B6C /* Key.swift */,
 				AA58BA1461A32173AF7B416780C64571 /* KeyDeserializer.swift */,
 				31A28AB2633E6B8AB9E184F789269C46 /* KeyMaterialRng.swift */,
@@ -1455,9 +1467,6 @@
 				2E063BFD0D569B91795C908DD3CC528B /* Pem.swift */,
 				0B4D8A16766C93FB352971B36798590A /* Pkcs5Pbes2.swift */,
 				62060792CBE0D3DCF19F4E70C2909324 /* Pkcs5Pbkdf2.swift */,
-				3429BC5A4C7720A23E3DAF3C74FA063C /* Pkcs8DerDeserializer.swift */,
-				7313A97424BD98864F64F91450BB0CEA /* Pkcs8DerSerializer.swift */,
-				1FBD60FF52B171AEAB14721417D84BC6 /* Pkcs8Deserializer.swift */,
 				FD23178A0DF5146BBE23C690E02B878D /* Pkcs8Serializer.swift */,
 				D950A91C786D452ACC8DD249C2898718 /* PrivateKey.swift */,
 				B1D29982AC13070BAA09227353BE74E3 /* PublicKey.swift */,
@@ -1468,6 +1477,9 @@
 				F67C7A6574E3B3894D4B666690055623 /* RsaPublicKey.swift */,
 				0F319464E90A5470062CB9A4B7CAEC45 /* SaltedKdf.swift */,
 				F817756736497E56BC6B1F7BC86CC834 /* SaltedKdfAlgInfo.swift */,
+				420948712282C3E000CAF5E6 /* Sec1Serializer.swift */,
+				420948732282C3E000CAF5E6 /* Secp256r1PrivateKey.swift */,
+				4209486F2282C3E000CAF5E6 /* Secp256r1PublicKey.swift */,
 				8F78EAE618D85485C12A1105C6E45F45 /* SeedEntropySource.swift */,
 				1DA44AA37F558B58EDB7BCAB9F7EE5EC /* Sha224.swift */,
 				CE3E6D413B6984E4A16125D4D678AC9D /* Sha256.swift */,
@@ -2265,12 +2277,13 @@
 				6C41701B60FCB946DFCF48809AD5BB15 /* CipherInfo.swift in Sources */,
 				E39A80B65E92DD28A43A75C1FF4A5707 /* ComputeSharedKey.swift in Sources */,
 				2849190A621EE04668B4572DE060C7D7 /* CtrDrbg.swift in Sources */,
+				4209487E2282C3E100CAF5E6 /* EcAlgInfo.swift in Sources */,
 				41C9159818BDE827038083DE597F270F /* Curve25519PrivateKey.swift in Sources */,
 				713A8A42B11C68D38855788E598DE802 /* Curve25519PublicKey.swift in Sources */,
 				B6A165C4C9760907AB4BB3D4FD77A1D3 /* Decrypt.swift in Sources */,
-				01C4069F0A02EBA5B33826BABD778FC8 /* Defaults.swift in Sources */,
 				92CB66E832117230C1C4AB1FA758C4B3 /* Ecies.swift in Sources */,
 				E069C922FBAD29CF2B1440804C5421BA /* Ed25519PrivateKey.swift in Sources */,
+				4209488A2282C3E100CAF5E6 /* Secp256r1PrivateKey.swift in Sources */,
 				E6A42DD0BDDDB4F3A2EBC413D98C72C9 /* Ed25519PublicKey.swift in Sources */,
 				94B44058B4452AC2C5FC0A72D584565F /* Encrypt.swift in Sources */,
 				1254E03F6A64E8E325CD90834567BB95 /* EntropyAccumulator.swift in Sources */,
@@ -2280,6 +2293,7 @@
 				DC568C1164EF2D323DB21F8D8613E8CC /* FoundationImplementation.swift in Sources */,
 				719565031722844428AFBA02AE8B0B45 /* GenerateEphemeralKey.swift in Sources */,
 				C91D344CB05E3EE3404DB84827EC3989 /* GenerateKey.swift in Sources */,
+				4209487A2282C3E100CAF5E6 /* Secp256r1PublicKey.swift in Sources */,
 				115304D69BE19B609A213AB28FBE77F9 /* Hash.swift in Sources */,
 				0030B3462555211CC97DE0442B3B4E59 /* HashBasedAlgInfo.swift in Sources */,
 				0B008A0CD48C41D1D5CD59D626A55A9C /* Hkdf.swift in Sources */,
@@ -2289,6 +2303,7 @@
 				B4F0F32E77F4DFA6831376AF40E84268 /* Kdf2.swift in Sources */,
 				32F677E9012E2C3CF2552478CCE65AAE /* Key.swift in Sources */,
 				9AED3C24E5FC92BAD3A5A14CF08059A7 /* KeyDeserializer.swift in Sources */,
+				420948862282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */,
 				9F5EDB88EE2B6139ADF6F310B5FEFAA6 /* KeyMaterialRng.swift in Sources */,
 				46B5AA1732672954C0EAEC6286E117FD /* KeyProvider.swift in Sources */,
 				DDFCFCFD583292DFC55EA74FE020C25D /* KeyRecipientInfo.swift in Sources */,
@@ -2298,6 +2313,7 @@
 				B6AFCB3A916828A0C86B49C1232CBEF0 /* Mac.swift in Sources */,
 				527759E56E63440B4CD8467F0C0AB192 /* MessageInfo.swift in Sources */,
 				891C7482C3AFB2A481A5B1420A14F579 /* MessageInfoCustomParams.swift in Sources */,
+				420948822282C3E100CAF5E6 /* Sec1Serializer.swift in Sources */,
 				D3831F6B9955FC6252402896E5C2833E /* MessageInfoDerSerializer.swift in Sources */,
 				D8E27341F328364A2A2E54CD04A133C8 /* MessageInfoSerializer.swift in Sources */,
 				B201C6BEF48A53F011B20B269FCFFE23 /* Oid.swift in Sources */,
@@ -2308,14 +2324,12 @@
 				D23877A9F8EA87912ECF4DD515A71304 /* Pem.swift in Sources */,
 				7DE3585602D0C17DDB4A950705815563 /* Pkcs5Pbes2.swift in Sources */,
 				A6B012112CF2C3120BE7B4DCB208C6E5 /* Pkcs5Pbkdf2.swift in Sources */,
-				B228D8F4D93A92C1CE3F7C86455B5AEC /* Pkcs8DerDeserializer.swift in Sources */,
-				38BDDF6EFA905EDC8BC282459A298FE6 /* Pkcs8DerSerializer.swift in Sources */,
-				4FAA6282FB51B484E03670443569570E /* Pkcs8Deserializer.swift in Sources */,
 				5844AD06EF62D573B553C138B88CCD1A /* Pkcs8Serializer.swift in Sources */,
 				BD6A9B0AE382989C2B1B80F1048DF5E9 /* PrivateKey.swift in Sources */,
 				A3298F3F4266081E8FEDB77D988F46D8 /* PublicKey.swift in Sources */,
 				3CFB0A00A2CE2F4637D26D7DDA5D4E1D /* Random.swift in Sources */,
 				3F7E6BEDB350C9AE9A568AB01ED4C242 /* RawKey.swift in Sources */,
+				420948762282C3E100CAF5E6 /* KeyAsn1Serializer.swift in Sources */,
 				7708BF54B177EE1FD1F7CC7315CCC482 /* RecipientCipher.swift in Sources */,
 				340B95452DCAF3BB14E0AA1B35444DCA /* RsaPrivateKey.swift in Sources */,
 				8A7492185565F3701CE8874415676E9A /* RsaPublicKey.swift in Sources */,
@@ -2391,12 +2405,13 @@
 				711A88C3B9207B5C3BC915EA21DC7984 /* CipherInfo.swift in Sources */,
 				B85C04E252EB1C7BEE9641651B431293 /* ComputeSharedKey.swift in Sources */,
 				12FEEACC6D18CA61F38CFDCF69098B54 /* CtrDrbg.swift in Sources */,
+				4209487C2282C3E100CAF5E6 /* EcAlgInfo.swift in Sources */,
 				EC14B28AD51592B8E569E610299BF566 /* Curve25519PrivateKey.swift in Sources */,
 				773C42F7B95A92FB9A398EF6EFA3A0B9 /* Curve25519PublicKey.swift in Sources */,
 				37F78189AC6CDDF4B2E16A5DEE80E3D7 /* Decrypt.swift in Sources */,
-				A168A894C0F350258F9B1FC1B88C34C6 /* Defaults.swift in Sources */,
 				A119960A99C306BA9E8ECE3ACFC864CB /* Ecies.swift in Sources */,
 				8515FD818ED84760E22306A89178D426 /* Ed25519PrivateKey.swift in Sources */,
+				420948882282C3E100CAF5E6 /* Secp256r1PrivateKey.swift in Sources */,
 				0226997D4F2EE60CD58251228F1820DA /* Ed25519PublicKey.swift in Sources */,
 				761A9B5741FF61BB098EEFEA00169D00 /* Encrypt.swift in Sources */,
 				5710CF2E3F42473A37D8EFB6D3611F40 /* EntropyAccumulator.swift in Sources */,
@@ -2406,6 +2421,7 @@
 				BF491993FA224EA8DD8ECA028832067D /* FoundationImplementation.swift in Sources */,
 				0D8F592AFCD854CFA19F62F5BB1E1D1D /* GenerateEphemeralKey.swift in Sources */,
 				73E3E157959B695EF2A246866B7ED3C8 /* GenerateKey.swift in Sources */,
+				420948782282C3E100CAF5E6 /* Secp256r1PublicKey.swift in Sources */,
 				53EE4762CC759D5200383A64B30E080A /* Hash.swift in Sources */,
 				8A71A21017B9EDC995C6765CE14587A5 /* HashBasedAlgInfo.swift in Sources */,
 				ADD08CE63381C6C8CAB2E2A6F762A4BE /* Hkdf.swift in Sources */,
@@ -2415,6 +2431,7 @@
 				5E3D9FA72A9AA2457A284F6EA09EF5F6 /* Kdf2.swift in Sources */,
 				A5F6A8D244807AE90C3E345DC21479FC /* Key.swift in Sources */,
 				8A718249B11C76FF56A44E6DA1F4B61F /* KeyDeserializer.swift in Sources */,
+				420948842282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */,
 				A95AFCA98F530B06D78D3F12106108D8 /* KeyMaterialRng.swift in Sources */,
 				7604460D1E2571EF6461819E0F9DB33F /* KeyProvider.swift in Sources */,
 				D621C68122453DE4733098BB417B3FDA /* KeyRecipientInfo.swift in Sources */,
@@ -2424,6 +2441,7 @@
 				8C0EDACD87C60DC03CD6B16F29EA088E /* Mac.swift in Sources */,
 				8BE1E2556A17FF3485AC58654D21E1F2 /* MessageInfo.swift in Sources */,
 				1198B3ED139404AA8D1D346A00D14945 /* MessageInfoCustomParams.swift in Sources */,
+				420948802282C3E100CAF5E6 /* Sec1Serializer.swift in Sources */,
 				9F39E77E4E91B4D7CFEE0A48F1DD2806 /* MessageInfoDerSerializer.swift in Sources */,
 				4DE37649C259E29D2C31FB39FEFF8C86 /* MessageInfoSerializer.swift in Sources */,
 				D30D695E5E0CF4C65CA82B1461EC379D /* Oid.swift in Sources */,
@@ -2434,14 +2452,12 @@
 				3BE390DBE9355D6664776CD3F7CF8F9D /* Pem.swift in Sources */,
 				2453EEF991A569F166E3007E8360EFCC /* Pkcs5Pbes2.swift in Sources */,
 				A56564EC15A4B4029C31D29EE61F75B4 /* Pkcs5Pbkdf2.swift in Sources */,
-				72B9E2AA2F5D7CC433C49B7B6F166676 /* Pkcs8DerDeserializer.swift in Sources */,
-				115A5ACD6AF4D583B0B58621A07B4447 /* Pkcs8DerSerializer.swift in Sources */,
-				F56C4FE6182610AE61522535DBF51628 /* Pkcs8Deserializer.swift in Sources */,
 				A00FC6036B3CEF7CEB001D9B0EC56690 /* Pkcs8Serializer.swift in Sources */,
 				5DBF2BED7CAAFD618671F932F226B697 /* PrivateKey.swift in Sources */,
 				61D84C67789D901D74AA544D99EE7192 /* PublicKey.swift in Sources */,
 				E1BDE4A26D5AF073A8AC498E89A6C58F /* Random.swift in Sources */,
 				4D62FD6F874D71E9F3FB49242343E08B /* RawKey.swift in Sources */,
+				420948742282C3E100CAF5E6 /* KeyAsn1Serializer.swift in Sources */,
 				F5EA4F997F99025F80C99EE59A453844 /* RecipientCipher.swift in Sources */,
 				1547AFB2D908A0B29FB3773006C4E986 /* RsaPrivateKey.swift in Sources */,
 				9B972CE635F8C81325C146BCBDAB3F81 /* RsaPublicKey.swift in Sources */,
@@ -2517,12 +2533,13 @@
 				3B7C16A62D625CE6690B6ECBFF7CAD6A /* CipherInfo.swift in Sources */,
 				7BF34A10228CEF865CBF5203E961EB30 /* ComputeSharedKey.swift in Sources */,
 				C8EA8408B1327FDA305F6266D6133E06 /* CtrDrbg.swift in Sources */,
+				4209487F2282C3E100CAF5E6 /* EcAlgInfo.swift in Sources */,
 				0837C30F9FD4BFE9F0BA9B6EA7472ECB /* Curve25519PrivateKey.swift in Sources */,
 				4FB9C0CE8EFC22FD6755A3F92B3D762A /* Curve25519PublicKey.swift in Sources */,
 				C6EE3411B12E886A01CBB6C7FBE529F7 /* Decrypt.swift in Sources */,
-				B1A34623EB505709EB35552E5A7981A9 /* Defaults.swift in Sources */,
 				4D2950D8A2C2009542E47AC4342F80EA /* Ecies.swift in Sources */,
 				D51BE0B17A4D53440C7043D1624CBCE5 /* Ed25519PrivateKey.swift in Sources */,
+				4209488B2282C3E100CAF5E6 /* Secp256r1PrivateKey.swift in Sources */,
 				C587DB210B4AE6C92B0491DA6F50E5BA /* Ed25519PublicKey.swift in Sources */,
 				AFC7BD01367BDA2F41B053DE8E03A6F3 /* Encrypt.swift in Sources */,
 				48E64C3B0B43DC8B1531597A7161927A /* EntropyAccumulator.swift in Sources */,
@@ -2532,6 +2549,7 @@
 				162681EE787D81A10A9333D7A5E5997E /* FoundationImplementation.swift in Sources */,
 				A123874C95E4F81747D1634E0BBD2F64 /* GenerateEphemeralKey.swift in Sources */,
 				4CBA22974845D44810E14A96B8D4838F /* GenerateKey.swift in Sources */,
+				4209487B2282C3E100CAF5E6 /* Secp256r1PublicKey.swift in Sources */,
 				65639C5D0D183118BAAAC41A932C84B4 /* Hash.swift in Sources */,
 				A2BDC3C692D28E55130CDF68B1BAC566 /* HashBasedAlgInfo.swift in Sources */,
 				560E544330D2B2C33BE564B26CF4A7FD /* Hkdf.swift in Sources */,
@@ -2541,6 +2559,7 @@
 				2D06FD9DAECDA794B63437DB59C74615 /* Kdf2.swift in Sources */,
 				EC796F5C78E468108AE3631BE9C1D254 /* Key.swift in Sources */,
 				2BCBB7AD9B09B26B628472BA9D04E48C /* KeyDeserializer.swift in Sources */,
+				420948872282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */,
 				8FE7E2AE41253F6335FFAF44F4B9CC1B /* KeyMaterialRng.swift in Sources */,
 				ADCAE1481E86D806F912DE885241A8C4 /* KeyProvider.swift in Sources */,
 				7E320476553CFE686B7D1A34F1FD1EF8 /* KeyRecipientInfo.swift in Sources */,
@@ -2550,6 +2569,7 @@
 				5D09B7CC6B517F90E21B3190FF6E89A4 /* Mac.swift in Sources */,
 				580EAF2B9ADC79B369D9124902129D04 /* MessageInfo.swift in Sources */,
 				27F6B8B82E9A5D5B8E53F75EC50A8A14 /* MessageInfoCustomParams.swift in Sources */,
+				420948832282C3E100CAF5E6 /* Sec1Serializer.swift in Sources */,
 				4F20D969FEC192F08E1FACBD91B0551B /* MessageInfoDerSerializer.swift in Sources */,
 				84BE22161B93257BC030BBC84FDFE287 /* MessageInfoSerializer.swift in Sources */,
 				90412B7DF97D4DDD09D13EB194C0F339 /* Oid.swift in Sources */,
@@ -2560,14 +2580,12 @@
 				A3E3C17BC90DB18E2213CF8E216176A7 /* Pem.swift in Sources */,
 				ABEBE1B86E642644B578F61C4256DF83 /* Pkcs5Pbes2.swift in Sources */,
 				2491AD87807124026382D9E9B0823193 /* Pkcs5Pbkdf2.swift in Sources */,
-				F2AC7D83AB0291D2850B2847F4325565 /* Pkcs8DerDeserializer.swift in Sources */,
-				5F2774236FC96602A64608E2033D3D90 /* Pkcs8DerSerializer.swift in Sources */,
-				03F808FDD81C0D5B1E8BBB286B303E7C /* Pkcs8Deserializer.swift in Sources */,
 				FD043EB410502A0332E7F1DC118F5CFD /* Pkcs8Serializer.swift in Sources */,
 				0E1F9523CFBFD2EB559938961A89BA64 /* PrivateKey.swift in Sources */,
 				A9BABEB162C2C3329F1707D183BCDCE5 /* PublicKey.swift in Sources */,
 				8D3B090FBA8469207D3FF14788DB764D /* Random.swift in Sources */,
 				8FAAA1DA984709454A36D0726CCCAE83 /* RawKey.swift in Sources */,
+				420948772282C3E100CAF5E6 /* KeyAsn1Serializer.swift in Sources */,
 				64CCF4EF050E08C94D8AACF649E96453 /* RecipientCipher.swift in Sources */,
 				91C0257857A9ADF0741918C77A40B0AC /* RsaPrivateKey.swift in Sources */,
 				5E62C5BA2957C27E469790A8A5C056FD /* RsaPublicKey.swift in Sources */,
@@ -2686,12 +2704,13 @@
 				B215F4356228391CBCA19AC568009BAC /* CipherInfo.swift in Sources */,
 				18E39907EF4E1E7A1790FA0ED71D7064 /* ComputeSharedKey.swift in Sources */,
 				7A333A96EA34A34434063B5D2E803D09 /* CtrDrbg.swift in Sources */,
+				4209487D2282C3E100CAF5E6 /* EcAlgInfo.swift in Sources */,
 				07C94BF686A740C36188899E7CD66DAE /* Curve25519PrivateKey.swift in Sources */,
 				F2C25B4B40635D90E5359E4C60C33FB0 /* Curve25519PublicKey.swift in Sources */,
 				CE11BC8768B5CB5ADA61765BB8877B33 /* Decrypt.swift in Sources */,
-				4DF1FE379225CD28B655B5276DF25C62 /* Defaults.swift in Sources */,
 				1996E9FB648E71088D1866B01C90F43A /* Ecies.swift in Sources */,
 				6E3168B11BB44FFC04129813E4F281DF /* Ed25519PrivateKey.swift in Sources */,
+				420948892282C3E100CAF5E6 /* Secp256r1PrivateKey.swift in Sources */,
 				5DB44C46D62CF3441ABE835B6352441F /* Ed25519PublicKey.swift in Sources */,
 				30C2100C675469FE47F07EF1E1052D5F /* Encrypt.swift in Sources */,
 				0AFB32E25AE453F4B70D13BEAE343CF6 /* EntropyAccumulator.swift in Sources */,
@@ -2701,6 +2720,7 @@
 				276F2B74198343F2F3A2B365B7DD13A1 /* FoundationImplementation.swift in Sources */,
 				AE18D383EDD3B97FBCD27AA6427654BF /* GenerateEphemeralKey.swift in Sources */,
 				13371AC24D9500DA21F36C8D0398C2BC /* GenerateKey.swift in Sources */,
+				420948792282C3E100CAF5E6 /* Secp256r1PublicKey.swift in Sources */,
 				8AC416E94313B24ECD2BF7797EBF12A7 /* Hash.swift in Sources */,
 				0B1A5932977C8A6FC9D1C94F4199F29C /* HashBasedAlgInfo.swift in Sources */,
 				ECFE335383FBFAEB098FE32E9F29BCE8 /* Hkdf.swift in Sources */,
@@ -2710,6 +2730,7 @@
 				36BE1A4D8B6267747F3EF4E1C49DC915 /* Kdf2.swift in Sources */,
 				B04A8B02A04283B0347E5B5861376353 /* Key.swift in Sources */,
 				851DD45384A3058E6A95C147472FD718 /* KeyDeserializer.swift in Sources */,
+				420948852282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */,
 				E9973BE8C25983C0FA71DF9DC6E6BF14 /* KeyMaterialRng.swift in Sources */,
 				1539A0B2037AC87FCD1CCF9456ECFEAE /* KeyProvider.swift in Sources */,
 				203E071D411EB13E7A1094CDB574057B /* KeyRecipientInfo.swift in Sources */,
@@ -2719,6 +2740,7 @@
 				47C1D7C3E05C0BBB2C8BA32DEC072FB1 /* Mac.swift in Sources */,
 				AAFCBB5BBBE161AF1A38CB5AB3DB6CA1 /* MessageInfo.swift in Sources */,
 				471C0F03E9ABC4D2B8E65CC328335AF9 /* MessageInfoCustomParams.swift in Sources */,
+				420948812282C3E100CAF5E6 /* Sec1Serializer.swift in Sources */,
 				299AF5B731E77BF3AEF382662FB513AC /* MessageInfoDerSerializer.swift in Sources */,
 				34E5330F6881EB6A4A68F6216DAC3FDB /* MessageInfoSerializer.swift in Sources */,
 				43A68EB01623418C0C37AE1017B2E8C7 /* Oid.swift in Sources */,
@@ -2729,14 +2751,12 @@
 				FC6165CE84EC30DC723B4F3F8BC79346 /* Pem.swift in Sources */,
 				1771313D4183FEEC9EA4D58AFA9674CE /* Pkcs5Pbes2.swift in Sources */,
 				C32A1664A19453AE2270BD7BE0F49DDD /* Pkcs5Pbkdf2.swift in Sources */,
-				9E08644DBEB167BBFB65C25870F32A10 /* Pkcs8DerDeserializer.swift in Sources */,
-				2D0480046F1E04F442E342019E365ACD /* Pkcs8DerSerializer.swift in Sources */,
-				CD780F5DB90F536E533E461C5AE30C36 /* Pkcs8Deserializer.swift in Sources */,
 				E7B31990EFA66FF3DE5083762825B496 /* Pkcs8Serializer.swift in Sources */,
 				B889D4AA4BC7728774085D90A23472DB /* PrivateKey.swift in Sources */,
 				19E965AB80F7444425A2F55E67398A1B /* PublicKey.swift in Sources */,
 				D2432862DAB01D388F201F497280A9D6 /* Random.swift in Sources */,
 				6A2833AF738CF576335BED160F55ECF3 /* RawKey.swift in Sources */,
+				420948752282C3E100CAF5E6 /* KeyAsn1Serializer.swift in Sources */,
 				AE317AB8792C9CA25CA34826E781A53E /* RecipientCipher.swift in Sources */,
 				FD3866BDE24221F7404E08B06BB82AE6 /* RsaPrivateKey.swift in Sources */,
 				B0031A3E5EEC97A6DAF5FDC41EE7740E /* RsaPublicKey.swift in Sources */,

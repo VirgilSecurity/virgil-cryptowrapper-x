@@ -36,15 +36,15 @@
 import Foundation
 import VSCFoundation
 
-/// Implements PKCS#8 key deserialization from PEM format.
-@objc(VSCFPkcs8Deserializer) public class Pkcs8Deserializer: NSObject, KeyDeserializer {
+/// Handle algorithm information about ECP.
+@objc(VSCFEcAlgInfo) public class EcAlgInfo: NSObject, AlgInfo {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_pkcs8_deserializer_new()
+        self.c_ctx = vscf_ec_alg_info_new()
         super.init()
     }
 
@@ -58,57 +58,40 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_pkcs8_deserializer_shallow_copy(c_ctx)
+        self.c_ctx = vscf_ec_alg_info_shallow_copy(c_ctx)
         super.init()
+    }
+
+    /// Create algorithm info with EC generic key identificator, EC domain group identificator.
+    public init(algId: AlgId, keyId: OidId, domainId: OidId) {
+        let proxyResult = vscf_ec_alg_info_new_with_members(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), vscf_oid_id_t(rawValue: UInt32(keyId.rawValue)), vscf_oid_id_t(rawValue: UInt32(domainId.rawValue)))
+
+        self.c_ctx = proxyResult!
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_pkcs8_deserializer_delete(self.c_ctx)
+        vscf_ec_alg_info_delete(self.c_ctx)
     }
 
-    @objc public func setAsn1Reader(asn1Reader: Asn1Reader) {
-        vscf_pkcs8_deserializer_release_asn1_reader(self.c_ctx)
-        vscf_pkcs8_deserializer_use_asn1_reader(self.c_ctx, asn1Reader.c_ctx)
+    /// Return EC specific algorithm identificator {unrestricted, ecDH, ecMQV}.
+    @objc public func keyId() -> OidId {
+        let proxyResult = vscf_ec_alg_info_key_id(self.c_ctx)
+
+        return OidId.init(fromC: proxyResult)
     }
 
-    @objc public func setDerDeserializer(derDeserializer: KeyDeserializer) {
-        vscf_pkcs8_deserializer_release_der_deserializer(self.c_ctx)
-        vscf_pkcs8_deserializer_use_der_deserializer(self.c_ctx, derDeserializer.c_ctx)
+    /// Return EC domain group identificator.
+    @objc public func domainId() -> OidId {
+        let proxyResult = vscf_ec_alg_info_domain_id(self.c_ctx)
+
+        return OidId.init(fromC: proxyResult)
     }
 
-    /// Setup predefined values to the uninitialized class dependencies.
-    @objc public func setupDefaults() {
-        vscf_pkcs8_deserializer_setup_defaults(self.c_ctx)
-    }
+    /// Provide algorithm identificator.
+    @objc public func algId() -> AlgId {
+        let proxyResult = vscf_ec_alg_info_alg_id(self.c_ctx)
 
-    /// Deserialize given public key as an interchangeable format to the object.
-    @objc public func deserializePublicKey(publicKeyData: Data) throws -> RawKey {
-        var error: vscf_error_t = vscf_error_t()
-        vscf_error_reset(&error)
-
-        let proxyResult = publicKeyData.withUnsafeBytes({ (publicKeyDataPointer: UnsafeRawBufferPointer) in
-
-            return vscf_pkcs8_deserializer_deserialize_public_key(self.c_ctx, vsc_data(publicKeyDataPointer.bindMemory(to: byte.self).baseAddress, publicKeyData.count), &error)
-        })
-
-        try FoundationError.handleStatus(fromC: error.status)
-
-        return RawKey.init(take: proxyResult!)
-    }
-
-    /// Deserialize given private key as an interchangeable format to the object.
-    @objc public func deserializePrivateKey(privateKeyData: Data) throws -> RawKey {
-        var error: vscf_error_t = vscf_error_t()
-        vscf_error_reset(&error)
-
-        let proxyResult = privateKeyData.withUnsafeBytes({ (privateKeyDataPointer: UnsafeRawBufferPointer) in
-
-            return vscf_pkcs8_deserializer_deserialize_private_key(self.c_ctx, vsc_data(privateKeyDataPointer.bindMemory(to: byte.self).baseAddress, privateKeyData.count), &error)
-        })
-
-        try FoundationError.handleStatus(fromC: error.status)
-
-        return RawKey.init(take: proxyResult!)
+        return AlgId.init(fromC: proxyResult)
     }
 }

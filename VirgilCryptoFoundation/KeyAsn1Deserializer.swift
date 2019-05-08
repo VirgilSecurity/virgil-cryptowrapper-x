@@ -36,15 +36,15 @@
 import Foundation
 import VSCFoundation
 
-/// Implements PKCS#8 key deserialization from DER format.
-@objc(VSCFPkcs8DerDeserializer) public class Pkcs8DerDeserializer: NSObject, KeyDeserializer {
+/// Implements PKCS#8 and SEC1 key deserialization from DER / PEM format.
+@objc(VSCFKeyAsn1Deserializer) public class KeyAsn1Deserializer: NSObject, KeyDeserializer {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_pkcs8_der_deserializer_new()
+        self.c_ctx = vscf_key_asn1_deserializer_new()
         super.init()
     }
 
@@ -58,23 +58,23 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_pkcs8_der_deserializer_shallow_copy(c_ctx)
+        self.c_ctx = vscf_key_asn1_deserializer_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_pkcs8_der_deserializer_delete(self.c_ctx)
+        vscf_key_asn1_deserializer_delete(self.c_ctx)
     }
 
     @objc public func setAsn1Reader(asn1Reader: Asn1Reader) {
-        vscf_pkcs8_der_deserializer_release_asn1_reader(self.c_ctx)
-        vscf_pkcs8_der_deserializer_use_asn1_reader(self.c_ctx, asn1Reader.c_ctx)
+        vscf_key_asn1_deserializer_release_asn1_reader(self.c_ctx)
+        vscf_key_asn1_deserializer_use_asn1_reader(self.c_ctx, asn1Reader.c_ctx)
     }
 
     /// Setup predefined values to the uninitialized class dependencies.
     @objc public func setupDefaults() {
-        vscf_pkcs8_der_deserializer_setup_defaults(self.c_ctx)
+        vscf_key_asn1_deserializer_setup_defaults(self.c_ctx)
     }
 
     /// Deserialize Public Key by using internal ASN.1 reader.
@@ -84,21 +84,21 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_pkcs8_der_deserializer_deserialize_public_key_inplace(self.c_ctx, &error)
+        let proxyResult = vscf_key_asn1_deserializer_deserialize_public_key_inplace(self.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
         return RawKey.init(take: proxyResult!)
     }
 
-    /// Deserialize Public Key by using internal ASN.1 reader.
+    /// Deserialize Private Key by using internal ASN.1 reader.
     /// Note, that caller code is responsible to reset ASN.1 reader with
     /// an input buffer.
     @objc public func deserializePrivateKeyInplace() throws -> RawKey {
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_pkcs8_der_deserializer_deserialize_private_key_inplace(self.c_ctx, &error)
+        let proxyResult = vscf_key_asn1_deserializer_deserialize_private_key_inplace(self.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -112,7 +112,7 @@ import VSCFoundation
 
         let proxyResult = publicKeyData.withUnsafeBytes({ (publicKeyDataPointer: UnsafeRawBufferPointer) in
 
-            return vscf_pkcs8_der_deserializer_deserialize_public_key(self.c_ctx, vsc_data(publicKeyDataPointer.bindMemory(to: byte.self).baseAddress, publicKeyData.count), &error)
+            return vscf_key_asn1_deserializer_deserialize_public_key(self.c_ctx, vsc_data(publicKeyDataPointer.bindMemory(to: byte.self).baseAddress, publicKeyData.count), &error)
         })
 
         try FoundationError.handleStatus(fromC: error.status)
@@ -127,7 +127,7 @@ import VSCFoundation
 
         let proxyResult = privateKeyData.withUnsafeBytes({ (privateKeyDataPointer: UnsafeRawBufferPointer) in
 
-            return vscf_pkcs8_der_deserializer_deserialize_private_key(self.c_ctx, vsc_data(privateKeyDataPointer.bindMemory(to: byte.self).baseAddress, privateKeyData.count), &error)
+            return vscf_key_asn1_deserializer_deserialize_private_key(self.c_ctx, vsc_data(privateKeyDataPointer.bindMemory(to: byte.self).baseAddress, privateKeyData.count), &error)
         })
 
         try FoundationError.handleStatus(fromC: error.status)
