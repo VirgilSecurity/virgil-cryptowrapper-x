@@ -1016,7 +1016,7 @@
 		365C842CBC8A18274C4C1B3418914C40 /* VSCRatchet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCRatchet.framework; sourceTree = "<group>"; };
 		3ABCDC2FAA19EC7B1C8B5A1EA34B5863 /* Curve25519PrivateKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curve25519PrivateKey.swift; sourceTree = "<group>"; };
 		3AE18690AC37D7164CA87647800DD458 /* Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base64.swift; sourceTree = "<group>"; };
-		3B85C1C40DC52505A1E96FED5540A054 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B85C1C40DC52505A1E96FED5540A054 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CA19916DFD333F0BFD9DB7940A3B6E2 /* AlgInfoSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgInfoSerializer.swift; sourceTree = "<group>"; };
 		3F854BCC4323AD9FC9DC971A6FFE1318 /* RatchetMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatchetMessage.swift; sourceTree = "<group>"; };
 		41E115D5E7608BA04C612929B276744B /* AlgId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgId.swift; sourceTree = "<group>"; };
@@ -1043,10 +1043,10 @@
 		5544F6D22233D281C108320344F9A473 /* Sha512.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha512.swift; sourceTree = "<group>"; };
 		5595700F701D5B0785592FB98B10F206 /* Asn1rd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asn1rd.swift; sourceTree = "<group>"; };
 		588CB566553A8A8E133D667928419547 /* VirgilCryptoPythia.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirgilCryptoPythia.h; sourceTree = "<group>"; };
-		59225707F2BB7657FB54DA5B26800EF9 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5A99E151904A6D709ACC13ADF74AA30D /* VirgilCryptoFoundation-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoFoundation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		59225707F2BB7657FB54DA5B26800EF9 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A99E151904A6D709ACC13ADF74AA30D /* VirgilCryptoFoundation-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoFoundation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AD396FEFADA2E89793ED6C34D0415CC /* MessageInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageInfo.swift; sourceTree = "<group>"; };
-		5C4ECDB4CDA773A42D4CE9526513DDBA /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C4ECDB4CDA773A42D4CE9526513DDBA /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D33F30B4A747D0FF66A5D694880FFCC /* CipherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherInfo.swift; sourceTree = "<group>"; };
 		605C1FA7C04B4C1299CEE8B5473B734C /* Asn1Reader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asn1Reader.swift; sourceTree = "<group>"; };
 		6196A4ACC9E0049AA243D5A901211B6C /* Key.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Key.swift; sourceTree = "<group>"; };
@@ -1094,14 +1094,14 @@
 		A84AA161461F5FC6437DDF90B88103D1 /* VirgilCryptoFoundation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VirgilCryptoFoundation.h; sourceTree = "<group>"; };
 		AA58BA1461A32173AF7B416780C64571 /* KeyDeserializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyDeserializer.swift; sourceTree = "<group>"; };
 		AAEC40A65CDF21E4D0F755C5B23998A0 /* VSCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCFoundation.framework; sourceTree = "<group>"; };
-		AB070BA1355FE223EF4B3FC1A38429B7 /* VirgilCryptoFoundation-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoFoundation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AB070BA1355FE223EF4B3FC1A38429B7 /* VirgilCryptoFoundation-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoFoundation-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0B76A1F472095E79D5A2EED014ACFDF /* VSCCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCCommon.framework; sourceTree = "<group>"; };
 		B1D29982AC13070BAA09227353BE74E3 /* PublicKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicKey.swift; sourceTree = "<group>"; };
 		B426F3F94950B498F305E418AEB9D7E2 /* VSCCommon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCCommon.framework; sourceTree = "<group>"; };
 		B460B409AD44E59A332D9CCB6E55C91C /* Asn1Writer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asn1Writer.swift; sourceTree = "<group>"; };
 		B65BD06E323EE4B9204614ADD0077EEA /* ComputeSharedKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComputeSharedKey.swift; sourceTree = "<group>"; };
 		B7F43EFEDC6B22D5E53F40689E35BF69 /* CContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CContext.swift; sourceTree = "<group>"; };
-		B86ECC54505E3612D72760CE75E71F8E /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B86ECC54505E3612D72760CE75E71F8E /* VirgilCryptoPythia-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoPythia-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B930DF9FC7AB5E513FCCD5F0D431AA58 /* FoundationImplementation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundationImplementation.swift; sourceTree = "<group>"; };
 		BD0D8A1BA3F0E2C279D0AD1D7745FAA4 /* VSCFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCFoundation.framework; sourceTree = "<group>"; };
 		BFAA40E13A6DBF6976C2FB8EC9BEB8C5 /* Kdf2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kdf2.swift; sourceTree = "<group>"; };
@@ -2101,7 +2101,13 @@
 					06FD5131E629998633C99EEB627B39B6 = {
 						LastSwiftMigration = 1020;
 					};
+					1A82AABC14E289DE0E33AD4DFE88AD1A = {
+						LastSwiftMigration = 1020;
+					};
 					3BD3F1BFD20257BEE85947CFA2923B96 = {
+						LastSwiftMigration = 1020;
+					};
+					404F49577F8C94EFF5C889A5CE4B2926 = {
 						LastSwiftMigration = 1020;
 					};
 					43152703D5DF8DC71DD98274AABC7D99 = {
@@ -2116,7 +2122,25 @@
 					518839FE28520B45E3E22CA0F2F25D05 = {
 						LastSwiftMigration = 1020;
 					};
+					6E515EB01EE4A2C0311AEB2F53398663 = {
+						LastSwiftMigration = 1020;
+					};
+					72A14415C59746934A1909F8DC183A93 = {
+						LastSwiftMigration = 1020;
+					};
+					794314D953A5EBF720165F7508C31E1C = {
+						LastSwiftMigration = 1020;
+					};
+					7C6DA5D831FFBCD25C80231AD2B3CF91 = {
+						LastSwiftMigration = 1020;
+					};
+					92CD67FC0C8DDB33398236D9FA026922 = {
+						LastSwiftMigration = 1020;
+					};
 					980035A804E2DE173B5101F2789E72F7 = {
+						LastSwiftMigration = 1020;
+					};
+					9C88BB1F447859A12E48A932B341E0AC = {
 						LastSwiftMigration = 1020;
 					};
 					BA072C618E840A5F1D4B67A9CDDB881B = {
@@ -2129,6 +2153,9 @@
 						LastSwiftMigration = 1020;
 					};
 					EBC4EB55650D68FC092DDC5B4B38DCD7 = {
+						LastSwiftMigration = 1020;
+					};
+					F3C3D70EAB1EA9D8D4DDDCB0406024A7 = {
 						LastSwiftMigration = 1020;
 					};
 					FBB41C24CE0CC2F8AE51F4D8EAAF8E0B = {
@@ -2987,6 +3014,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3130,6 +3158,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3327,6 +3356,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3346,6 +3376,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -3366,6 +3397,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -3386,6 +3418,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -3433,6 +3466,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3538,6 +3572,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3577,6 +3612,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3687,6 +3723,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3742,6 +3779,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3762,6 +3800,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3783,6 +3822,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -3924,6 +3964,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -3944,6 +3985,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -4006,6 +4048,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Release;
@@ -4026,6 +4069,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = appletvos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 			};
 			name = Debug;
@@ -4072,6 +4116,7 @@
 				);
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
