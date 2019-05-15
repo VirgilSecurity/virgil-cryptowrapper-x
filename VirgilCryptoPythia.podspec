@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name                        = "VirgilCryptoPythia"
   s.version                     = "0.7.0"
+  s.swift_version               = "5.0"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
   s.summary                     = "Contains swift classes working with Pythia crypto."
   s.homepage                    = "https://github.com/VirgilSecurity/virgil-cryptowrapper-x"
