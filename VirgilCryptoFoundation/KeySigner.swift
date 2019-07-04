@@ -36,11 +36,23 @@
 import Foundation
 import VSCFoundation
 
-/// Provide interface to compute shared key for 2 asymmetric keys.
-///
-/// Assume that this interface is implemented on the private key.
-@objc(VSCFGenerateEphemeralKey) public protocol GenerateEphemeralKey : CContext {
+/// Provide an interface for signing and verifying data digest
+/// with asymmetric keys.
+@objc(VSCFKeySigner) public protocol KeySigner : KeyAlg {
 
-    /// Generate ephemeral private key of the same type.
-    @objc func generateEphemeralKey() throws -> PrivateKey
+    /// Check if algorithm can sign data digest with a given key.
+    @objc func canSign(privateKey: PrivateKey) -> Bool
+
+    /// Return length in bytes required to hold signature.
+    /// Return zero if a given private key can not produce signatures.
+    @objc func signatureLen(key: Key) -> Int
+
+    /// Sign data digest with a given private key.
+    @objc func signHash(privateKey: PrivateKey, hashId: AlgId, digest: Data) throws -> Data
+
+    /// Check if algorithm can verify data digest with a given key.
+    @objc func canVerify(publicKey: PublicKey) -> Bool
+
+    /// Verify data digest with a given public key and signature.
+    @objc func verifyHash(publicKey: PublicKey, hashId: AlgId, digest: Data, signature: Data) -> Bool
 }

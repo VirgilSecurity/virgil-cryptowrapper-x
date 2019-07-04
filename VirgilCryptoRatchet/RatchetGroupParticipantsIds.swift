@@ -34,12 +34,52 @@
 
 
 import Foundation
-import VSCFoundation
+import VSCRatchet
+import VirgilCryptoFoundation
 
-/// Interface for private or secret key generation.
-@objc(VSCFGenerateKey) public protocol GenerateKey : CContext {
+/// Container for array of participants ids
+@objc(VSCRRatchetGroupParticipantsIds) public class RatchetGroupParticipantsIds: NSObject {
 
-    /// Generate new private or secret key.
-    /// Note, this operation can be slow.
-    @objc func generateKey() throws
+    /// Handle underlying C context.
+    @objc public let c_ctx: OpaquePointer
+
+    /// Create underlying C context.
+    public override init() {
+        self.c_ctx = vscr_ratchet_group_participants_ids_new()
+        super.init()
+    }
+
+    /// Acquire C context.
+    /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
+    public init(take c_ctx: OpaquePointer) {
+        self.c_ctx = c_ctx
+        super.init()
+    }
+
+    /// Acquire retained C context.
+    /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
+    public init(use c_ctx: OpaquePointer) {
+        self.c_ctx = vscr_ratchet_group_participants_ids_shallow_copy(c_ctx)
+        super.init()
+    }
+
+    /// Creates new array for size elements
+    public init(size: UInt32) {
+        let proxyResult = vscr_ratchet_group_participants_ids_new_size(size)
+
+        self.c_ctx = proxyResult!
+    }
+
+    /// Release underlying C context.
+    deinit {
+        vscr_ratchet_group_participants_ids_delete(self.c_ctx)
+    }
+
+    /// Add participant id to array
+    @objc public func addId(id: Data) {
+        id.withUnsafeBytes({ (idPointer: UnsafeRawBufferPointer) -> Void in
+
+            vscr_ratchet_group_participants_ids_add_id(self.c_ctx, vsc_data(idPointer.bindMemory(to: byte.self).baseAddress, id.count))
+        })
+    }
 }

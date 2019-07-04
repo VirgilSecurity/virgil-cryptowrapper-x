@@ -36,12 +36,18 @@
 import Foundation
 import VSCFoundation
 
-/// Provide interface for signing data with private key.
-@objc(VSCFSignHash) public protocol SignHash : CContext {
+/// Represents group message type
+@objc(VSCFGroupMsgType) public enum GroupMsgType: Int {
 
-    /// Return length in bytes required to hold signature.
-    @objc func signatureLen() -> Int
+    /// Group info type with encryption key.
+    /// This type of message should be encrypted before transferring.
+    case groupInfo = 1
 
-    /// Sign data given private key.
-    @objc func signHash(hashDigest: Data, hashId: AlgId) throws -> Data
+    /// Regular group message with encrypted text.
+    case regular = 2
+
+    /// Create enumeration value from the correspond C enumeration value.
+    internal init(fromC groupMsgType: vscf_group_msg_type_t) {
+        self.init(rawValue: Int(groupMsgType.rawValue))!
+    }
 }

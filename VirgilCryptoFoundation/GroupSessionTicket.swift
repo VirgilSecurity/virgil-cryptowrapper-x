@@ -36,15 +36,15 @@
 import Foundation
 import VSCFoundation
 
-/// Provide implementation agnostic representation of the asymmetric key.
-@objc(VSCFRawKey) public class RawKey: NSObject {
+/// Group ticket used to start group session, remove participants or proactive to rotate encryption key.
+@objc(VSCFGroupSessionTicket) public class GroupSessionTicket: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_raw_key_new()
+        self.c_ctx = vscf_group_session_ticket_new()
         super.init()
     }
 
@@ -58,37 +58,43 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_raw_key_shallow_copy(c_ctx)
+        self.c_ctx = vscf_group_session_ticket_shallow_copy(c_ctx)
         super.init()
-    }
-
-    /// Creates raw key defined with algorithm and data.
-    /// Note, data is copied.
-    public init(algId: AlgId, rawKeyData: Data) {
-        let proxyResult = rawKeyData.withUnsafeBytes({ (rawKeyDataPointer: UnsafeRawBufferPointer) -> OpaquePointer? in
-
-            return vscf_raw_key_new_with_data(vscf_alg_id_t(rawValue: UInt32(algId.rawValue)), vsc_data(rawKeyDataPointer.bindMemory(to: byte.self).baseAddress, rawKeyData.count))
-        })
-
-        self.c_ctx = proxyResult!
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_raw_key_delete(self.c_ctx)
+        vscf_group_session_ticket_delete(self.c_ctx)
     }
 
-    /// Returns asymmetric algorithm type that raw key belongs to.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_raw_key_alg_id(self.c_ctx)
-
-        return AlgId.init(fromC: proxyResult)
+    /// Random used to generate keys
+    @objc public func setRng(rng: Random) {
+        vscf_group_session_ticket_release_rng(self.c_ctx)
+        vscf_group_session_ticket_use_rng(self.c_ctx, rng.c_ctx)
     }
 
-    /// Return raw key data.
-    @objc public func data() -> Data {
-        let proxyResult = vscf_raw_key_data(self.c_ctx)
+    /// Setups default dependencies:
+    /// - RNG: CTR DRBG
+    @objc public func setupDefaults() throws {
+        let proxyResult = vscf_group_session_ticket_setup_defaults(self.c_ctx)
 
-        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
+        try FoundationError.handleStatus(fromC: proxyResult)
+    }
+
+    /// Set this ticket to start new group session.
+    @objc public func setupTicketAsNew(sessionId: Data) throws {
+        let proxyResult = sessionId.withUnsafeBytes({ (sessionIdPointer: UnsafeRawBufferPointer) -> vscf_status_t in
+
+            return vscf_group_session_ticket_setup_ticket_as_new(self.c_ctx, vsc_data(sessionIdPointer.bindMemory(to: byte.self).baseAddress, sessionId.count))
+        })
+
+        try FoundationError.handleStatus(fromC: proxyResult)
+    }
+
+    /// Returns message that should be sent to all participants using secure channel.
+    @objc public func getTicketMessage() -> GroupSessionMessage {
+        let proxyResult = vscf_group_session_ticket_get_ticket_message(self.c_ctx)
+
+        return GroupSessionMessage.init(use: proxyResult!)
     }
 }

@@ -34,24 +34,18 @@
 
 
 import Foundation
-import VSCFoundation
+import VSCRatchet
+import VirgilCryptoFoundation
 
-/// Random number generator that generate deterministic sequence based
-/// on a given seed.
-/// This RNG can be used to transform key material rial to the private key.
-@objc(VSCFKeyMaterialRng) public class KeyMaterialRng: NSObject, Random {
-
-    /// Minimum length in bytes for the key material.
-    @objc public static let keyMaterialLenMin: Int = 32
-    /// Maximum length in bytes for the key material.
-    @objc public static let keyMaterialLenMax: Int = 512
+/// Container for array of participants' info
+@objc(VSCRRatchetGroupParticipantsInfo) public class RatchetGroupParticipantsInfo: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_key_material_rng_new()
+        self.c_ctx = vscr_ratchet_group_participants_info_new()
         super.init()
     }
 
@@ -65,50 +59,31 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_key_material_rng_shallow_copy(c_ctx)
+        self.c_ctx = vscr_ratchet_group_participants_info_shallow_copy(c_ctx)
         super.init()
+    }
+
+    /// Creates new array for size elements
+    public init(size: UInt32) {
+        let proxyResult = vscr_ratchet_group_participants_info_new_size(size)
+
+        self.c_ctx = proxyResult!
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_key_material_rng_delete(self.c_ctx)
+        vscr_ratchet_group_participants_info_delete(self.c_ctx)
     }
 
-    /// Set a new key material.
-    @objc public func resetKeyMaterial(keyMaterial: Data) {
-        keyMaterial.withUnsafeBytes({ (keyMaterialPointer: UnsafeRawBufferPointer) -> Void in
+    /// Add participant info
+    @objc public func addParticipant(id: Data, pubKey: Data) throws {
+        let proxyResult = id.withUnsafeBytes({ (idPointer: UnsafeRawBufferPointer) -> vscr_status_t in
+            pubKey.withUnsafeBytes({ (pubKeyPointer: UnsafeRawBufferPointer) -> vscr_status_t in
 
-            vscf_key_material_rng_reset_key_material(self.c_ctx, vsc_data(keyMaterialPointer.bindMemory(to: byte.self).baseAddress, keyMaterial.count))
+                return vscr_ratchet_group_participants_info_add_participant(self.c_ctx, vsc_data(idPointer.bindMemory(to: byte.self).baseAddress, id.count), vsc_data(pubKeyPointer.bindMemory(to: byte.self).baseAddress, pubKey.count))
+            })
         })
-    }
 
-    /// Generate random bytes.
-    /// All RNG implementations must be thread-safe.
-    @objc public func random(dataLen: Int) throws -> Data {
-        let dataCount = dataLen
-        var data = Data(count: dataCount)
-        var dataBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(dataBuf)
-        }
-
-        let proxyResult = data.withUnsafeMutableBytes({ (dataPointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
-            vsc_buffer_init(dataBuf)
-            vsc_buffer_use(dataBuf, dataPointer.bindMemory(to: byte.self).baseAddress, dataCount)
-
-            return vscf_key_material_rng_random(self.c_ctx, dataLen, dataBuf)
-        })
-        data.count = vsc_buffer_len(dataBuf)
-
-        try FoundationError.handleStatus(fromC: proxyResult)
-
-        return data
-    }
-
-    /// Retrieve new seed data from the entropy sources.
-    @objc public func reseed() throws {
-        let proxyResult = vscf_key_material_rng_reseed(self.c_ctx)
-
-        try FoundationError.handleStatus(fromC: proxyResult)
+        try RatchetError.handleStatus(fromC: proxyResult)
     }
 }

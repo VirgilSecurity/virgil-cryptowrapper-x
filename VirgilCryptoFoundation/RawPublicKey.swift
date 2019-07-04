@@ -36,22 +36,15 @@
 import Foundation
 import VSCFoundation
 
-/// Random number generator that generate deterministic sequence based
-/// on a given seed.
-/// This RNG can be used to transform key material rial to the private key.
-@objc(VSCFKeyMaterialRng) public class KeyMaterialRng: NSObject, Random {
-
-    /// Minimum length in bytes for the key material.
-    @objc public static let keyMaterialLenMin: Int = 32
-    /// Maximum length in bytes for the key material.
-    @objc public static let keyMaterialLenMax: Int = 512
+/// Handles interchangeable public key representation.
+@objc(VSCFRawPublicKey) public class RawPublicKey: NSObject, Key, PublicKey {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_key_material_rng_new()
+        self.c_ctx = vscf_raw_public_key_new()
         super.init()
     }
 
@@ -65,50 +58,55 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_key_material_rng_shallow_copy(c_ctx)
+        self.c_ctx = vscf_raw_public_key_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_key_material_rng_delete(self.c_ctx)
+        vscf_raw_public_key_delete(self.c_ctx)
     }
 
-    /// Set a new key material.
-    @objc public func resetKeyMaterial(keyMaterial: Data) {
-        keyMaterial.withUnsafeBytes({ (keyMaterialPointer: UnsafeRawBufferPointer) -> Void in
+    /// Return key data.
+    @objc public func data() -> Data {
+        let proxyResult = vscf_raw_public_key_data(self.c_ctx)
 
-            vscf_key_material_rng_reset_key_material(self.c_ctx, vsc_data(keyMaterialPointer.bindMemory(to: byte.self).baseAddress, keyMaterial.count))
-        })
+        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
     }
 
-    /// Generate random bytes.
-    /// All RNG implementations must be thread-safe.
-    @objc public func random(dataLen: Int) throws -> Data {
-        let dataCount = dataLen
-        var data = Data(count: dataCount)
-        var dataBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(dataBuf)
-        }
+    /// Algorithm identifier the key belongs to.
+    @objc public func algId() -> AlgId {
+        let proxyResult = vscf_raw_public_key_alg_id(self.c_ctx)
 
-        let proxyResult = data.withUnsafeMutableBytes({ (dataPointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
-            vsc_buffer_init(dataBuf)
-            vsc_buffer_use(dataBuf, dataPointer.bindMemory(to: byte.self).baseAddress, dataCount)
-
-            return vscf_key_material_rng_random(self.c_ctx, dataLen, dataBuf)
-        })
-        data.count = vsc_buffer_len(dataBuf)
-
-        try FoundationError.handleStatus(fromC: proxyResult)
-
-        return data
+        return AlgId.init(fromC: proxyResult)
     }
 
-    /// Retrieve new seed data from the entropy sources.
-    @objc public func reseed() throws {
-        let proxyResult = vscf_key_material_rng_reseed(self.c_ctx)
+    /// Return algorithm information that can be used for serialization.
+    @objc public func algInfo() -> AlgInfo {
+        let proxyResult = vscf_raw_public_key_alg_info(self.c_ctx)
 
-        try FoundationError.handleStatus(fromC: proxyResult)
+        return FoundationImplementation.wrapAlgInfo(take: proxyResult!)
+    }
+
+    /// Length of the key in bytes.
+    @objc public func len() -> Int {
+        let proxyResult = vscf_raw_public_key_len(self.c_ctx)
+
+        return proxyResult
+    }
+
+    /// Length of the key in bits.
+    @objc public func bitlen() -> Int {
+        let proxyResult = vscf_raw_public_key_bitlen(self.c_ctx)
+
+        return proxyResult
+    }
+
+    /// Check that key is valid.
+    /// Note, this operation can be slow.
+    @objc public func isValid() -> Bool {
+        let proxyResult = vscf_raw_public_key_is_valid(self.c_ctx)
+
+        return proxyResult
     }
 }

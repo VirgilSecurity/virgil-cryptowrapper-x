@@ -34,18 +34,22 @@
 
 
 import Foundation
-import VSCRatchet
-import VirgilCryptoFoundation
+import VSCFoundation
 
-/// Class represents ratchet message
-@objc(VSCRRatchetMessage) public class RatchetMessage: NSObject {
+/// Class represents group session message
+@objc(VSCFGroupSessionMessage) public class GroupSessionMessage: NSObject {
+
+    /// Max message len
+    @objc public static let maxMessageLen: Int = 30222
+    /// Message version
+    @objc public static let messageVersion: Int = 1
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscr_ratchet_message_new()
+        self.c_ctx = vscf_group_session_message_new()
         super.init()
     }
 
@@ -59,46 +63,48 @@ import VirgilCryptoFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscr_ratchet_message_shallow_copy(c_ctx)
+        self.c_ctx = vscf_group_session_message_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscr_ratchet_message_delete(self.c_ctx)
+        vscf_group_session_message_delete(self.c_ctx)
     }
 
     /// Returns message type.
-    @objc public func getType() -> MsgType {
-        let proxyResult = vscr_ratchet_message_get_type(self.c_ctx)
+    @objc public func getType() -> GroupMsgType {
+        let proxyResult = vscf_group_session_message_get_type(self.c_ctx)
 
-        return MsgType.init(fromC: proxyResult)
+        return GroupMsgType.init(fromC: proxyResult)
     }
 
-    /// Returns message counter in current asymmetric ratchet round.
-    @objc public func getCounter() -> UInt32 {
-        let proxyResult = vscr_ratchet_message_get_counter(self.c_ctx)
+    /// Returns session id.
+    /// This method should be called only for group info type.
+    @objc public func getSessionId() -> Data {
+        let proxyResult = vscf_group_session_message_get_session_id(self.c_ctx)
+
+        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
+    }
+
+    /// Returns message sender id.
+    /// This method should be called only for regular message type.
+    @objc public func getSenderId() -> Data {
+        let proxyResult = vscf_group_session_message_get_sender_id(self.c_ctx)
+
+        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
+    }
+
+    /// Returns message epoch.
+    @objc public func getEpoch() -> UInt32 {
+        let proxyResult = vscf_group_session_message_get_epoch(self.c_ctx)
 
         return proxyResult
     }
 
-    /// Returns long-term public key, if message is prekey message.
-    @objc public func getLongTermPublicKey() -> Data {
-        let proxyResult = vscr_ratchet_message_get_long_term_public_key(self.c_ctx)
-
-        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
-    }
-
-    /// Returns one-time public key, if message is prekey message and if one-time key is present, empty result otherwise.
-    @objc public func getOneTimePublicKey() -> Data {
-        let proxyResult = vscr_ratchet_message_get_one_time_public_key(self.c_ctx)
-
-        return Data.init(bytes: proxyResult.bytes, count: proxyResult.len)
-    }
-
     /// Buffer len to serialize this class.
     @objc public func serializeLen() -> Int {
-        let proxyResult = vscr_ratchet_message_serialize_len(self.c_ctx)
+        let proxyResult = vscf_group_session_message_serialize_len(self.c_ctx)
 
         return proxyResult
     }
@@ -116,7 +122,7 @@ import VirgilCryptoFoundation
             vsc_buffer_init(outputBuf)
             vsc_buffer_use(outputBuf, outputPointer.bindMemory(to: byte.self).baseAddress, outputCount)
 
-            vscr_ratchet_message_serialize(self.c_ctx, outputBuf)
+            vscf_group_session_message_serialize(self.c_ctx, outputBuf)
         })
         output.count = vsc_buffer_len(outputBuf)
 
@@ -124,17 +130,17 @@ import VirgilCryptoFoundation
     }
 
     /// Deserializes instance.
-    @objc public static func deserialize(input: Data) throws -> RatchetMessage {
-        var error: vscr_error_t = vscr_error_t()
-        vscr_error_reset(&error)
+    @objc public static func deserialize(input: Data) throws -> GroupSessionMessage {
+        var error: vscf_error_t = vscf_error_t()
+        vscf_error_reset(&error)
 
         let proxyResult = input.withUnsafeBytes({ (inputPointer: UnsafeRawBufferPointer) in
 
-            return vscr_ratchet_message_deserialize(vsc_data(inputPointer.bindMemory(to: byte.self).baseAddress, input.count), &error)
+            return vscf_group_session_message_deserialize(vsc_data(inputPointer.bindMemory(to: byte.self).baseAddress, input.count), &error)
         })
 
-        try RatchetError.handleStatus(fromC: error.status)
+        try FoundationError.handleStatus(fromC: error.status)
 
-        return RatchetMessage.init(take: proxyResult!)
+        return GroupSessionMessage.init(take: proxyResult!)
     }
 }
