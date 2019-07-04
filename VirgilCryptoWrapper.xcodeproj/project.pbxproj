@@ -209,6 +209,22 @@
 		4219FAC922648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
 		4219FACA22648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
 		4247ACDBFC93BAB76134040A754AA9F4 /* CipherAlgInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF2C71ED044C93EB7A1580D691AFA296 /* CipherAlgInfo.swift */; };
+		42492F2322CE046600BEA96F /* GroupSessionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F1F22CE046500BEA96F /* GroupSessionMessage.swift */; };
+		42492F2422CE046600BEA96F /* GroupSessionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F1F22CE046500BEA96F /* GroupSessionMessage.swift */; };
+		42492F2522CE046600BEA96F /* GroupSessionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F1F22CE046500BEA96F /* GroupSessionMessage.swift */; };
+		42492F2622CE046600BEA96F /* GroupSessionMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F1F22CE046500BEA96F /* GroupSessionMessage.swift */; };
+		42492F2722CE046600BEA96F /* GroupSessionTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2022CE046600BEA96F /* GroupSessionTicket.swift */; };
+		42492F2822CE046600BEA96F /* GroupSessionTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2022CE046600BEA96F /* GroupSessionTicket.swift */; };
+		42492F2922CE046600BEA96F /* GroupSessionTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2022CE046600BEA96F /* GroupSessionTicket.swift */; };
+		42492F2A22CE046600BEA96F /* GroupSessionTicket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2022CE046600BEA96F /* GroupSessionTicket.swift */; };
+		42492F2B22CE046600BEA96F /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2122CE046600BEA96F /* GroupMsgType.swift */; };
+		42492F2C22CE046600BEA96F /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2122CE046600BEA96F /* GroupMsgType.swift */; };
+		42492F2D22CE046600BEA96F /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2122CE046600BEA96F /* GroupMsgType.swift */; };
+		42492F2E22CE046600BEA96F /* GroupMsgType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2122CE046600BEA96F /* GroupMsgType.swift */; };
+		42492F2F22CE046600BEA96F /* GroupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2222CE046600BEA96F /* GroupSession.swift */; };
+		42492F3022CE046600BEA96F /* GroupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2222CE046600BEA96F /* GroupSession.swift */; };
+		42492F3122CE046600BEA96F /* GroupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2222CE046600BEA96F /* GroupSession.swift */; };
+		42492F3222CE046600BEA96F /* GroupSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42492F2222CE046600BEA96F /* GroupSession.swift */; };
 		428DA0CC22CB55AB00CD5391 /* KeyCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DA0BD22CB55A900CD5391 /* KeyCipher.swift */; };
 		428DA0CD22CB55AB00CD5391 /* KeyCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DA0BD22CB55A900CD5391 /* KeyCipher.swift */; };
 		428DA0CE22CB55AB00CD5391 /* KeyCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428DA0BD22CB55A900CD5391 /* KeyCipher.swift */; };
@@ -1043,6 +1059,10 @@
 		420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyAsn1Deserializer.swift; sourceTree = "<group>"; };
 		4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatchetKeyId.swift; sourceTree = "<group>"; };
 		422DB46F2E2EB0E5D30A0717AFB30DE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42492F1F22CE046500BEA96F /* GroupSessionMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSessionMessage.swift; sourceTree = "<group>"; };
+		42492F2022CE046600BEA96F /* GroupSessionTicket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSessionTicket.swift; sourceTree = "<group>"; };
+		42492F2122CE046600BEA96F /* GroupMsgType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupMsgType.swift; sourceTree = "<group>"; };
+		42492F2222CE046600BEA96F /* GroupSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupSession.swift; sourceTree = "<group>"; };
 		428DA0BD22CB55A900CD5391 /* KeyCipher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyCipher.swift; sourceTree = "<group>"; };
 		428DA0BE22CB55A900CD5391 /* Ecc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ecc.swift; sourceTree = "<group>"; };
 		428DA0BF22CB55A900CD5391 /* KeySigner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeySigner.swift; sourceTree = "<group>"; };
@@ -1464,6 +1484,10 @@
 				E9C584EA6CF4776627D883CD7AAB334C /* FakeRandom.swift */,
 				E33EF6EE07EC571FC56AF62B1FE11064 /* FoundationError.swift */,
 				B930DF9FC7AB5E513FCCD5F0D431AA58 /* FoundationImplementation.swift */,
+				42492F2122CE046600BEA96F /* GroupMsgType.swift */,
+				42492F2222CE046600BEA96F /* GroupSession.swift */,
+				42492F1F22CE046500BEA96F /* GroupSessionMessage.swift */,
+				42492F2022CE046600BEA96F /* GroupSessionTicket.swift */,
 				84D102052E4F23C740AC3DACF001DAEE /* Hash.swift */,
 				91487494B4B6FC9BEC58BAF9DDE0FB32 /* HashBasedAlgInfo.swift */,
 				912DB40A57D33B496EECEB012E3A0144 /* Hkdf.swift */,
@@ -2330,6 +2354,7 @@
 				6140C9A0A3C2E3F9A657FBCE33699A82 /* Asn1Writer.swift in Sources */,
 				8A48B415A770AF413C90B6E2F6147976 /* Asn1rd.swift in Sources */,
 				428DA0FA22CB55AB00CD5391 /* RawPublicKey.swift in Sources */,
+				42492F3122CE046600BEA96F /* GroupSession.swift in Sources */,
 				A2DCD337A655429BFF1F9B85B1735512 /* Asn1wr.swift in Sources */,
 				50B98CCB739E61C18F9FD71D948F6504 /* AuthDecrypt.swift in Sources */,
 				612A044B9CF171EDB6DF96687A968D4D /* AuthEncrypt.swift in Sources */,
@@ -2348,6 +2373,7 @@
 				94B44058B4452AC2C5FC0A72D584565F /* Encrypt.swift in Sources */,
 				1254E03F6A64E8E325CD90834567BB95 /* EntropyAccumulator.swift in Sources */,
 				ED37D0973B87CFA6E429C4FAD3F70523 /* EntropySource.swift in Sources */,
+				42492F2522CE046600BEA96F /* GroupSessionMessage.swift in Sources */,
 				7257E1DAF53D0B110A5A8C608A0D07D7 /* FakeRandom.swift in Sources */,
 				6E6C79DED8733A01634B03AEC006E5BA /* FoundationError.swift in Sources */,
 				428DA0DA22CB55AB00CD5391 /* BrainkeyClient.swift in Sources */,
@@ -2359,6 +2385,7 @@
 				4C44027748F189DDA12B3A4FFBE639BF /* Hmac.swift in Sources */,
 				88721A968E81223B361EE2097F236759 /* Kdf.swift in Sources */,
 				B43FF091B27894A200B8723FBBBC740B /* Kdf1.swift in Sources */,
+				42492F2922CE046600BEA96F /* GroupSessionTicket.swift in Sources */,
 				B4F0F32E77F4DFA6831376AF40E84268 /* Kdf2.swift in Sources */,
 				32F677E9012E2C3CF2552478CCE65AAE /* Key.swift in Sources */,
 				9AED3C24E5FC92BAD3A5A14CF08059A7 /* KeyDeserializer.swift in Sources */,
@@ -2389,6 +2416,7 @@
 				7DE3585602D0C17DDB4A950705815563 /* Pkcs5Pbes2.swift in Sources */,
 				428DA10622CB55AB00CD5391 /* BrainkeyServer.swift in Sources */,
 				A6B012112CF2C3120BE7B4DCB208C6E5 /* Pkcs5Pbkdf2.swift in Sources */,
+				42492F2D22CE046600BEA96F /* GroupMsgType.swift in Sources */,
 				5844AD06EF62D573B553C138B88CCD1A /* Pkcs8Serializer.swift in Sources */,
 				428DA0EE22CB55AB00CD5391 /* EccPrivateKey.swift in Sources */,
 				BD6A9B0AE382989C2B1B80F1048DF5E9 /* PrivateKey.swift in Sources */,
@@ -2461,6 +2489,7 @@
 				56914B35E06D15D3A7130D0A223F178D /* Asn1Writer.swift in Sources */,
 				D489B4B55A716CFA3B6702EE87C1FA3F /* Asn1rd.swift in Sources */,
 				428DA0F822CB55AB00CD5391 /* RawPublicKey.swift in Sources */,
+				42492F2F22CE046600BEA96F /* GroupSession.swift in Sources */,
 				CCA7EC68FC20F8548AD276931A5CF0BD /* Asn1wr.swift in Sources */,
 				10B00E92BC70249B16E92FBC395F7EF8 /* AuthDecrypt.swift in Sources */,
 				52A5D9EBACD41BAC284AD7632C4949A2 /* AuthEncrypt.swift in Sources */,
@@ -2479,6 +2508,7 @@
 				761A9B5741FF61BB098EEFEA00169D00 /* Encrypt.swift in Sources */,
 				5710CF2E3F42473A37D8EFB6D3611F40 /* EntropyAccumulator.swift in Sources */,
 				9F4CE937A9206D312ED455E54DF1AB0F /* EntropySource.swift in Sources */,
+				42492F2322CE046600BEA96F /* GroupSessionMessage.swift in Sources */,
 				5F212392DE8A6E151306C4B111367651 /* FakeRandom.swift in Sources */,
 				86216C629915A59FE2830F0D3171CA8A /* FoundationError.swift in Sources */,
 				428DA0D822CB55AB00CD5391 /* BrainkeyClient.swift in Sources */,
@@ -2490,6 +2520,7 @@
 				17667D3EB118463F86872E6E2C445301 /* Hmac.swift in Sources */,
 				6DCA5F650D14B3229C034452A0BF5274 /* Kdf.swift in Sources */,
 				178E6E36133AA5E1374F00E7615242A9 /* Kdf1.swift in Sources */,
+				42492F2722CE046600BEA96F /* GroupSessionTicket.swift in Sources */,
 				5E3D9FA72A9AA2457A284F6EA09EF5F6 /* Kdf2.swift in Sources */,
 				A5F6A8D244807AE90C3E345DC21479FC /* Key.swift in Sources */,
 				8A718249B11C76FF56A44E6DA1F4B61F /* KeyDeserializer.swift in Sources */,
@@ -2520,6 +2551,7 @@
 				2453EEF991A569F166E3007E8360EFCC /* Pkcs5Pbes2.swift in Sources */,
 				428DA10422CB55AB00CD5391 /* BrainkeyServer.swift in Sources */,
 				A56564EC15A4B4029C31D29EE61F75B4 /* Pkcs5Pbkdf2.swift in Sources */,
+				42492F2B22CE046600BEA96F /* GroupMsgType.swift in Sources */,
 				A00FC6036B3CEF7CEB001D9B0EC56690 /* Pkcs8Serializer.swift in Sources */,
 				428DA0EC22CB55AB00CD5391 /* EccPrivateKey.swift in Sources */,
 				5DBF2BED7CAAFD618671F932F226B697 /* PrivateKey.swift in Sources */,
@@ -2594,6 +2626,7 @@
 				F353E18B55FB90927F4E017A00A50A5C /* Asn1Writer.swift in Sources */,
 				3EFE824C13987DCC5CA92F9D3A7E9556 /* Asn1rd.swift in Sources */,
 				428DA0FB22CB55AB00CD5391 /* RawPublicKey.swift in Sources */,
+				42492F3222CE046600BEA96F /* GroupSession.swift in Sources */,
 				F983E0D30123FCF1BAD5CA8F5BD7E19A /* Asn1wr.swift in Sources */,
 				6373B629BBA83489DB289B844448C110 /* AuthDecrypt.swift in Sources */,
 				02BBB81AE556C1692D0D9E2BF1361E50 /* AuthEncrypt.swift in Sources */,
@@ -2612,6 +2645,7 @@
 				AFC7BD01367BDA2F41B053DE8E03A6F3 /* Encrypt.swift in Sources */,
 				48E64C3B0B43DC8B1531597A7161927A /* EntropyAccumulator.swift in Sources */,
 				C3845B7FB0B0AD5743293945E380E9A2 /* EntropySource.swift in Sources */,
+				42492F2622CE046600BEA96F /* GroupSessionMessage.swift in Sources */,
 				3CB6E0E2A77792C5913686141B830D71 /* FakeRandom.swift in Sources */,
 				A9DD5671B06769DBAD42997CF9B8F420 /* FoundationError.swift in Sources */,
 				428DA0DB22CB55AB00CD5391 /* BrainkeyClient.swift in Sources */,
@@ -2623,6 +2657,7 @@
 				AE1ED8F771C25313DEC5928FD6C24EB7 /* Hmac.swift in Sources */,
 				E9717AB8F9EAFD4B1139FCB9E2CD2F67 /* Kdf.swift in Sources */,
 				45C662F4A8431AD2F0F5C4CF5C8AF9E0 /* Kdf1.swift in Sources */,
+				42492F2A22CE046600BEA96F /* GroupSessionTicket.swift in Sources */,
 				2D06FD9DAECDA794B63437DB59C74615 /* Kdf2.swift in Sources */,
 				EC796F5C78E468108AE3631BE9C1D254 /* Key.swift in Sources */,
 				2BCBB7AD9B09B26B628472BA9D04E48C /* KeyDeserializer.swift in Sources */,
@@ -2653,6 +2688,7 @@
 				ABEBE1B86E642644B578F61C4256DF83 /* Pkcs5Pbes2.swift in Sources */,
 				428DA10722CB55AB00CD5391 /* BrainkeyServer.swift in Sources */,
 				2491AD87807124026382D9E9B0823193 /* Pkcs5Pbkdf2.swift in Sources */,
+				42492F2E22CE046600BEA96F /* GroupMsgType.swift in Sources */,
 				FD043EB410502A0332E7F1DC118F5CFD /* Pkcs8Serializer.swift in Sources */,
 				428DA0EF22CB55AB00CD5391 /* EccPrivateKey.swift in Sources */,
 				0E1F9523CFBFD2EB559938961A89BA64 /* PrivateKey.swift in Sources */,
@@ -2770,6 +2806,7 @@
 				4140CD385B711E0652FD6506F7AAC827 /* Asn1Writer.swift in Sources */,
 				00E576DD47EFC2A7745A167CCA34C259 /* Asn1rd.swift in Sources */,
 				428DA0F922CB55AB00CD5391 /* RawPublicKey.swift in Sources */,
+				42492F3022CE046600BEA96F /* GroupSession.swift in Sources */,
 				AC544EFFFAAD820C100754AFBE50AD60 /* Asn1wr.swift in Sources */,
 				0EE5D1E2C36E8462BB6B80723692D1A0 /* AuthDecrypt.swift in Sources */,
 				0F512D6AC4809691D4AFC88236FAF6C7 /* AuthEncrypt.swift in Sources */,
@@ -2788,6 +2825,7 @@
 				30C2100C675469FE47F07EF1E1052D5F /* Encrypt.swift in Sources */,
 				0AFB32E25AE453F4B70D13BEAE343CF6 /* EntropyAccumulator.swift in Sources */,
 				22E929A42DD747A9E0BA3A5941851B74 /* EntropySource.swift in Sources */,
+				42492F2422CE046600BEA96F /* GroupSessionMessage.swift in Sources */,
 				5996C569F2837402F2905EF13D63A6E4 /* FakeRandom.swift in Sources */,
 				1E0E3859F7D370E346FD0CC4BD86FE78 /* FoundationError.swift in Sources */,
 				428DA0D922CB55AB00CD5391 /* BrainkeyClient.swift in Sources */,
@@ -2799,6 +2837,7 @@
 				F7FFABFFBAE8EB787A39B611283E0936 /* Hmac.swift in Sources */,
 				D6EB298E6949E3100EB52F4105CB7DB4 /* Kdf.swift in Sources */,
 				C0F03D2D29D56B2C4B9CB2E2FEB7EFAB /* Kdf1.swift in Sources */,
+				42492F2822CE046600BEA96F /* GroupSessionTicket.swift in Sources */,
 				36BE1A4D8B6267747F3EF4E1C49DC915 /* Kdf2.swift in Sources */,
 				B04A8B02A04283B0347E5B5861376353 /* Key.swift in Sources */,
 				851DD45384A3058E6A95C147472FD718 /* KeyDeserializer.swift in Sources */,
@@ -2829,6 +2868,7 @@
 				1771313D4183FEEC9EA4D58AFA9674CE /* Pkcs5Pbes2.swift in Sources */,
 				428DA10522CB55AB00CD5391 /* BrainkeyServer.swift in Sources */,
 				C32A1664A19453AE2270BD7BE0F49DDD /* Pkcs5Pbkdf2.swift in Sources */,
+				42492F2C22CE046600BEA96F /* GroupMsgType.swift in Sources */,
 				E7B31990EFA66FF3DE5083762825B496 /* Pkcs8Serializer.swift in Sources */,
 				428DA0ED22CB55AB00CD5391 /* EccPrivateKey.swift in Sources */,
 				B889D4AA4BC7728774085D90A23472DB /* PrivateKey.swift in Sources */,
