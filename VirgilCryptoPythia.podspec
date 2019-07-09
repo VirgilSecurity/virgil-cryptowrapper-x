@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                        = "VirgilCryptoPythia"
-  s.version                     = "0.8.0"
+  s.version                     = "0.8.1"
   s.swift_version               = "5.0"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
   s.summary                     = "Contains swift classes working with Pythia crypto."
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target   = "2.0"
   s.public_header_files         = "VirgilCryptoPythia/VirgilCryptoPythia.h"
   s.source_files                = "VirgilCryptoPythia/**/*.{h,mm,swift}"
-  s.dependency 'VirgilCryptoFoundation', '= 0.8.0'
-  s.dependency 'VSCCrypto/Common', '= 0.8.0'
-  s.dependency 'VSCCrypto/Foundation', '= 0.8.0'
-  s.dependency 'VSCCrypto/Pythia', '= 0.8.0'
+  s.dependency 'VirgilCryptoFoundation', '= 0.8.1'
+  s.dependency 'VSCCrypto/Common', '= 0.8.1'
+  s.dependency 'VSCCrypto/Foundation', '= 0.8.1'
+  s.dependency 'VSCCrypto/Pythia', '= 0.8.1'
 end
