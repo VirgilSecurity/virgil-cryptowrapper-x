@@ -124,7 +124,6 @@
 		1461791F504E1192510889DB6E86197C /* AlgInfoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19916DFD333F0BFD9DB7940A3B6E2 /* AlgInfoSerializer.swift */; };
 		1539A0B2037AC87FCD1CCF9456ECFEAE /* KeyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C678030818AB5850A641960BF79F298 /* KeyProvider.swift */; };
 		1547AFB2D908A0B29FB3773006C4E986 /* RsaPrivateKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 947D25545BAB9EAE23DB13A7BAE3DCD4 /* RsaPrivateKey.swift */; };
-		15CB189A78D1A5EAFB9D3364A7B5626B /* ListKeyValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19E377CE0BE587F38AC0AA616722C /* ListKeyValueNode.swift */; };
 		162681EE787D81A10A9333D7A5E5997E /* FoundationImplementation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B930DF9FC7AB5E513FCCD5F0D431AA58 /* FoundationImplementation.swift */; };
 		1760F962BBC3F2292991DFC96FC1126B /* AlgInfoDerSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E38864E8766F048DCA6759537368FE /* AlgInfoDerSerializer.swift */; };
 		17667D3EB118463F86872E6E2C445301 /* Hmac.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9445FE204BE3DA08C90E85A11A58CC59 /* Hmac.swift */; };
@@ -293,7 +292,6 @@
 		42C8C7D922A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8C7D322A16D040071CE14 /* RatchetGroupParticipantsInfo.swift */; };
 		42C8C7DA22A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8C7D322A16D040071CE14 /* RatchetGroupParticipantsInfo.swift */; };
 		42C8C7DB22A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8C7D322A16D040071CE14 /* RatchetGroupParticipantsInfo.swift */; };
-		42E0218AAD8B677D8F7C0F88C67A0495 /* ListKeyValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19E377CE0BE587F38AC0AA616722C /* ListKeyValueNode.swift */; };
 		43974678AA5EC5EC231B33042FC1309A /* Sha384.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E1F1294051A5761709472EE894B0B /* Sha384.swift */; };
 		43A68EB01623418C0C37AE1017B2E8C7 /* Oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108EC7D74A8F34C20C4717A1758DEBF /* Oid.swift */; };
 		45B51FF3D55149158ABF1B09B97ED186 /* AlgId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E115D5E7608BA04C612929B276744B /* AlgId.swift */; };
@@ -336,7 +334,6 @@
 		5736A733CFF662C3ACBDB4548C8D02B4 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0D8A1BA3F0E2C279D0AD1D7745FAA4 /* VSCFoundation.framework */; };
 		580EAF2B9ADC79B369D9124902129D04 /* MessageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD396FEFADA2E89793ED6C34D0415CC /* MessageInfo.swift */; };
 		5844AD06EF62D573B553C138B88CCD1A /* Pkcs8Serializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD23178A0DF5146BBE23C690E02B878D /* Pkcs8Serializer.swift */; };
-		5897437A0B0EFE2CF77D7B5F995C5F91 /* ListKeyValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19E377CE0BE587F38AC0AA616722C /* ListKeyValueNode.swift */; };
 		58FFC6C7C290031036D1940B0FDF328F /* VSCCommon.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B426F3F94950B498F305E418AEB9D7E2 /* VSCCommon.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		5996C569F2837402F2905EF13D63A6E4 /* FakeRandom.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C584EA6CF4776627D883CD7AAB334C /* FakeRandom.swift */; };
 		59E348617FA5E81C4F6C55AF53A3F6AD /* AlgInfoSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA19916DFD333F0BFD9DB7940A3B6E2 /* AlgInfoSerializer.swift */; };
@@ -563,7 +560,6 @@
 		CB9160D54F90997205482E271AE6AC32 /* CContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3912F3040F1CBC7B4AC578CECE674FF /* CContext.swift */; };
 		CBA965EC55BB386E98BE1560E4EAB113 /* RatchetCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224EF7201F02DA8006518718FCF5AE98 /* RatchetCommon.swift */; };
 		CBB62682114948FF53FDBD8088943716 /* RatchetGroupMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5320C08116F72B0078D83BFAF67BF76E /* RatchetGroupMessage.swift */; };
-		CC02CD28649AF307F00098C4A7F71149 /* ListKeyValueNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC19E377CE0BE587F38AC0AA616722C /* ListKeyValueNode.swift */; };
 		CC6D7A4F652A8062F944640A33AB9AD4 /* VSCFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E747C06C35F7243875CD0BE5309A89F1 /* VSCFoundation.framework */; };
 		CCA7EC68FC20F8548AD276931A5CF0BD /* Asn1wr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F999E0EA724BF0B98D98D3E7AC99511 /* Asn1wr.swift */; };
 		CDC1D7EE58A0C5C3AE3408A143A58C58 /* Verifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD6C38B0BD37C101E8B0822435165A4 /* Verifier.swift */; };
@@ -1043,7 +1039,6 @@
 		240E1F1294051A5761709472EE894B0B /* Sha384.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sha384.swift; sourceTree = "<group>"; };
 		25BCC4C91E6AFC6DE04006B510D526FE /* AlgInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgInfo.swift; sourceTree = "<group>"; };
 		26CC9C8351371E3450EB86865304690F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2BC19E377CE0BE587F38AC0AA616722C /* ListKeyValueNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListKeyValueNode.swift; sourceTree = "<group>"; };
 		2E063BFD0D569B91795C908DD3CC528B /* Pem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pem.swift; sourceTree = "<group>"; };
 		304FCFD06291B1E34E63330D46410BA6 /* CtrDrbg.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CtrDrbg.swift; sourceTree = "<group>"; };
 		31A28AB2633E6B8AB9E184F789269C46 /* KeyMaterialRng.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyMaterialRng.swift; sourceTree = "<group>"; };
@@ -1509,7 +1504,6 @@
 				E499E731E02A5359719160EE0F08A4C5 /* KeyRecipientInfo.swift */,
 				8669FC2D17C7802506C86A76BBCA6B21 /* KeyRecipientInfoList.swift */,
 				77F4F719F320FD2AE3BE8F859DE6E49D /* KeySerializer.swift */,
-				2BC19E377CE0BE587F38AC0AA616722C /* ListKeyValueNode.swift */,
 				F16BADA7343F0DCDBEF1CA2B35262AE3 /* Mac.swift */,
 				5AD396FEFADA2E89793ED6C34D0415CC /* MessageInfo.swift */,
 				8E1829A5096E0A995DC17D93D98B74F7 /* MessageInfoCustomParams.swift */,
@@ -2396,7 +2390,6 @@
 				DDFCFCFD583292DFC55EA74FE020C25D /* KeyRecipientInfo.swift in Sources */,
 				B7DA9A00644773E4C43A08A6BEA7E504 /* KeyRecipientInfoList.swift in Sources */,
 				7F87DF168DCF4131EA159878EB283269 /* KeySerializer.swift in Sources */,
-				CC02CD28649AF307F00098C4A7F71149 /* ListKeyValueNode.swift in Sources */,
 				428DA0D222CB55AB00CD5391 /* Ecc.swift in Sources */,
 				B6AFCB3A916828A0C86B49C1232CBEF0 /* Mac.swift in Sources */,
 				428DA0FE22CB55AB00CD5391 /* RawPrivateKey.swift in Sources */,
@@ -2531,7 +2524,6 @@
 				D621C68122453DE4733098BB417B3FDA /* KeyRecipientInfo.swift in Sources */,
 				D8CCA23FC5DE5FBA62EAD39FA097AE29 /* KeyRecipientInfoList.swift in Sources */,
 				B6AF9EB77B26D5A13459D0A249D106E4 /* KeySerializer.swift in Sources */,
-				42E0218AAD8B677D8F7C0F88C67A0495 /* ListKeyValueNode.swift in Sources */,
 				428DA0D022CB55AB00CD5391 /* Ecc.swift in Sources */,
 				8C0EDACD87C60DC03CD6B16F29EA088E /* Mac.swift in Sources */,
 				428DA0FC22CB55AB00CD5391 /* RawPrivateKey.swift in Sources */,
@@ -2668,7 +2660,6 @@
 				7E320476553CFE686B7D1A34F1FD1EF8 /* KeyRecipientInfo.swift in Sources */,
 				D4A6DBEB1275926E3F6F996133EBB349 /* KeyRecipientInfoList.swift in Sources */,
 				D4E3037ADD7CAE12642F4F985351F3DC /* KeySerializer.swift in Sources */,
-				15CB189A78D1A5EAFB9D3364A7B5626B /* ListKeyValueNode.swift in Sources */,
 				428DA0D322CB55AB00CD5391 /* Ecc.swift in Sources */,
 				5D09B7CC6B517F90E21B3190FF6E89A4 /* Mac.swift in Sources */,
 				428DA0FF22CB55AB00CD5391 /* RawPrivateKey.swift in Sources */,
@@ -2848,7 +2839,6 @@
 				203E071D411EB13E7A1094CDB574057B /* KeyRecipientInfo.swift in Sources */,
 				FBEC9BCDDFEC08AFC38B0151166C1B29 /* KeyRecipientInfoList.swift in Sources */,
 				EB125E0A96626FEFCD60B130DCE8E2DC /* KeySerializer.swift in Sources */,
-				5897437A0B0EFE2CF77D7B5F995C5F91 /* ListKeyValueNode.swift in Sources */,
 				428DA0D122CB55AB00CD5391 /* Ecc.swift in Sources */,
 				47C1D7C3E05C0BBB2C8BA32DEC072FB1 /* Mac.swift in Sources */,
 				428DA0FD22CB55AB00CD5391 /* RawPrivateKey.swift in Sources */,

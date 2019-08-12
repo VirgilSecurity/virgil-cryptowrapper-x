@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                        = "VirgilCryptoRatchet"
-  s.version                     = "0.8.1"
+  s.version                     = "0.10.0"
   s.swift_version               = "5.0"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
   s.summary                     = "Contains swift for double ratchet crypto operations."
@@ -13,8 +13,8 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target   = "2.0"
   s.public_header_files         = "VirgilCryptoRatchet/VirgilCryptoRatchet.h"
   s.source_files                = "VirgilCryptoRatchet/**/*.{h,mm,swift}"
-  s.dependency 'VirgilCryptoFoundation', '= 0.8.1'
-  s.dependency 'VSCCrypto/Common', '= 0.8.1'
-  s.dependency 'VSCCrypto/Foundation', '= 0.8.1'
-  s.dependency 'VSCCrypto/Ratchet', '= 0.8.1'
+  s.dependency 'VirgilCryptoFoundation', '= 0.10.0'
+  s.dependency 'VSCCrypto/Common', '= 0.10.0'
+  s.dependency 'VSCCrypto/Foundation', '= 0.10.0'
+  s.dependency 'VSCCrypto/Ratchet', '= 0.10.0'
 end
