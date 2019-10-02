@@ -292,6 +292,34 @@
 		42C8C7D922A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8C7D322A16D040071CE14 /* RatchetGroupParticipantsInfo.swift */; };
 		42C8C7DA22A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8C7D322A16D040071CE14 /* RatchetGroupParticipantsInfo.swift */; };
 		42C8C7DB22A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C8C7D322A16D040071CE14 /* RatchetGroupParticipantsInfo.swift */; };
+		42EE1F9223447724004DC918 /* SignerInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F8F23447723004DC918 /* SignerInfoList.swift */; };
+		42EE1F9323447724004DC918 /* SignerInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F8F23447723004DC918 /* SignerInfoList.swift */; };
+		42EE1F9423447724004DC918 /* SignerInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F8F23447723004DC918 /* SignerInfoList.swift */; };
+		42EE1F9523447724004DC918 /* SignerInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F8F23447723004DC918 /* SignerInfoList.swift */; };
+		42EE1F9623447724004DC918 /* SignedDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9023447723004DC918 /* SignedDataInfo.swift */; };
+		42EE1F9723447724004DC918 /* SignedDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9023447723004DC918 /* SignedDataInfo.swift */; };
+		42EE1F9823447724004DC918 /* SignedDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9023447723004DC918 /* SignedDataInfo.swift */; };
+		42EE1F9923447724004DC918 /* SignedDataInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9023447723004DC918 /* SignedDataInfo.swift */; };
+		42EE1F9A23447724004DC918 /* SignerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9123447723004DC918 /* SignerInfo.swift */; };
+		42EE1F9B23447724004DC918 /* SignerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9123447723004DC918 /* SignerInfo.swift */; };
+		42EE1F9C23447724004DC918 /* SignerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9123447723004DC918 /* SignerInfo.swift */; };
+		42EE1F9D23447724004DC918 /* SignerInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9123447723004DC918 /* SignerInfo.swift */; };
+		42EE1FA223447772004DC918 /* MessageInfoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9E23447771004DC918 /* MessageInfoFooter.swift */; };
+		42EE1FA323447772004DC918 /* MessageInfoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9E23447771004DC918 /* MessageInfoFooter.swift */; };
+		42EE1FA423447772004DC918 /* MessageInfoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9E23447771004DC918 /* MessageInfoFooter.swift */; };
+		42EE1FA523447772004DC918 /* MessageInfoFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9E23447771004DC918 /* MessageInfoFooter.swift */; };
+		42EE1FA623447772004DC918 /* FooterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9F23447772004DC918 /* FooterInfo.swift */; };
+		42EE1FA723447772004DC918 /* FooterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9F23447772004DC918 /* FooterInfo.swift */; };
+		42EE1FA823447772004DC918 /* FooterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9F23447772004DC918 /* FooterInfo.swift */; };
+		42EE1FA923447772004DC918 /* FooterInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1F9F23447772004DC918 /* FooterInfo.swift */; };
+		42EE1FAA23447772004DC918 /* MessageInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1FA023447772004DC918 /* MessageInfoEditor.swift */; };
+		42EE1FAB23447772004DC918 /* MessageInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1FA023447772004DC918 /* MessageInfoEditor.swift */; };
+		42EE1FAC23447772004DC918 /* MessageInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1FA023447772004DC918 /* MessageInfoEditor.swift */; };
+		42EE1FAD23447772004DC918 /* MessageInfoEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1FA023447772004DC918 /* MessageInfoEditor.swift */; };
+		42EE1FAE23447772004DC918 /* MessageInfoFooterSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1FA123447772004DC918 /* MessageInfoFooterSerializer.swift */; };
+		42EE1FAF23447772004DC918 /* MessageInfoFooterSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1FA123447772004DC918 /* MessageInfoFooterSerializer.swift */; };
+		42EE1FB023447772004DC918 /* MessageInfoFooterSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1FA123447772004DC918 /* MessageInfoFooterSerializer.swift */; };
+		42EE1FB123447772004DC918 /* MessageInfoFooterSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EE1FA123447772004DC918 /* MessageInfoFooterSerializer.swift */; };
 		43974678AA5EC5EC231B33042FC1309A /* Sha384.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240E1F1294051A5761709472EE894B0B /* Sha384.swift */; };
 		43A68EB01623418C0C37AE1017B2E8C7 /* Oid.swift in Sources */ = {isa = PBXBuildFile; fileRef = A108EC7D74A8F34C20C4717A1758DEBF /* Oid.swift */; };
 		45B51FF3D55149158ABF1B09B97ED186 /* AlgId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E115D5E7608BA04C612929B276744B /* AlgId.swift */; };
@@ -1075,6 +1103,13 @@
 		428DA0CB22CB55AA00CD5391 /* BrainkeyServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrainkeyServer.swift; sourceTree = "<group>"; };
 		42C8C7D222A16D040071CE14 /* RatchetGroupParticipantsIds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatchetGroupParticipantsIds.swift; sourceTree = "<group>"; };
 		42C8C7D322A16D040071CE14 /* RatchetGroupParticipantsInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatchetGroupParticipantsInfo.swift; sourceTree = "<group>"; };
+		42EE1F8F23447723004DC918 /* SignerInfoList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignerInfoList.swift; sourceTree = "<group>"; };
+		42EE1F9023447723004DC918 /* SignedDataInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignedDataInfo.swift; sourceTree = "<group>"; };
+		42EE1F9123447723004DC918 /* SignerInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignerInfo.swift; sourceTree = "<group>"; };
+		42EE1F9E23447771004DC918 /* MessageInfoFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInfoFooter.swift; sourceTree = "<group>"; };
+		42EE1F9F23447772004DC918 /* FooterInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FooterInfo.swift; sourceTree = "<group>"; };
+		42EE1FA023447772004DC918 /* MessageInfoEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInfoEditor.swift; sourceTree = "<group>"; };
+		42EE1FA123447772004DC918 /* MessageInfoFooterSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInfoFooterSerializer.swift; sourceTree = "<group>"; };
 		44305C4FD16F206D77A3D48C90DDA2AA /* OidId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OidId.swift; sourceTree = "<group>"; };
 		44CED32CE3C5B64E72A60626CBB24C73 /* AlgFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgFactory.swift; sourceTree = "<group>"; };
 		45A1719D816EEC31A8E3BD697F440B24 /* CipherAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CipherAuth.swift; sourceTree = "<group>"; };
@@ -1477,6 +1512,7 @@
 				14B968E6F792275C59C2536A92206C75 /* EntropyAccumulator.swift */,
 				6D2CEF1A1BF6F82A3371CBB57A46F17C /* EntropySource.swift */,
 				E9C584EA6CF4776627D883CD7AAB334C /* FakeRandom.swift */,
+				42EE1F9F23447772004DC918 /* FooterInfo.swift */,
 				E33EF6EE07EC571FC56AF62B1FE11064 /* FoundationError.swift */,
 				B930DF9FC7AB5E513FCCD5F0D431AA58 /* FoundationImplementation.swift */,
 				42492F2122CE046600BEA96F /* GroupMsgType.swift */,
@@ -1508,6 +1544,9 @@
 				5AD396FEFADA2E89793ED6C34D0415CC /* MessageInfo.swift */,
 				8E1829A5096E0A995DC17D93D98B74F7 /* MessageInfoCustomParams.swift */,
 				6A092E1ED9E39C5D4EC2FE9CC3A063D2 /* MessageInfoDerSerializer.swift */,
+				42EE1FA023447772004DC918 /* MessageInfoEditor.swift */,
+				42EE1F9E23447771004DC918 /* MessageInfoFooter.swift */,
+				42EE1FA123447772004DC918 /* MessageInfoFooterSerializer.swift */,
 				4DC33983AF5F67C443D9317C4CC93AF1 /* MessageInfoSerializer.swift */,
 				A108EC7D74A8F34C20C4717A1758DEBF /* Oid.swift */,
 				44305C4FD16F206D77A3D48C90DDA2AA /* OidId.swift */,
@@ -1535,7 +1574,10 @@
 				CE3E6D413B6984E4A16125D4D678AC9D /* Sha256.swift */,
 				240E1F1294051A5761709472EE894B0B /* Sha384.swift */,
 				5544F6D22233D281C108320344F9A473 /* Sha512.swift */,
+				42EE1F9023447723004DC918 /* SignedDataInfo.swift */,
 				4ED3E4F895B8722D6A3F52C81B66AF36 /* Signer.swift */,
+				42EE1F9123447723004DC918 /* SignerInfo.swift */,
+				42EE1F8F23447723004DC918 /* SignerInfoList.swift */,
 				72A4189F841DAB5C3F653FAC33E6BA34 /* SimpleAlgInfo.swift */,
 				8AD6C38B0BD37C101E8B0822435165A4 /* Verifier.swift */,
 				A84AA161461F5FC6437DDF90B88103D1 /* VirgilCryptoFoundation.h */,
@@ -2335,6 +2377,7 @@
 				C650F27FE68A69F0690098AADAC0BFBF /* Aes256Gcm.swift in Sources */,
 				D7CA187C63679E4953D0DC2B69107AA1 /* Alg.swift in Sources */,
 				428DA0F222CB55AB00CD5391 /* EccAlgInfo.swift in Sources */,
+				42EE1FA823447772004DC918 /* FooterInfo.swift in Sources */,
 				F46CC33A05183C2F03B0C99386FB5FB2 /* AlgFactory.swift in Sources */,
 				45B51FF3D55149158ABF1B09B97ED186 /* AlgId.swift in Sources */,
 				0DD138A7F4D37584A766E81B20EB08AD /* AlgInfo.swift in Sources */,
@@ -2343,6 +2386,7 @@
 				6CE09F2FDB62D7DCEF3E5E0872E15735 /* AlgInfoDeserializer.swift in Sources */,
 				1461791F504E1192510889DB6E86197C /* AlgInfoSerializer.swift in Sources */,
 				AF148A3C56BEA147FE38006E2AC5FF02 /* Asn1Reader.swift in Sources */,
+				42EE1F9823447724004DC918 /* SignedDataInfo.swift in Sources */,
 				428DA0D622CB55AB00CD5391 /* KeySigner.swift in Sources */,
 				3FF220FBB5AB41070B96D03918EE0996 /* Asn1Tag.swift in Sources */,
 				6140C9A0A3C2E3F9A657FBCE33699A82 /* Asn1Writer.swift in Sources */,
@@ -2407,6 +2451,7 @@
 				2FDF19316803AF724E7AD9F02BEED499 /* PbeAlgInfo.swift in Sources */,
 				D23877A9F8EA87912ECF4DD515A71304 /* Pem.swift in Sources */,
 				7DE3585602D0C17DDB4A950705815563 /* Pkcs5Pbes2.swift in Sources */,
+				42EE1F9423447724004DC918 /* SignerInfoList.swift in Sources */,
 				428DA10622CB55AB00CD5391 /* BrainkeyServer.swift in Sources */,
 				A6B012112CF2C3120BE7B4DCB208C6E5 /* Pkcs5Pbkdf2.swift in Sources */,
 				42492F2D22CE046600BEA96F /* GroupMsgType.swift in Sources */,
@@ -2424,7 +2469,11 @@
 				4B6358000E703A8CD6F979BC244BA976 /* SeedEntropySource.swift in Sources */,
 				F8019EA7B2BC71E1691A3081FA59A1C5 /* Sha224.swift in Sources */,
 				F1B4E9D854F3B874E1B573A5AB4CBB45 /* Sha256.swift in Sources */,
+				42EE1FB023447772004DC918 /* MessageInfoFooterSerializer.swift in Sources */,
+				42EE1F9C23447724004DC918 /* SignerInfo.swift in Sources */,
+				42EE1FAC23447772004DC918 /* MessageInfoEditor.swift in Sources */,
 				43974678AA5EC5EC231B33042FC1309A /* Sha384.swift in Sources */,
+				42EE1FA423447772004DC918 /* MessageInfoFooter.swift in Sources */,
 				7786DA132D3B91DFFCAACAD406B227FF /* Sha512.swift in Sources */,
 				EA55F3CEA538FF43BA378E096D1B57A7 /* Signer.swift in Sources */,
 				428DA10222CB55AB00CD5391 /* KeyAlgFactory.swift in Sources */,
@@ -2469,6 +2518,7 @@
 				B2FCF821267AF92C4732142BB41252D5 /* Aes256Gcm.swift in Sources */,
 				F8422EF0DC75956B66B0B80ECBA0C06A /* Alg.swift in Sources */,
 				428DA0F022CB55AB00CD5391 /* EccAlgInfo.swift in Sources */,
+				42EE1FA623447772004DC918 /* FooterInfo.swift in Sources */,
 				7CC7CAF03F2303F3156603A6D37286B0 /* AlgFactory.swift in Sources */,
 				61AC30F27FE34D5253030541E5D04268 /* AlgId.swift in Sources */,
 				77A2244850A0C06DB3A07EDDEC537775 /* AlgInfo.swift in Sources */,
@@ -2477,6 +2527,7 @@
 				C98AB0876F7AF5A15995CE77F4DD811C /* AlgInfoDeserializer.swift in Sources */,
 				3A4378C2D2F53E4BE4D2D289215F8F6D /* AlgInfoSerializer.swift in Sources */,
 				EB8419BE96FD5FA04A5863EF407C6A5B /* Asn1Reader.swift in Sources */,
+				42EE1F9623447724004DC918 /* SignedDataInfo.swift in Sources */,
 				428DA0D422CB55AB00CD5391 /* KeySigner.swift in Sources */,
 				5D0D8D9EE76E928587141B9E140B76F7 /* Asn1Tag.swift in Sources */,
 				56914B35E06D15D3A7130D0A223F178D /* Asn1Writer.swift in Sources */,
@@ -2541,6 +2592,7 @@
 				D258D4054C029D45A90641AF0528B7D8 /* PbeAlgInfo.swift in Sources */,
 				3BE390DBE9355D6664776CD3F7CF8F9D /* Pem.swift in Sources */,
 				2453EEF991A569F166E3007E8360EFCC /* Pkcs5Pbes2.swift in Sources */,
+				42EE1F9223447724004DC918 /* SignerInfoList.swift in Sources */,
 				428DA10422CB55AB00CD5391 /* BrainkeyServer.swift in Sources */,
 				A56564EC15A4B4029C31D29EE61F75B4 /* Pkcs5Pbkdf2.swift in Sources */,
 				42492F2B22CE046600BEA96F /* GroupMsgType.swift in Sources */,
@@ -2558,7 +2610,11 @@
 				7F6931EBB2CA87B3D7021D5AF4689C9D /* SeedEntropySource.swift in Sources */,
 				6D6F6D99DF4D688FE53C27EDD962756D /* Sha224.swift in Sources */,
 				55C12DE12236FD4A284003D13CA0ED6D /* Sha256.swift in Sources */,
+				42EE1FAE23447772004DC918 /* MessageInfoFooterSerializer.swift in Sources */,
+				42EE1F9A23447724004DC918 /* SignerInfo.swift in Sources */,
+				42EE1FAA23447772004DC918 /* MessageInfoEditor.swift in Sources */,
 				D58270DF2F4AE11D3DE74C961235DB32 /* Sha384.swift in Sources */,
+				42EE1FA223447772004DC918 /* MessageInfoFooter.swift in Sources */,
 				FE31CE8E701D52640F1109DD4E76AF1C /* Sha512.swift in Sources */,
 				F04BD88CE0F5D69C4C92F4FDD484AECA /* Signer.swift in Sources */,
 				428DA10022CB55AB00CD5391 /* KeyAlgFactory.swift in Sources */,
@@ -2605,6 +2661,7 @@
 				0B5E9DE27F0C8BAEE745A3AE7026E411 /* Aes256Gcm.swift in Sources */,
 				8841941DDB4DCE37942C1E3A1F1061A6 /* Alg.swift in Sources */,
 				428DA0F322CB55AB00CD5391 /* EccAlgInfo.swift in Sources */,
+				42EE1FA923447772004DC918 /* FooterInfo.swift in Sources */,
 				21A8E3359A4C3EE620DD7E736E84A0DC /* AlgFactory.swift in Sources */,
 				4EE534CB40713A25765F27EDF62F6D7C /* AlgId.swift in Sources */,
 				B2EC19548AD002CD5871C4789F80D190 /* AlgInfo.swift in Sources */,
@@ -2613,6 +2670,7 @@
 				08661115C21F2986E67A3B618985E34E /* AlgInfoDeserializer.swift in Sources */,
 				59E348617FA5E81C4F6C55AF53A3F6AD /* AlgInfoSerializer.swift in Sources */,
 				A9E690099F4F4EB7B304D2099BB2BD41 /* Asn1Reader.swift in Sources */,
+				42EE1F9923447724004DC918 /* SignedDataInfo.swift in Sources */,
 				428DA0D722CB55AB00CD5391 /* KeySigner.swift in Sources */,
 				B59491D15490390CA0E8523756C478CB /* Asn1Tag.swift in Sources */,
 				F353E18B55FB90927F4E017A00A50A5C /* Asn1Writer.swift in Sources */,
@@ -2677,6 +2735,7 @@
 				711112823EE400019C1A4997A056E20F /* PbeAlgInfo.swift in Sources */,
 				A3E3C17BC90DB18E2213CF8E216176A7 /* Pem.swift in Sources */,
 				ABEBE1B86E642644B578F61C4256DF83 /* Pkcs5Pbes2.swift in Sources */,
+				42EE1F9523447724004DC918 /* SignerInfoList.swift in Sources */,
 				428DA10722CB55AB00CD5391 /* BrainkeyServer.swift in Sources */,
 				2491AD87807124026382D9E9B0823193 /* Pkcs5Pbkdf2.swift in Sources */,
 				42492F2E22CE046600BEA96F /* GroupMsgType.swift in Sources */,
@@ -2694,7 +2753,11 @@
 				718DD8B009F39A0BFC4AFB108CC590B9 /* SeedEntropySource.swift in Sources */,
 				84E1BBD1D086B0D74BF448B72496DB5C /* Sha224.swift in Sources */,
 				F8BB1C48341E5A5AA05396799B15B3BF /* Sha256.swift in Sources */,
+				42EE1FB123447772004DC918 /* MessageInfoFooterSerializer.swift in Sources */,
+				42EE1F9D23447724004DC918 /* SignerInfo.swift in Sources */,
+				42EE1FAD23447772004DC918 /* MessageInfoEditor.swift in Sources */,
 				2C331604A3BBAF28A9689B20A0559BDB /* Sha384.swift in Sources */,
+				42EE1FA523447772004DC918 /* MessageInfoFooter.swift in Sources */,
 				CB26A682B52A866ADF7D6A777D7887E0 /* Sha512.swift in Sources */,
 				34D443D5D8278554ABFCA16A03CFA133 /* Signer.swift in Sources */,
 				428DA10322CB55AB00CD5391 /* KeyAlgFactory.swift in Sources */,
@@ -2784,6 +2847,7 @@
 				559852510881B5A4E697AD7C16E9FFD5 /* Aes256Gcm.swift in Sources */,
 				36B9C926B0103F40B1000A766061EA31 /* Alg.swift in Sources */,
 				428DA0F122CB55AB00CD5391 /* EccAlgInfo.swift in Sources */,
+				42EE1FA723447772004DC918 /* FooterInfo.swift in Sources */,
 				BEC1F63A5D9369091BBA07142D203319 /* AlgFactory.swift in Sources */,
 				023B3512E6F3FBF0633B8CC495229E53 /* AlgId.swift in Sources */,
 				81AB5A2C149DE98BB3FD7C7931645E08 /* AlgInfo.swift in Sources */,
@@ -2792,6 +2856,7 @@
 				B23CF91E995C6524E4FE85F6EE5E0EA3 /* AlgInfoDeserializer.swift in Sources */,
 				46AECF573B2F85E93985CA2AA15A8A9B /* AlgInfoSerializer.swift in Sources */,
 				83CDC1112B55F53CB96F786A9094AE12 /* Asn1Reader.swift in Sources */,
+				42EE1F9723447724004DC918 /* SignedDataInfo.swift in Sources */,
 				428DA0D522CB55AB00CD5391 /* KeySigner.swift in Sources */,
 				20AD898D971300BBBA14F18FEB4FD03C /* Asn1Tag.swift in Sources */,
 				4140CD385B711E0652FD6506F7AAC827 /* Asn1Writer.swift in Sources */,
@@ -2856,6 +2921,7 @@
 				8CBACAE95B745253E96721E0CB495B8A /* PbeAlgInfo.swift in Sources */,
 				FC6165CE84EC30DC723B4F3F8BC79346 /* Pem.swift in Sources */,
 				1771313D4183FEEC9EA4D58AFA9674CE /* Pkcs5Pbes2.swift in Sources */,
+				42EE1F9323447724004DC918 /* SignerInfoList.swift in Sources */,
 				428DA10522CB55AB00CD5391 /* BrainkeyServer.swift in Sources */,
 				C32A1664A19453AE2270BD7BE0F49DDD /* Pkcs5Pbkdf2.swift in Sources */,
 				42492F2C22CE046600BEA96F /* GroupMsgType.swift in Sources */,
@@ -2873,7 +2939,11 @@
 				EE19D4429662FE0AABBFBF5080FEBF60 /* SeedEntropySource.swift in Sources */,
 				E33BDD53B814FB06B63EB6E1F0FD471F /* Sha224.swift in Sources */,
 				AFF1B4E455E38486C3C6668F18DFABAA /* Sha256.swift in Sources */,
+				42EE1FAF23447772004DC918 /* MessageInfoFooterSerializer.swift in Sources */,
+				42EE1F9B23447724004DC918 /* SignerInfo.swift in Sources */,
+				42EE1FAB23447772004DC918 /* MessageInfoEditor.swift in Sources */,
 				02A1C01B8BC8470B9D588C68265F9C3A /* Sha384.swift in Sources */,
+				42EE1FA323447772004DC918 /* MessageInfoFooter.swift in Sources */,
 				F8EB39CE97198A1C56D4252B4763B892 /* Sha512.swift in Sources */,
 				1F2624EAD67E689FCDF62985092E51D6 /* Signer.swift in Sources */,
 				428DA10122CB55AB00CD5391 /* KeyAlgFactory.swift in Sources */,
