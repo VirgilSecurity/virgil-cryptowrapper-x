@@ -36,15 +36,15 @@
 import Foundation
 import VSCFoundation
 
-/// Virgil Security implementation of the KDF1 (ISO-18033-2) algorithm.
-@objc(VSCFKdf1) public class Kdf1: NSObject, Alg, Kdf {
+/// Handle meta information about signed data.
+@objc(VSCFSignedDataInfo) public class SignedDataInfo: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_kdf1_new()
+        self.c_ctx = vscf_signed_data_info_new()
         super.init()
     }
 
@@ -58,59 +58,26 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_kdf1_shallow_copy(c_ctx)
+        self.c_ctx = vscf_signed_data_info_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_kdf1_delete(self.c_ctx)
+        vscf_signed_data_info_delete(self.c_ctx)
     }
 
-    @objc public func setHash(hash: Hash) {
-        vscf_kdf1_release_hash(self.c_ctx)
-        vscf_kdf1_use_hash(self.c_ctx, hash.c_ctx)
+    /// Set information about algorithm that was used to produce data digest.
+    @objc public func setHashAlgInfo(hashAlgInfo: AlgInfo) {
+        var hashAlgInfoCopy = vscf_impl_shallow_copy(hashAlgInfo.c_ctx)
+
+        vscf_signed_data_info_set_hash_alg_info(self.c_ctx, &hashAlgInfoCopy)
     }
 
-    /// Provide algorithm identificator.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_kdf1_alg_id(self.c_ctx)
-
-        return AlgId.init(fromC: proxyResult)
-    }
-
-    /// Produce object with algorithm information and configuration parameters.
-    @objc public func produceAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_kdf1_produce_alg_info(self.c_ctx)
+    /// Return information about algorithm that was used to produce data digest.
+    @objc public func hashAlgInfo() -> AlgInfo {
+        let proxyResult = vscf_signed_data_info_hash_alg_info(self.c_ctx)
 
         return FoundationImplementation.wrapAlgInfo(take: proxyResult!)
-    }
-
-    /// Restore algorithm configuration from the given object.
-    @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
-        let proxyResult = vscf_kdf1_restore_alg_info(self.c_ctx, algInfo.c_ctx)
-
-        try FoundationError.handleStatus(fromC: proxyResult)
-    }
-
-    /// Derive key of the requested length from the given data.
-    @objc public func derive(data: Data, keyLen: Int) -> Data {
-        let keyCount = keyLen
-        var key = Data(count: keyCount)
-        var keyBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(keyBuf)
-        }
-
-        data.withUnsafeBytes({ (dataPointer: UnsafeRawBufferPointer) -> Void in
-            key.withUnsafeMutableBytes({ (keyPointer: UnsafeMutableRawBufferPointer) -> Void in
-                vsc_buffer_use(keyBuf, keyPointer.bindMemory(to: byte.self).baseAddress, keyCount)
-
-                vscf_kdf1_derive(self.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), keyLen, keyBuf)
-            })
-        })
-        key.count = vsc_buffer_len(keyBuf)
-
-        return key
     }
 }

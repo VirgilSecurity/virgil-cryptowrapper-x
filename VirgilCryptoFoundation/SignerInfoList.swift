@@ -36,15 +36,15 @@
 import Foundation
 import VSCFoundation
 
-/// Virgil Security implementation of the KDF1 (ISO-18033-2) algorithm.
-@objc(VSCFKdf1) public class Kdf1: NSObject, Alg, Kdf {
+/// Handles a list of "signer info" class objects.
+@objc(VSCFSignerInfoList) public class SignerInfoList: NSObject {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_kdf1_new()
+        self.c_ctx = vscf_signer_info_list_new()
         super.init()
     }
 
@@ -58,59 +58,59 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_kdf1_shallow_copy(c_ctx)
+        self.c_ctx = vscf_signer_info_list_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_kdf1_delete(self.c_ctx)
+        vscf_signer_info_list_delete(self.c_ctx)
     }
 
-    @objc public func setHash(hash: Hash) {
-        vscf_kdf1_release_hash(self.c_ctx)
-        vscf_kdf1_use_hash(self.c_ctx, hash.c_ctx)
+    /// Return true if given list has item.
+    @objc public func hasItem() -> Bool {
+        let proxyResult = vscf_signer_info_list_has_item(self.c_ctx)
+
+        return proxyResult
     }
 
-    /// Provide algorithm identificator.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_kdf1_alg_id(self.c_ctx)
+    /// Return list item.
+    @objc public func item() -> SignerInfo {
+        let proxyResult = vscf_signer_info_list_item(self.c_ctx)
 
-        return AlgId.init(fromC: proxyResult)
+        return SignerInfo.init(use: proxyResult!)
     }
 
-    /// Produce object with algorithm information and configuration parameters.
-    @objc public func produceAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_kdf1_produce_alg_info(self.c_ctx)
+    /// Return true if list has next item.
+    @objc public func hasNext() -> Bool {
+        let proxyResult = vscf_signer_info_list_has_next(self.c_ctx)
 
-        return FoundationImplementation.wrapAlgInfo(take: proxyResult!)
+        return proxyResult
     }
 
-    /// Restore algorithm configuration from the given object.
-    @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
-        let proxyResult = vscf_kdf1_restore_alg_info(self.c_ctx, algInfo.c_ctx)
+    /// Return next list node if exists, or NULL otherwise.
+    @objc public func next() -> SignerInfoList {
+        let proxyResult = vscf_signer_info_list_next(self.c_ctx)
 
-        try FoundationError.handleStatus(fromC: proxyResult)
+        return SignerInfoList.init(take: proxyResult!)
     }
 
-    /// Derive key of the requested length from the given data.
-    @objc public func derive(data: Data, keyLen: Int) -> Data {
-        let keyCount = keyLen
-        var key = Data(count: keyCount)
-        var keyBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(keyBuf)
-        }
+    /// Return true if list has previous item.
+    @objc public func hasPrev() -> Bool {
+        let proxyResult = vscf_signer_info_list_has_prev(self.c_ctx)
 
-        data.withUnsafeBytes({ (dataPointer: UnsafeRawBufferPointer) -> Void in
-            key.withUnsafeMutableBytes({ (keyPointer: UnsafeMutableRawBufferPointer) -> Void in
-                vsc_buffer_use(keyBuf, keyPointer.bindMemory(to: byte.self).baseAddress, keyCount)
+        return proxyResult
+    }
 
-                vscf_kdf1_derive(self.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), keyLen, keyBuf)
-            })
-        })
-        key.count = vsc_buffer_len(keyBuf)
+    /// Return previous list node if exists, or NULL otherwise.
+    @objc public func prev() -> SignerInfoList {
+        let proxyResult = vscf_signer_info_list_prev(self.c_ctx)
 
-        return key
+        return SignerInfoList.init(take: proxyResult!)
+    }
+
+    /// Remove all items.
+    @objc public func clear() {
+        vscf_signer_info_list_clear(self.c_ctx)
     }
 }

@@ -36,15 +36,15 @@
 import Foundation
 import VSCFoundation
 
-/// Provide interface for data encryption.
-@objc(VSCFEncrypt) public protocol Encrypt : CContext {
+/// Provide interface for "message info footer" class serialization.
+@objc(VSCFMessageInfoFooterSerializer) public protocol MessageInfoFooterSerializer : CContext {
 
-    /// Encrypt given data.
-    @objc func encrypt(data: Data) throws -> Data
+    /// Return buffer size enough to hold serialized message info footer.
+    @objc func serializedFooterLen(messageInfoFooter: MessageInfoFooter) -> Int
 
-    /// Calculate required buffer length to hold the encrypted data.
-    @objc func encryptedLen(dataLen: Int) -> Int
+    /// Serialize class "message info footer".
+    @objc func serializeFooter(messageInfoFooter: MessageInfoFooter) -> Data
 
-    /// Precise length calculation of encrypted data.
-    @objc func preciseEncryptedLen(dataLen: Int) -> Int
+    /// Deserialize class "message info footer".
+    @objc func deserializeFooter(data: Data) throws -> MessageInfoFooter
 }
