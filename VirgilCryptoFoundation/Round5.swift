@@ -36,8 +36,9 @@
 import Foundation
 import VSCFoundation
 
-/// This is implementation of Ed25519 elliptic curve algorithms.
-@objc(VSCFEd25519) public class Ed25519: NSObject, Alg, KeyAlg, KeyCipher, KeySigner, ComputeSharedKey {
+/// Provide post-quantum encryption based on the round5 implementation.
+/// For algorithm details check https://github.com/round5/code
+@objc(VSCFRound5) public class Round5: NSObject, Alg, KeyAlg, KeyCipher {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
@@ -56,7 +57,7 @@ import VSCFoundation
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_ed25519_new()
+        self.c_ctx = vscf_round5_new()
         super.init()
     }
 
@@ -70,28 +71,23 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_ed25519_shallow_copy(c_ctx)
+        self.c_ctx = vscf_round5_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_ed25519_delete(self.c_ctx)
+        vscf_round5_delete(self.c_ctx)
     }
 
     @objc public func setRandom(random: Random) {
-        vscf_ed25519_release_random(self.c_ctx)
-        vscf_ed25519_use_random(self.c_ctx, random.c_ctx)
-    }
-
-    @objc public func setEcies(ecies: Ecies) {
-        vscf_ed25519_release_ecies(self.c_ctx)
-        vscf_ed25519_use_ecies(self.c_ctx, ecies.c_ctx)
+        vscf_round5_release_random(self.c_ctx)
+        vscf_round5_use_random(self.c_ctx, random.c_ctx)
     }
 
     /// Setup predefined values to the uninitialized class dependencies.
     @objc public func setupDefaults() throws {
-        let proxyResult = vscf_ed25519_setup_defaults(self.c_ctx)
+        let proxyResult = vscf_round5_setup_defaults(self.c_ctx)
 
         try FoundationError.handleStatus(fromC: proxyResult)
     }
@@ -102,7 +98,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_ed25519_generate_key(self.c_ctx, &error)
+        let proxyResult = vscf_round5_generate_key(self.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -111,21 +107,21 @@ import VSCFoundation
 
     /// Provide algorithm identificator.
     @objc public func algId() -> AlgId {
-        let proxyResult = vscf_ed25519_alg_id(self.c_ctx)
+        let proxyResult = vscf_round5_alg_id(self.c_ctx)
 
         return AlgId.init(fromC: proxyResult)
     }
 
     /// Produce object with algorithm information and configuration parameters.
     @objc public func produceAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_ed25519_produce_alg_info(self.c_ctx)
+        let proxyResult = vscf_round5_produce_alg_info(self.c_ctx)
 
         return FoundationImplementation.wrapAlgInfo(take: proxyResult!)
     }
 
     /// Restore algorithm configuration from the given object.
     @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
-        let proxyResult = vscf_ed25519_restore_alg_info(self.c_ctx, algInfo.c_ctx)
+        let proxyResult = vscf_round5_restore_alg_info(self.c_ctx, algInfo.c_ctx)
 
         try FoundationError.handleStatus(fromC: proxyResult)
     }
@@ -136,7 +132,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_ed25519_generate_ephemeral_key(self.c_ctx, key.c_ctx, &error)
+        let proxyResult = vscf_round5_generate_ephemeral_key(self.c_ctx, key.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -155,7 +151,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_ed25519_import_public_key(self.c_ctx, rawKey.c_ctx, &error)
+        let proxyResult = vscf_round5_import_public_key(self.c_ctx, rawKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -171,7 +167,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_ed25519_export_public_key(self.c_ctx, publicKey.c_ctx, &error)
+        let proxyResult = vscf_round5_export_public_key(self.c_ctx, publicKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -190,7 +186,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_ed25519_import_private_key(self.c_ctx, rawKey.c_ctx, &error)
+        let proxyResult = vscf_round5_import_private_key(self.c_ctx, rawKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -206,7 +202,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_ed25519_export_private_key(self.c_ctx, privateKey.c_ctx, &error)
+        let proxyResult = vscf_round5_export_private_key(self.c_ctx, privateKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -215,14 +211,14 @@ import VSCFoundation
 
     /// Check if algorithm can encrypt data with a given key.
     @objc public func canEncrypt(publicKey: PublicKey, dataLen: Int) -> Bool {
-        let proxyResult = vscf_ed25519_can_encrypt(self.c_ctx, publicKey.c_ctx, dataLen)
+        let proxyResult = vscf_round5_can_encrypt(self.c_ctx, publicKey.c_ctx, dataLen)
 
         return proxyResult
     }
 
     /// Calculate required buffer length to hold the encrypted data.
     @objc public func encryptedLen(publicKey: PublicKey, dataLen: Int) -> Int {
-        let proxyResult = vscf_ed25519_encrypted_len(self.c_ctx, publicKey.c_ctx, dataLen)
+        let proxyResult = vscf_round5_encrypted_len(self.c_ctx, publicKey.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -240,7 +236,7 @@ import VSCFoundation
             out.withUnsafeMutableBytes({ (outPointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
                 vsc_buffer_use(outBuf, outPointer.bindMemory(to: byte.self).baseAddress, outCount)
 
-                return vscf_ed25519_encrypt(self.c_ctx, publicKey.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), outBuf)
+                return vscf_round5_encrypt(self.c_ctx, publicKey.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), outBuf)
             })
         })
         out.count = vsc_buffer_len(outBuf)
@@ -253,14 +249,14 @@ import VSCFoundation
     /// Check if algorithm can decrypt data with a given key.
     /// However, success result of decryption is not guaranteed.
     @objc public func canDecrypt(privateKey: PrivateKey, dataLen: Int) -> Bool {
-        let proxyResult = vscf_ed25519_can_decrypt(self.c_ctx, privateKey.c_ctx, dataLen)
+        let proxyResult = vscf_round5_can_decrypt(self.c_ctx, privateKey.c_ctx, dataLen)
 
         return proxyResult
     }
 
     /// Calculate required buffer length to hold the decrypted data.
     @objc public func decryptedLen(privateKey: PrivateKey, dataLen: Int) -> Int {
-        let proxyResult = vscf_ed25519_decrypted_len(self.c_ctx, privateKey.c_ctx, dataLen)
+        let proxyResult = vscf_round5_decrypted_len(self.c_ctx, privateKey.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -278,7 +274,7 @@ import VSCFoundation
             out.withUnsafeMutableBytes({ (outPointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
                 vsc_buffer_use(outBuf, outPointer.bindMemory(to: byte.self).baseAddress, outCount)
 
-                return vscf_ed25519_decrypt(self.c_ctx, privateKey.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), outBuf)
+                return vscf_round5_decrypt(self.c_ctx, privateKey.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), outBuf)
             })
         })
         out.count = vsc_buffer_len(outBuf)
@@ -286,92 +282,5 @@ import VSCFoundation
         try FoundationError.handleStatus(fromC: proxyResult)
 
         return out
-    }
-
-    /// Check if algorithm can sign data digest with a given key.
-    @objc public func canSign(privateKey: PrivateKey) -> Bool {
-        let proxyResult = vscf_ed25519_can_sign(self.c_ctx, privateKey.c_ctx)
-
-        return proxyResult
-    }
-
-    /// Return length in bytes required to hold signature.
-    /// Return zero if a given private key can not produce signatures.
-    @objc public func signatureLen(privateKey: PrivateKey) -> Int {
-        let proxyResult = vscf_ed25519_signature_len(self.c_ctx, privateKey.c_ctx)
-
-        return proxyResult
-    }
-
-    /// Sign data digest with a given private key.
-    @objc public func signHash(privateKey: PrivateKey, hashId: AlgId, digest: Data) throws -> Data {
-        let signatureCount = self.signatureLen(privateKey: privateKey)
-        var signature = Data(count: signatureCount)
-        var signatureBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(signatureBuf)
-        }
-
-        let proxyResult = digest.withUnsafeBytes({ (digestPointer: UnsafeRawBufferPointer) -> vscf_status_t in
-            signature.withUnsafeMutableBytes({ (signaturePointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
-                vsc_buffer_use(signatureBuf, signaturePointer.bindMemory(to: byte.self).baseAddress, signatureCount)
-
-                return vscf_ed25519_sign_hash(self.c_ctx, privateKey.c_ctx, vscf_alg_id_t(rawValue: UInt32(hashId.rawValue)), vsc_data(digestPointer.bindMemory(to: byte.self).baseAddress, digest.count), signatureBuf)
-            })
-        })
-        signature.count = vsc_buffer_len(signatureBuf)
-
-        try FoundationError.handleStatus(fromC: proxyResult)
-
-        return signature
-    }
-
-    /// Check if algorithm can verify data digest with a given key.
-    @objc public func canVerify(publicKey: PublicKey) -> Bool {
-        let proxyResult = vscf_ed25519_can_verify(self.c_ctx, publicKey.c_ctx)
-
-        return proxyResult
-    }
-
-    /// Verify data digest with a given public key and signature.
-    @objc public func verifyHash(publicKey: PublicKey, hashId: AlgId, digest: Data, signature: Data) -> Bool {
-        let proxyResult = digest.withUnsafeBytes({ (digestPointer: UnsafeRawBufferPointer) -> Bool in
-            signature.withUnsafeBytes({ (signaturePointer: UnsafeRawBufferPointer) -> Bool in
-
-                return vscf_ed25519_verify_hash(self.c_ctx, publicKey.c_ctx, vscf_alg_id_t(rawValue: UInt32(hashId.rawValue)), vsc_data(digestPointer.bindMemory(to: byte.self).baseAddress, digest.count), vsc_data(signaturePointer.bindMemory(to: byte.self).baseAddress, signature.count))
-            })
-        })
-
-        return proxyResult
-    }
-
-    /// Compute shared key for 2 asymmetric keys.
-    /// Note, computed shared key can be used only within symmetric cryptography.
-    @objc public func computeSharedKey(publicKey: PublicKey, privateKey: PrivateKey) throws -> Data {
-        let sharedKeyCount = self.sharedKeyLen(key: privateKey)
-        var sharedKey = Data(count: sharedKeyCount)
-        var sharedKeyBuf = vsc_buffer_new()
-        defer {
-            vsc_buffer_delete(sharedKeyBuf)
-        }
-
-        let proxyResult = sharedKey.withUnsafeMutableBytes({ (sharedKeyPointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
-            vsc_buffer_use(sharedKeyBuf, sharedKeyPointer.bindMemory(to: byte.self).baseAddress, sharedKeyCount)
-
-            return vscf_ed25519_compute_shared_key(self.c_ctx, publicKey.c_ctx, privateKey.c_ctx, sharedKeyBuf)
-        })
-        sharedKey.count = vsc_buffer_len(sharedKeyBuf)
-
-        try FoundationError.handleStatus(fromC: proxyResult)
-
-        return sharedKey
-    }
-
-    /// Return number of bytes required to hold shared key.
-    /// Expect Public Key or Private Key.
-    @objc public func sharedKeyLen(key: Key) -> Int {
-        let proxyResult = vscf_ed25519_shared_key_len(self.c_ctx, key.c_ctx)
-
-        return proxyResult
     }
 }
