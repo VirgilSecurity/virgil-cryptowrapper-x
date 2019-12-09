@@ -36,72 +36,20 @@
 import Foundation
 import VSCFoundation
 
-@objc(VSCFOidId) public enum OidId: Int {
+/// Enumerates possible sequentail cipher's states.
+@objc(VSCFCipherState) public enum CipherState: Int {
 
-    case none
+    /// Cipher is ready for new encryption / decryption operation.
+    case initial
 
-    case rsa
+    /// Cipher is configured for encryption.
+    case encryption
 
-    case ed25519
-
-    case curve25519
-
-    case sha224
-
-    case sha256
-
-    case sha384
-
-    case sha512
-
-    case kdf1
-
-    case kdf2
-
-    case aes256Gcm
-
-    case aes256Cbc
-
-    case pkcs5Pbkdf2
-
-    case pkcs5Pbes2
-
-    case cmsData
-
-    case cmsEnvelopedData
-
-    case hkdfWithSha256
-
-    case hkdfWithSha384
-
-    case hkdfWithSha512
-
-    case hmacWithSha224
-
-    case hmacWithSha256
-
-    case hmacWithSha384
-
-    case hmacWithSha512
-
-    case ecGenericKey
-
-    case ecDomainSecp256r1
-
-    case compoundKey
-
-    case chainedKey
-
-    case falcon
-
-    case round5
-
-    case round5Nd5pke5d
-
-    case randomPadding
+    /// Cipher is configured for decryption.
+    case decryption
 
     /// Create enumeration value from the correspond C enumeration value.
-    internal init(fromC oidId: vscf_oid_id_t) {
-        self.init(rawValue: Int(oidId.rawValue))!
+    internal init(fromC cipherState: vscf_cipher_state_t) {
+        self.init(rawValue: Int(cipherState.rawValue))!
     }
 }
