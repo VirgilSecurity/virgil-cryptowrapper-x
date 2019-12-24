@@ -36,10 +36,10 @@
 import Foundation
 import VSCFoundation
 
-/// Implements public key cryptography over chained keys.
-/// Chained encryption pseudo-code: encrypt(l2_key, encrypt(l1_key, data))
-/// Chained decryption pseudo-code: decrypt(l1_key, decrypt(l2_key, data))
-@objc(VSCFChainedKeyAlg) public class ChainedKeyAlg: NSObject, Alg, KeyAlg, KeyCipher, KeySigner {
+/// Implements public key cryptography over hybrid keys.
+/// Hybrid encryption - TODO
+/// Hybrid signatures - TODO
+@objc(VSCFHybridKeyAlg) public class HybridKeyAlg: NSObject, KeyAlg, KeyCipher, KeySigner {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
@@ -58,7 +58,7 @@ import VSCFoundation
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_chained_key_alg_new()
+        self.c_ctx = vscf_hybrid_key_alg_new()
         super.init()
     }
 
@@ -72,62 +72,47 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_chained_key_alg_shallow_copy(c_ctx)
+        self.c_ctx = vscf_hybrid_key_alg_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_chained_key_alg_delete(self.c_ctx)
+        vscf_hybrid_key_alg_delete(self.c_ctx)
     }
 
     @objc public func setRandom(random: Random) {
-        vscf_chained_key_alg_release_random(self.c_ctx)
-        vscf_chained_key_alg_use_random(self.c_ctx, random.c_ctx)
+        vscf_hybrid_key_alg_release_random(self.c_ctx)
+        vscf_hybrid_key_alg_use_random(self.c_ctx, random.c_ctx)
+    }
+
+    @objc public func setCipher(cipher: CipherAuth) {
+        vscf_hybrid_key_alg_release_cipher(self.c_ctx)
+        vscf_hybrid_key_alg_use_cipher(self.c_ctx, cipher.c_ctx)
+    }
+
+    @objc public func setHash(hash: Hash) {
+        vscf_hybrid_key_alg_release_hash(self.c_ctx)
+        vscf_hybrid_key_alg_use_hash(self.c_ctx, hash.c_ctx)
     }
 
     /// Setup predefined values to the uninitialized class dependencies.
     @objc public func setupDefaults() throws {
-        let proxyResult = vscf_chained_key_alg_setup_defaults(self.c_ctx)
+        let proxyResult = vscf_hybrid_key_alg_setup_defaults(self.c_ctx)
 
         try FoundationError.handleStatus(fromC: proxyResult)
     }
 
-    /// Make chained private key from given keys that are suitable for
-    /// encryption and decrypt, and/or signing verifying.
-    ///
-    /// Note, l2 should be able to encrypt data produced by the l1 cipher,
-    /// if keys are used for encryption.
-    @objc public func makeKey(l1Key: PrivateKey, l2Key: PrivateKey) throws -> PrivateKey {
+    /// Make hybrid private key from given keys.
+    @objc public func makeKey(firstKey: PrivateKey, secondKey: PrivateKey) throws -> PrivateKey {
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_chained_key_alg_make_key(self.c_ctx, l1Key.c_ctx, l2Key.c_ctx, &error)
+        let proxyResult = vscf_hybrid_key_alg_make_key(self.c_ctx, firstKey.c_ctx, secondKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
         return FoundationImplementation.wrapPrivateKey(take: proxyResult!)
-    }
-
-    /// Provide algorithm identificator.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_chained_key_alg_alg_id(self.c_ctx)
-
-        return AlgId.init(fromC: proxyResult)
-    }
-
-    /// Produce object with algorithm information and configuration parameters.
-    @objc public func produceAlgInfo() -> AlgInfo {
-        let proxyResult = vscf_chained_key_alg_produce_alg_info(self.c_ctx)
-
-        return FoundationImplementation.wrapAlgInfo(take: proxyResult!)
-    }
-
-    /// Restore algorithm configuration from the given object.
-    @objc public func restoreAlgInfo(algInfo: AlgInfo) throws {
-        let proxyResult = vscf_chained_key_alg_restore_alg_info(self.c_ctx, algInfo.c_ctx)
-
-        try FoundationError.handleStatus(fromC: proxyResult)
     }
 
     /// Generate ephemeral private key of the same type.
@@ -136,7 +121,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_chained_key_alg_generate_ephemeral_key(self.c_ctx, key.c_ctx, &error)
+        let proxyResult = vscf_hybrid_key_alg_generate_ephemeral_key(self.c_ctx, key.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -155,7 +140,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_chained_key_alg_import_public_key(self.c_ctx, rawKey.c_ctx, &error)
+        let proxyResult = vscf_hybrid_key_alg_import_public_key(self.c_ctx, rawKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -171,7 +156,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_chained_key_alg_export_public_key(self.c_ctx, publicKey.c_ctx, &error)
+        let proxyResult = vscf_hybrid_key_alg_export_public_key(self.c_ctx, publicKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -190,7 +175,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_chained_key_alg_import_private_key(self.c_ctx, rawKey.c_ctx, &error)
+        let proxyResult = vscf_hybrid_key_alg_import_private_key(self.c_ctx, rawKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -206,7 +191,7 @@ import VSCFoundation
         var error: vscf_error_t = vscf_error_t()
         vscf_error_reset(&error)
 
-        let proxyResult = vscf_chained_key_alg_export_private_key(self.c_ctx, privateKey.c_ctx, &error)
+        let proxyResult = vscf_hybrid_key_alg_export_private_key(self.c_ctx, privateKey.c_ctx, &error)
 
         try FoundationError.handleStatus(fromC: error.status)
 
@@ -215,14 +200,14 @@ import VSCFoundation
 
     /// Check if algorithm can encrypt data with a given key.
     @objc public func canEncrypt(publicKey: PublicKey, dataLen: Int) -> Bool {
-        let proxyResult = vscf_chained_key_alg_can_encrypt(self.c_ctx, publicKey.c_ctx, dataLen)
+        let proxyResult = vscf_hybrid_key_alg_can_encrypt(self.c_ctx, publicKey.c_ctx, dataLen)
 
         return proxyResult
     }
 
     /// Calculate required buffer length to hold the encrypted data.
     @objc public func encryptedLen(publicKey: PublicKey, dataLen: Int) -> Int {
-        let proxyResult = vscf_chained_key_alg_encrypted_len(self.c_ctx, publicKey.c_ctx, dataLen)
+        let proxyResult = vscf_hybrid_key_alg_encrypted_len(self.c_ctx, publicKey.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -240,7 +225,7 @@ import VSCFoundation
             out.withUnsafeMutableBytes({ (outPointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
                 vsc_buffer_use(outBuf, outPointer.bindMemory(to: byte.self).baseAddress, outCount)
 
-                return vscf_chained_key_alg_encrypt(self.c_ctx, publicKey.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), outBuf)
+                return vscf_hybrid_key_alg_encrypt(self.c_ctx, publicKey.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), outBuf)
             })
         })
         out.count = vsc_buffer_len(outBuf)
@@ -253,14 +238,14 @@ import VSCFoundation
     /// Check if algorithm can decrypt data with a given key.
     /// However, success result of decryption is not guaranteed.
     @objc public func canDecrypt(privateKey: PrivateKey, dataLen: Int) -> Bool {
-        let proxyResult = vscf_chained_key_alg_can_decrypt(self.c_ctx, privateKey.c_ctx, dataLen)
+        let proxyResult = vscf_hybrid_key_alg_can_decrypt(self.c_ctx, privateKey.c_ctx, dataLen)
 
         return proxyResult
     }
 
     /// Calculate required buffer length to hold the decrypted data.
     @objc public func decryptedLen(privateKey: PrivateKey, dataLen: Int) -> Int {
-        let proxyResult = vscf_chained_key_alg_decrypted_len(self.c_ctx, privateKey.c_ctx, dataLen)
+        let proxyResult = vscf_hybrid_key_alg_decrypted_len(self.c_ctx, privateKey.c_ctx, dataLen)
 
         return proxyResult
     }
@@ -278,7 +263,7 @@ import VSCFoundation
             out.withUnsafeMutableBytes({ (outPointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
                 vsc_buffer_use(outBuf, outPointer.bindMemory(to: byte.self).baseAddress, outCount)
 
-                return vscf_chained_key_alg_decrypt(self.c_ctx, privateKey.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), outBuf)
+                return vscf_hybrid_key_alg_decrypt(self.c_ctx, privateKey.c_ctx, vsc_data(dataPointer.bindMemory(to: byte.self).baseAddress, data.count), outBuf)
             })
         })
         out.count = vsc_buffer_len(outBuf)
@@ -290,7 +275,7 @@ import VSCFoundation
 
     /// Check if algorithm can sign data digest with a given key.
     @objc public func canSign(privateKey: PrivateKey) -> Bool {
-        let proxyResult = vscf_chained_key_alg_can_sign(self.c_ctx, privateKey.c_ctx)
+        let proxyResult = vscf_hybrid_key_alg_can_sign(self.c_ctx, privateKey.c_ctx)
 
         return proxyResult
     }
@@ -298,7 +283,7 @@ import VSCFoundation
     /// Return length in bytes required to hold signature.
     /// Return zero if a given private key can not produce signatures.
     @objc public func signatureLen(privateKey: PrivateKey) -> Int {
-        let proxyResult = vscf_chained_key_alg_signature_len(self.c_ctx, privateKey.c_ctx)
+        let proxyResult = vscf_hybrid_key_alg_signature_len(self.c_ctx, privateKey.c_ctx)
 
         return proxyResult
     }
@@ -316,7 +301,7 @@ import VSCFoundation
             signature.withUnsafeMutableBytes({ (signaturePointer: UnsafeMutableRawBufferPointer) -> vscf_status_t in
                 vsc_buffer_use(signatureBuf, signaturePointer.bindMemory(to: byte.self).baseAddress, signatureCount)
 
-                return vscf_chained_key_alg_sign_hash(self.c_ctx, privateKey.c_ctx, vscf_alg_id_t(rawValue: UInt32(hashId.rawValue)), vsc_data(digestPointer.bindMemory(to: byte.self).baseAddress, digest.count), signatureBuf)
+                return vscf_hybrid_key_alg_sign_hash(self.c_ctx, privateKey.c_ctx, vscf_alg_id_t(rawValue: UInt32(hashId.rawValue)), vsc_data(digestPointer.bindMemory(to: byte.self).baseAddress, digest.count), signatureBuf)
             })
         })
         signature.count = vsc_buffer_len(signatureBuf)
@@ -328,7 +313,7 @@ import VSCFoundation
 
     /// Check if algorithm can verify data digest with a given key.
     @objc public func canVerify(publicKey: PublicKey) -> Bool {
-        let proxyResult = vscf_chained_key_alg_can_verify(self.c_ctx, publicKey.c_ctx)
+        let proxyResult = vscf_hybrid_key_alg_can_verify(self.c_ctx, publicKey.c_ctx)
 
         return proxyResult
     }
@@ -338,7 +323,7 @@ import VSCFoundation
         let proxyResult = digest.withUnsafeBytes({ (digestPointer: UnsafeRawBufferPointer) -> Bool in
             signature.withUnsafeBytes({ (signaturePointer: UnsafeRawBufferPointer) -> Bool in
 
-                return vscf_chained_key_alg_verify_hash(self.c_ctx, publicKey.c_ctx, vscf_alg_id_t(rawValue: UInt32(hashId.rawValue)), vsc_data(digestPointer.bindMemory(to: byte.self).baseAddress, digest.count), vsc_data(signaturePointer.bindMemory(to: byte.self).baseAddress, signature.count))
+                return vscf_hybrid_key_alg_verify_hash(self.c_ctx, publicKey.c_ctx, vscf_alg_id_t(rawValue: UInt32(hashId.rawValue)), vsc_data(digestPointer.bindMemory(to: byte.self).baseAddress, digest.count), vsc_data(signaturePointer.bindMemory(to: byte.self).baseAddress, signature.count))
             })
         })
 

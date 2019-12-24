@@ -36,23 +36,17 @@
 import Foundation
 import VSCFoundation
 
-/// Handles chained private key.
+/// Handles a hybrid public key.
 ///
-/// Chained private key contains 2 private keys:
-///     - l1 key:
-///         - can be used for decryption data decrypted by the l2;
-///         - can be used to produce l1 signature;
-///     - l2 key:
-///         - can be used for decryption data;
-///         - can be used to produce l1 signature.
-@objc(VSCFChainedPrivateKey) public class ChainedPrivateKey: NSObject, Key, PrivateKey {
+/// The hybrid public key contains 2 public keys.
+@objc(VSCFHybridPublicKey) public class HybridPublicKey: NSObject, Key, PublicKey {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_chained_private_key_new()
+        self.c_ctx = vscf_hybrid_public_key_new()
         super.init()
     }
 
@@ -66,53 +60,53 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_chained_private_key_shallow_copy(c_ctx)
+        self.c_ctx = vscf_hybrid_public_key_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_chained_private_key_delete(self.c_ctx)
+        vscf_hybrid_public_key_delete(self.c_ctx)
     }
 
-    /// Return l1 private key.
-    @objc public func l1Key() -> PrivateKey {
-        let proxyResult = vscf_chained_private_key_l1_key(self.c_ctx)
+    /// Return the first public key.
+    @objc public func firstKey() -> PublicKey {
+        let proxyResult = vscf_hybrid_public_key_first_key(self.c_ctx)
 
-        return FoundationImplementation.wrapPrivateKey(use: proxyResult!)
+        return FoundationImplementation.wrapPublicKey(use: proxyResult!)
     }
 
-    /// Return l2 private key.
-    @objc public func l2Key() -> PrivateKey {
-        let proxyResult = vscf_chained_private_key_l2_key(self.c_ctx)
+    /// Return the second public key.
+    @objc public func secondKey() -> PublicKey {
+        let proxyResult = vscf_hybrid_public_key_second_key(self.c_ctx)
 
-        return FoundationImplementation.wrapPrivateKey(use: proxyResult!)
+        return FoundationImplementation.wrapPublicKey(use: proxyResult!)
     }
 
     /// Algorithm identifier the key belongs to.
     @objc public func algId() -> AlgId {
-        let proxyResult = vscf_chained_private_key_alg_id(self.c_ctx)
+        let proxyResult = vscf_hybrid_public_key_alg_id(self.c_ctx)
 
         return AlgId.init(fromC: proxyResult)
     }
 
     /// Return algorithm information that can be used for serialization.
     @objc public func algInfo() -> AlgInfo {
-        let proxyResult = vscf_chained_private_key_alg_info(self.c_ctx)
+        let proxyResult = vscf_hybrid_public_key_alg_info(self.c_ctx)
 
         return FoundationImplementation.wrapAlgInfo(use: proxyResult!)
     }
 
     /// Length of the key in bytes.
     @objc public func len() -> Int {
-        let proxyResult = vscf_chained_private_key_len(self.c_ctx)
+        let proxyResult = vscf_hybrid_public_key_len(self.c_ctx)
 
         return proxyResult
     }
 
     /// Length of the key in bits.
     @objc public func bitlen() -> Int {
-        let proxyResult = vscf_chained_private_key_bitlen(self.c_ctx)
+        let proxyResult = vscf_hybrid_public_key_bitlen(self.c_ctx)
 
         return proxyResult
     }
@@ -120,15 +114,8 @@ import VSCFoundation
     /// Check that key is valid.
     /// Note, this operation can be slow.
     @objc public func isValid() -> Bool {
-        let proxyResult = vscf_chained_private_key_is_valid(self.c_ctx)
+        let proxyResult = vscf_hybrid_public_key_is_valid(self.c_ctx)
 
         return proxyResult
-    }
-
-    /// Extract public key from the private key.
-    @objc public func extractPublicKey() -> PublicKey {
-        let proxyResult = vscf_chained_private_key_extract_public_key(self.c_ctx)
-
-        return FoundationImplementation.wrapPublicKey(take: proxyResult!)
     }
 }

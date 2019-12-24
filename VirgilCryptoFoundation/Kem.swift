@@ -36,70 +36,33 @@
 import Foundation
 import VSCFoundation
 
-@objc(VSCFOidId) public enum OidId: Int {
+/// Provides generic interface to the Key Encapsulation Mechanism (KEM).
+@objc(VSCFKem) public protocol Kem : CContext {
 
-    case none
+    /// Return length in bytes required to hold encapsulated shared key.
+    @objc func kemSharedKeyLen(key: Key) -> Int
 
-    case rsa
+    /// Return length in bytes required to hold encapsulated key.
+    @objc func kemEncapsulatedKeyLen(publicKey: PublicKey) -> Int
 
-    case ed25519
+    /// Generate a shared key and a key encapsulated message.
+    @objc func kemEncapsulate(publicKey: PublicKey) throws -> KemKemEncapsulateResult
 
-    case curve25519
+    /// Decapsulate the shared key.
+    @objc func kemDecapsulate(encapsulatedKey: Data, privateKey: PrivateKey) throws -> Data
+}
 
-    case sha224
+/// Encapsulate result of method Kem.kemEncapsulate()
+@objc(VSCFKemKemEncapsulateResult) public class KemKemEncapsulateResult: NSObject {
 
-    case sha256
+    @objc public let sharedKey: Data
 
-    case sha384
+    @objc public let encapsulatedKey: Data
 
-    case sha512
-
-    case kdf1
-
-    case kdf2
-
-    case aes256Gcm
-
-    case aes256Cbc
-
-    case pkcs5Pbkdf2
-
-    case pkcs5Pbes2
-
-    case cmsData
-
-    case cmsEnvelopedData
-
-    case hkdfWithSha256
-
-    case hkdfWithSha384
-
-    case hkdfWithSha512
-
-    case hmacWithSha224
-
-    case hmacWithSha256
-
-    case hmacWithSha384
-
-    case hmacWithSha512
-
-    case ecGenericKey
-
-    case ecDomainSecp256r1
-
-    case compoundKey
-
-    case hybridKey
-
-    case falcon
-
-    case round5Nd5kem5d
-
-    case randomPadding
-
-    /// Create enumeration value from the correspond C enumeration value.
-    internal init(fromC oidId: vscf_oid_id_t) {
-        self.init(rawValue: Int(oidId.rawValue))!
+    /// Initialize all properties.
+    internal init(sharedKey: Data, encapsulatedKey: Data) {
+        self.sharedKey = sharedKey
+        self.encapsulatedKey = encapsulatedKey
+        super.init()
     }
 }

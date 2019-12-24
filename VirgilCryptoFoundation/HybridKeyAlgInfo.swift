@@ -36,23 +36,15 @@
 import Foundation
 import VSCFoundation
 
-/// Handles chained public key.
-///
-/// Chained public key contains 2 public keys:
-///     - l1 key:
-///         - can be used for plain text encryption;
-///         - can be used to verify l1 signature;
-///     - l2 key:
-///         - can be used for l1 output encryption;
-///         - can be used to verify l2 signature.
-@objc(VSCFChainedPublicKey) public class ChainedPublicKey: NSObject, Key, PublicKey {
+/// Handle information about hybrid key algorithm.
+@objc(VSCFHybridKeyAlgInfo) public class HybridKeyAlgInfo: NSObject, AlgInfo {
 
     /// Handle underlying C context.
     @objc public let c_ctx: OpaquePointer
 
     /// Create underlying C context.
     public override init() {
-        self.c_ctx = vscf_chained_public_key_new()
+        self.c_ctx = vscf_hybrid_key_alg_info_new()
         super.init()
     }
 
@@ -66,62 +58,33 @@ import VSCFoundation
     /// Acquire retained C context.
     /// Note. This method is used in generated code only, and SHOULD NOT be used in another way.
     public init(use c_ctx: OpaquePointer) {
-        self.c_ctx = vscf_chained_public_key_shallow_copy(c_ctx)
+        self.c_ctx = vscf_hybrid_key_alg_info_shallow_copy(c_ctx)
         super.init()
     }
 
     /// Release underlying C context.
     deinit {
-        vscf_chained_public_key_delete(self.c_ctx)
+        vscf_hybrid_key_alg_info_delete(self.c_ctx)
     }
 
-    /// Return l1 public key.
-    @objc public func l1Key() -> PublicKey {
-        let proxyResult = vscf_chained_public_key_l1_key(self.c_ctx)
-
-        return FoundationImplementation.wrapPublicKey(use: proxyResult!)
-    }
-
-    /// Return l2 public key.
-    @objc public func l2Key() -> PublicKey {
-        let proxyResult = vscf_chained_public_key_l2_key(self.c_ctx)
-
-        return FoundationImplementation.wrapPublicKey(use: proxyResult!)
-    }
-
-    /// Algorithm identifier the key belongs to.
-    @objc public func algId() -> AlgId {
-        let proxyResult = vscf_chained_public_key_alg_id(self.c_ctx)
-
-        return AlgId.init(fromC: proxyResult)
-    }
-
-    /// Return algorithm information that can be used for serialization.
-    @objc public func algInfo() -> AlgInfo {
-        let proxyResult = vscf_chained_public_key_alg_info(self.c_ctx)
+    /// Return algorithm information about the first key.
+    @objc public func firstKeyAlgInfo() -> AlgInfo {
+        let proxyResult = vscf_hybrid_key_alg_info_first_key_alg_info(self.c_ctx)
 
         return FoundationImplementation.wrapAlgInfo(use: proxyResult!)
     }
 
-    /// Length of the key in bytes.
-    @objc public func len() -> Int {
-        let proxyResult = vscf_chained_public_key_len(self.c_ctx)
+    /// Return algorithm information about the second key.
+    @objc public func secondKeyAlgInfo() -> AlgInfo {
+        let proxyResult = vscf_hybrid_key_alg_info_second_key_alg_info(self.c_ctx)
 
-        return proxyResult
+        return FoundationImplementation.wrapAlgInfo(use: proxyResult!)
     }
 
-    /// Length of the key in bits.
-    @objc public func bitlen() -> Int {
-        let proxyResult = vscf_chained_public_key_bitlen(self.c_ctx)
+    /// Provide algorithm identificator.
+    @objc public func algId() -> AlgId {
+        let proxyResult = vscf_hybrid_key_alg_info_alg_id(self.c_ctx)
 
-        return proxyResult
-    }
-
-    /// Check that key is valid.
-    /// Note, this operation can be slow.
-    @objc public func isValid() -> Bool {
-        let proxyResult = vscf_chained_public_key_is_valid(self.c_ctx)
-
-        return proxyResult
+        return AlgId.init(fromC: proxyResult)
     }
 }
