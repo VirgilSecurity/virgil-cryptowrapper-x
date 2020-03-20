@@ -35,7 +35,7 @@ This library contains basic cryptographic algorithms and can be used as building
 
 ### Library: Pythia
 
-Cryptographic background for the [Password-Hardened Encryption (PHE) protocol](https://virgilsecurity.com/wp-content/uploads/2018/11/PHE-Whitepaper-2018.pdf) that provides developers with a technology to protect users passwords from offline attacks and make stolen passwords useless even if your database has been compromised. Service implementation can be found [here](https://github.com/passw0rd/phe-go).
+Implementation of the [Pythia](http://pages.cs.wisc.edu/~ace/papers/pythia-full.pdf) protocol.
 
 ### Library: Ratchet
 
