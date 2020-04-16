@@ -203,10 +203,6 @@
 		420948852282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */; };
 		420948862282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */; };
 		420948872282C3E100CAF5E6 /* KeyAsn1Deserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */; };
-		4219FAC722648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
-		4219FAC822648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
-		4219FAC922648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
-		4219FACA22648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */; };
 		422B7119237E15410067B80A /* CompoundKeyAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B710F237E15400067B80A /* CompoundKeyAlg.swift */; };
 		422B711A237E15410067B80A /* CompoundKeyAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B710F237E15400067B80A /* CompoundKeyAlg.swift */; };
 		422B711B237E15410067B80A /* CompoundKeyAlg.swift in Sources */ = {isa = PBXBuildFile; fileRef = 422B710F237E15400067B80A /* CompoundKeyAlg.swift */; };
@@ -1144,7 +1140,6 @@
 		4209486E2282C3E000CAF5E6 /* KeyAsn1Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyAsn1Serializer.swift; sourceTree = "<group>"; };
 		420948712282C3E000CAF5E6 /* Sec1Serializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sec1Serializer.swift; sourceTree = "<group>"; };
 		420948722282C3E000CAF5E6 /* KeyAsn1Deserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyAsn1Deserializer.swift; sourceTree = "<group>"; };
-		4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatchetKeyId.swift; sourceTree = "<group>"; };
 		422B710F237E15400067B80A /* CompoundKeyAlg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundKeyAlg.swift; sourceTree = "<group>"; };
 		422B7110237E15400067B80A /* CompoundKeyAlgInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompoundKeyAlgInfo.swift; sourceTree = "<group>"; };
 		422B7113237E15400067B80A /* Falcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Falcon.swift; sourceTree = "<group>"; };
@@ -1513,7 +1508,6 @@
 				0452C096012514CE472EE2ED3C3341A8 /* RatchetGroupSession.swift */,
 				0A98D138B339154524DBC6A35DD262B0 /* RatchetGroupTicket.swift */,
 				FA7C17011799B7D8643BEAD6D8EF9B4F /* RatchetImplementation.swift */,
-				4219FAC622648E5C00D4FBC7 /* RatchetKeyId.swift */,
 				3F854BCC4323AD9FC9DC971A6FFE1318 /* RatchetMessage.swift */,
 				830979EB33504F633A6D4D34B56E3D25 /* RatchetSession.swift */,
 				960B2A8CA6579C15E842054EB2AEFC25 /* VirgilCryptoRatchet.h */,
@@ -2402,7 +2396,6 @@
 				42C8C7D822A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */,
 				C0FBA2638AB45B86F391E6AFA086328F /* RatchetCommon.swift in Sources */,
 				7C86CEF331C30DC0AE660C087F78E1ED /* RatchetError.swift in Sources */,
-				4219FAC722648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */,
 				217AB4FB40647B4AD5AE92AFA55DF0FB /* RatchetGroupMessage.swift in Sources */,
 				675658DBAD1024766CC39C69544B995D /* RatchetGroupSession.swift in Sources */,
 				785DF5A0B42CF1D59743600864A0F166 /* RatchetGroupTicket.swift in Sources */,
@@ -2442,7 +2435,6 @@
 				42C8C7DB22A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */,
 				98449A3F2C909CC084593F79095ECAD5 /* RatchetCommon.swift in Sources */,
 				874828E489FA55D63AD90C6F3834244C /* RatchetError.swift in Sources */,
-				4219FACA22648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */,
 				56D0354D109E2411BC1A702DA2CBB35F /* RatchetGroupMessage.swift in Sources */,
 				B72CE03A985F6C322F977094D6940858 /* RatchetGroupSession.swift in Sources */,
 				5542A2CE7431981E590CFC094DDF0E7E /* RatchetGroupTicket.swift in Sources */,
@@ -2761,7 +2753,6 @@
 				42C8C7D922A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */,
 				CBA965EC55BB386E98BE1560E4EAB113 /* RatchetCommon.swift in Sources */,
 				A7A9449EC148856F5A76ED144488C022 /* RatchetError.swift in Sources */,
-				4219FAC822648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */,
 				D788721ADEB4322E5D407C44A9384FA5 /* RatchetGroupMessage.swift in Sources */,
 				4963408A8ADC1B1C7ADB06C5A973D202 /* RatchetGroupSession.swift in Sources */,
 				6169F1F19DB192B059363EDBCF379C47 /* RatchetGroupTicket.swift in Sources */,
@@ -2963,7 +2954,6 @@
 				42C8C7DA22A16D040071CE14 /* RatchetGroupParticipantsInfo.swift in Sources */,
 				03095F89E24BAC8282E8C0E036870D2D /* RatchetCommon.swift in Sources */,
 				E87A2E002C4D8B121F113E01B7F1FEF0 /* RatchetError.swift in Sources */,
-				4219FAC922648E5D00D4FBC7 /* RatchetKeyId.swift in Sources */,
 				CBB62682114948FF53FDBD8088943716 /* RatchetGroupMessage.swift in Sources */,
 				773AD1C0128DF73FB2580ADCE2D9C13C /* RatchetGroupSession.swift in Sources */,
 				5DB9901A6A06D82C804B162FFB308F63 /* RatchetGroupTicket.swift in Sources */,
