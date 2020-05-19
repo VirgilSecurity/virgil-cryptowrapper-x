@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RsaPrivateKey Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RsaPrivateKey" class="dashAnchor"></a>
+    <a title="RsaPrivateKey Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">VirgilCryptoFoundation Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">VirgilCryptoFoundation Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RsaPrivateKey Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Aes256Cbc.html">Aes256Cbc</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Aes256Gcm.html">Aes256Gcm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlgFactory.html">AlgFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlgInfoDerDeserializer.html">AlgInfoDerDeserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlgInfoDerSerializer.html">AlgInfoDerSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Asn1rd.html">Asn1rd</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Asn1wr.html">Asn1wr</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AuthEncryptAuthEncryptResult.html">AuthEncryptAuthEncryptResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Base64.html">Base64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CipherAlgInfo.html">CipherAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CtrDrbg.html">CtrDrbg</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Curve25519PrivateKey.html">Curve25519PrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Curve25519PublicKey.html">Curve25519PublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ecies.html">Ecies</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ed25519PrivateKey.html">Ed25519PrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ed25519PublicKey.html">Ed25519PublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EntropyAccumulator.html">EntropyAccumulator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FakeRandom.html">FakeRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFFoundationImplementation">FoundationImplementation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HashBasedAlgInfo.html">HashBasedAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Hkdf.html">Hkdf</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Hmac.html">Hmac</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Kdf1.html">Kdf1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Kdf2.html">Kdf2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyMaterialRng.html">KeyMaterialRng</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyProvider.html">KeyProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyRecipientInfo.html">KeyRecipientInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyRecipientInfoList.html">KeyRecipientInfoList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ListKeyValueNode.html">ListKeyValueNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageInfo.html">MessageInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageInfoCustomParams.html">MessageInfoCustomParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageInfoDerSerializer.html">MessageInfoDerSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Oid.html">Oid</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordRecipientInfo.html">PasswordRecipientInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordRecipientInfoList.html">PasswordRecipientInfoList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PbeAlgInfo.html">PbeAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pem.html">Pem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs5Pbes2.html">Pkcs5Pbes2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs5Pbkdf2.html">Pkcs5Pbkdf2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs8DerDeserializer.html">Pkcs8DerDeserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs8DerSerializer.html">Pkcs8DerSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs8Deserializer.html">Pkcs8Deserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs8Serializer.html">Pkcs8Serializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RawKey.html">RawKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecipientCipher.html">RecipientCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RsaPrivateKey.html">RsaPrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RsaPublicKey.html">RsaPublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SaltedKdfAlgInfo.html">SaltedKdfAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SeedEntropySource.html">SeedEntropySource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sha224.html">Sha224</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sha256.html">Sha256</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sha384.html">Sha384</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sha512.html">Sha512</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Signer.html">Signer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SimpleAlgInfo.html">SimpleAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Verifier.html">Verifier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AlgId.html">AlgId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Asn1Tag.html">Asn1Tag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FoundationError.html">FoundationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OidId.html">OidId</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Alg.html">Alg</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AlgInfo.html">AlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AlgInfoDeserializer.html">AlgInfoDeserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AlgInfoSerializer.html">AlgInfoSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Asn1Reader.html">Asn1Reader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Asn1Writer.html">Asn1Writer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AuthDecrypt.html">AuthDecrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AuthEncrypt.html">AuthEncrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CContext.html">CContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Cipher.html">Cipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFCipherAuth">CipherAuth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CipherAuthInfo.html">CipherAuthInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CipherInfo.html">CipherInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ComputeSharedKey.html">ComputeSharedKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Decrypt.html">Decrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Defaults.html">Defaults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Encrypt.html">Encrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EntropySource.html">EntropySource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/GenerateEphemeralKey.html">GenerateEphemeralKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/GenerateKey.html">GenerateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Hash.html">Hash</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Kdf.html">Kdf</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Key.html">Key</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyDeserializer.html">KeyDeserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeySerializer.html">KeySerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Mac.html">Mac</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MessageInfoSerializer.html">MessageInfoSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PrivateKey.html">PrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PublicKey.html">PublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Random.html">Random</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SaltedKdf.html">SaltedKdf</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SignHash.html">SignHash</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/VerifyHash.html">VerifyHash</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RsaPrivateKey</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc(VSCFRsaPrivateKey)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">RsaPrivateKey</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/Alg.html">Alg</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/Key.html">Key</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/GenerateKey.html">GenerateKey</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/Decrypt.html">Decrypt</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/SignHash.html">SignHash</a></span><span class="p">,</span> <span class="kt"><a href="../Protocols/PrivateKey.html">PrivateKey</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(py)c_ctx"></a>
+                    <a name="//apple_ref/swift/Property/c_ctx" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(py)c_ctx">c_ctx</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handle underlying C context.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">c_ctx</span><span class="p">:</span> <span class="kt">OpaquePointer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(py)canImportPrivateKey"></a>
+                    <a name="//apple_ref/swift/Property/canImportPrivateKey" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(py)canImportPrivateKey">canImportPrivateKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Define whether a private key can be imported or not.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">canImportPrivateKey</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(py)canExportPrivateKey"></a>
+                    <a name="//apple_ref/swift/Property/canExportPrivateKey" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(py)canExportPrivateKey">canExportPrivateKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Define whether a private key can be exported or not.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">canExportPrivateKey</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create underlying C context.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22VirgilCryptoFoundation13RsaPrivateKeyC4takeACs13OpaquePointerV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(take:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22VirgilCryptoFoundation13RsaPrivateKeyC4takeACs13OpaquePointerV_tcfc">init(take:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Acquire C context.
+Note. This method is used in generated code only, and SHOULD NOT be used in another way.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">take</span> <span class="nv">c_ctx</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:22VirgilCryptoFoundation13RsaPrivateKeyC3useACs13OpaquePointerV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(use:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:22VirgilCryptoFoundation13RsaPrivateKeyC3useACs13OpaquePointerV_tcfc">init(use:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Acquire retained C context.
+Note. This method is used in generated code only, and SHOULD NOT be used in another way.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">use</span> <span class="nv">c_ctx</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setRandomWithRandom:"></a>
+                    <a name="//apple_ref/swift/Method/setRandom(random:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setRandomWithRandom:">setRandom(random:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setRandom</span><span class="p">(</span><span class="nv">random</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Random.html">Random</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setAsn1rdWithAsn1rd:"></a>
+                    <a name="//apple_ref/swift/Method/setAsn1rd(asn1rd:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setAsn1rdWithAsn1rd:">setAsn1rd(asn1rd:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAsn1rd</span><span class="p">(</span><span class="nv">asn1rd</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Asn1Reader.html">Asn1Reader</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setAsn1wrWithAsn1wr:"></a>
+                    <a name="//apple_ref/swift/Method/setAsn1wr(asn1wr:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setAsn1wrWithAsn1wr:">setAsn1wr(asn1wr:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setAsn1wr</span><span class="p">(</span><span class="nv">asn1wr</span><span class="p">:</span> <span class="kt"><a href="../Protocols/Asn1Writer.html">Asn1Writer</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setupDefaultsAndReturnError:"></a>
+                    <a name="//apple_ref/swift/Method/setupDefaults()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setupDefaultsAndReturnError:">setupDefaults()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setup predefined values to the uninitialized class dependencies.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setupDefaults</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setKeygenParamsWithBitlen:"></a>
+                    <a name="//apple_ref/swift/Method/setKeygenParams(bitlen:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)setKeygenParamsWithBitlen:">setKeygenParams(bitlen:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Setup key length in bits that is used for key generation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">setKeygenParams</span><span class="p">(</span><span class="nv">bitlen</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)algId"></a>
+                    <a name="//apple_ref/swift/Method/algId()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)algId">algId()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Provide algorithm identificator.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">algId</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/AlgId.html">AlgId</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)produceAlgInfo"></a>
+                    <a name="//apple_ref/swift/Method/produceAlgInfo()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)produceAlgInfo">produceAlgInfo()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Produce object with algorithm information and configuration parameters.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">produceAlgInfo</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/AlgInfo.html">AlgInfo</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)restoreAlgInfoWithAlgInfo:error:"></a>
+                    <a name="//apple_ref/swift/Method/restoreAlgInfo(algInfo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)restoreAlgInfoWithAlgInfo:error:">restoreAlgInfo(algInfo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Restore algorithm configuration from the given object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">restoreAlgInfo</span><span class="p">(</span><span class="nv">algInfo</span><span class="p">:</span> <span class="kt"><a href="../Protocols/AlgInfo.html">AlgInfo</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)keyLen"></a>
+                    <a name="//apple_ref/swift/Method/keyLen()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)keyLen">keyLen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Length of the key in bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">keyLen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)keyBitlen"></a>
+                    <a name="//apple_ref/swift/Method/keyBitlen()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)keyBitlen">keyBitlen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Length of the key in bits.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">keyBitlen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)generateKeyAndReturnError:"></a>
+                    <a name="//apple_ref/swift/Method/generateKey()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)generateKeyAndReturnError:">generateKey()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Generate new private or secret key.
+Note, this operation can be slow.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">generateKey</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)decryptWithData:error:"></a>
+                    <a name="//apple_ref/swift/Method/decrypt(data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)decryptWithData:error:">decrypt(data:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Decrypt given data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">decrypt</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)decryptedLenWithDataLen:"></a>
+                    <a name="//apple_ref/swift/Method/decryptedLen(dataLen:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)decryptedLenWithDataLen:">decryptedLen(dataLen:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Calculate required buffer length to hold the decrypted data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">decryptedLen</span><span class="p">(</span><span class="nv">dataLen</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)signatureLen"></a>
+                    <a name="//apple_ref/swift/Method/signatureLen()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)signatureLen">signatureLen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return length in bytes required to hold signature.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">signatureLen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)signHashWithHashDigest:hashId:error:"></a>
+                    <a name="//apple_ref/swift/Method/signHash(hashDigest:hashId:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)signHashWithHashDigest:hashId:error:">signHash(hashDigest:hashId:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sign data given private key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">signHash</span><span class="p">(</span><span class="nv">hashDigest</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="nv">hashId</span><span class="p">:</span> <span class="kt"><a href="../Enums/AlgId.html">AlgId</a></span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)extractPublicKey"></a>
+                    <a name="//apple_ref/swift/Method/extractPublicKey()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)extractPublicKey">extractPublicKey()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Extract public part of the key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">extractPublicKey</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/PublicKey.html">PublicKey</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)exportPrivateKeyAndReturnError:"></a>
+                    <a name="//apple_ref/swift/Method/exportPrivateKey()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)exportPrivateKeyAndReturnError:">exportPrivateKey()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Export private key in the binary format.</p>
+
+<p>Binary format must be defined in the key specification.
+For instance, RSA private key must be exported in format defined in
+RFC 3447 Appendix A.1.2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportPrivateKey</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)exportedPrivateKeyLen"></a>
+                    <a name="//apple_ref/swift/Method/exportedPrivateKeyLen()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)exportedPrivateKeyLen">exportedPrivateKeyLen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return length in bytes required to hold exported private key.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">exportedPrivateKeyLen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)importPrivateKeyWithData:error:"></a>
+                    <a name="//apple_ref/swift/Method/importPrivateKey(data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFRsaPrivateKey(im)importPrivateKeyWithData:error:">importPrivateKey(data:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Import private key from the binary format.</p>
+
+<p>Binary format must be defined in the key specification.
+For instance, RSA private key must be imported from the format defined in
+RFC 3447 Appendix A.1.2.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">importPrivateKey</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://virgilsecurity.com/" target="_blank" rel="external">Virgil Security</a>. All rights reserved. (Last updated: 2019-04-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.9.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
