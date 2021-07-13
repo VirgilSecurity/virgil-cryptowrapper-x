@@ -1175,6 +1175,7 @@
 		970F4D7D269DD8DB002C8008 /* VSCCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VSCCommon.xcframework; path = Carthage/Build/VSCCommon.xcframework; sourceTree = "<group>"; };
 		970F4D95269DE64F002C8008 /* VSCPythia.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VSCPythia.xcframework; path = Carthage/Build/VSCPythia.xcframework; sourceTree = "<group>"; };
 		970F4DAB269DEA44002C8008 /* VSCRatchet.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VSCRatchet.xcframework; path = Carthage/Build/VSCRatchet.xcframework; sourceTree = "<group>"; };
+		97BBF840269E3017005C4901 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		9CAAC5006EFE70CDC79914851F6274F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E2CD4D12B41E25AACF6794F252A7B0E /* VSCPythia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = VSCPythia.framework; sourceTree = "<group>"; };
 		9EE38118ECBC048D102B40D29B44D277 /* VirgilCryptoRatchet-Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilCryptoRatchet-Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1698,6 +1699,7 @@
 				84A83205B0B91AB9992D3817B2978E7D /* VirgilCryptoPythiaTests */,
 				0A4F0F2B38B054B535552CA5A11E42E9 /* VirgilCryptoRatchet */,
 				AC0756634D85AC0C9B98B8202952BBEC /* VirgilCryptoRatchetTests */,
+				97BBF840269E3017005C4901 /* Config.xcconfig */,
 				71F6F543F531F81F040978F95429EF83 /* Frameworks */,
 				1F33D330B95E549A364389C16A6BAB4C /* Products */,
 			);
@@ -3210,7 +3212,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoPythia;
 				PRODUCT_NAME = VirgilCryptoPythia;
 				SDKROOT = macosx;
@@ -3265,7 +3266,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoPythia;
 				PRODUCT_NAME = VirgilCryptoPythia;
 				SDKROOT = macosx;
@@ -3292,7 +3292,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoPythia;
 				PRODUCT_NAME = VirgilCryptoPythia;
 				SDKROOT = iphoneos;
@@ -3320,7 +3319,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoRatchet;
 				PRODUCT_NAME = VirgilCryptoRatchet;
 				SDKROOT = iphoneos;
@@ -3344,7 +3342,6 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoRatchet/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoRatchet;
 				PRODUCT_NAME = VirgilCryptoRatchet;
 				SDKROOT = watchos;
@@ -3393,7 +3390,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoFoundation;
 				PRODUCT_NAME = VirgilCryptoFoundation;
 				SDKROOT = appletvos;
@@ -3412,6 +3408,7 @@
 		};
 		2EA0FFFAB24C6B8647EC6800BB28CEE5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97BBF840269E3017005C4901 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -3481,7 +3478,6 @@
 				);
 				INFOPLIST_FILE = VirgilCryptoFoundation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoFoundation;
 				PRODUCT_NAME = VirgilCryptoFoundation;
 				SDKROOT = watchos;
@@ -3510,7 +3506,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoFoundation;
 				PRODUCT_NAME = VirgilCryptoFoundation;
 				SDKROOT = macosx;
@@ -3538,7 +3533,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoRatchet;
 				PRODUCT_NAME = VirgilCryptoRatchet;
 				SDKROOT = macosx;
@@ -3642,7 +3636,6 @@
 				);
 				INFOPLIST_FILE = VirgilCryptoFoundation/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoFoundation;
 				PRODUCT_NAME = VirgilCryptoFoundation;
 				SDKROOT = watchos;
@@ -3692,7 +3685,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoRatchet;
 				PRODUCT_NAME = VirgilCryptoRatchet;
 				SDKROOT = macosx;
@@ -3719,7 +3711,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoRatchet;
 				PRODUCT_NAME = VirgilCryptoRatchet;
 				SDKROOT = appletvos;
@@ -3743,7 +3734,6 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoPythia/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoPythia;
 				PRODUCT_NAME = VirgilCryptoPythia;
 				SDKROOT = watchos;
@@ -3827,7 +3817,6 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoFoundation;
 				PRODUCT_NAME = VirgilCryptoFoundation;
 				SDKROOT = macosx;
@@ -3854,7 +3843,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoRatchet;
 				PRODUCT_NAME = VirgilCryptoRatchet;
 				SDKROOT = appletvos;
@@ -3882,7 +3870,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoRatchet;
 				PRODUCT_NAME = VirgilCryptoRatchet;
 				SDKROOT = iphoneos;
@@ -3934,7 +3921,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoFoundation;
 				PRODUCT_NAME = VirgilCryptoFoundation;
 				SDKROOT = iphoneos;
@@ -4019,7 +4005,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoPythia;
 				PRODUCT_NAME = VirgilCryptoPythia;
 				SDKROOT = appletvos;
@@ -4043,7 +4028,6 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoRatchet/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoRatchet;
 				PRODUCT_NAME = VirgilCryptoRatchet;
 				SDKROOT = watchos;
@@ -4074,7 +4058,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoFoundation;
 				PRODUCT_NAME = VirgilCryptoFoundation;
 				SDKROOT = appletvos;
@@ -4102,7 +4085,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoPythia;
 				PRODUCT_NAME = VirgilCryptoPythia;
 				SDKROOT = appletvos;
@@ -4184,7 +4166,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoFoundation;
 				PRODUCT_NAME = VirgilCryptoFoundation;
 				SDKROOT = iphoneos;
@@ -4247,7 +4228,6 @@
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoPythia/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoPythia;
 				PRODUCT_NAME = VirgilCryptoPythia;
 				SDKROOT = watchos;
@@ -4294,7 +4274,6 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.11.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilCryptoPythia;
 				PRODUCT_NAME = VirgilCryptoPythia;
 				SDKROOT = iphoneos;
@@ -4313,6 +4292,7 @@
 		};
 		F9CFC5B743020948B91D71B3ADF4B7C3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97BBF840269E3017005C4901 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
