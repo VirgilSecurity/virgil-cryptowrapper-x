@@ -1,4 +1,4 @@
 pod trunk push VirgilCryptoFoundation.podspec;
-pod repo update master;
+pod repo update;
 pod trunk push VirgilCryptoPythia.podspec;
 pod trunk push VirgilCryptoRatchet.podspec;
