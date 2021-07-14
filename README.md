@@ -65,9 +65,9 @@ To integrate VirgilCryptoWrapper into your Xcode project using CocoaPods, specif
 target '<Your Target Name>' do
   use_frameworks!
 
-  pod 'VirgilCryptoFoundation', '~> 0.15.2'
-  pod 'VirgilCryptoRatchet', '~> 0.15.2'
-  pod 'VirgilCryptoPythia', '~> 0.15.2'
+  pod 'VirgilCryptoFoundation', '~> 0.16.0'
+  pod 'VirgilCryptoRatchet', '~> 0.16.0'
+  pod 'VirgilCryptoPythia', '~> 0.16.0'
 end
 ```
 
@@ -93,7 +93,7 @@ $ brew install carthage
 To integrate VirgilCryptoWrapper into your Xcode project using Carthage, create an empty file with name *Cartfile* in your project's root folder and add following lines to your *Cartfile*
 
 ```
-github "VirgilSecurity/virgil-cryptowrapper-x" ~> 0.15.2
+github "VirgilSecurity/virgil-cryptowrapper-x" ~> 0.16.0
 ```
 
 #### Linking against prebuilt binaries
@@ -101,8 +101,9 @@ github "VirgilSecurity/virgil-cryptowrapper-x" ~> 0.15.2
 To link prebuilt frameworks to your app, run following command:
 
 ```bash
-$ carthage update
+$ carthage update --use-xcframeworks
 ```
+
 
 This will build each dependency or download a pre-compiled framework from github Releases.
 
@@ -117,25 +118,7 @@ On your application target's “General” settings tab, in the “Linked Framew
  - VSCRatchet
  - VSCPythia
  
- __NOTE__: It's not mandatory to include all this dependencies, add only frameworks you are going to use. Frameworks with VSC prefix in their name are written in C, those without prefix are swift frameworks. It is mandatory to include VSCCommon and for any VirgilCryptoNAME.framework add also VSCNAME.framework. 
-
-On your application target's “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase”. Create a Run Script in which you specify your shell (ex: */bin/sh*), add the following contents to the script area below the shell:
-
-```bash
-/usr/local/bin/carthage copy-frameworks
-```
-
-and add the paths to the frameworks you want to use under “Input Files”, e.g.:
-
-```
-$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoFoundation.framework
-$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoRatchet.framework
-$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoPythia.framework
-$(SRCROOT)/Carthage/Build/iOS/VSCCommon.framework
-$(SRCROOT)/Carthage/Build/iOS/VSCFoundation.framework
-$(SRCROOT)/Carthage/Build/iOS/VSCRatchet.framework
-$(SRCROOT)/Carthage/Build/iOS/VSCPythia.framework
-```
+ Check Embed & sign for each.
 
 ##### Building for macOS
 
