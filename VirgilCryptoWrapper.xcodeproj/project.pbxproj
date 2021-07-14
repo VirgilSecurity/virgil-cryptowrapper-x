@@ -526,6 +526,10 @@
 		970F4DB8269DEA7D002C8008 /* VSCFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970F4D70269DD3EE002C8008 /* VSCFoundation.xcframework */; };
 		970F4DBA269DEA7D002C8008 /* VSCRatchet.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970F4DAB269DEA44002C8008 /* VSCRatchet.xcframework */; };
 		9729286415B54C309EF1AB9F4FEC0A3D /* PasswordRecipientInfoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12D60A873FF0B6BB9A0715C3BEA9CFDA /* PasswordRecipientInfoList.swift */; };
+		9796B927269F44DC009D44DD /* VSCCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970F4D7D269DD8DB002C8008 /* VSCCommon.xcframework */; };
+		9796B92A269F44E5009D44DD /* VSCCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970F4D7D269DD8DB002C8008 /* VSCCommon.xcframework */; };
+		9796B92D269F44EB009D44DD /* VSCCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970F4D7D269DD8DB002C8008 /* VSCCommon.xcframework */; };
+		9796B930269F44F2009D44DD /* VSCCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970F4D7D269DD8DB002C8008 /* VSCCommon.xcframework */; };
 		98449A3F2C909CC084593F79095ECAD5 /* RatchetCommon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224EF7201F02DA8006518718FCF5AE98 /* RatchetCommon.swift */; };
 		993E26D7B281D8EB50AB352477425616 /* VirgilCryptoRatchet.h in Headers */ = {isa = PBXBuildFile; fileRef = 960B2A8CA6579C15E842054EB2AEFC25 /* VirgilCryptoRatchet.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9AED3C24E5FC92BAD3A5A14CF08059A7 /* KeyDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA58BA1461A32173AF7B416780C64571 /* KeyDeserializer.swift */; };
@@ -1281,6 +1285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				970F4D96269DE64F002C8008 /* VSCPythia.xcframework in Frameworks */,
+				9796B927269F44DC009D44DD /* VSCCommon.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1289,6 +1294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				970F4D9C269DE6FB002C8008 /* VSCPythia.xcframework in Frameworks */,
+				9796B92A269F44E5009D44DD /* VSCCommon.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1346,6 +1352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				970F4DA5269DEA19002C8008 /* VSCPythia.xcframework in Frameworks */,
+				9796B930269F44F2009D44DD /* VSCCommon.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1433,6 +1440,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				970F4DA2269DE7B6002C8008 /* VSCPythia.xcframework in Frameworks */,
+				9796B92D269F44EB009D44DD /* VSCCommon.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
