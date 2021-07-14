@@ -65,9 +65,9 @@ To integrate VirgilCryptoWrapper into your Xcode project using CocoaPods, specif
 target '<Your Target Name>' do
   use_frameworks!
 
-  pod 'VirgilCryptoFoundation', '~> 0.16.0'
-  pod 'VirgilCryptoRatchet', '~> 0.16.0'
-  pod 'VirgilCryptoPythia', '~> 0.16.0'
+  pod 'VirgilCryptoFoundation', '~> 0.16.0-rc1'
+  pod 'VirgilCryptoRatchet', '~> 0.16.0-rc1'
+  pod 'VirgilCryptoPythia', '~> 0.16.0-rc1'
 end
 ```
 
@@ -93,7 +93,7 @@ $ brew install carthage
 To integrate VirgilCryptoWrapper into your Xcode project using Carthage, create an empty file with name *Cartfile* in your project's root folder and add following lines to your *Cartfile*
 
 ```
-github "VirgilSecurity/virgil-cryptowrapper-x" ~> 0.16.0
+github "VirgilSecurity/virgil-cryptowrapper-x" ~> 0.16.0-rc1
 ```
 
 #### Linking against prebuilt binaries
