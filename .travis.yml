@@ -46,7 +46,7 @@ script:
 
   # Build with carthage
   - if [ $PUBLISH_CARTHAGE == "YES" ]; then
-      ./CI/publish-carthage.sh
+      ./CI/publish-carthage.sh;
     fi
 
   # Generate docs
