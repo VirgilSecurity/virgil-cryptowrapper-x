@@ -3233,10 +3233,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoPythiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3372,6 +3369,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -3555,16 +3553,14 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoPythiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -3575,10 +3571,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoPythiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3603,6 +3596,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
@@ -3659,16 +3653,14 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoPythiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -3764,6 +3756,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = "";
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -3801,6 +3794,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -3900,6 +3894,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "VirgilCryptoFoundation-Tests";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -3961,16 +3956,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoPythiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				PRODUCT_NAME = "VirgilCryptoPythia-Tests";
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -3990,6 +3983,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_NAME = "VirgilCryptoRatchet-Tests";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -4188,10 +4182,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = VirgilCryptoPythiaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
