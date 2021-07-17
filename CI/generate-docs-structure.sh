@@ -37,11 +37,8 @@
 
 gem install jazzy
 
-# Settings
-INFOPLIST_FILE_PATH="${TRAVIS_BUILD_DIR}/VirgilCryptoFoundation/Info.plist"
-
 # Define SDK versions
-VERSION="v"$(/usr/libexec/PlistBuddy -c "Print CFBundleShortVersionString" "${INFOPLIST_FILE_PATH}")
+VERSION="v"$(xcodebuild -showBuildSettings | grep MARKETING_VERSION | tr -d 'MARKETING_VERSION =')
 CURRENT_VERSION_DIR="${DOCS_DIR}/${VERSION}"
 mkdir "${CURRENT_VERSION_DIR}"
 
