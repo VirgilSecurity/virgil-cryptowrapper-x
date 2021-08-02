@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target   = "2.0"
   s.public_header_files         = "VirgilCryptoRatchet/VirgilCryptoRatchet.h"
   s.source_files                = "VirgilCryptoRatchet/**/*.{h,mm,swift}"
-  s.dependency 'VirgilCryptoFoundation', '= 0.16.0-rc1'
+  s.dependency 'VirgilCryptoFoundation', '= 0.16.0'
   s.dependency 'VSCCrypto/Common', '= 0.16.0'
   s.dependency 'VSCCrypto/Foundation', '= 0.16.0'
   s.dependency 'VSCCrypto/Ratchet', '= 0.16.0'
