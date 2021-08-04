@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Asn1Writer Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/Asn1Writer" class="dashAnchor"></a>
+    <a title="Asn1Writer Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">VirgilCryptoFoundation Docs</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">VirgilCryptoFoundation Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Asn1Writer Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Aes256Cbc.html">Aes256Cbc</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Aes256Gcm.html">Aes256Gcm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlgFactory.html">AlgFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlgInfoDerDeserializer.html">AlgInfoDerDeserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AlgInfoDerSerializer.html">AlgInfoDerSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Asn1rd.html">Asn1rd</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Asn1wr.html">Asn1wr</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/AuthEncryptAuthEncryptResult.html">AuthEncryptAuthEncryptResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Base64.html">Base64</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BrainkeyClient.html">BrainkeyClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BrainkeyClientBlindResult.html">BrainkeyClientBlindResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/BrainkeyServer.html">BrainkeyServer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CipherAlgInfo.html">CipherAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/CtrDrbg.html">CtrDrbg</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Curve25519.html">Curve25519</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ecc.html">Ecc</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EccAlgInfo.html">EccAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EccPrivateKey.html">EccPrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EccPublicKey.html">EccPublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ecies.html">Ecies</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Ed25519.html">Ed25519</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/EntropyAccumulator.html">EntropyAccumulator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/FakeRandom.html">FakeRandom</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@VirgilCryptoFoundation@objc(cs)VSCFFoundationImplementation">FoundationImplementation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupSession.html">GroupSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupSessionMessage.html">GroupSessionMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/GroupSessionTicket.html">GroupSessionTicket</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/HashBasedAlgInfo.html">HashBasedAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Hkdf.html">Hkdf</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Hmac.html">Hmac</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Kdf1.html">Kdf1</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Kdf2.html">Kdf2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyAlgFactory.html">KeyAlgFactory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyAsn1Deserializer.html">KeyAsn1Deserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyAsn1Serializer.html">KeyAsn1Serializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyMaterialRng.html">KeyMaterialRng</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyProvider.html">KeyProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyRecipientInfo.html">KeyRecipientInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/KeyRecipientInfoList.html">KeyRecipientInfoList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ListKeyValueNode.html">ListKeyValueNode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageInfo.html">MessageInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageInfoCustomParams.html">MessageInfoCustomParams</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MessageInfoDerSerializer.html">MessageInfoDerSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Oid.html">Oid</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordRecipientInfo.html">PasswordRecipientInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PasswordRecipientInfoList.html">PasswordRecipientInfoList</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PbeAlgInfo.html">PbeAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pem.html">Pem</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs5Pbes2.html">Pkcs5Pbes2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs5Pbkdf2.html">Pkcs5Pbkdf2</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Pkcs8Serializer.html">Pkcs8Serializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RawPrivateKey.html">RawPrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RawPublicKey.html">RawPublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RecipientCipher.html">RecipientCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Rsa.html">Rsa</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RsaPrivateKey.html">RsaPrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RsaPublicKey.html">RsaPublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SaltedKdfAlgInfo.html">SaltedKdfAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sec1Serializer.html">Sec1Serializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SeedEntropySource.html">SeedEntropySource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sha224.html">Sha224</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sha256.html">Sha256</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sha384.html">Sha384</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Sha512.html">Sha512</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Signer.html">Signer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SimpleAlgInfo.html">SimpleAlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Verifier.html">Verifier</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AlgId.html">AlgId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Asn1Tag.html">Asn1Tag</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/FoundationError.html">FoundationError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/GroupMsgType.html">GroupMsgType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/OidId.html">OidId</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Alg.html">Alg</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AlgInfo.html">AlgInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AlgInfoDeserializer.html">AlgInfoDeserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AlgInfoSerializer.html">AlgInfoSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Asn1Reader.html">Asn1Reader</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Asn1Writer.html">Asn1Writer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AuthDecrypt.html">AuthDecrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/AuthEncrypt.html">AuthEncrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CContext.html">CContext</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Cipher.html">Cipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFCipherAuth">CipherAuth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CipherAuthInfo.html">CipherAuthInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/CipherInfo.html">CipherInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ComputeSharedKey.html">ComputeSharedKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Decrypt.html">Decrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Encrypt.html">Encrypt</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EntropySource.html">EntropySource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Hash.html">Hash</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Kdf.html">Kdf</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Key.html">Key</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyAlg.html">KeyAlg</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyCipher.html">KeyCipher</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeyDeserializer.html">KeyDeserializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeySerializer.html">KeySerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/KeySigner.html">KeySigner</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Mac.html">Mac</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MessageInfoSerializer.html">MessageInfoSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/PrivateKey.html">PrivateKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFPublicKey">PublicKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/Random.html">Random</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SaltedKdf.html">SaltedKdf</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Asn1Writer</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">@objc(VSCFAsn1Writer)</span>
+<span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">Asn1Writer</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/CContext.html">CContext</a></span></code></pre>
+
+                </div>
+              </div>
+            <p>Provides interface to the ASN.1 writer.
+Note, elements are written starting from the buffer ending.
+Note, that all <q>write</q> methods move writing position backward.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)resetWithOut:outLen:"></a>
+                    <a name="//apple_ref/swift/Method/reset(out:outLen:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)resetWithOut:outLen:">reset(out:outLen:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reset all internal states and prepare to new ASN.1 writing operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">reset</span><span class="p">(</span><span class="nv">out</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">outLen</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)finishWithDoNotAdjust:"></a>
+                    <a name="//apple_ref/swift/Method/finish(doNotAdjust:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)finishWithDoNotAdjust:">finish(doNotAdjust:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finalize writing and forbid further operations.</p>
+
+<p>Note, that ASN.1 structure is always written to the buffer end, and
+if argument <q>do not adjust</q> is false, then data is moved to the
+beginning, otherwise - data is left at the buffer end.</p>
+
+<p>Returns length of the written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">finish</span><span class="p">(</span><span class="nv">doNotAdjust</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)bytes"></a>
+                    <a name="//apple_ref/swift/Method/bytes()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)bytes">bytes()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns pointer to the inner buffer.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">bytes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)len"></a>
+                    <a name="//apple_ref/swift/Method/len()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)len">len()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns total inner buffer length.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">len</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writtenLen"></a>
+                    <a name="//apple_ref/swift/Method/writtenLen()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writtenLen">writtenLen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns how many bytes were already written to the ASN.1 structure.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writtenLen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)unwrittenLen"></a>
+                    <a name="//apple_ref/swift/Method/unwrittenLen()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)unwrittenLen">unwrittenLen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns how many bytes are available for writing.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">unwrittenLen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)hasError"></a>
+                    <a name="//apple_ref/swift/Method/hasError()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)hasError">hasError()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return true if status is not <q>success</q>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">hasError</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)statusAndReturnError:"></a>
+                    <a name="//apple_ref/swift/Method/status()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)statusAndReturnError:">status()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Return error code.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">status</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)reserveWithLen:"></a>
+                    <a name="//apple_ref/swift/Method/reserve(len:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)reserveWithLen:">reserve(len:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Move writing position backward for the given length.
+Return current writing position.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">reserve</span><span class="p">(</span><span class="nv">len</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">UInt8</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeTagWithTag:"></a>
+                    <a name="//apple_ref/swift/Method/writeTag(tag:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeTagWithTag:">writeTag(tag:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 tag.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeTag</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeContextTagWithTag:len:"></a>
+                    <a name="//apple_ref/swift/Method/writeContextTag(tag:len:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeContextTagWithTag:len:">writeContextTag(tag:len:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write context-specific ASN.1 tag.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeContextTag</span><span class="p">(</span><span class="nv">tag</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="nv">len</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeLenWithLen:"></a>
+                    <a name="//apple_ref/swift/Method/writeLen(len:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeLenWithLen:">writeLen(len:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write length of the following data.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeLen</span><span class="p">(</span><span class="nv">len</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeIntWithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeInt(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeIntWithValue:">writeInt(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeInt</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeInt8WithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeInt8(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeInt8WithValue:">writeInt8(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeInt8</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Int8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeInt16WithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeInt16(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeInt16WithValue:">writeInt16(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeInt16</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Int16</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeInt32WithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeInt32(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeInt32WithValue:">writeInt32(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeInt32</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Int32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeInt64WithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeInt64(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeInt64WithValue:">writeInt64(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeInt64</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUintWithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeUint(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUintWithValue:">writeUint(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeUint</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUint8WithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeUint8(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUint8WithValue:">writeUint8(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeUint8</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">UInt8</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUint16WithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeUint16(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUint16WithValue:">writeUint16(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeUint16</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">UInt16</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUint32WithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeUint32(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUint32WithValue:">writeUint32(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeUint32</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">UInt32</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUint64WithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeUint64(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUint64WithValue:">writeUint64(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: INTEGER.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeUint64</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeBoolWithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeBool(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeBoolWithValue:">writeBool(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: BOOLEAN.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeBool</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeNull"></a>
+                    <a name="//apple_ref/swift/Method/writeNull()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeNull">writeNull()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: NULL.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeNull</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeOctetStrWithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeOctetStr(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeOctetStrWithValue:">writeOctetStr(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: OCTET STRING.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeOctetStr</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeOctetStrAsBitstringWithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeOctetStrAsBitstring(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeOctetStrAsBitstringWithValue:">writeOctetStrAsBitstring(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: BIT STRING with all zero unused bits.</p>
+
+<p>Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeOctetStrAsBitstring</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeDataWithData:"></a>
+                    <a name="//apple_ref/swift/Method/writeData(data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeDataWithData:">writeData(data:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write raw data directly to the ASN.1 structure.
+Return count of written bytes.
+Note, use this method carefully.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeData</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUtf8StrWithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeUtf8Str(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeUtf8StrWithValue:">writeUtf8Str(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: UTF8String.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeUtf8Str</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeOidWithValue:"></a>
+                    <a name="//apple_ref/swift/Method/writeOid(value:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeOidWithValue:">writeOid(value:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Write ASN.1 type: OID.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeOid</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeSequenceWithLen:"></a>
+                    <a name="//apple_ref/swift/Method/writeSequence(len:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeSequenceWithLen:">writeSequence(len:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Mark previously written data of given length as ASN.1 type: SQUENCE.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeSequence</span><span class="p">(</span><span class="nv">len</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeSetWithLen:"></a>
+                    <a name="//apple_ref/swift/Method/writeSet(len:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoFoundation@objc(pl)VSCFAsn1Writer(im)writeSetWithLen:">writeSet(len:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Mark previously written data of given length as ASN.1 type: SET.
+Return count of written bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">func</span> <span class="nf">writeSet</span><span class="p">(</span><span class="nv">len</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2019 <a class="link" href="https://virgilsecurity.com/" target="_blank" rel="external">Virgil Security</a>. All rights reserved. (Last updated: 2019-07-09)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.10.0</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RatchetMessage Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/RatchetMessage" class="dashAnchor"></a>
+    <a title="RatchetMessage Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">VirgilCryptoRatchet 0.16.0 Docs</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">VirgilCryptoRatchet Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RatchetMessage Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/RatchetCommon.html">RatchetCommon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetImplementation">RatchetImplementation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RatchetMessage.html">RatchetMessage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RatchetSession.html">RatchetSession</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/GroupMsgType.html">GroupMsgType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/MsgType.html">MsgType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RatchetError.html">RatchetError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/CContext.html">CContext</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RatchetMessage</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">@objc(VSCRRatchetMessage)</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="kt">RatchetMessage</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Class represents ratchet message</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(py)c_ctx"></a>
+                    <a name="//apple_ref/swift/Property/c_ctx" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(py)c_ctx">c_ctx</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Handle underlying C context.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="k">let</span> <span class="nv">c_ctx</span><span class="p">:</span> <span class="kt">OpaquePointer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)init"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)init">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create underlying C context.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19VirgilCryptoRatchet0C7MessageC4takeACs13OpaquePointerV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(take:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19VirgilCryptoRatchet0C7MessageC4takeACs13OpaquePointerV_tcfc">init(take:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Acquire C context.
+Note. This method is used in generated code only, and SHOULD NOT be used in another way.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">take</span> <span class="nv">c_ctx</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:19VirgilCryptoRatchet0C7MessageC3useACs13OpaquePointerV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(use:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:19VirgilCryptoRatchet0C7MessageC3useACs13OpaquePointerV_tcfc">init(use:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Acquire retained C context.
+Note. This method is used in generated code only, and SHOULD NOT be used in another way.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">use</span> <span class="nv">c_ctx</span><span class="p">:</span> <span class="kt">OpaquePointer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getType"></a>
+                    <a name="//apple_ref/swift/Method/getType()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getType">getType()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns message type.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getType</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Enums/MsgType.html">MsgType</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getCounter"></a>
+                    <a name="//apple_ref/swift/Method/getCounter()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getCounter">getCounter()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns message counter in current asymmetric ratchet round.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getCounter</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">UInt32</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getSenderIdentityKeyId"></a>
+                    <a name="//apple_ref/swift/Method/getSenderIdentityKeyId()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getSenderIdentityKeyId">getSenderIdentityKeyId()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns long-term public key, if message is prekey message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getSenderIdentityKeyId</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getReceiverIdentityKeyId"></a>
+                    <a name="//apple_ref/swift/Method/getReceiverIdentityKeyId()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getReceiverIdentityKeyId">getReceiverIdentityKeyId()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns long-term public key, if message is prekey message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getReceiverIdentityKeyId</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getReceiverLongTermKeyId"></a>
+                    <a name="//apple_ref/swift/Method/getReceiverLongTermKeyId()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getReceiverLongTermKeyId">getReceiverLongTermKeyId()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns long-term public key, if message is prekey message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getReceiverLongTermKeyId</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getReceiverOneTimeKeyId"></a>
+                    <a name="//apple_ref/swift/Method/getReceiverOneTimeKeyId()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)getReceiverOneTimeKeyId">getReceiverOneTimeKeyId()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns one-time public key, if message is prekey message and if one-time key is present, empty result otherwise.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">getReceiverOneTimeKeyId</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)serializeLen"></a>
+                    <a name="//apple_ref/swift/Method/serializeLen()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)serializeLen">serializeLen()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Buffer len to serialize this class.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">serializeLen</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Int</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)serialize"></a>
+                    <a name="//apple_ref/swift/Method/serialize()" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(im)serialize">serialize()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Serializes instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">serialize</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Data</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(cm)deserializeWithInput:error:"></a>
+                    <a name="//apple_ref/swift/Method/deserialize(input:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@M@VirgilCryptoRatchet@objc(cs)VSCRRatchetMessage(cm)deserializeWithInput:error:">deserialize(input:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deserializes instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@objc</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">deserialize</span><span class="p">(</span><span class="nv">input</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">RatchetMessage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2021 <a class="link" href="https://virgilsecurity.com/" target="_blank" rel="external">Virgil Security</a>. All rights reserved. (Last updated: 2021-08-04)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.7</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

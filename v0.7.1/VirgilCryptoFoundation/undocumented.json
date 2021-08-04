@@ -1,0 +1,866 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 42,
+      "symbol": "AlgId.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 44,
+      "symbol": "AlgId.sha224",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 46,
+      "symbol": "AlgId.sha256",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 48,
+      "symbol": "AlgId.sha384",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 50,
+      "symbol": "AlgId.sha512",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 52,
+      "symbol": "AlgId.kdf1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 54,
+      "symbol": "AlgId.kdf2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 56,
+      "symbol": "AlgId.rsa",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 58,
+      "symbol": "AlgId.ecc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 60,
+      "symbol": "AlgId.ed25519",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 62,
+      "symbol": "AlgId.curve25519",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 64,
+      "symbol": "AlgId.secp256r1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 66,
+      "symbol": "AlgId.aes256Gcm",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 68,
+      "symbol": "AlgId.aes256Cbc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 70,
+      "symbol": "AlgId.hmac",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 72,
+      "symbol": "AlgId.hkdf",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 74,
+      "symbol": "AlgId.pkcs5Pbkdf2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgId.swift",
+      "line": 76,
+      "symbol": "AlgId.pkcs5Pbes2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgInfoDerDeserializer.swift",
+      "line": 70,
+      "symbol": "AlgInfoDerDeserializer.setAsn1Reader(asn1Reader:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AlgInfoDerSerializer.swift",
+      "line": 70,
+      "symbol": "AlgInfoDerSerializer.setAsn1Writer(asn1Writer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 42,
+      "symbol": "Asn1Tag.boolean",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 44,
+      "symbol": "Asn1Tag.integer",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 46,
+      "symbol": "Asn1Tag.bitString",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 48,
+      "symbol": "Asn1Tag.octetString",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 50,
+      "symbol": "Asn1Tag.null",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 52,
+      "symbol": "Asn1Tag.oid",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 54,
+      "symbol": "Asn1Tag.utf8String",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 56,
+      "symbol": "Asn1Tag.sequence",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 58,
+      "symbol": "Asn1Tag.set",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 60,
+      "symbol": "Asn1Tag.printableString",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 62,
+      "symbol": "Asn1Tag.t61String",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 64,
+      "symbol": "Asn1Tag.ia5String",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 66,
+      "symbol": "Asn1Tag.utcTime",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 68,
+      "symbol": "Asn1Tag.generalizedTime",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 70,
+      "symbol": "Asn1Tag.universalString",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 72,
+      "symbol": "Asn1Tag.bmpString",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 74,
+      "symbol": "Asn1Tag.primitive",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 76,
+      "symbol": "Asn1Tag.constructed",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Asn1Tag.swift",
+      "line": 78,
+      "symbol": "Asn1Tag.contextSpecific",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AuthEncrypt.swift",
+      "line": 53,
+      "symbol": "AuthEncryptAuthEncryptResult.out",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/AuthEncrypt.swift",
+      "line": 55,
+      "symbol": "AuthEncryptAuthEncryptResult.tag",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 39,
+      "symbol": "BrainkeyClient",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 41,
+      "symbol": "BrainkeyClient.pointLen",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 42,
+      "symbol": "BrainkeyClient.mpiLen",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 43,
+      "symbol": "BrainkeyClient.seedLen",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 44,
+      "symbol": "BrainkeyClient.maxPasswordLen",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 45,
+      "symbol": "BrainkeyClient.maxKeyNameLen",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 87,
+      "symbol": "BrainkeyClient.setupDefaults()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 93,
+      "symbol": "BrainkeyClient.blind(password:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 129,
+      "symbol": "BrainkeyClient.deblind(password:hardenedPoint:deblindFactor:keyName:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 162,
+      "symbol": "BrainkeyClientBlindResult.deblindFactor",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyClient.swift",
+      "line": 164,
+      "symbol": "BrainkeyClientBlindResult.blindedPoint",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyServer.swift",
+      "line": 39,
+      "symbol": "BrainkeyServer",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyServer.swift",
+      "line": 41,
+      "symbol": "BrainkeyServer.pointLen",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyServer.swift",
+      "line": 42,
+      "symbol": "BrainkeyServer.mpiLen",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyServer.swift",
+      "line": 84,
+      "symbol": "BrainkeyServer.setupDefaults()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyServer.swift",
+      "line": 90,
+      "symbol": "BrainkeyServer.generateIdentitySecret()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/BrainkeyServer.swift",
+      "line": 111,
+      "symbol": "BrainkeyServer.harden(identitySecret:blindedPoint:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/CContext.swift",
+      "line": 38,
+      "symbol": "CContext",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/CipherAuthInfo.swift",
+      "line": 39,
+      "symbol": "CipherAuthInfo",
+      "symbol_kind": "source.lang.swift.decl.protocol",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/CtrDrbg.swift",
+      "line": 77,
+      "symbol": "CtrDrbg.setEntropySource(entropySource:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Curve25519.swift",
+      "line": 82,
+      "symbol": "Curve25519.setRandom(random:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Curve25519.swift",
+      "line": 87,
+      "symbol": "Curve25519.setEcies(ecies:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Ecc.swift",
+      "line": 84,
+      "symbol": "Ecc.setRandom(random:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Ecc.swift",
+      "line": 89,
+      "symbol": "Ecc.setEcies(ecies:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Ecies.swift",
+      "line": 70,
+      "symbol": "Ecies.setRandom(random:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Ecies.swift",
+      "line": 75,
+      "symbol": "Ecies.setCipher(cipher:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Ecies.swift",
+      "line": 80,
+      "symbol": "Ecies.setMac(mac:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Ecies.swift",
+      "line": 85,
+      "symbol": "Ecies.setKdf(kdf:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Ed25519.swift",
+      "line": 82,
+      "symbol": "Ed25519.setRandom(random:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Ed25519.swift",
+      "line": 87,
+      "symbol": "Ed25519.setEcies(ecies:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/EntropyAccumulator.swift",
+      "line": 42,
+      "symbol": "EntropyAccumulator.sourcesMax",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/FoundationImplementation.swift",
+      "line": 39,
+      "symbol": "FoundationImplementation",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Hkdf.swift",
+      "line": 42,
+      "symbol": "Hkdf.hashCounterMax",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Hkdf.swift",
+      "line": 72,
+      "symbol": "Hkdf.setHash(hash:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Hmac.swift",
+      "line": 70,
+      "symbol": "Hmac.setHash(hash:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Kdf1.swift",
+      "line": 70,
+      "symbol": "Kdf1.setHash(hash:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Kdf2.swift",
+      "line": 70,
+      "symbol": "Kdf2.setHash(hash:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/KeyAsn1Deserializer.swift",
+      "line": 70,
+      "symbol": "KeyAsn1Deserializer.setAsn1Reader(asn1Reader:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/KeyAsn1Serializer.swift",
+      "line": 72,
+      "symbol": "KeyAsn1Serializer.setAsn1Writer(asn1Writer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/KeyProvider.swift",
+      "line": 71,
+      "symbol": "KeyProvider.setRandom(random:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/KeyProvider.swift",
+      "line": 76,
+      "symbol": "KeyProvider.setEcies(ecies:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/MessageInfoCustomParams.swift",
+      "line": 39,
+      "symbol": "MessageInfoCustomParams",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/MessageInfoDerSerializer.swift",
+      "line": 45,
+      "symbol": "MessageInfoDerSerializer.prefixLen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/MessageInfoDerSerializer.swift",
+      "line": 72,
+      "symbol": "MessageInfoDerSerializer.setAsn1Reader(asn1Reader:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/MessageInfoDerSerializer.swift",
+      "line": 77,
+      "symbol": "MessageInfoDerSerializer.setAsn1Writer(asn1Writer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/MessageInfoSerializer.swift",
+      "line": 41,
+      "symbol": "MessageInfoSerializer.prefixLen",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 39,
+      "symbol": "OidId",
+      "symbol_kind": "source.lang.swift.decl.enum",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 41,
+      "symbol": "OidId.none",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 43,
+      "symbol": "OidId.rsa",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 45,
+      "symbol": "OidId.ed25519",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 47,
+      "symbol": "OidId.curve25519",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 49,
+      "symbol": "OidId.sha224",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 51,
+      "symbol": "OidId.sha256",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 53,
+      "symbol": "OidId.sha384",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 55,
+      "symbol": "OidId.sha512",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 57,
+      "symbol": "OidId.kdf1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 59,
+      "symbol": "OidId.kdf2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 61,
+      "symbol": "OidId.aes256Gcm",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 63,
+      "symbol": "OidId.aes256Cbc",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 65,
+      "symbol": "OidId.pkcs5Pbkdf2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 67,
+      "symbol": "OidId.pkcs5Pbes2",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 69,
+      "symbol": "OidId.cmsData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 71,
+      "symbol": "OidId.cmsEnvelopedData",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 73,
+      "symbol": "OidId.hkdfWithSha256",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 75,
+      "symbol": "OidId.hkdfWithSha384",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 77,
+      "symbol": "OidId.hkdfWithSha512",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 79,
+      "symbol": "OidId.hmacWithSha224",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 81,
+      "symbol": "OidId.hmacWithSha256",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 83,
+      "symbol": "OidId.hmacWithSha384",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 85,
+      "symbol": "OidId.hmacWithSha512",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 87,
+      "symbol": "OidId.ecGenericKey",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/OidId.swift",
+      "line": 89,
+      "symbol": "OidId.ecDomainSecp256r1",
+      "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Pkcs5Pbes2.swift",
+      "line": 70,
+      "symbol": "Pkcs5Pbes2.setKdf(kdf:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Pkcs5Pbes2.swift",
+      "line": 75,
+      "symbol": "Pkcs5Pbes2.setCipher(cipher:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Pkcs5Pbkdf2.swift",
+      "line": 70,
+      "symbol": "Pkcs5Pbkdf2.setHmac(hmac:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Pkcs8Serializer.swift",
+      "line": 70,
+      "symbol": "Pkcs8Serializer.setAsn1Writer(asn1Writer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/RecipientCipher.swift",
+      "line": 72,
+      "symbol": "RecipientCipher.setRandom(random:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/RecipientCipher.swift",
+      "line": 77,
+      "symbol": "RecipientCipher.setEncryptionCipher(encryptionCipher:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Rsa.swift",
+      "line": 82,
+      "symbol": "Rsa.setRandom(random:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Sec1Serializer.swift",
+      "line": 71,
+      "symbol": "Sec1Serializer.setAsn1Writer(asn1Writer:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Signer.swift",
+      "line": 70,
+      "symbol": "Signer.setHash(hash:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x/VirgilCryptoFoundation/Signer.swift",
+      "line": 75,
+      "symbol": "Signer.setRandom(random:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/travis/build/VirgilSecurity/virgil-cryptowrapper-x"
+}
