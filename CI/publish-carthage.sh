@@ -4,5 +4,5 @@ carthage build --use-xcframeworks --no-skip-current;
 
 # TODO: Should be replaced by carthage archive, when it supports xcframeworks
 FRAMEWORKS_PATH=Carthage/Build
-find ${FRAMEWORKS_PATH} ! -name 'VirgilCrypto*' -delete
+find ${FRAMEWORKS_PATH} ! -name 'VirgilCrypto*' -maxdepth 1 -delete
 zip -r VirgilCryptoWrapper.xcframework.zip ${FRAMEWORKS_PATH}
