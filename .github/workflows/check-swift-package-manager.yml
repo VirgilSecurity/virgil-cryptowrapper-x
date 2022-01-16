@@ -5,6 +5,5 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - run: rm -fr .build
       - run: swift --version
-      - run: swift test
+      - run: swift test || sleep 10 && swift test
