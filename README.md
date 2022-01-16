@@ -3,6 +3,7 @@
 [![Build Status](https://api.travis-ci.com/VirgilSecurity/virgil-cryptowrapper-x.svg?branch=master)](https://travis-ci.com/VirgilSecurity/virgil-cryptowrapper-x)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VirgilCryptoFoundation.svg)](https://cocoapods.org/pods/VirgilCryptoFoundation)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+![Swift Package Manager](https://github.com/VirgilSecurity/virgil-cryptowrapper-x/actions/workflows/check-swift-package-manager.yml/badge.svg)
 ![Platform](https://img.shields.io/cocoapods/p/VirgilCryptoFoundation.svg?style=flat)
 [![GitHub license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://github.com/VirgilSecurity/virgil/blob/master/LICENSE)
 
@@ -135,6 +136,12 @@ Additionally, you'll need to copy debug symbols for debugging and crash reportin
 
 On your application target’s “Build Phases” settings tab, click the “+” icon and choose “New Copy Files Phase”.
 Click the “Destination” drop-down menu and select “Products Directory”. For each framework, drag and drop the corresponding dSYM file.
+
+## Swift Package Manager
+
+[Swift Package Manager](https://www.swift.org/package-manager) is an official Apple tool for managing the distribution of Swift code.
+
+[The Apple documentation](https://developer.apple.com/documentation/swift_packages/adding_package_dependencies_to_your_app) can be used to add frameworks to an Xcode project.
 
 ## Docs
 - [Crypto Core Library](https://github.com/VirgilSecurity/virgil-crypto-c)
