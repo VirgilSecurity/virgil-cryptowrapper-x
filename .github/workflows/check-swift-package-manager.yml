@@ -5,7 +5,7 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v2
-      - run: brew install coreutils
+      - run: brew install coreutils # install 'timeout' utility
       - run: swift --version
-      - run: timeout 5m bash -c 'until swift build; do sleep 10; done'
+      - run: timeout 5m bash -c 'until swift build; do sleep 10; done' # fix network issues when Swift Package Manager fails to download binary targets
       - run: swift test
