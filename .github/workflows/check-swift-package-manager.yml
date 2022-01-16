@@ -6,4 +6,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: swift --version
-      - run: swift test || sleep 10 && swift test
+      - run: timeout 5m bash -c 'until swift build; do sleep 10; done'
+      - run: swift test
