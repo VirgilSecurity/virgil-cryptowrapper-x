@@ -6,7 +6,7 @@ on:
     - '*'
 
 jobs:
-  Deploy
+  Deploy:
     name: Deploy
     runs-on: macOS-12
     env:

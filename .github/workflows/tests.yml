@@ -10,7 +10,7 @@ on:
         - '*'
 
 jobs:
-  Tests
+  Tests:
     name: Tests
     runs-on: macOS-12
     env:
