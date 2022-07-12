@@ -21,19 +21,17 @@ jobs:
         include:
           - destination: "OS=15.5,name=iPhone 13 Pro"
             prefix: "iOS"
-            sdk: "iphonesimulator15.5"
           - destination: "arch=x86_64"
             prefix: "macOS"
-            sdk: "macosx12.4"
           - destination: "OS=15.5,name=Apple TV"
             prefix: "tvOS"
-            sdk: "appletvsimulator15.5"
           - destination: "OS=8.5,name=Apple Watch Series 7 - 45mm"
             prefix: "watchOS"
-            sdk: "watchsimulator8.5"
     steps:
       - uses: actions/checkout@v2
       - name: Prepare Dependencies
+        env:
+            GITHUB_ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
             carthage version
             carthage bootstrap --use-xcframeworks
@@ -45,9 +43,9 @@ jobs:
             for proj in "${projs[@]}"; do
                 SCHEME="${proj}_${{ matrix.prefix }}"
                 # Build Framework
-                xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "${{ matrix.sdk }}" -destination "${{ matrix.destination }}" -configuration Debug clean build-for-testing | xcpretty;
+                xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -destination "${{ matrix.destination }}" -configuration Debug clean build-for-testing | xcpretty;
                 # Run Tests
-                xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "${{ matrix.sdk }}" -destination "${{ matrix.destination }}" -configuration Debug test-without-building | xcpretty;
+                xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -destination "${{ matrix.destination }}" -configuration Debug test-without-building | xcpretty;
             done
   SPM:
     runs-on: macOS-12
