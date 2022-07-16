@@ -46,7 +46,7 @@ PROJS=( "VirgilCryptoFoundation" "VirgilCryptoPythia" "VirgilCryptoRatchet" )
 
 for proj in "${PROJS[@]}"; do
     # Generate the HTML documentation.
-    PROJ=${proj} OUTPUT="${CURRENT_VERSION_DIR}/${proj}" ${TRAVIS_BUILD_DIR}/CI/generate-docs.sh
+    PROJ=${proj} OUTPUT="${CURRENT_VERSION_DIR}/${proj}" ${GITHUB_WORKSPACE}/CI/generate-docs.sh
 done
 
 # Generate root HTML file
