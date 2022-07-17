@@ -1,1 +1,4 @@
-github "VirgilSecurity/virgil-crypto-c" "v0.16.0"
+binary "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.0/VSCCommon.json" == 0.16.0
+binary "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.0/VSCFoundation.json" == 0.16.0
+binary "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.0/VSCPythia.json" == 0.16.0
+binary "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.0/VSCRatchet.json" == 0.16.0
