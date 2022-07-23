@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - master
-      - git-actions
+      - develop
     pull_request:
       branches:
         - '*'
