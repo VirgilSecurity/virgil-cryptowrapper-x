@@ -27,26 +27,26 @@ let package = Package(
         //
         .binaryTarget(
             name: "VSCCommon",
-            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.0/VSCCommon.xcframework.zip",
-            checksum: "5d0b6b30566c4207b7193975211cfaad875ec375311c5eb6c59a766042afe73f"
+            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1-rc1/VSCCommon.xcframework.zip",
+            checksum: "5f63c20f43bff3d419b1f4081de2ef05b59469d317f72a80bf8d28de15905f09"
         ),
 
         .binaryTarget(
             name: "VSCFoundation",
-            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.0/VSCFoundation.xcframework.zip",
-            checksum: "d4cbf329eee3ad9d335e1238147f01c65bcf860fe13def3eb6d41f6997efc187"
+            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1-rc1/VSCFoundation.xcframework.zip",
+            checksum: "ac931b8b1ff03e06fffc15f9a4765ed7fa5ab52c6a4c31f3b32255764a9af564"
         ),
 
         .binaryTarget(
             name: "VSCPythia",
-            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.0/VSCPythia.xcframework.zip",
-            checksum: "de2d55495ac91dfb638cf97c35e49cf22c9fde06e20b1b3466a926e79084f60c"
+            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1-rc1/VSCPythia.xcframework.zip",
+            checksum: "350e1b937b078afc0b2a572abe5990cdd36f3f4562dc12c5e311e695bb79e38e"
         ),
 
         .binaryTarget(
             name: "VSCRatchet",
-            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.0/VSCRatchet.xcframework.zip",
-            checksum: "e548c0b3ad7341d75d75727bb6d7cea507d5db6570b4fc71e64fc88cb4574f7d"
+            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1-rc1/VSCRatchet.xcframework.zip",
+            checksum: "4c8c84f848714f75784f7a583ef69a4ebc861a0f388db8424296296a802b2328"
         ),
 
         //
