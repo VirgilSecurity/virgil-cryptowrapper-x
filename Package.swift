@@ -28,25 +28,25 @@ let package = Package(
         .binaryTarget(
             name: "VSCCommon",
             url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1/VSCCommon.xcframework.zip",
-            checksum: "5f63c20f43bff3d419b1f4081de2ef05b59469d317f72a80bf8d28de15905f09"
+            checksum: "bfc35e17772e458ff86af42c843dcf4130e71af221efeb5497d3e15068c0097d"
         ),
 
         .binaryTarget(
             name: "VSCFoundation",
             url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1/VSCFoundation.xcframework.zip",
-            checksum: "ac931b8b1ff03e06fffc15f9a4765ed7fa5ab52c6a4c31f3b32255764a9af564"
+            checksum: "d6349eb82a8478d00bc62b40f30f341553ab72e771f1316a1c32193a339c7faa"
         ),
 
         .binaryTarget(
             name: "VSCPythia",
             url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1/VSCPythia.xcframework.zip",
-            checksum: "350e1b937b078afc0b2a572abe5990cdd36f3f4562dc12c5e311e695bb79e38e"
+            checksum: "b76319840a7c67303821ca4324965a6782d3d8f6ae5d108261c32f3139887e6c"
         ),
 
         .binaryTarget(
             name: "VSCRatchet",
             url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1/VSCRatchet.xcframework.zip",
-            checksum: "4c8c84f848714f75784f7a583ef69a4ebc861a0f388db8424296296a802b2328"
+            checksum: "ff3a3c6677eec624772936dff7f4243787d1122811f8a1ecb76f41050d2e7ee5"
         ),
 
         //
