@@ -36,9 +36,9 @@
 #
 
 # Get a clean version of the HTML documentation repo.
-DOCS_DIR="${TRAVIS_BUILD_DIR}/docs"
+DOCS_DIR="${GITHUB_WORKSPACE}/docs"
 rm -rf ${DOCS_DIR}
 mkdir -p ${DOCS_DIR}
 git clone -b gh-pages "${REPO_PATH}" --single-branch ${DOCS_DIR}
 
-DOCS_DIR=${DOCS_DIR} ${TRAVIS_BUILD_DIR}/CI/generate-docs-structure.sh
+DOCS_DIR=${DOCS_DIR} ${GITHUB_WORKSPACE}/CI/generate-docs-structure.sh
