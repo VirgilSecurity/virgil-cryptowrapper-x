@@ -30,6 +30,9 @@ jobs:
           - destination: "OS=8.5,name=Apple Watch Series 7 - 45mm"
             prefix: "watchOS"
             test: "0"
+          - destination: "OS=9.0,name=Apple Watch Ultra - 49mm"
+            prefix: "watchOS"
+            test: "0"
     steps:
       - uses: actions/checkout@v2
       - name: Prepare Dependencies
