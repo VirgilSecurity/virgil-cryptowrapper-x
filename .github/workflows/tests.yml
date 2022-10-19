@@ -13,7 +13,6 @@ jobs:
     name: Tests
     runs-on: macOS-12
     env:
-      DEVELOPER_DIR: /Applications/Xcode_13.4.1.app/Contents/Developer
       PROJECT: VirgilCryptoWrapper.xcodeproj
     strategy:
       matrix:
@@ -34,6 +33,9 @@ jobs:
             prefix: "watchOS"
             test: "0"
     steps:
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest
       - uses: actions/checkout@v2
       - name: Prepare Dependencies
         env:

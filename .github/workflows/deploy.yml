@@ -12,6 +12,9 @@ jobs:
     env:
       DEVELOPER_DIR: /Applications/Xcode_13.4.1.app/Contents/Developer
     steps:
+      - uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: latest
       - uses: actions/checkout@v2
       - name: Prepare Dependencies
         env:
