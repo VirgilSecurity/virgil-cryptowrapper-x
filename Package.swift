@@ -27,26 +27,26 @@ let package = Package(
         //
         .binaryTarget(
             name: "VSCCommon",
-            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1/VSCCommon.xcframework.zip",
-            checksum: "bfc35e17772e458ff86af42c843dcf4130e71af221efeb5497d3e15068c0097d"
+            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.2/VSCCommon.xcframework.zip",
+            checksum: "821ef22ce9bfaf250a7c9ea1d2e02e7ea88b99483a204e4d98731a600ae5f4a7"
         ),
 
         .binaryTarget(
             name: "VSCFoundation",
-            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1/VSCFoundation.xcframework.zip",
-            checksum: "d6349eb82a8478d00bc62b40f30f341553ab72e771f1316a1c32193a339c7faa"
+            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.2/VSCFoundation.xcframework.zip",
+            checksum: "7b0e66546707e59460af666f4a268990e13e5e8662526bd7c4a9c8d0a6fded72"
         ),
 
         .binaryTarget(
             name: "VSCPythia",
-            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1/VSCPythia.xcframework.zip",
-            checksum: "b76319840a7c67303821ca4324965a6782d3d8f6ae5d108261c32f3139887e6c"
+            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.2/VSCPythia.xcframework.zip",
+            checksum: "c45a52299e319b9c80b834d7895f71a8383fe0e8a30c9b2a676f0d35d9205540"
         ),
 
         .binaryTarget(
             name: "VSCRatchet",
-            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.1/VSCRatchet.xcframework.zip",
-            checksum: "ff3a3c6677eec624772936dff7f4243787d1122811f8a1ecb76f41050d2e7ee5"
+            url: "https://github.com/VirgilSecurity/virgil-crypto-c/releases/download/v0.16.2/VSCRatchet.xcframework.zip",
+            checksum: "dd3c675527e3257a456433ebb3f1966f824033f38481863a0e06a1e25eb4eec0"
         ),
 
         //
