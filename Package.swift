@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "VirgilCryptoWrapper",
     platforms: [
-        .macOS(.v10_10), .iOS(.v9), .tvOS(.v9), .watchOS(.v2)
+        .macOS(.v10_10), .iOS(.v11), .tvOS(.v11), .watchOS(.v4)
     ],
     products: [
         .library(
